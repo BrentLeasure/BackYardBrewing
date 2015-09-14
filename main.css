@@ -1,9 +1,13 @@
+*{
+	box-sizing: border-box;
+}
 /*===============
 	body
  ===============*/
 body{
 	margin:0;
-	background-color: gray;
+	background-color: #715540;
+	font-size: 15px;
 }
 
 
@@ -23,35 +27,55 @@ body{
  	navigation
  ===============*/
 .nav-bar{
+	overflow: hidden;
+	display: block;
 	position: fixed;
- 	box-sizing: border-box;
- 	background-color: #715540;
- 	width:100%;
- 	top: 150px;
+	margin: auto;
+ 	left: 5%;
+ 	width: 90%;
+ 	top: 120px;
  	height: 100px;
- 	text-align: center;
 }
-
+ 
 .nav-list{
-	padding: 10px 0px 10px 0px;
+	padding: 0px;
 	float: none;
-	/*background-color: #C2A47E;*/
+	background-color: #C2A47E;
 	position: relative;
-	top: 15px;
+	top: 25px;
 }
 
 .nav-list-items{
-	padding-right: 70px;
+	text-align: center;
+	width: 20%;
+	padding: 12px 0px 12px 0px;
 	display: inline-block;
+	float: left;
+	border-right: 1px solid #715540;
+	border-left: 1px solid #715540;
+	background: linear-gradient(to right, #C2A47E 50%, #715540 50%);
+	background-size: 200%;
+	background-position: left bottom;
+	transition: all .5s ease;
 }
+
 
 .nav-links{
-	padding: 10px;
 	text-decoration: none;
+	background-color:;
  	color: white;
-
 }
 
-.nav-links:hover{
-	width: 300px;
+.nav-list-items:hover{
+	background-position:right bottom;
 }
+
+.left-edge-list-item{
+	margin: 0px;
+	border-left: 2px solid #715540;
+}
+
+.right-edge-list-item{
+	border-right: 2px solid #715540;
+}
+@media
