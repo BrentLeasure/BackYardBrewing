@@ -1,7 +1,57 @@
 /*===============
- 	NavBar
+	body
  ===============*/
- .navBar{
- 	position: fixed;
-	background-color: #A52A2A;
- }
+body{
+	margin:0;
+	background-color: gray;
+}
+
+
+
+/*===============
+ 	header-image
+ ===============*/
+.header-image{
+	position: fixed;
+	margin: 0;
+	padding: 0;	
+}
+
+
+
+/*===============
+ 	navigation
+ ===============*/
+.nav-bar{
+	position: fixed;
+ 	box-sizing: border-box;
+ 	background-color: #715540;
+ 	width:100%;
+ 	top: 150px;
+ 	height: 100px;
+ 	text-align: center;
+}
+
+.nav-list{
+	padding: 10px 0px 10px 0px;
+	float: none;
+	/*background-color: #C2A47E;*/
+	position: relative;
+	top: 15px;
+}
+
+.nav-list-items{
+	padding-right: 70px;
+	display: inline-block;
+}
+
+.nav-links{
+	padding: 10px;
+	text-decoration: none;
+ 	color: white;
+
+}
+
+.nav-links:hover{
+	width: 300px;
+}
