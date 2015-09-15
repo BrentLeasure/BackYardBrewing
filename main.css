@@ -11,30 +11,14 @@ body{
 }
 
 
-
-/*===============
- 	header-image
- ===============*/
-.header-image{
-	position: fixed;
-	margin: 0;
-	padding: 0;	
-}
-
-
-
 /*===============
  	navigation
  ===============*/
-.nav-bar{
-	overflow: hidden;
+.general-page-layout{
 	display: block;
-	position: fixed;
-	margin: auto;
- 	left: 5%;
- 	width: 90%;
- 	top: 120px;
- 	height: 100px;
+	position: relative;
+	margin: 0 auto;
+	width: 900px;
 }
  
 .nav-list{
@@ -42,7 +26,6 @@ body{
 	float: none;
 	background-color: #C2A47E;
 	position: relative;
-	top: 25px;
 }
 
 .nav-list-items{
@@ -77,5 +60,14 @@ body{
 
 .right-edge-list-item{
 	border-right: 2px solid #715540;
+}
+
+/*===================
+ MAIN PAGE CONTENT
+ ===================*/
+.page-content{
+	color: #E6E6E6; 
+	width: 850px;
+	margin-top: 75px;
 }
 @media
