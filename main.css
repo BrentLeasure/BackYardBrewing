@@ -10,23 +10,38 @@ body{
 	font-size: 15px;
 }
 
+/*===============
+	Header
+ ===============*/
+.header-img{
+	width: 100%;
+}
+
+
 
 /*===============
  	navigation
  ===============*/
 .general-page-layout{
-	display: block;
+	/*display: block;*/
 	position: relative;
 	margin: 0 auto;
+}
+
+.nav-bar{
+	position: static;
 	width: 900px;
+	transition: all .5s;
+	left: 10%;
 }
  
 .nav-list{
 	padding: 0px;
 	float: none;
 	background-color: #C2A47E;
-	position: relative;
 }
+
+
 
 .nav-list-items{
 	text-align: center;
@@ -39,7 +54,7 @@ body{
 	background: linear-gradient(to right, #C2A47E 50%, #715540 50%);
 	background-size: 200%;
 	background-position: left bottom;
-	transition: all .5s ease;
+	transition: background .5s ease;
 }
 
 
@@ -70,4 +85,78 @@ body{
 	width: 850px;
 	margin-top: 75px;
 }
-@media
+
+
+/*===============
+	Fixed nav-bar
+=================*/
+
+.nav-bar.full-width-nav{
+	transition: all .5s;
+	margin: 0px;
+	top: 0px;
+	width: 100%;
+	left: 0%;
+	position: fixed;
+	z-index: 1;
+}
+
+.full-width-nav .nav-list{
+	margin: 0px;
+}
+
+@media screen and (max-width: 925px){
+	.nav-bar{
+		font-size: 14px;
+		width: 800px;
+	}
+}
+
+@media screen and (max-width: 825px){
+	.nav-bar{
+		font-size: 13px;
+		width: 700px;
+	}
+}
+
+@media screen and (max-width: 725px){
+	.nav-bar{
+		font-size: 13px;
+		width: 600px;
+	}
+}
+
+@media screen and (max-width: 625px){
+	.nav-bar{
+		font-size: 11px;
+		width: 500px
+	}
+}
+
+@media screen and (max-width: 525px){
+	.nav-bar.full-width-nav{
+	width: 100%;
+	position: relative;
+	}
+
+	.header-img{
+		display: none;
+	}
+	.nav-bar{
+		top: 0px;
+		width: 100%;
+		text-align: center;
+		font-size: 15px;
+	}
+	.nav-list{
+		margin: 0px;
+	}
+	.nav-list-items{
+		background: linear-gradient(to right, #C2A47E 50%, #C2A47E 50%);
+		width: 100%;
+		position: relative;
+		display: block;
+		float: none;
+		border: none;
+	}
+}

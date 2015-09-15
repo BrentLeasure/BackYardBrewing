@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="indexModule">
 <head>
 	<meta charset="utf-8">
-	<title>A safe haven for craft brewers</title>
+	<title>A safe haven for Colorado craft brewers</title>
 	<script src ="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="normalize.css"/>
 	<link rel="stylesheet" href="main.css"/>
 </head>
-<body>
+<body ng-controller="mainController">
 	<script src="main.js" type="text/javascript"></script>
-	<img class="general-page-layout" src="http://placehold.it/900x150">
-	<div class="nav-bar general-page-layout">
+	<img class="header-img general-page-layout" src="http://placehold.it/900x150">
+	<div ng-class = "{'full-width-nav' : state}" class="nav-bar general-page-layout">
 		<ul class="nav-list">
 			<li class="nav-list-items left-edge-list-item"><a href="#" class="nav-links">Home</a></li>
 			<li class="nav-list-items"><a href="#" class="nav-links">The Basics</a></li>
