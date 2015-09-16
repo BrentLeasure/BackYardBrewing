@@ -31,7 +31,7 @@ body{
 .nav-bar{
 	position: static;
 	width: 900px;
-	transition: all .5s;
+	transition: all .1s;
 	left: 10%;
 }
  
