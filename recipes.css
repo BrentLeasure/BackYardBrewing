@@ -1,0 +1,18 @@
+.beer-list{
+}
+
+.beer-list-items{
+	text-align: center;
+	width: 30%;
+	margin: 3% 1.5%;
+	padding: 12px 0px 12px;
+	background-color: gray;
+	float: left;
+	display: inline-block;
+}
+
+.beer-links{
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
