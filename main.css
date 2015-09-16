@@ -6,7 +6,7 @@
  ===============*/
 body{
 	margin:0;
-	background-color: #715540;
+	background-image: url(http://designreflect.com/wp-content/uploads/2012/09/wooden-textures/Vintage-Grunge-Wood-Background.jpg);
 	font-size: 15px;
 }
 
@@ -23,7 +23,6 @@ body{
  	navigation
  ===============*/
 .general-page-layout{
-	/*display: block;*/
 	position: relative;
 	margin: 0 auto;
 }
@@ -49,9 +48,9 @@ body{
 	padding: 12px 0px 12px 0px;
 	display: inline-block;
 	float: left;
-	border-right: 1px solid #715540;
-	border-left: 1px solid #715540;
-	background: linear-gradient(to right, #C2A47E 50%, #715540 50%);
+	border-right: 1px solid #8A4E29;
+	border-left: 1px solid #8A4E29;
+	background: linear-gradient(to right, #C2A47E 50%, #8A4E29 50%);
 	background-size: 200%;
 	background-position: left bottom;
 	transition: background .5s ease;
@@ -70,25 +69,30 @@ body{
 
 .left-edge-list-item{
 	margin: 0px;
-	border-left: 2px solid #715540;
+	border-left: 2px solid #8A4E29;
 }
 
 .right-edge-list-item{
-	border-right: 2px solid #715540;
+	border-right: 2px solid #8A4E29;
 }
+
 
 /*===================
  MAIN PAGE CONTENT
  ===================*/
 .page-content{
+	position: static;
+	left: 10%;
+	background-color: #8A4E29;
 	color: #E6E6E6; 
 	width: 850px;
+	padding-bottom: 30px;
 	margin-top: 75px;
 }
 
 
 /*===============
-	Fixed nav-bar
+ NAV-BAR FULL WIDTH
 =================*/
 
 .nav-bar.full-width-nav{
@@ -105,6 +109,10 @@ body{
 	margin: 0px;
 }
 
+
+/*===================
+ MEDIA QUERIES
+ ===================*/
 @media screen and (max-width: 925px){
 	.nav-bar{
 		font-size: 14px;
