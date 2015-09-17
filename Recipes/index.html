@@ -23,6 +23,9 @@
 		</div>
 	</div>
 	<div class="page-content general-page-layout">
+		<div class="search-bar">
+		<input class="input-box" ng-model="SearchTool">
+		</div>
 		<div ng-repeat="beer in beerTypes">
 		<ul class="beer-list">
 			<a class="beer-links" href="#"><li class="beer-list-items">{{beer.name}}</li></a>
