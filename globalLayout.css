@@ -6,7 +6,6 @@
  ===============*/
 body{
 	margin:0;
-	background-image: url(http://designreflect.com/wp-content/uploads/2012/09/wooden-textures/Vintage-Grunge-Wood-Background.jpg);
 	font-size: 15px;
 }
 
@@ -24,14 +23,14 @@ body{
  ===============*/
 .general-page-layout{
 	position: relative;
-	margin: 0 auto;
+	margin: 0 auto; 
 }
 
 .nav-bar{
 	position: static;
 	width: 900px;
-	transition: all .5s;
-	left: 10%;
+	transition: all .1s;
+	left: 25%;
 }
  
 .nav-list{
@@ -59,7 +58,6 @@ body{
 
 .nav-links{
 	text-decoration: none;
-	background-color:;
  	color: white;
 }
 
@@ -86,8 +84,9 @@ body{
 	background-color: #8A4E29;
 	color: #E6E6E6; 
 	width: 850px;
-	padding-bottom: 30px;
+	padding: 5px 40px 30px;
 	margin-top: 75px;
+	overflow: hidden;
 }
 
 
@@ -96,7 +95,7 @@ body{
 =================*/
 
 .nav-bar.full-width-nav{
-	transition: all .5s;
+	transition: all 4s;
 	margin: 0px;
 	top: 0px;
 	width: 100%;
@@ -118,12 +117,19 @@ body{
 		font-size: 14px;
 		width: 800px;
 	}
+	.page-content{
+		width: 750px;
+	}
+
 }
 
 @media screen and (max-width: 825px){
 	.nav-bar{
 		font-size: 13px;
 		width: 700px;
+	}
+		.page-content{
+		width: 650px;
 	}
 }
 
@@ -132,12 +138,18 @@ body{
 		font-size: 13px;
 		width: 600px;
 	}
+		.page-content{
+		width: 550px;
+	}
 }
 
 @media screen and (max-width: 625px){
 	.nav-bar{
 		font-size: 11px;
 		width: 500px
+	}
+		.page-content{
+		width: 450px;
 	}
 }
 
@@ -166,5 +178,9 @@ body{
 		display: block;
 		float: none;
 		border: none;
+	}
+
+	.page-content{
+		width: 100%;
 	}
 }

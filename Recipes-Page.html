@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="indexModule">
+<head>
+	<title>Recipes</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="recipes.css">
+	<link rel="stylesheet" type="text/css" href="globalLayout.css">
+</head>
+<body ng-controller="beerTypesListController">
+	<script src="main.js" type="text/javascript"></script>
+	<div  id ="header">
+		<img class="header-img general-page-layout" src="http://placehold.it/900x150">
+
+		<div ng-controller="headerController" ng-class = "{'full-width-nav' : state}" class="nav-bar general-page-layout">
+			<ul class="nav-list">
+				<a href="file:///Users/student/Projects/BackYardBrewing/BYBHome.html" class="nav-links"><li class="nav-list-items left-edge-list-item">Home</li></a>
+				<a href="#" class="nav-links"><li class="nav-list-items">The Basics</li></a>
+				<a href="file:///Users/student/Projects/BackYardBrewing/Recipes-Page.html" class="nav-links"><li class="nav-list-items">Recipes</li></a>
+				<a href="#" class="nav-links"><li class="nav-list-items">Forums</li></a>
+				<a href="#" class="nav-links"><li class="nav-list-items right-edge-list-item">Join us!</li></a>
+			</ul>
+		</div>
+	</div>
+	<div class="page-content general-page-layout">
+		<div ng-repeat="beer in beerTypes">
+		<ul class="beer-list">
+			<a class="beer-links" href="#"><li class="beer-list-items">{{beer.name}}</li></a>
+		</ul>
+		</div>
+	</div>
+</body>
+</html>
