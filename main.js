@@ -15,9 +15,9 @@ angular.module("indexModule")
 		$scope.state = false;
 
 		 $interval(function(){
-			if($window.pageYOffset >= 200){
+			if($window.pageYOffset >= 150){
 				$scope.state = true;
-			}else if($window.pageYOffset < 200){
+			}else if($window.pageYOffset < 150){
 				$scope.state = false;	
 			}
 		}, 100);

@@ -5,6 +5,7 @@
 	body
  ===============*/
 body{
+	background-color: #333;
 	margin:0;
 	font-size: 15px;
 }
@@ -47,9 +48,9 @@ body{
 	padding: 12px 0px 12px 0px;
 	display: inline-block;
 	float: left;
-	border-right: 1px solid #8A4E29;
-	border-left: 1px solid #8A4E29;
-	background: linear-gradient(to right, #C2A47E 50%, #8A4E29 50%);
+	border-right: 1px solid #333;
+	border-left: 1px solid #333;
+	background: linear-gradient(to right, #BF0A30 50%, #FFD700 50%);
 	background-size: 200%;
 	background-position: left bottom;
 	transition: background .5s ease;
@@ -62,16 +63,17 @@ body{
 }
 
 .nav-list-items:hover{
+	color: #333;
 	background-position:right bottom;
 }
 
 .left-edge-list-item{
 	margin: 0px;
-	border-left: 2px solid #8A4E29;
+	border-left: 2px solid #333;
 }
 
 .right-edge-list-item{
-	border-right: 2px solid #8A4E29;
+	border-right: 2px solid #333;
 }
 
 
@@ -81,8 +83,8 @@ body{
 .page-content{
 	position: static;
 	left: 10%;
-	background-color: #8A4E29;
-	color: #E6E6E6; 
+	background-color: #333;
+	color: #e8e8e8; 
 	width: 850px;
 	padding: 5px 40px 30px;
 	margin-top: 75px;
