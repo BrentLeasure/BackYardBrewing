@@ -5,7 +5,7 @@
 	body
  ===============*/
 body{
-	background-color: #333;
+	background-color: #353230;
 	margin:0;
 	font-size: 15px;
 }
@@ -48,9 +48,9 @@ body{
 	padding: 12px 0px 12px 0px;
 	display: inline-block;
 	float: left;
-	border-right: 1px solid #333;
-	border-left: 1px solid #333;
-	background: linear-gradient(to right, #BF0A30 50%, #FFD700 50%);
+	border-right: 1px solid #353230;
+	border-left: 1px solid #353230;
+	background: linear-gradient(to right, #BF0A30 50%, #ffdf32 50%);
 	background-size: 200%;
 	background-position: left bottom;
 	transition: background .5s ease;
@@ -63,17 +63,18 @@ body{
 }
 
 .nav-list-items:hover{
-	color: #333;
+	font-weight: bold;
+	color: #353230;
 	background-position:right bottom;
 }
 
 .left-edge-list-item{
 	margin: 0px;
-	border-left: 2px solid #333;
+	border-left: 2px solid #353230;
 }
 
 .right-edge-list-item{
-	border-right: 2px solid #333;
+	border-right: 2px solid #353230;
 }
 
 
@@ -83,7 +84,7 @@ body{
 .page-content{
 	position: static;
 	left: 10%;
-	background-color: #333;
+	background-color: #353230;
 	color: #e8e8e8; 
 	width: 850px;
 	padding: 5px 40px 30px;
@@ -174,7 +175,7 @@ body{
 		margin: 0px;
 	}
 	.nav-list-items{
-		background: linear-gradient(to right, #C2A47E 50%, #C2A47E 50%);
+		background: linear-gradient(to right, #BF0A30 50%, #BF0A30 50%);
 		width: 100%;
 		position: relative;
 		display: block;
@@ -185,4 +186,9 @@ body{
 	.page-content{
 		width: 100%;
 	}
+
+	.nav-bar.full-width-nav{
+		transition: none;
+	}
+
 }
