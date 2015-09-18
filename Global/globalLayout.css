@@ -17,10 +17,8 @@ body{
 	width: 100%;
 }
 
-
-
 /*===============
- 	navigation
+ 	Navigation
  ===============*/
 .general-page-layout{
 	position: relative;
@@ -87,7 +85,7 @@ body{
 	background-color: #353230;
 	color: #e8e8e8; 
 	width: 850px;
-	padding: 5px 40px 30px;
+	padding: 30px 20px 30px 20px;
 	margin-top: 75px;
 	overflow: hidden;
 }
@@ -153,6 +151,7 @@ body{
 	}
 		.page-content{
 		width: 450px;
+		padding: 30px 10px 30px 10px;
 	}
 }
 
@@ -181,9 +180,11 @@ body{
 		display: block;
 		float: none;
 		border: none;
+		border-bottom: 5px solid #353230;
 	}
 
 	.page-content{
+		margin-top: 10px;
 		width: 100%;
 	}
 
