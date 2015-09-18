@@ -23,10 +23,18 @@
 		</div>
 	</div>
 	<div class="page-content general-page-layout">
+<<<<<<< HEAD
+		<div id="search-bar">
+			<label>Search for Beer: </label><input class="search-box" ng-model="userQuery"></br>
+		</div>
+
+		<div ng-repeat="beer in beerTypes | filter: userQuery">
+=======
 		<div class="search-bar">
 		<input class="input-box" ng-model="SearchTool">
 		</div>
 		<div ng-repeat="beer in beerTypes">
+>>>>>>> eb7d8c22c689f881f257d59448ca4c42f71486ca
 		<ul class="beer-list">
 			<a class="beer-links" href="#"><li class="beer-list-items">{{beer.name}}</li></a>
 		</ul>
