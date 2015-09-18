@@ -25,6 +25,7 @@ angular.module("indexModule")
 	}]);
 angular.module("indexModule")
 	.controller("beerTypesListController", ["$scope", function($scope){
+		//List of Beers
 		$scope.beerTypes = [
 			{
 			 name: "Inda Pale Ale",
@@ -356,4 +357,5 @@ angular.module("indexModule")
 			 taste: ""
 			},
 		];
+	
 	}]);
