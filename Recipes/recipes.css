@@ -1,6 +1,21 @@
-.beer-list{
+/*===============
+	SEARCH BAR 
+=================*/
+#search-bar{
+	display: inline-block;
+	float: right;
 }
 
+.search-box{
+	border: 1px solid black;
+	border-radius: 25px;
+	height: 30px;
+}
+
+
+/*===============
+	LIST OF BEERS
+=================*/
 .beer-list-items{
 	text-align: center;
 	width: 25%;
@@ -17,6 +32,11 @@
 	color: white;
 	text-decoration: none;
 }
+
+
+/*===============
+	MEDIA QUERIES
+=================*/
 
 @media screen and (max-width: 925px){
 	.beer-links{

@@ -13,39 +13,7 @@ angular.module("indexModule")
 angular.module("indexModule")
 	.controller("headerController", ["$scope", "$window", "$interval", function($scope, $window, $interval){
 		$scope.state = false;
-		$scope.beerTypes = [
-		{
-			name: "India Pale Ale",
-			description: "",
-			taste: "",
-		},
-
-		{
-			name: "Imperial Stout",
-			description: "",
-			taste: "",
-		},
-
-		{
-			name: "Rye Lager",
-			description: "",
-			taste: "",
-		},
-		
-		{
-			name: "English Pale Ale",
-			description: "",
-			taste: "",
-		},
-		
-		{
-			name: "Scottish Ale",
-			description: "",
-			taste: "",
-		},
-
-		];
-		 $interval(function(){
+		$interval(function(){
 			if($window.pageYOffset >= 150){
 				$scope.state = true;
 			}else if($window.pageYOffset < 150){
@@ -54,11 +22,14 @@ angular.module("indexModule")
 		}, 100);
 
 	}]);
+		
+
 angular.module("indexModule")
 	.controller("beerTypesListController", ["$scope", function($scope){
+		//List of Beers. cmd + option + ] to see.
 		$scope.beerTypes = [
 			{
-			 name: "Inda Pale Ale",
+			 name: "India Pale Ale",
 			 description: "",
 			 taste: ""
 			},
