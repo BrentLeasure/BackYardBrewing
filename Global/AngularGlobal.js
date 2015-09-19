@@ -47,8 +47,8 @@ angular.module("indexModule")
 		$scope.beerTypes = [
 			{
 			 alias: "India Pale Ale",
-			 about: "Hello world!",
-			 taste: "AIDS! AND THAT'S THE WAAAAAYYY IT GOES! LICK LICK LICK MAH BALLS! WUBBA LUBBA DUB DUB!"
+			 about: "",
+			 taste: ""
 			},
 
 			{

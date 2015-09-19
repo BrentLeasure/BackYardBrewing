@@ -50,12 +50,16 @@
 	LIGHT BOX
 ==================*/
 .light-box-close-button{
+	position: relative;
+	float: right;
 	color: #353230;
 }
 .light-box{
+	overflow-x: scroll;
 	position: fixed;
 	width: 100%;
 	height: 100%;
+	padding: 10px 20px;
 	top: 0;
 	left: 0;
 	background-color: rgba(0, 0, 0, .9);
@@ -64,11 +68,9 @@
 }
 
 .light-box-content{
-	left: 10%;
-	width: 950px;
-	float: left;
 	position: relative;
-	top: 200px;
+	float: left;
+	top: 50px;
 }
 
 /*===============

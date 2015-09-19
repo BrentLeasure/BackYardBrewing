@@ -30,10 +30,11 @@
 		</div>
 
 		<div ng-show="lightBoxState" ng-class="{'light-box' : lightBoxState}">
-			<div class="light-box-content">
 			<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
+			<div class="light-box-content">
+			
 			<h1>{{lightBox.alias}}</h1>
-			<h3>About</h3>
+			<h3>Description</h3>
 			<p>{{lightBox.about}}</p>
 	
 			</div>
