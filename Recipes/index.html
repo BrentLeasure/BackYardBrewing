@@ -41,7 +41,7 @@
 		</div>
 
 	
-		<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true" ng-click="lightBoxOn(beer)">
+		<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: 21: 0" ng-click="lightBoxOn(beer)">
 			<ul class="beer-list">
 				<a class="beer-links" href="#"><li class="beer-list-items">{{beer.alias}}</li></a>
 			</ul>

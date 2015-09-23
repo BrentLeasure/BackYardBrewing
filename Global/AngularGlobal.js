@@ -2,14 +2,6 @@
 angular.module("indexModule", []);
 
 
-
-//setting the controller
-angular.module("indexModule")
-	.controller("mainController", ["$scope", "$window", "$interval", function($scope, $window, $interval){
-
-
-	}]);
-
 angular.module("indexModule")
 	.controller("headerController", ["$scope", "$window", "$interval", function($scope, $window, $interval){
 		$scope.state = false;
