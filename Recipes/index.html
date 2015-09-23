@@ -13,7 +13,7 @@
 
 		<div ng-controller="headerController" ng-class = "{'full-width-nav' : state}" class="nav-bar general-page-layout">
 			<ul class="nav-list">
-				<a href="file:///Users/student/Projects/BackYardBrewing/home/index.html" class="nav-links"><li class="nav-list-items left-edge-list-item">Home</li></a>
+				<a href="file:///Users/student/Projects/BackYardBrewing/Home/index.html" class="nav-links"><li class="nav-list-items left-edge-list-item">Home</li></a>
 				<a href="#" class="nav-links"><li class="nav-list-items">The Basics</li></a>
 				<a href="file:///Users/student/Projects/BackYardBrewing/Recipes/index.html" class="nav-links"><li class="nav-list-items">Recipes</li></a>
 				<a href="#" class="nav-links"><li class="nav-list-items">Forums</li></a>
@@ -41,7 +41,11 @@
 		</div>
 
 	
+<<<<<<< HEAD
 		<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: 21: 0" ng-click="lightBoxOn(beer)">
+=======
+		<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: 33 : 0" ng-click="lightBoxOn(beer)">
+>>>>>>> 57c8515a7ed46bd8f3375496714c9e804eb5a7cc
 			<ul class="beer-list">
 				<a class="beer-links" href="#"><li class="beer-list-items">{{beer.alias}}</li></a>
 			</ul>

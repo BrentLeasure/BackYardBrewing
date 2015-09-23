@@ -93,7 +93,18 @@ body{
 	margin: 0px;
 }
 
+.full-width-nav .nav-list-items{
+	border-right: 1px solid #BF0A30;
+	border-left: 1px solid #BF0A30;
+}
 
+.full-width-nav .right-edge-list-item{
+	border-right: 2px solid #BF0A30;
+}
+
+.full-width-nav .right-edge-list-item{
+	border-right: 2px solid #BF0A30;
+}
 /*===================
  MEDIA QUERIES
  ===================*/
@@ -181,6 +192,7 @@ body{
 
 
 
+<<<<<<< HEAD
 @media screen and (max-width: 875px){
 	
 }
@@ -198,3 +210,40 @@ body{
 }
 
 
+=======
+
+/*============================
+	USED FOR CENTERING THE MENU BAR
+	IN TRANSITIONS
+============================*/
+@media screen and (max-width: 875px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+}
+@media screen and (max-width: 775px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+@media screen and (max-width: 675px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+@media screen and (max-width: 575px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+@media screen and (max-width: 475px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+>>>>>>> 57c8515a7ed46bd8f3375496714c9e804eb5a7cc
