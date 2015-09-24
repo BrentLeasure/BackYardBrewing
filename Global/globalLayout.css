@@ -7,7 +7,6 @@
 body{
 	margin:0; 
 	font-size: 15px;
-	color: #333;
 }
 
 /*===============
@@ -41,11 +40,11 @@ body{
 
 .nav-list-items{
 	text-align: center;
-	width: 20%;
+	width: 15%;
 	padding: 12px 0px 12px 0px;
 	display: inline-block;
 	float: left;
-	background: linear-gradient(to left, rgba(50, 49, 50, 0) 50%, rgba(140, 4, 8, .7)  50%);
+	background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, .1)  50%);
 	background-size: 200%;
 	background-position: right bottom;
 	transition: background .5s ease;
@@ -54,7 +53,7 @@ body{
 
 .nav-links{
 	text-decoration: none;
- 	color: #333;
+ 	color: black;
 }
 
 .nav-list-items:hover{
@@ -79,8 +78,9 @@ body{
  NAV-BAR FULL WIDTH
 =================*/
 
-.nav-bar.full-width-nav{
+.nav-bar.headerless-nav{
 	transition: all 4s;
+	background-color: black;
 	margin: 0px;
 	top: 0px;
 	width: 100%;
@@ -89,21 +89,8 @@ body{
 	z-index: 1;
 }
 
-.full-width-nav.nav-list{
-	margin: 0px;
-}
-
-.full-width-nav .nav-list-items{
-	border-right: 1px solid #BF0A30;
-	border-left: 1px solid #BF0A30;
-}
-
-.full-width-nav .right-edge-list-item{
-	border-right: 2px solid #BF0A30;
-}
-
-.full-width-nav .right-edge-list-item{
-	border-right: 2px solid #BF0A30;
+.headerless-nav-links{
+	color: white;
 }
 /*===================
  MEDIA QUERIES
@@ -192,25 +179,8 @@ body{
 
 
 
-<<<<<<< HEAD
-@media screen and (max-width: 875px){
-	
-}
-
-@media screen and (max-width: 775px){
-
-}
-
-@media screen and (max-width: 675px){
-
-}
-
-@media screen and (max-width: 575px){
-
-}
 
 
-=======
 
 /*============================
 	USED FOR CENTERING THE MENU BAR
@@ -246,4 +216,4 @@ body{
 		left: 25%;	
 	}
 }
->>>>>>> 57c8515a7ed46bd8f3375496714c9e804eb5a7cc
+

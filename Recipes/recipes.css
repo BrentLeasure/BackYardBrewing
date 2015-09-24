@@ -68,6 +68,7 @@
 }
 
 .light-box-content{
+	color: white;
 	position: relative;
 	float: left;
 	top: 50px;
