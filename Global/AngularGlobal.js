@@ -1,22 +1,18 @@
 //setting the 
 angular.module("indexModule", []);
 
-angular.module("indexModule")
-	.factory("mainFactory", [function(){
-		return {}
-	}]);
 
 angular.module("indexModule")
-	.controller("headerController", ["$scope", "$window", "$interval", "mainFactory", function($scope, $window, $interval, mainFactory){
+	.controller("headerController", ["$scope", "$window", "$interval", function($scope, $window, $interval){
 		$scope.state = false;
 		$interval(function(){
-			if($window.pageYOffset >= 190){
+			if($window.pageYOffset >= 150){
 				$scope.state = true;
-			}else if($window.pageYOffset < 190){
+			}else if($window.pageYOffset < 150){
 				$scope.state = false;	
 			}
 		}, 100);
-		
+
 	}]);
 		
 

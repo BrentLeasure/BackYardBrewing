@@ -1,11 +1,3 @@
-html{
-	background: url(http://i.imgur.com/kn00ykk.png) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
 *{
 	box-sizing: border-box;
 }
@@ -13,8 +5,6 @@ html{
 	body
  ===============*/
 body{
-	background-color: rgba(211, 211, 211, 0);
-	padding: 0;
 	margin:0; 
 	font-size: 15px;
 	color: #333;
@@ -36,16 +26,13 @@ body{
 }
 
 .nav-bar{
-	width: 100%;
-	background-color: white;
-	position: absolute;
-	/*width: 900px;*/
-	transition: width .5s;
-	left: 0%;
+	position: static;
+	width: 900px;
+	transition: all .1s;
+	left: 7%;
 }
  
 .nav-list{
-	margin: 0px;
 	padding: 0px;
 	float: none;
 }
@@ -54,8 +41,8 @@ body{
 
 .nav-list-items{
 	text-align: center;
-	width: 12%;
-	padding: 6px 0px 6px 0px;
+	width: 20%;
+	padding: 12px 0px 12px 0px;
 	display: inline-block;
 	float: left;
 	background: linear-gradient(to left, rgba(50, 49, 50, 0) 50%, rgba(140, 4, 8, .7)  50%);
@@ -83,19 +70,17 @@ body{
 	left: 10%; 
 	width: 850px;
 	padding: 30px 20px 30px 20px;
-	/*transition: all .5s;*/
 	margin-top: 75px;
 	overflow: hidden;
 }
 
 
 /*===============
- HEADERLESS
+ NAV-BAR FULL WIDTH
 =================*/
 
-.nav-bar.headerless-nav{
-	background-color: white;
-	transition: width .5s;
+.nav-bar.full-width-nav{
+	transition: all 4s;
 	margin: 0px;
 	top: 0px;
 	width: 100%;
@@ -104,21 +89,21 @@ body{
 	z-index: 1;
 }
 
-.headerless-nav.nav-list{
+.full-width-nav.nav-list{
 	margin: 0px;
 }
 
-/*.full-width-nav .nav-list-items{
-	border-right: 1px solid white;
-	border-left: 1px solid white;
+.full-width-nav .nav-list-items{
+	border-right: 1px solid #BF0A30;
+	border-left: 1px solid #BF0A30;
 }
 
 .full-width-nav .right-edge-list-item{
-	border-right: 2px solid white;
+	border-right: 2px solid #BF0A30;
 }
 
 .full-width-nav .right-edge-list-item{
-	border-right: 2px solid white;*/
+	border-right: 2px solid #BF0A30;
 }
 /*===================
  MEDIA QUERIES
@@ -176,7 +161,6 @@ body{
 		display: none;
 	}
 	.nav-bar{
-		position: static;
 		top: 0px;
 		width: 100%;
 		text-align: center;
@@ -186,13 +170,13 @@ body{
 		margin: 0px;
 	}
 	.nav-list-items{
-		background: linear-gradient(to right, rgba(140, 4, 8, .7) 50%, rgba(140, 4, 8, .7) 50%);
+		background: linear-gradient(to right, #D5CEC4 50%, #E1E3E0 50%);
 		width: 100%;
 		position: relative;
 		display: block;
 		float: none;
 		border: none;
-		border-bottom: 5px solid black;
+		border-bottom: 5px solid #D5CEC4;
 	}
 
 	.page-content{
@@ -207,4 +191,59 @@ body{
 }
 
 
-/*/*/
+
+<<<<<<< HEAD
+@media screen and (max-width: 875px){
+	
+}
+
+@media screen and (max-width: 775px){
+
+}
+
+@media screen and (max-width: 675px){
+
+}
+
+@media screen and (max-width: 575px){
+
+}
+
+
+=======
+
+/*============================
+	USED FOR CENTERING THE MENU BAR
+	IN TRANSITIONS
+============================*/
+@media screen and (max-width: 875px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+}
+@media screen and (max-width: 775px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+@media screen and (max-width: 675px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+@media screen and (max-width: 575px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+
+@media screen and (max-width: 475px){
+	.nav-bar{
+		left: 25%;	
+	}
+}
+>>>>>>> 57c8515a7ed46bd8f3375496714c9e804eb5a7cc
