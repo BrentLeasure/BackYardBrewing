@@ -5,6 +5,7 @@
 	body
  ===============*/
 body{
+	padding: 0;
 	margin:0; 
 	font-size: 15px;
 	color: #333;
@@ -26,13 +27,15 @@ body{
 }
 
 .nav-bar{
-	position: static;
+	/*overflow: hidden;*/
+	position: absolute;
 	width: 900px;
-	transition: all .1s;
-	left: 7%;
+	transition: width .5s;
+	left: 0%;
 }
  
 .nav-list{
+	margin: 0px;
 	padding: 0px;
 	float: none;
 }
@@ -41,8 +44,8 @@ body{
 
 .nav-list-items{
 	text-align: center;
-	width: 20%;
-	padding: 12px 0px 12px 0px;
+	width: 12%;
+	padding: 6px 0px 6px 0px;
 	display: inline-block;
 	float: left;
 	background: linear-gradient(to left, rgba(50, 49, 50, 0) 50%, rgba(140, 4, 8, .7)  50%);
@@ -70,17 +73,23 @@ body{
 	left: 10%; 
 	width: 850px;
 	padding: 30px 20px 30px 20px;
+	/*transition: all .5s;*/
 	margin-top: 75px;
 	overflow: hidden;
 }
 
 
 /*===============
- NAV-BAR FULL WIDTH
+ HEADERLESS
 =================*/
 
+/*.page-content-headerless{
+	margin-top: 100px;
+}*/
+
 .nav-bar.full-width-nav{
-	transition: all 4s;
+	background-color: white;
+	transition: width .5s;
 	margin: 0px;
 	top: 0px;
 	width: 100%;
@@ -93,17 +102,17 @@ body{
 	margin: 0px;
 }
 
-.full-width-nav .nav-list-items{
-	border-right: 1px solid #BF0A30;
-	border-left: 1px solid #BF0A30;
+/*.full-width-nav .nav-list-items{
+	border-right: 1px solid white;
+	border-left: 1px solid white;
 }
 
 .full-width-nav .right-edge-list-item{
-	border-right: 2px solid #BF0A30;
+	border-right: 2px solid white;
 }
 
 .full-width-nav .right-edge-list-item{
-	border-right: 2px solid #BF0A30;
+	border-right: 2px solid white;*/
 }
 /*===================
  MEDIA QUERIES
@@ -191,27 +200,6 @@ body{
 }
 
 
-
-<<<<<<< HEAD
-@media screen and (max-width: 875px){
-	
-}
-
-@media screen and (max-width: 775px){
-
-}
-
-@media screen and (max-width: 675px){
-
-}
-
-@media screen and (max-width: 575px){
-
-}
-
-
-=======
-
 /*============================
 	USED FOR CENTERING THE MENU BAR
 	IN TRANSITIONS
@@ -246,4 +234,3 @@ body{
 		left: 25%;	
 	}
 }
->>>>>>> 57c8515a7ed46bd8f3375496714c9e804eb5a7cc

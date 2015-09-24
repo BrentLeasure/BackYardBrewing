@@ -10,9 +10,10 @@
 </head>
 <body>
 	<div  id ="header">
-		<img class="header-img general-page-layout" src="http://placehold.it/900x150">
-
-		<div ng-controller="headerController" ng-class = "{'full-width-nav' : state}" class="nav-bar general-page-layout">
+		<div id="banner">
+			<img class="header-img general-page-layout" src="http://placehold.it/900x170">
+		</div>
+		<div ng-controller="headerController" ng-class = "{'full-width-nav' : state}" class="nav-bar">
 			<ul class="nav-list">
 				<a href="#" class="nav-links"><li class="nav-list-items left-edge-list-item">Home</li></a>
 				<a href="#" class="nav-links"><li class="nav-list-items">The Basics</li></a>
@@ -24,12 +25,30 @@
 	</div>
 
 
-	<div ng-controller="mainController" class="page-content general-page-layout">
+	<div ng-controller="mainController"  ng-class="{'page-content-headerless' : state}" class="page-content general-page-layout">
 		<h1>Upcoming Events</h1>
 		<div id="map"></div>
+
+		<p>Bacon ipsum dolor amet prosciutto cow bresaola, short loin corned beef ribeye andouille pork biltong cupim pork belly shoulder meatball turkey. Shankle swine pork loin drumstick alcatra. Doner sausage andouille chicken strip steak. Salami t-bone turducken pancetta meatloaf, meatball venison swine. Pancetta cupim capicola boudin. Venison biltong capicola cow boudin frankfurter cupim tenderloin rump strip steak tail leberkas. Alcatra shank pork loin, ham jowl pig capicola kielbasa spare ribs pork tri-tip porchetta venison boudin.
+
+Tenderloin shoulder cow capicola jowl ham hock meatloaf, tri-tip leberkas. Landjaeger fatback filet mignon cupim, chuck meatball ball tip short ribs. Beef pork filet mignon corned beef, frankfurter tri-tip fatback. Bacon venison drumstick pork belly. Kevin andouille frankfurter strip steak filet mignon chicken cow turducken biltong, doner cupim. Jerky meatloaf capicola, frankfurter pancetta pastrami turkey.
+
+Pancetta prosciutto filet mignon meatball, leberkas chicken shankle jerky porchetta short ribs kevin beef hamburger shank landjaeger. Shank biltong chicken, rump landjaeger sausage tri-tip. T-bone jowl capicola chuck. Tongue corned beef alcatra cupim pork chop. Shankle ribeye shoulder chicken.
+
+Landjaeger flank brisket biltong short ribs salami filet mignon tenderloin. Capicola spare ribs drumstick sirloin ball tip turkey ribeye sausage shank beef ribs frankfurter. Short ribs tail short loin porchetta beef ribs pork chop. Strip steak rump picanha chicken swine capicola jerky alcatra pork loin boudin ground round kielbasa porchetta pastrami. Beef ribs shankle leberkas shoulder ball tip fatback swine short loin pork biltong corned beef capicola spare ribs pork loin porchetta. Tail andouille short loin, beef boudin leberkas pastrami chuck meatloaf tongue shoulder porchetta fatback frankfurter. Pork landjaeger drumstick, pork chop leberkas pig spare ribs shoulder ribeye salami picanha strip steak.
+
+Beef ribs hamburger tongue salami ribeye doner cupim pig. Frankfurter landjaeger capicola ground round. Short ribs short loin alcatra sirloin, meatball salami tenderloin doner. Short ribs pork tri-tip t-bone ham venison andouille bresaola fatback turducken meatball tenderloin beef ribs pork belly. Capicola biltong hamburger, bacon pork beef ribs tongue chicken turducken pastrami sirloin ham pork chop.
+
+</p>
 	</div>
+
+	<!-- Google Map script -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD-QBAroiKyXO6TdT1XiZZ898OTt2BONY&callback=initMap"
         async defer></script>
+
+
+
+       <!--For connecting to local files  -->
     <script src="../Global/JavaScriptGlobal.js" type="text/javascript"></script>
 	<script src="../Global/AngularGlobal.js" type="text/javascript"></script>
 	<script src="home.js" type="text/javascript"></script>
