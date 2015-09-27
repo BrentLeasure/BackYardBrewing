@@ -5,7 +5,7 @@
 	body
  ===============*/
 body{
-	/*background-image: url(http://www.onsecrethunt.com/wallpaper/wp-content/uploads/2014/09/Minimalist-Wallpaper-By-Well-Now-What-D766sst.jpg);*/
+	background-color: #DAD3C8;
 	margin:0; 
 	font-size: 15px;
 }
@@ -27,9 +27,14 @@ body{
 }
 
 .nav-bar{
-	position: static;
-	transition: all .4s;
-	background-color: white;
+	position: absolute;
+	background-color: #611B19;
+	margin: 0px;
+	top: 150px;
+	padding-top: 12px;
+	width: 100%;
+	height: 50px;
+	left: 0%;
 }
  
 .nav-list{
@@ -46,7 +51,7 @@ body{
 	padding: 5px 0px 5px 0px;
 	display: inline-block;
 	float: left;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, .1)  50%);
+	background: linear-gradient(to left, #611B19 50%, #446c91  50%);
 	background-size: 200%;
 	background-position: right bottom;
 	transition: background .5s ease;
@@ -55,7 +60,7 @@ body{
 
 .nav-links{
 	text-decoration: none;
- 	color: black;
+ 	color: white;
 }
 
 .nav-list-items:hover{
@@ -81,14 +86,7 @@ body{
 =================*/
 
 .nav-bar.headerless-nav{
-	transition: all 4s;
-	background-color: black;
-	margin: 0px;
 	top: 0px;
-	padding-top: 12px;
-	width: 100%;
-	height: 50px;
-	left: 0%;
 	position: fixed;
 	z-index: 1;
 }
@@ -105,9 +103,7 @@ body{
  ===================*/
 @media screen and (max-width: 925px){
 	.nav-bar{
-		/*left: 6%;*/
 		font-size: 14px;
-		/*width: 800px;*/
 	}
 	.page-content{
 		width: 750px;
@@ -118,7 +114,6 @@ body{
 @media screen and (max-width: 825px){
 	.nav-bar{
 		font-size: 13px;
-		/*width: 700px;*/
 	}
 		.page-content{
 		width: 650px;
@@ -128,7 +123,6 @@ body{
 @media screen and (max-width: 725px){
 	.nav-bar{
 		font-size: 12px;
-		/*width: 600px;*/
 	}
 		.page-content{
 		width: 550px;
