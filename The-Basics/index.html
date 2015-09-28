@@ -1,0 +1,25 @@
+<html ng-app="indexModule">
+<head>
+	<meta charset="utf-8">
+	<title>The Basics</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js">      
+	<link rel="stylesheet" href="../Global/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="recipes.css">
+	<link rel="stylesheet" type="text/css" href="../Global/globalLayout.css">
+</head>
+<body>
+<div ng-controller="headerController" ng-class = "{'headerless-nav' : state}" class="nav-bar general-page-layout">
+			<ul class="nav-list">
+				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items ">Home</li></a>
+				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items">The Basics</li></a>
+				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items">Recipes</li></a>
+				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items">Forums</li></a>
+			</ul>
+		</div>
+	</div>
+
+
+</body>
+</html>

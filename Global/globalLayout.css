@@ -5,7 +5,7 @@
 	body
  ===============*/
 body{
-	background-color: #DAD3C8;
+	background-color: #D8C8B0;
 	margin:0; 
 	font-size: 15px;
 }
@@ -24,6 +24,7 @@ body{
 .general-page-layout{
 	position: relative;
 	margin: 0 auto; 
+	color: black;
 }
 
 .nav-bar{
