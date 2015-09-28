@@ -92,6 +92,14 @@ body{
 }
 
 /*====================
+	GLOBAL PAGE CHANGE BUTTONS
+=====================*/
+.global-page-change-buttons{
+	text-decoration: none;
+	color: #353230;
+}
+
+/*====================
 	GLOBAL SEARCH BOX
 ====================*/
 

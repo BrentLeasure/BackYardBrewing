@@ -3,9 +3,32 @@ angular.module("indexModule")
 		//===================
 		// PAGINATION
 		//===================
-		$scope.bookmarkBox={
-			state: false
+
+		$scope.bookmarkPageNumber = 0;
+		$scope.pageNumber = 1;
+		$scope.beersPerPage = 24;
+		
+		$scope.checkUserQuery = function(){
+			if($scope.userQuery != "" && $scope.pageNumber != 1){
+				$scope.bookmarkPageNumber = $scope.pageNumber;
+				$scope.pageNumber = 1;
+			}else if($scope.userQuery === ""){
+				$scope.pageNumber = $scope.bookmarkPageNumber;
+			}
 		}
+
+		$scope.moveBeerListForward = function(){
+			if($scope.pageNumber < $scope.lastPage){
+				$scope.pageNumber += 1;
+			}
+		}
+
+		$scope.moveBeerListBackward = function(){
+			if($scope.pageNumber > 1){
+				$scope.pageNumber -= 1;
+			}
+		}	
+
 		$scope.activePage = function(objectPassed){
 			$scope.objectPassed.state = true;
 		}
@@ -374,7 +397,6 @@ angular.module("indexModule")
 			},
 		];
 
-
-
+		$scope.lastPage = $scope.beerTypes.length / $scope.beersPerPage;
 
 }]);

@@ -22,6 +22,9 @@
 				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items">Recipes</li></a>
 				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items">Forums</li></a>
 			</ul>
+			<ul class="nav-list">
+				<
+			</ul>
 		</div>
 	</div>
 
@@ -43,17 +46,23 @@
 		<div class="container">
 			<div class="row">
 					<div class="col-xs-8 global-page-layout">
-						<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: 33 : 0" ng-click="lightBoxOn(beer)">
+						<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: 18 : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
 
 							<ul class="beers">
-								<a class="global-link-text" href="#"><li class="global-button-layout recipe-button-layout">{{beer.alias}}</li></a>
+
+								<a class="global-link-text beer-links" href="#"><li class="global-button-layout recipe-button-layout">{{beer.alias}}</li>
+								</a>
 							</ul>
 						</div>
 					</div>
 					<div class="recipe-side-nav col-xs-4 global-page-layout">
-						<input class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
-						<button class="page-prev page-change-buttons">Prev</button>
-						<button class="page-next page-change-buttons">Next</button>
+						<input ng-change="checkUserQuery()"class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
+
+						<button class="global-page-change-buttons" ng-click="moveBeerListBackward()">Prev</button>
+
+						<button ng-repeat="page in pagination"></button>
+
+						<button class="global-page-change-buttons" ng-click="moveBeerListForward()">Next</button>
 					</div>
 			</div>
 		</div>
