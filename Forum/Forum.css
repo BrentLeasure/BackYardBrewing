@@ -1,0 +1,33 @@
+/*===============
+USER INTERACTION MENU
+=================*/
+.forum-posts{
+	position: absolute;
+	left: 0px;
+	width: 50%;
+}
+
+/*===============
+USER INTERACTION MENU
+=================*/
+.user-interaction-menu{
+	position: absolute;
+	right: 0px;
+	margin-right: 20px;
+	border: 1px solid black;
+}
+
+/*================
+	BUTTON LAYOUT
+==================*/
+.forum-button-layout{
+	padding: 12px 10px 12px;
+	width: 100%;
+}
+
+/*================
+	RECIPE SIDE NAV
+==================*/
+.recipe-side-nav{
+	top: 10px;
+}

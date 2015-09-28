@@ -4,17 +4,18 @@
 <head>
 	<title>Recipes</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js">      
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">    
 	<link rel="stylesheet" href="../Global/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="recipes.css">
 	<link rel="stylesheet" type="text/css" href="../Global/globalLayout.css">
+	<link rel="stylesheet" type="text/css" href="recipes.css">
 </head>
 
-<body ng-controller="RecipesController">
+<body>
 	<div  id ="header">
-		<img class="header-img general-page-layout" src="http://placehold.it/900x150">
+		<img class="header-img" src="http://placehold.it/900x150">
 
-		<div ng-controller="headerController" ng-class = "{'headerless-nav' : state}" class="nav-bar general-page-layout">
+		<div ng-controller="headerController" ng-class = "{'headerless-nav' : state}" class="nav-bar">
 			<ul class="nav-list">
 				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items left-edge-list-item">Home</li></a>
 				<a href="#" ng-class="{'headerless-nav-links' : state}" class="nav-links"><li class="nav-list-items">The Basics</li></a>
@@ -24,32 +25,37 @@
 		</div>
 	</div>
 
-	<div class="page-content general-page-layout">
-		<div id="search-bar">
-			<button class="page-prev page-change-buttons">Prev</button>
-			<!-- <button ng-class = "{'change-color' : state}"></button> -->
-			<button class="page-next page-change-buttons">Next</button>
-			<label class="search-box-label">Search: </label><input class="search-box" ng-model="userQuery"></br>
-		</div>
-
-		<div ng-show="lightBoxState" ng-class="{'light-box' : lightBoxState}">
-			<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
-			<div class="light-box-content">
+	<div ng-controller="RecipesController">
+		<div class="container">
+			<div class="row">
+				<div ng-show="lightBoxState" ng-class="{'light-box' : lightBoxState}">
+					<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
+					<div class="light-box-content">
+					
+						<h1>{{lightBox.alias}}</h1>
+						<h3>Description</h3>
+						<p>{{lightBox.about}}</p>
 			
-			<h1>{{lightBox.alias}}</h1>
-			<h3>Description</h3>
-			<p>{{lightBox.about}}</p>
-	
-			</div>
+					</div>
+				</div>	
+			</div>	
 		</div>
+		<div class="container">
+			<div class="row">
+					<div class="col-xs-8 global-page-layout">
+						<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: 33 : 0" ng-click="lightBoxOn(beer)">
 
-
-
-		<div ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: 33 : 0" ng-click="lightBoxOn(beer)">
-
-			<ul class="beer-list">
-				<a class="beer-links" href="#"><li class="beer-list-items">{{beer.alias}}</li></a>
-			</ul>
+							<ul class="beers">
+								<a class="global-link-text" href="#"><li class="global-button-layout recipe-button-layout">{{beer.alias}}</li></a>
+							</ul>
+						</div>
+					</div>
+					<div class="recipe-side-nav col-xs-4 global-page-layout">
+						<input class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
+						<button class="page-prev page-change-buttons">Prev</button>
+						<button class="page-next page-change-buttons">Next</button>
+					</div>
+			</div>
 		</div>
 	</div>
 

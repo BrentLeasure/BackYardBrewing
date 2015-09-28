@@ -1,4 +1,6 @@
-#map { 
+#eventMap { 
+	border: 5px solid #611B19;
+	border-radius: 7px;
 	width: 600px;
 	height: 400px; 
 	opacity: 0.9;
@@ -9,84 +11,84 @@
    MEDIA QUERIES
 ================*/   
 @media screen and (max-width: 925px){
-	#map{
+	#eventMap{
 		left: 7%;
 	}
 }
 @media screen and (max-width: 825px){
-	#map{
+	#eventMap{
 		height: 400px;
 		width: 550px;
 		left: 4%;
 	}	
 }
 @media screen and (max-width: 725px){
-	#map{
+	#eventMap{
 		height: 350px;
 		width: 500px;
 		left: 1%;
 	}
 }
 @media screen and (max-width: 625px){
-	#map{
+	#eventMap{
 		height: 300px;
 		width: 420px;
 		left: 0%;
 	}
 }
 @media screen and (max-width: 525px){
-	#map{
+	#eventMap{
 		left: 4%;
 	}
 }
 
 @media screen and (max-width: 485px){
-	#map{
+	#eventMap{
 		left: 3%;
 	}
 }
 
 @media screen and (max-width: 470px){
-	#map{
+	#eventMap{
 		left: 2%;
 	}
 }
 
 @media screen and (max-width: 460px){
-	#map{
+	#eventMap{
 		left: 1%;
 	}
 }
 
 @media screen and (max-width: 450px){
-	#map{
+	#eventMap{
 		left: 0%;
 	}
 }
 
 @media screen and (max-width: 440px){
-	#map{
+	#eventMap{
 		width: 400px;
 		left: 1%;
 	}
 }
 
 @media screen and (max-width: 430px){
-	#map{
+	#eventMap{
 		width: 375px;
 		left: 2.7%;
 	}
 }
 
 @media screen and (max-width: 410px){
-	#map{
+	#eventMap{
 		width: 375px;
 		left: 2%;
 	}
 }
 
 @media screen and (max-width: 405px){
-	#map{
+	#eventMap{
 		width: 375px;
 		left: 1%;
 	}

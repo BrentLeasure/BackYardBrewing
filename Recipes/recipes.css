@@ -1,48 +1,18 @@
 /*===============
 	SEARCH BAR 
 =================*/
-#search-bar{
-	display: inline-block;
-}
 
 .page-change-buttons{
 	text-decoration: none;
 	color: #353230;
 }
-.search-box-label{
-	margin-left: 20px;
-}
 
-.search-box{
-	color: lightgray;
-	outline: none;
-	box-shadow: none;
-	border: 1px solid black;
-	border-radius: 25px;
-	padding: 0px 5px;
-	height: 30px;
-}
-
-
-/*===============
-	LIST OF BEERS
-=================*/
-
-.beer-list-items{
-	text-align: center;
+/*=================
+	RECIPE BUTTON LAYOUT
+===================*/
+.recipe-button-layout{
 	width: 25%;
 	margin: 3% 3%;
-	padding: 12px 0px 12px;
-	border-radius: 5px;
-	background-color: gray;
-	float: left;
-	display: inline-block;
-}
-
-.beer-links{
-	text-align: center;
-	color: white;
-	text-decoration: none;
 }
 
 /*=================
