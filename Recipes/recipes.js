@@ -4,6 +4,7 @@ angular.module("indexModule")
 		// PAGINATION
 		//===================
 
+		$scope.firstPageDisplayed = 1;
 		$scope.bookmarkPageNumber = 0;
 		$scope.pageNumber = 1;
 		$scope.beersPerPage = 24;
@@ -28,13 +29,17 @@ angular.module("indexModule")
 				$scope.pageNumber -= 1;
 			}
 		}	
+		$scope.changePagination = function(){
+			if($scope.currentPaginationHead != $scope.pagination.length){
 
-		$scope.activePage = function(objectPassed){
-			$scope.objectPassed.state = true;
+			}
 		}
 
-		$scope.deactivatePage = function(objectPassed){
-			$scope.objectPassed.state = true;
+		$scope.changePagination = function(selectedPage){
+			if($scope.currentPaginationHead != $scope.lastPage && selectedPagination > 4){
+				$scope.firstPageDisplayed = selectedPage - 4;
+			}
+			$scope.pageNumber = selectedPagination;
 		}
 
 		//=====================

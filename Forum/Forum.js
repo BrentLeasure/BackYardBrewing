@@ -1,11 +1,10 @@
 angular.module("indexModule")
 	.controller("forumController", ["$scope", function(){
+		
 		$scope.bookmarkPageNumber = 0;
 		$scope.pageNumber = 1;
 		$scope.beersPerPage = 24;
-		$scope.pagination = $scope.set
 		
-		$scope.pagination.head = 6;
 
 		$scope.checkUserQuery = function(){
 			if($scope.userQuery != "" && $scope.pageNumber != 1){
@@ -27,12 +26,6 @@ angular.module("indexModule")
 				$scope.pageNumber -= 1;
 			}
 		}	
-
-		$scope.changePagination = function(){
-			if($scope.currentPaginationHead != $scope.pagination.length){
-
-			}
-		}
 
 
 		$scope.lastPage = forumPosts.length;
