@@ -39,7 +39,7 @@
 
 					<button class="global-page-change-buttons" ng-click="moveForumPostsBackward()">Prev</button>
 
-					<button ng-repeat="page in pagination"></button>
+					<button  ng-repeat="page in pagination | limitTo: 5 : startingElement - 1" ng-click="changePage(page)">{{page.number}}</button>
 
 					<button class="global-page-change-buttons" ng-click="moveForumPostsForward()">Next</button>	
 					<a class="global-button-layout global-link-text forum-button-layout" href="#">Submit a post</a>

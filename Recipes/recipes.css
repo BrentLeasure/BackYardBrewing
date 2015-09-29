@@ -6,6 +6,25 @@
 	margin: 3% 3%;
 }
 
+/*===================
+	ACTIVE BUTTON
+====================*/
+.recipe-pagination-button-layout{
+	text-align: center;
+	margin: 0px 1px 0px 1px;
+	border: 1px solid black;
+	background-color: white;
+	width: 25px;
+	height: 25px;
+}
+/*===================
+	ACTIVE BUTTON
+====================*/
+.recipe-active-page{
+	background-color: rgba(97,27,25, .9);
+	color: white;
+}
+
 /*=================
 	LIGHT BOX
 ==================*/

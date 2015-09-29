@@ -23,15 +23,17 @@ angular.module("indexModule")
 
 
 		changePagination = function($scope, selectedPage){
-			if(selectedPage != $scope.lastPage && selectedPage.number >= 5){
+				console.log("hello!")
+			if(selectedPage != $scope.lastPage && selectedPage.number >= $scope.shownPages){
 				$scope.startingElement = selectedPage.number -2;
 
 			}else if(selectedPage == $scope.lastPage){
-				console.log("hello world!");
 				$scope.startingElement = selectedPage.number -3;
 			}else{
 				$scope.startingElement = 1;
 			}
+			$scope.pagination[$scope.pageNumber-1].state = false;
+			selectedPage.state = true;
 			$scope.pageNumber = selectedPage.number;
 		}
 
@@ -50,4 +52,21 @@ angular.module("indexModule")
 			changePagination: changePagination,
 			setPagination: setPagination
 		};
-	});
+	})
+	.factory("WatchWidthFactory", function(){
+		//$scope.$watch(function(scope) { return document.body.clientwidth},
+        //      function() {
+        			//if(document.body.clientwidht >= 1200){
+        			// 	$scope.shownPages = 10;
+        			// }
+       	//		 } 
+        //     );
+
+
+		//INTERVAL
+		//WINDOW RESIZE JAVASCRIPT
+		
+	});	
+
+
+//document.body.clientwidth

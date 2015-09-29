@@ -4,6 +4,7 @@ angular.module("indexModule")
 		// PAGINATION
 		//===================
 		$scope.pagination = [];
+		$scope.shownPages = 5;
 		$scope.pageNumber = 1;
 		$scope.bookmarkPageNumber = 0;
 		$scope.startingElement = 1;
