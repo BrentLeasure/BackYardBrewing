@@ -1,32 +1,20 @@
 angular.module("indexModule")
-	.controller("forumController", ["$scope", function(){
+	.controller("forumController", ["$scope", "PaginationFactory", function($scope, PaginationFactory){
 		
-		$scope.bookmarkPageNumber = 0;
+		$scope.pagination = [];
 		$scope.pageNumber = 1;
-		$scope.beersPerPage = 24;
-		
+		$scope.bookmarkPageNumber = 0;
+		$scope.startingElement = 1;
+		$scope.postsPerPage = 24;
 
-		$scope.checkUserQuery = function(){
-			if($scope.userQuery != "" && $scope.pageNumber != 1){
-				$scope.bookmarkPageNumber = $scope.pageNumber;
-				$scope.pageNumber = 1;
-			}else if($scope.userQuery === ""){
-				$scope.pageNumber = $scope.bookmarkPageNumber;
-			}
+		$scope.Paginate = PaginationFactory;
+		$scope.changePage = function(page){
+			$scope.Paginate.changePagination($scope, page);
 		}
 
-		$scope.moveForumPostsForward = function(){
-			if($scope.pageNumber < $scope.lastPage){
-				$scope.pageNumber += 1;
-			}
-		}
+		$scope.forumPosts[{
+			
+		}]
 
-		$scope.moveForumPostsBackward = function(){
-			if($scope.pageNumber > 1){
-				$scope.pageNumber -= 1;
-			}
-		}	
-
-
-		$scope.lastPage = forumPosts.length;
+		$scope.lastPage = forumPosts.length/$scope.postsPerPage;
 	}]);

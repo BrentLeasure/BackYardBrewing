@@ -4,6 +4,9 @@ angular.module("indexModule", []);
 
 angular.module("indexModule")
 	.controller("headerController", ["$scope", "$window", "$interval", function($scope, $window, $interval){
+		//===================
+		// ACTIVATE FIXED NAV BAR
+		//===================
 		$scope.state = false;
 		$interval(function(){
 			if($window.pageYOffset >= 150){
