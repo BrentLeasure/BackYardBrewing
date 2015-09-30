@@ -7,14 +7,14 @@ angular.module("indexModule")
 		//===================
 		// ACTIVATE FIXED NAV BAR
 		//===================
-		$scope.state = false;
-		$interval(function(){
-			if($window.pageYOffset >= 150){
-				$scope.state = true;
-			}else if($window.pageYOffset < 150){
-				$scope.state = false;	
-			}
-		}, 100);
+		// $scope.state = false;
+		// $interval(function(){
+		// 	if($window.pageYOffset >= 150){
+		// 		$scope.state = true;
+		// 	}else if($window.pageYOffset < 150){
+		// 		$scope.state = false;	
+		// 	}
+		// }, 100);
 
 	}]);
 		

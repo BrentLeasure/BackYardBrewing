@@ -53,6 +53,13 @@
 	top: 50px;
 }
 
+/*===================
+	PAGINATION BAR
+===================*/
+.pagination-bar{
+	padding-left: 10px;
+}
+
 
 /*===============
 	MEDIA QUERIES

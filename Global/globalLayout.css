@@ -19,10 +19,10 @@ body{
 }
 
 /*===============
- 	NAVIGATION
+ 	GLOBAL PAGE LAYOUT
  ===============*/
 .global-page-layout{
-	padding: 115px 50px 0px 50px;
+	padding: 90px 50px 0px 50px;
 }
 
 /*===============
@@ -30,10 +30,10 @@ body{
  ===============*/
 
 .nav-bar{
-	position: absolute;
+	top: 0px;
+	position: fixed;
 	background-color: #611B19;
 	margin: 0px;
-	top: 150px;
 	padding-top: 12px;
 	width: 100%;
 	height: 50px;
@@ -114,20 +114,6 @@ body{
 	border-radius: 25px;
 	padding: 0px 5px 0px 20px;
 	height: 30px;
-}
-
-/*===============
- NAV-BAR HEADERLESS
-=================*/
-
-.nav-bar.headerless-nav{
-	top: 0px;
-	position: fixed;
-	z-index: 100;
-}
-
-.headerless-nav-links{
-	color: white;
 }
 
 /*===================

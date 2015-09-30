@@ -12,12 +12,16 @@ angular.module("indexModule")
 		moveListForward = function($scope){
 			if($scope.pageNumber < $scope.lastPage){
 				$scope.pageNumber += 1;
+				$scope.pagination[$scope.pageNumber-2].state = false;
+				$scope.pagination[$scope.pageNumber-1].state = true;
 			}
 		}
 
 		moveListBackward = function($scope){
 			if($scope.pageNumber > 1){
 				$scope.pageNumber -= 1;
+				$scope.pagination[$scope.pageNumber].state = false;
+				$scope.pagination[$scope.pageNumber-1].state = true;
 			}
 		}	
 
@@ -39,7 +43,10 @@ angular.module("indexModule")
 
 
 		setPagination = function($scope){
-			for(var i = 0; i < $scope.lastPage; i++){
+				$scope.pagination[0] = {};
+				$scope.pagination[0].number = 1;
+				$scope.pagination[0].state = true;
+			for(var i = 1; i < $scope.lastPage; i++){
 				$scope.pagination[i] = {};
 				$scope.pagination[i].number = i + 1;
 				$scope.pagination[i].state = false;
@@ -53,19 +60,16 @@ angular.module("indexModule")
 			setPagination: setPagination
 		};
 	})
-	.factory("WatchWidthFactory", function(){
-		//$scope.$watch(function(scope) { return document.body.clientwidth},
-        //      function() {
-        			//if(document.body.clientwidht >= 1200){
-        			// 	$scope.shownPages = 10;
-        			// }
-       	//		 } 
-        //     );
-
-
-		//INTERVAL
-		//WINDOW RESIZE JAVASCRIPT
-		
+	.service("WatchWidthFactory", function(){
+		 this.changeNumberOfPages= function($scope){
+		 	var screenWidth = window.outerWidth;
+		 	if(screenWidth <= 1200){
+		 		 	$scope.shownPages = 10;
+		 	}else{
+		 			$scope.shownPages = 5;
+		 	}
+		 	console.log($scope.shownPages);
+		}
 	});	
 
 

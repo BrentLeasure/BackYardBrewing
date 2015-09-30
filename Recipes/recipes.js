@@ -1,17 +1,20 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "PaginationFactory", function($scope, PaginationFactory){
+	.controller("RecipesController", ["$scope", "PaginationFactory", "WatchWidthFactory", function($scope, PaginationFactory, WatchWidthFactory){
 		//===================
 		// PAGINATION
 		//===================
 		$scope.pagination = [];
-		$scope.shownPages = 5;
 		$scope.pageNumber = 1;
 		$scope.bookmarkPageNumber = 0;
 		$scope.startingElement = 1;
 		$scope.beersPerPage = 24;
-		
 
 		$scope.Paginate = PaginationFactory;
+		$scope.WidthChecker = WatchWidthFactory;
+
+		window.addEventListener("resize", function(){
+			$scope.WidthChecker.changeNumberOfPages($scope)});
+
 		$scope.changePage = function(page){
 			$scope.Paginate.changePagination($scope, page);
 		}
