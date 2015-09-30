@@ -62,13 +62,15 @@ angular.module("indexModule")
 	})
 	.service("WatchWidthFactory", function(){
 		 this.changeNumberOfPages= function($scope){
-		 	var screenWidth = window.outerWidth;
-		 	if(screenWidth <= 1200){
-		 		 	$scope.shownPages = 10;
-		 	}else{
-		 			$scope.shownPages = 5;
-		 	}
-		 	console.log($scope.shownPages);
+		 	$scope.$apply(function(){
+			 	var screenWidth = window.outerWidth;
+			 	if(screenWidth <= 1200){
+			 		 	$scope.shownPages = 10;
+			 	}else{
+			 			$scope.shownPages = 5;
+			 	}
+			 	console.log($scope.shownPages);
+		 	})
 		}
 	});	
 
