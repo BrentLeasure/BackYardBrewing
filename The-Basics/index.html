@@ -27,11 +27,27 @@
 		<div class="row">
 			<div class="col-xs-12 global-page-layout">
 				<h1>What and Where</h1>
-				<div class="active-tab">
-					<accordion>
-						<accordion-group heading="Beer Ingredients">
-						</accordion-group>
-					</accordion>
+				<ul >
+					<li ng-click="activateAccordian(1)">	
+
+					</li>
+					<li ng-click="activateAccordian(2)">
+
+					</li>
+					<li ng-click="activateAccordian(3)">
+
+					</li>
+					<li ng-click="activateAccordian(4)">
+	
+					</li>
+				</ul>
+				<div class="beer-stuff-box">
+					<div ng-class="{'active-tab' : state}">
+						<accordion>
+							<accordion-group heading="Beer Ingredients">
+							</accordion-group>
+						</accordion>
+					</div>
 				</div>
 				<div id="brewingEquipmentMap"></div>
 			</div>
