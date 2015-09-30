@@ -1,5 +1,5 @@
 //setting the 
-angular.module("indexModule", []);
+angular.module("indexModule", ["ui.bootstrap"]);
 
 
 angular.module("indexModule")

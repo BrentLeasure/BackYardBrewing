@@ -14,9 +14,3 @@ function initMap() {
 		title: 'Hello World!'
 	});
 }
-
-angular.module("indexModule")
-	.controller("homePageController", ["$scope", function(){
-
-
-	}]);

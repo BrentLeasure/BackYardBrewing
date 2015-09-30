@@ -14,3 +14,4 @@ function initMap() {
 		title: 'Hello World!'
 	});
 }
+

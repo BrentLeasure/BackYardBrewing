@@ -33,7 +33,7 @@
 	#eventMap{
 		height: 300px;
 		width: 420px;
-		left: 0%;
+		left: 1%;
 	}
 }
 @media screen and (max-width: 525px){
@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 450px){
 	#eventMap{
-		left: 0%;
+		left: 1%;
 	}
 }
 

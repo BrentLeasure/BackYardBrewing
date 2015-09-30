@@ -64,7 +64,7 @@ angular.module("indexModule")
 		 this.changeNumberOfPages= function($scope){
 		 	$scope.$apply(function(){
 			 	var screenWidth = window.outerWidth;
-			 	if(screenWidth <= 1200){
+			 	if(screenWidth <= 1199){
 			 		 	$scope.shownPages = 10;
 			 	}else{
 			 			$scope.shownPages = 5;

@@ -75,12 +75,15 @@ body{
 /*===============
  GLOBAL BUTTON LAYOUT
 =================*/
+.global-button-color{
+	background-color: gray;
+	border: 1px solid gray;
+}
 
 .global-button-layout{
 	text-align: center;
-	padding: 12px 0px 12px;
+	padding: 12px 5px 12px;
 	border-radius: 5px;
-	background-color: gray;
 	float: left;
 	display: inline-block;
 }

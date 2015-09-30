@@ -1,0 +1,107 @@
+#brewingEquipmentMap { 
+	position: relative;
+	border: 5px solid #611B19;
+	border-radius: 7px;
+	width: 600px;
+	height: 400px; 
+	left: 12%;
+	opacity: 0.9;
+}
+
+.active-tab{
+	position: relative;
+	margin-bottom: 20px;
+	padding: 30px 50px 30px;
+	height: 200px;
+	width: 600px;
+	border: 5px solid #611B19;
+	border-radius: 7px;
+	left: 12%;
+	overflow-y: scroll;
+}
+
+/*================
+   MEDIA QUERIES
+================*/   
+@media screen and (max-width: 925px){
+	#brewingEquipmentMap{
+		left: 4%;
+	}
+}
+@media screen and (max-width: 825px){
+	#brewingEquipmentMap{
+		height: 400px;
+		width: 550px;
+		left: 4%;
+	}	
+}
+@media screen and (max-width: 725px){
+	#brewingEquipmentMap{
+		height: 350px;
+		width: 500px;
+		left: 1%;
+	}
+}
+@media screen and (max-width: 625px){
+	#brewingEquipmentMap{
+		height: 300px;
+		width: 420px;
+		left: 5%;
+	}
+}
+@media screen and (max-width: 525px){
+	#brewingEquipmentMap{
+		left: 4%;
+	}
+}
+
+@media screen and (max-width: 485px){
+	#brewingEquipmentMap{
+		left: 3%;
+	}
+}
+
+@media screen and (max-width: 470px){
+	#brewingEquipmentMap{
+		left: 2%;
+	}
+}
+
+@media screen and (max-width: 460px){
+	#brewingEquipmentMap{
+		left: 1%;
+	}
+}
+@media screen and (max-width: 450px){
+	#brewingEquipmentMap{
+		left: 1%;
+	}
+}
+
+@media screen and (max-width: 440px){
+	#brewingEquipmentMap{
+		width: 400px;
+		left: 1%;
+	}
+}
+
+@media screen and (max-width: 430px){
+	#brewingEquipmentMap{
+		width: 375px;
+		left: 2.7%;
+	}
+}
+
+@media screen and (max-width: 410px){
+	#brewingEquipmentMap{
+		width: 375px;
+		left: 2%;
+	}
+}
+
+@media screen and (max-width: 405px){
+	#brewingEquipmentMap{
+		width: 375px;
+		left: 1%;
+	}
+}
