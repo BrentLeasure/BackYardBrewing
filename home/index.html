@@ -16,44 +16,42 @@
 
 <body>
 		<!-- <img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"> -->
-		<div ng-controller="headerController" class="nav-bar">
-			<ul class="nav-list">
-				<a class="nav-links" href="#"><li class="nav-list-logo"></li></a>
-				<a class="nav-links" href="#"><li class="nav-list-items">The Basics</li></a>
-				<a class="nav-links" href="#"><li class="nav-list-items">Recipes</li></a>
-				<a class="nav-links" href="#"><li class="nav-list-items">Forums</li></a>
-			</ul>
-			<ul>
-				<a href="#"></a>
-			</ul
+		<div ng-controller="headerController">
+			<div class="nav-bar">
+				<ul class="nav-list">
+					<a class="nav-links" href="#"><li class="nav-list-logo"></li></a>
+					<a class="nav-links" href="#"><li class="nav-list-items">The Basics</li></a>
+					<a class="nav-links" href="#"><li class="nav-list-items">Recipes</li></a>
+					<a class="nav-links" href="#"><li class="nav-list-items">Forums</li></a>
+				</ul>
+			</div>
 		</div>
+			
 
-	<div class="container">
+	<div ng-controller="homePageController" class="container">
 		<div class="row">
-			<div ng-controller="homePageController" class="col-xs-12 global-page-layout">
+			<div class="col-xs-12 global-page-layout">
 				<h1>Upcoming Events</h1>
-				
+				<div class="map-helper-container">
+					<ul class="global-maps-list">
+						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': weekState}" ng-click="activateTab()"><li>	
+						Ingredients
+						</li></button>
+						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': monthState}" ng-click="activateTab()"><li class="global-maps-list-items">
+						Equipments
+						</li></button>
+					</ul>
+					<div class="global-beer-box">
+						<div ng-show="weekState">
+							<span ng-repeat="BLANK in BLANK">{{event.date}}</span>
+						</div>
+						<div ng-show="monthState">
+							
+						</div>
+					</div>
+				</div>
 				<div id="eventMap"></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 		</div>
 	</div>

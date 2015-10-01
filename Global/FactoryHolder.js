@@ -75,4 +75,5 @@ angular.module("indexModule")
 	});	
 
 
+
 //document.body.clientwidth

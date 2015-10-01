@@ -7,13 +7,25 @@
 	left: 12%;
 }
 
+.map-helper-container{
+	position: relative;
+	left: 10%;
+}
+
 /*================
    MEDIA QUERIES
 ================*/   
 @media screen and (max-width: 925px){
 	#eventMap{
-		left: 7%;
+		left: 4%;
 	}
+	.map-helper-container{
+		left: 4%;
+	}
+	.global-beer-box{
+		left: 0%;
+	}
+
 }
 @media screen and (max-width: 825px){
 	#eventMap{
@@ -21,23 +33,44 @@
 		width: 550px;
 		left: 4%;
 	}	
+	.map-helper-container{
+		left: 4%;
+	}
+	.global-beer-box{
+		width: 550px;
+	}
 }
 @media screen and (max-width: 725px){
 	#eventMap{
 		height: 350px;
 		width: 500px;
-		left: 1%;
+		left: 2%;
+	}
+	.map-helper-container{
+		left: 2%;
+	}
+	.global-beer-box{
+		width: 500px;
 	}
 }
 @media screen and (max-width: 625px){
 	#eventMap{
 		height: 300px;
 		width: 420px;
-		left: 1%;
+		left: 5%;
+	}
+	.map-helper-container{
+		left: 5%;
+	}
+	.global-beer-box{
+		width: 420px;
 	}
 }
 @media screen and (max-width: 525px){
 	#eventMap{
+		left: 4%;
+	}
+	.map-helper-container{
 		left: 4%;
 	}
 }
@@ -46,17 +79,17 @@
 	#eventMap{
 		left: 3%;
 	}
+	.map-helper-container{
+		left: 3%;
+	}
 }
 
 @media screen and (max-width: 470px){
 	#eventMap{
 		left: 2%;
 	}
-}
-
-@media screen and (max-width: 460px){
-	#eventMap{
-		left: 1%;
+	.map-helper-container{
+		left: 2%;
 	}
 }
 
@@ -64,12 +97,17 @@
 	#eventMap{
 		left: 1%;
 	}
+	.map-helper-container{
+		left: 1%;
+	}
 }
 
 @media screen and (max-width: 440px){
 	#eventMap{
 		width: 400px;
-		left: 1%;
+	}
+	.global-beer-box{
+		width: 400px;
 	}
 }
 
@@ -78,18 +116,28 @@
 		width: 375px;
 		left: 2.7%;
 	}
+	.global-beer-box{
+		width: 375px;
+	}
+	.map-helper-container{
+		left: 2.7%;
+	}
 }
 
 @media screen and (max-width: 410px){
 	#eventMap{
-		width: 375px;
+		left: 2%;
+	}
+	.map-helper-container{
 		left: 2%;
 	}
 }
 
 @media screen and (max-width: 405px){
 	#eventMap{
-		width: 375px;
+		left: 1%;
+	}
+	.map-helper-container{
 		left: 1%;
 	}
 }

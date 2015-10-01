@@ -24,30 +24,29 @@
 			
 		</ul>
 	</div>
-	<div class="container">
+	<div ng-controller="theBasicsController" class="container">
 		<div class="row">
 			<div class="col-xs-12 global-page-layout">
 				<h1>What and Where</h1>
-				<ul >
-					<li ng-click="activateAccordian(1)">	
-
-					</li>
-					<li ng-click="activateAccordian(2)">
-
-					</li>
-					<li ng-click="activateAccordian(3)">
-
-					</li>
-					<li ng-click="activateAccordian(4)">
-	
-					</li>
-				</ul>
-				<div class="beer-stuff-box">
-					<div ng-class="{'active-tab' : state}">
-						<accordion>
-							<accordion-group heading="Beer Ingredients">
-							</accordion-group>
-						</accordion>
+				<div class="map-helper-container">
+					<ul class="global-maps-list">
+						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': ingredientsState}" ng-click="activateTab(ingredientsState, equipmentState)"><li>	
+						Ingredients
+						</li></button>
+						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': equipmentState}" ng-click="activateTab(ingredientsState, equipmentState)"><li class="global-maps-list-items">
+						Equipment
+						</li></button>
+					</ul>
+					<div class="global-beer-box">
+						<div ng-show="ingredientsState">
+							<accordion>
+							  <accordion-group ng-repeat="ingredient in ingredients"heading="{{ingredient.alias}}">{{ingredient.description}}
+							  </accordion-group>	
+							</accordion>
+						</div>	
+						<div ng-show="equipmentState">
+							
+						</div>
 					</div>
 				</div>
 				<div id="brewingEquipmentMap"></div>
@@ -56,6 +55,8 @@
 	</div>
 
 	<!-- SCRIPTS AND LINKS -->
+
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD-QBAroiKyXO6TdT1XiZZ898OTt2BONY&callback=initMap"
         async defer></script>
 	<script src="../Global/AngularGlobal.js" type="text/javascript"></script>

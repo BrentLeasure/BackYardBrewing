@@ -8,17 +8,16 @@
 	opacity: 0.9;
 }
 
-.beer-stuff-box{
+
+/*==================
+GLOBAL MAP ASSOCIATED LIST CONTAINER
+===================*/
+.map-helper-container{
 	position: relative;
-	margin-bottom: 20px;
-	padding: 30px 50px 30px;
-	height: 200px;
-	width: 600px;
-	border: 5px solid #611B19;
-	border-radius: 7px;
-	left: 12%;
-	overflow-y: scroll;
+	left: 10%;
 }
+
+
 
 /*================
    MEDIA QUERIES
@@ -27,6 +26,13 @@
 	#brewingEquipmentMap{
 		left: 4%;
 	}
+	.map-helper-container{
+		left: 4%;
+	}
+	.global-beer-box{
+		left: 0%;
+	}
+
 }
 @media screen and (max-width: 825px){
 	#brewingEquipmentMap{
@@ -34,12 +40,24 @@
 		width: 550px;
 		left: 4%;
 	}	
+	.map-helper-container{
+		left: 4%;
+	}
+	.global-beer-box{
+		width: 550px;
+	}
 }
 @media screen and (max-width: 725px){
 	#brewingEquipmentMap{
 		height: 350px;
 		width: 500px;
-		left: 1%;
+		left: 2%;
+	}
+	.map-helper-container{
+		left: 2%;
+	}
+	.global-beer-box{
+		width: 500px;
 	}
 }
 @media screen and (max-width: 625px){
@@ -48,9 +66,18 @@
 		width: 420px;
 		left: 5%;
 	}
+	.map-helper-container{
+		left: 5%;
+	}
+	.global-beer-box{
+		width: 420px;
+	}
 }
 @media screen and (max-width: 525px){
 	#brewingEquipmentMap{
+		left: 4%;
+	}
+	.map-helper-container{
 		left: 4%;
 	}
 }
@@ -59,21 +86,25 @@
 	#brewingEquipmentMap{
 		left: 3%;
 	}
+	.map-helper-container{
+		left: 3%;
+	}
 }
 
 @media screen and (max-width: 470px){
 	#brewingEquipmentMap{
 		left: 2%;
 	}
+	.map-helper-container{
+		left: 2%;
+	}
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 450px){
 	#brewingEquipmentMap{
 		left: 1%;
 	}
-}
-@media screen and (max-width: 450px){
-	#brewingEquipmentMap{
+	.map-helper-container{
 		left: 1%;
 	}
 }
@@ -81,7 +112,9 @@
 @media screen and (max-width: 440px){
 	#brewingEquipmentMap{
 		width: 400px;
-		left: 1%;
+	}
+	.global-beer-box{
+		width: 400px;
 	}
 }
 
@@ -90,18 +123,28 @@
 		width: 375px;
 		left: 2.7%;
 	}
+	.global-beer-box{
+		width: 375px;
+	}
+	.map-helper-container{
+		left: 2.7%;
+	}
 }
 
 @media screen and (max-width: 410px){
 	#brewingEquipmentMap{
-		width: 375px;
+		left: 2%;
+	}
+	.map-helper-container{
 		left: 2%;
 	}
 }
 
 @media screen and (max-width: 405px){
 	#brewingEquipmentMap{
-		width: 375px;
+		left: 1%;
+	}
+	.map-helper-container{
 		left: 1%;
 	}
 }
