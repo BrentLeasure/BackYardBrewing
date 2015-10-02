@@ -57,7 +57,6 @@
 					<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
 
 						<ul class="beers">
-
 							<a class="global-link-text beer-links" href="#"><li class="global-button-layout global-button-color recipe-button-layout">{{beer.alias}}</li>
 							</a>
 						</ul>

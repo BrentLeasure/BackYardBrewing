@@ -27,7 +27,6 @@ angular.module("indexModule")
 
 
 		changePagination = function($scope, selectedPage){
-				console.log("hello!")
 			if(selectedPage != $scope.lastPage && selectedPage.number >= $scope.shownPages){
 				$scope.startingElement = selectedPage.number -2;
 
@@ -69,7 +68,6 @@ angular.module("indexModule")
 			 	}else{
 			 			$scope.shownPages = 5;
 			 	}
-			 	console.log($scope.shownPages);
 		 	})
 		}
 	});	
