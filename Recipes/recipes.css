@@ -1,6 +1,11 @@
 /*=================
 	RECIPE BUTTON LAYOUT
 ===================*/
+.turn-off-scroll{
+	position: fixed; 
+    overflow-y: scroll;
+    width: 100%
+}
 .recipe-button-layout{
 	width: 25%;
 	margin: 3% 3%;
@@ -61,6 +66,11 @@
 }
 
 
+@media screen and (min-width: 1200px){
+	.recipe-button-layout{
+		font-size: 12px;
+	}
+}
 /*===============
 	MEDIA QUERIES
 =================*/
@@ -107,7 +117,7 @@
 }
 
 @media screen and (max-width: 425px){
-	.beer-list-items{
-
+	.beer-links{
+		font-size: 10px;
 	}
 }

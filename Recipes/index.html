@@ -15,7 +15,7 @@
 		<!-- <img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"> -->
 		<div ng-controller="headerController" class="nav-bar">
 			<ul class="nav-list">
-				<a class="nav-links" href="#"><li class="nav-list-logo"></li></a>
+				<a class="nav-links" href="#"><li class="nav-list-logo"><img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"></li></a>
 				<a class="nav-links" href="#"><li class="nav-list-items">The Basics</li></a>
 				<a class="nav-links" href="#"><li class="nav-list-items">Recipes</li></a>
 				<a class="nav-links" href="#"><li class="nav-list-items">Forums</li></a>
@@ -28,21 +28,25 @@
 	<div ng-controller="RecipesController">
 		<div class="container">
 			<div class="row">
-				
-			</div>	
-		</div>
-		<div class="container">
-			<div class="row">
-				<div ng-show="lightBoxState" ng-class="{'light-box' : lightBoxState}">
+				<div ng-show="lightBoxState" class="light-box">
 					<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
 					<div class="light-box-content">
 					
 						<h1>{{lightBox.alias}}</h1>
-						<h3>Description</h3>
 						<p>{{lightBox.about}}</p>
+						<button class="global-button-layout global-button-color" type="submit">Submit a Recipe!</button>
+
+						<div class="userRecipes">
+							
+						</div>
 			
 					</div>
 				</div>	
+			</div>	
+		</div>
+		<div ng-class="{'turn-off-scroll' : lightBoxState}" class="container">
+			<div class="row">
+
 				<div class="recipe-side-nav col-lg-4 col-lg-push-8 global-page-layout">
 					<input ng-change="Paginate.checkUserQuery(this)"class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
 					<div class="pagination-bar">

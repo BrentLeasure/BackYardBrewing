@@ -11,10 +11,7 @@ angular.module("indexModule")
 		$scope.ingredients = [
 			{
 				alias: "Hops",
-				description: "Hops provide beer with four attributes:"+
-								"Bitterness: Bitterness is essential to the flavor balance of the beer; it offsets the sweetness of the malt."+
-								"Flavor: Hops have flavor that’s distinctly different from bitterness, and it adds to the overall complexity of the beer."+
-								"Aroma: The piquant aroma of hops, which mirrors their flavor, is derived from essential oils in the hops."
+				description: "Hops provide beer with four attributes: \n Bitterness: Bitterness is essential to the flavor balance of the beer; it offsets the sweetness of the malt. \n Flavor: Hops have flavor that’s distinctly different from bitterness, and it adds to the overall complexity of the beer. \n Aroma: The piquant aroma of hops, which mirrors their flavor, is derived from essential oils in the hops. \n"
 			},
 			{
 				alias: "Grains",

@@ -7,7 +7,7 @@ angular.module("indexModule")
 		$scope.pageNumber = 1;
 		$scope.bookmarkPageNumber = 0;
 		$scope.startingElement = 1;
-		$scope.beersPerPage = 24;
+		$scope.beersPerPage = 18;
 
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
@@ -48,1180 +48,618 @@ angular.module("indexModule")
 		//List of Beers To see, select cmd + option + ]
 		$scope.beerTypes = [
 			{
-			 alias: "India Pale Ale",
-			 about: "",
+			 alias: "Red Ale",
+			 style: "Ale",
+			 about: "Also known as a American Amber",
 			 taste: ""
 			},
-
 			{
-			 alias: "Imperial Stout",
+			 alias: "American Barleywine",
+			 style: "Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "Rye Lager",
+			 alias: "American Black Ale",
+			 style: "Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "Blonde Ale",
+			 alias: "American Blonde Ale",
+			 style: "Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "Hefeweizen",
+			 alias: "American Brown Ale",
+			 style: "Ale",
 			 about: "",
 			 taste: ""
 			},
-			
 			{
-			 alias: "Wheat Beer",
+			 alias: "American Dark Wheat Ale",
+			 style: "Ale",
 			 about: "",
 			 taste: ""
 			},
-			
 			{
-			 alias: "Scottish Ale",
+			 alias: "American Double IPA",
+			 style: "Ale",
+			 about: "Also known as an Imperial IPA",
+			 taste: ""
+			},
+			{
+			 alias: "American Double Stout",
+			 style: "Ale",
 			 about: "",
 			 taste: ""
 			},
-			
+			{
+			 alias: "American IPA",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "American Pale Ale",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "American Pale Wheat Ale",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "American Porter",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "American Stout",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "American Strong Ale",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "American Wild Ale",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Black & Tan",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Chile Beer",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Cream Ale",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Pumpkin Ale",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Rye Beer",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Wheatwine",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+				{
+			 alias: "Wheatwine",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Belgian Dark Ale",
+			 style: "Belgian Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Belgian IPA",
+			 style: "Belgian Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Belgian Pale Ale",
+			 style: "Belgian Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Belgian Strong Dark Ale",
+			 style: "Belgian Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Belgian Strong Pale Ale",
+			 style: "Belgian Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Bière de Champagne",
+			 style: "Belgian Ale",
+			 about: "Also known as Bière Brut",
+			 taste: ""
+			},
+			{
+			 alias: "Bière de Garde",
+			 style: "Belgian Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Dubbel",
+			 style: "Belgian Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Faro",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Flanders Oud Bruin",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Flanders Red Ale",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Gueuze",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Lambic-Fruit",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Lambic-Unblended",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Quadrupel",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Saison",
+			 style: "Ale",
+			 about: "",
+			 taste: "Also known as a Farmhouse Ale"
+			},
+			{
+			 alias: "Tripel",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Witbier",
+			 style: "Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Baltic Porter",
+			 style: "English Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "Braggot",
+			 style: "English Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "English Barleywine",
+			 style: "English Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "English Bitter",
+			 style: "English Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "English Brown Ale",
+			 style: "English Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "English Dark Mild Ale",
+			 style: "English Ale",
+			 about: "",
+			 taste: ""
+			},
+			{
+			 alias: "English IPA",
+			 style: "English Ale",
+			 about: "",
+			 taste: ""
+			},
 			{
 			 alias: "English Pale Ale",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "English Pale Mild Ale",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "English Porter",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "English Stout",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "English Strong Ale",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "Extra Strong Bitter",
+			 style: "English Ale",
+			 about: "Also known as the Extra Special Bitter",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "Foriegn Stout",
+			 style: "English Ale",
+			 about: "Also known as the Export Stout",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Milk Stout",
+			 style: "English Ale",
 			 about: "",
-			 taste: ""
+			 taste: "Also known as the Sweet Stout"
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Oatmeal Stout",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Old Ale",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Russian Imperial Stout",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Winter Warmer",
+			 style: "English Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Sahti",
+			 style: "Finnish Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Altbier",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Berliner Weissbier",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Dunkelweizen",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Gose",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Hefeweizen",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Kölsch",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Kristalweizen",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Roggenbier",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Weizenbock",
+			 style: "German Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Irish Dry Stout",
+			 style: "Irish Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Irish Red Ale",
+			 style: "Irish Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Kvass",
+			 style: "Russian Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "Scotch Ale",
+			 style: "Scottish Ale",
+			 about: "Also known as the Wee Heavy",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Scottish Ale",
+			 style: "Scottish Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Scottish Gruit",
+			 style: "Scottish Ale",
 			 about: "",
-			 taste: ""
+			 taste: "Also known as the Ancient Herbed Ale"
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Kölsch",
+			 style: "Scottish Ale",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "American Adjunct Lager",
+			 style: "American Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "American Red Lager",
+			 style: "American Lager",
 			 about: "",
-			 taste: ""
+			 taste: "Also known as the American Amber"
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "American Double Pilsner",
+			 style: "American Lager",
+			 about: "Also known as the American Imperial Pilsner",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "American Malt Liquor",
+			 style: "American Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "American Pale Lager",
+			 style: "American Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "California Common",
+			 style: "American Lager",
+			 about: "Also known as a California Steam Beer",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Light Lager",
+			 style: "American Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Czech Pilsener",
+			 style: "Czech Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Euro Dark Lager",
+			 style: "European Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Euro Pale Lager",
+			 style: "European Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Euro Strong Lager",
+			 style: "European Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Bock",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Doppelbock",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "Dortmunder Lager",
+			 style: "German Lager",
+			 about: "Also known as the Export Lager",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Eisbock",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "German Pilsener",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "Kellerbier",
+			 style: "German Lager",
+			 about: "Also known as the Zwickelbier",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "Maibock",
+			 style: "German Lager",
+			 about: "Also known as the Helles Bock",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
-			 about: "",
+			 alias: "Märzen",
+			 style: "German Lager",
+			 about: "Also known as the Oktoberfest",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Munich Dunkel Lager",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Munich Helles Lager",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Rauchbier",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Schwarzbier",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Vienna Lager",
+			 style: "German Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Happoshu",
+			 style: "Japanese Lager",
 			 about: "",
 			 taste: ""
 			},
-
 			{
-			 alias: "FILLER LINK",
+			 alias: "Japanese Rice Lager",
+			 style: "Japanese Lager",
 			 about: "",
 			 taste: ""
 			},
 
-			{
-			 alias: "FILLER LINK",
-			 about: "",
-			 taste: ""
-			},
 
 
 		];
