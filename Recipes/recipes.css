@@ -60,22 +60,32 @@
 }
 
 /*STATIC BEER INFORMATION*/
-.general-beer-info{
+.beer-info-box{
+	position: relative;
 	height: 300px;
 }
 .beer-info{
 	float: left;
 }
 
-.submit-recipe-button{
-	position: relative;
-	top: 250px;
-	float: right;
-}
+
 
 /*USER RECIPES AREA*/
 .user-recipes{
-	top: 300px;
+	position: relative;
+}
+.submit-recipe-button{
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+.submit-recipe-button:hover{
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	color: #337ab7;
+	float: left;
 }
 /*===================
 	PAGINATION BAR
