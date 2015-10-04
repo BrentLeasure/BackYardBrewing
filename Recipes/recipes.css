@@ -1,18 +1,13 @@
 /*=================
 	RECIPE BUTTON LAYOUT
 ===================*/
-.turn-off-scroll{
-	position: fixed; 
-    overflow-y: scroll;
-    width: 100%
-}
 .recipe-button-layout{
 	width: 25%;
 	margin: 3% 3%;
 }
 
 /*===================
-	ACTIVE BUTTON
+	PAGINATION BUTTONS
 ====================*/
 .recipe-pagination-button-layout{
 	text-align: center;
@@ -33,6 +28,12 @@
 /*=================
 	LIGHT BOX
 ==================*/
+.turn-off-scroll{
+	position: fixed; 
+    overflow-y: scroll;
+    width: 100%
+}
+
 .light-box-close-button{
 	position: relative;
 	float: right;
@@ -54,10 +55,28 @@
 .light-box-content{
 	color: white;
 	position: relative;
-	float: left;
+	width: 100%;
 	top: 50px;
 }
 
+/*STATIC BEER INFORMATION*/
+.general-beer-info{
+	height: 300px;
+}
+.beer-info{
+	float: left;
+}
+
+.submit-recipe-button{
+	position: relative;
+	top: 250px;
+	float: right;
+}
+
+/*USER RECIPES AREA*/
+.user-recipes{
+	top: 300px;
+}
 /*===================
 	PAGINATION BAR
 ===================*/

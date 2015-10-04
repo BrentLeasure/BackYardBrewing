@@ -31,16 +31,16 @@
 				<div ng-show="lightBoxState" class="light-box">
 					<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
 					<div class="light-box-content">
-					
-						<h1>{{lightBox.alias}}</h1>
-						<p>{{lightBox.about}}</p>
-						<button class="global-button-layout global-button-color" type="submit">Submit a Recipe!</button>
-
-						<div class="userRecipes">
-							
+						<div class="general-beer-info">
+							<h1 class="beer-info">{{lightBox.alias}}</h1>
+							<p class="beer-info">{{lightBox.about}}</p>
+							<button class="global-button-layout global-button-color submit-recipe-button" type="submit">Submit a Recipe!</button>
+		 				</div>
+		 				<div class="user-recipes">
+							<h1 class="beer-info">User Recipes</h1>
 						</div>
-			
 					</div>
+
 				</div>	
 			</div>	
 		</div>
