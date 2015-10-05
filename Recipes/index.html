@@ -44,10 +44,10 @@
 				</div>	
 			</div>	
 		</div>
-		<div ng-class="{'turn-off-scroll' : lightBoxState}" class="container">
+		<div ng-class="{'turn-off-scroll' : lightBoxState}" class="container global-page-layout">
 			<div class="row">
 
-				<div class="recipe-side-nav col-lg-4 col-lg-push-8 global-page-layout">
+				<div class="recipe-side-nav col-lg-4 col-lg-push-8">
 					<input ng-change="Paginate.checkUserQuery(this)"class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
 					<div class="pagination-bar">
 						<button class="global-page-change-buttons" ng-click="Paginate.moveListBackward(this)">Prev</button>
@@ -57,7 +57,7 @@
 						<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>
 					</div>
 				</div>			
-				<div class="col-lg-8 col-lg-pull-4 global-page-layout">
+				<div class="col-lg-8 col-lg-pull-4">
 					<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
 
 						<ul class="beers">
