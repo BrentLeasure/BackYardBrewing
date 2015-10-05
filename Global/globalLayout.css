@@ -111,6 +111,7 @@ body{
 .global-button-color{
 	background-color: gray;
 	border: 1px solid gray;
+	color: white;
 }
 
 .global-button-layout{
