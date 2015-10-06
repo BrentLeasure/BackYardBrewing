@@ -2,16 +2,20 @@
 <head>
 	<meta charset="utf-8">
 	<title>The Basics</title>
-
+	
+	<!-- PULLED FROM WEB -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
-
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">    
+
+	<!-- GLOBAL -->
 	<link rel="stylesheet" href="../Global/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="../Global/GlobalLayout.css">
+
+	<!-- LOCAL -->
 	<link rel="stylesheet" type="text/css" href="TheBasics.css">
 </head>
-<body ng-class="{'night-time-mode-body': night-mode}" class="body">
+<body ng-class="{'night-time-mode-body': nightMode}" class="body">
 	<!-- <img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"> -->
 	<div ng-controller="headerController" class="nav-bar">
 		<ul class="nav-list">
@@ -30,10 +34,10 @@
 				<h1>What and Where</h1>
 				<div class="map-helper-container">
 					<ul class="global-maps-list">
-						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': ingredientsState}" ng-click="activateTab(ingredientsState, equipmentState)"><li>	
+						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': ingredientsState}" ng-click="activateTab(1)"><li>	
 						Ingredients
 						</li></button>
-						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': equipmentState}" ng-click="activateTab(ingredientsState, equipmentState)"><li class="global-maps-list-items">
+						<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': equipmentState}" ng-click="activateTab(2)"><li class="global-maps-list-items">
 						Equipment
 						</li></button>
 					</ul>
@@ -54,13 +58,14 @@
 		</div>
 	</div>
 
-	<!-- SCRIPTS AND LINKS -->
-
-
+	<!-- GLOBAL -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD-QBAroiKyXO6TdT1XiZZ898OTt2BONY&callback=initMap"
         async defer></script>
 	<script src="../Global/AngularGlobal.js" type="text/javascript"></script>
 	<script src="../Global/JavaScriptGlobal.js" type="text/javascript"></script>
+	<script src="../Global/FactoryHolder.js" type="text/javascript"></script>
+
+	<!-- LOCAL -->
 	<script src="TheBasicsAngular.js" type="text/javascript"></script>
 	<script src="TheBasics.js" type="text/javascript"></script>
 </body>

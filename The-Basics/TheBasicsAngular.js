@@ -3,9 +3,14 @@ angular.module("indexModule")
 		$scope.ingredientsState = true;
 		$scope.equipmentState = false;
 
-		$scope.activateTab = function(){
-			$scope.ingredientsState = !$scope.ingredientsState;
-			$scope.equipmentState = !$scope.equipmentState;
+		$scope.activateTab = function(buttonClicked){
+			if(buttonClicked == 1){
+				$scope.weekState = true;
+				$scope.monthState = false;
+			}else if(buttonClicked == 2){
+				$scope.weekState = false;
+				$scope.monthState = true;
+			}
 		}
 
 		$scope.ingredients = [
