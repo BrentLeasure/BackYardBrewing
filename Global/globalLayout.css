@@ -6,11 +6,25 @@
 /*===============
 	body
  ===============*/
-body{
-	background-color: #FFFFFF;
+.body{
+/*	background-color: #FFFFFF;
+	color: #2B2B2B;*/
+	background-color: #2B2B2B;
+	color: #DFE2DB;
 	margin:0; 
 	font-size: 15px;
 }
+.night-time-mode-body{
+	background-color: #2B2B2B;
+	color: #FFFFFF;
+}
+
+/*===============
+NIGHT TIME MODE
+=================*/
+/*body{
+
+}*/
 
 /*===============
 	Header

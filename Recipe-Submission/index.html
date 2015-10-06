@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="../Global/GlobalLayout.css">
 	<link rel="stylesheet" type="text/css" href="RecipeSubmission.css">
 </head>
-<body>
+<body ng-class="{'night-time-mode-body': night-mode}" class="body">
 	<div ng-controller="headerController" class="nav-bar">
 		<ul class="nav-list">
 			<a class="nav-links" href="#"><li class="nav-list-logo"><img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"></li></a>
@@ -35,7 +35,7 @@
 				<textarea ng-model="description" cols="50" rows="5" class="input-box"></textarea></br>
 				<label>Recipe</label></br>
 				<textarea ng-model="recipe" cols="50" rows="5" class="input-box"></textarea></br>
-				<a href="#" class="global-button-layout global-button-color">Submit</a>
+				<a href="#" class="global-button-layout global-button-color recipe-submission-button">Submit</a>
 
 
 			</div>
