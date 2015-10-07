@@ -3,12 +3,19 @@ angular.module("indexModule", ["ui.bootstrap"]);
 
 
 angular.module("indexModule")
-	.controller("bodyController", ["$scope", "$window", "$interval", "NightModeFactory", function($scope, $window, $interval, NightModeFactory){
-		$scope.NightMode = NightModeFactory;
+	.controller("headerController", ["$scope", "$window", "$interval", function($scope, $window, $interval){
 		
-		$scope.activateNightMode = function(){
-			$scope.NightMode.activateNightMode($scope);
-		}
 	}])
-
+	.controller("bodyController", ["NightModeFactory", function( NightModeFactory){
+		console.log('BODY CONT')
+		
+		this.NightMode = NightModeFactory;
+		
+		this.activateNightMode = function(){
+			console.log('!')
+			this.NightMode.activateNightMode(this);
+		}
+		this.stuff="this stuff"
+		
+	}]);
 
