@@ -60,7 +60,7 @@ angular.module("indexModule")
 		};
 	})
 	.service("WatchWidthFactory", function(){
-		 this.changeNumberOfPages= function($scope){
+		 this.changeNumberOfPages = function($scope){
 		 	$scope.$apply(function(){
 			 	var screenWidth = window.outerWidth;
 			 	if(screenWidth <= 1199){
@@ -70,12 +70,12 @@ angular.module("indexModule")
 			 	}
 		 	})
 		}
-	});	
-	.factory("NightMode", function(){
-		$scope.activateNightMode = function(nightMode){
-			nightMode = !nightMode;
+	})
+	.service("NightModeFactory", function(){
+		this.activateNightMode = function($scope){
+			$scope.nightMode = !$scope.nightMode;
+			console.log($scope.nightMode);
 		}
-		return nightMode;
 	});
 
 
