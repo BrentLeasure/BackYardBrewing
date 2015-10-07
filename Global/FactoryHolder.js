@@ -74,7 +74,6 @@ angular.module("indexModule")
 	.service("NightModeFactory", function(){
 		this.activateNightMode = function($scope){
 			$scope.nightMode = !$scope.nightMode;
-			console.log($scope.nightMode);
 		}
 	});
 

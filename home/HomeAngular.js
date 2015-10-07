@@ -12,5 +12,4 @@ angular.module("indexModule")
 				$scope.monthState = true;
 			}
 		}
-
 	}]);

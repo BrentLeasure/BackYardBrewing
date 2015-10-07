@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("forumController", ["$scope", "PaginationFactory", "WatchWidthFactory" function($scope, PaginationFactory, WatchWidthFactory){
+	.controller("forumController", ["$scope", "PaginationFactory", "WatchWidthFactory", function($scope, PaginationFactory, WatchWidthFactory){
 		$scope.pagination = [];
 		$scope.pageNumber = 1;
 		$scope.bookmarkPageNumber = 0;
