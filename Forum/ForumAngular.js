@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("forumController", ["$scope", "PaginationFactory", "WatchWidthFactory", "NightModeFactory", function($scope, PaginationFactory, WatchWidthFactory, NightModeFactory){
+	.controller("forumController", ["$scope", "PaginationFactory", "WatchWidthFactory" function($scope, PaginationFactory, WatchWidthFactory){
 		$scope.pagination = [];
 		$scope.pageNumber = 1;
 		$scope.bookmarkPageNumber = 0;
@@ -7,10 +7,8 @@ angular.module("indexModule")
 		$scope.postsPerPage = 24;
 		$scope.nightMode = false;
 
-		$scope.NightMode = NightModeFactory;
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
-
 
 		window.addEventListener("resize", function(){
 			$scope.WidthChecker.changeNumberOfPages($scope)});
@@ -19,9 +17,7 @@ angular.module("indexModule")
 			$scope.Paginate.changePagination($scope, page);
 		}
 
-		$scope.activateNightMode = function(){
-			$scope.NightMode.activateNightMode($scope);
-		}
+		
 
 		$scope.forumPosts = [];
 
