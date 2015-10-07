@@ -71,6 +71,12 @@ angular.module("indexModule")
 		 	})
 		}
 	});	
+	.factory("NightMode", function(){
+		$scope.activateNightMode = function(nightMode){
+			nightMode = !nightMode;
+		}
+		return nightMode;
+	});
 
 
 
