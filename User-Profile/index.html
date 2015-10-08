@@ -15,22 +15,22 @@
 	<!-- LOCAL -->
 	<link rel="stylesheet" type="text/css" href="UserProfile.css">
 </head>
-<body ng-controller="bodyController" ng-class="{'night-time-mode-body': nightMode}" class="body">
-	<div class="nav-bar">
+<body ng-controller="bodyController as body" ng-class="{'night-time-mode-body': body.nightMode}" class="body">
+	<div ng-controller="headerController" class="nav-bar">
 		<ul class="nav-list">
 			<a class="nav-links" href="#"><li class="nav-list-logo"><img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"></li></a>
 			<a class="nav-links" href="#"><li class="nav-list-items">The Basics</li></a>
 			<a class="nav-links" href="#"><li class="nav-list-items">Recipes</li></a>
 			<a class="nav-links" href="#"><li class="nav-list-items">Forums</li></a>
 		</ul>
-		<button ng-click="activateNightMode()"></button>
 		<ul class="nav-list">
 		
 		</ul>
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-12 global-page-layout">
+			<button ng-click="body.activateNightMode()">nightmode</button>
 
 			</div>
 		</div>

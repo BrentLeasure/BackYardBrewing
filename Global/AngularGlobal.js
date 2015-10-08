@@ -7,15 +7,12 @@ angular.module("indexModule")
 		
 	}])
 	.controller("bodyController", ["NightModeFactory", function( NightModeFactory){
-		console.log('BODY CONT')
 		
 		this.NightMode = NightModeFactory;
 		
 		this.activateNightMode = function(){
-			console.log('!')
 			this.NightMode.activateNightMode(this);
 		}
-		this.stuff="this stuff"
 		
 	}]);
 
