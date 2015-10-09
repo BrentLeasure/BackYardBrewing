@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "PaginationFactory", "WatchWidthFactory", function($scope, PaginationFactory, WatchWidthFactory){
+	.controller("RecipesController", ["$scope", "$http", "PaginationFactory", "WatchWidthFactory", function($scope, $http, PaginationFactory, WatchWidthFactory){
 		//===================
 		// PAGINATION
 		//===================
@@ -11,6 +11,17 @@ angular.module("indexModule")
 
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
+
+		$scope.createRecipe = function(){
+			console.log("hello!")
+			$http.post("/createrecipe", $scope.recipe)
+			.then(function(returnData){
+				for(var key in $scope.recipe){
+					$scope.recipe[key] = "";
+				}
+				console.log(returnData);
+			})
+		}
 
 		window.addEventListener("resize", function(){
 			$scope.WidthChecker.changeNumberOfPages($scope)});

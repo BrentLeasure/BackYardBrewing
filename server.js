@@ -1,30 +1,47 @@
+
+//requires
 var express = require("express");
-var bodyParser = ("require");
+var bodyParser = require("body-parser");
 
 var server = express();
 
+var recipeController = require("./controllers/recipeController")
 
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
-server.use(express.static(__dirname + "./public"));
+server.use(express.static(__dirname + "/public"));
 
+
+
+//Get Routes
 server.get("/", function(req, res){
-	res.sendFile("/Home.html", {root: "./Home"})
+	res.sendFile("Home.html", {root: "./public/Home"})
 });
 
 server.get("/forums", function(req, res){
-	res.sendFile("/Forum.html", {root: "./Forum"})
+	res.sendFile("Forum.html", {root: "./public/Forum"})
 });
 server.get("/recipesubmission", function(req, res){
-	res.sendFile("/RecipeSubmission.html", {root: "./Recipe-Submission"})
+	res.sendFile("RecipeSubmission.html", {root: "./public/Recipe-Submission"})
 });
 server.get("/recipes", function(req, res){
-	res.sendFile("/Recipe.html", {root: "./Recipes"})
+	res.sendFile("Recipes.html", {root: "./public/Recipes"})
 });
 server.get("/thebasics", function(req, res){
-	res.sendFile("/TheBasics.html", {root: "./The-Basics"})
+	res.sendFile("TheBasics.html", {root: "./public/The-Basics"})
 });
 
+//post routes
+server.post("/createrecipe", recipeController.createRecipe);
+
+//port
+var port = 3000;
+server.listen(port, function(){
+  console.log('Server running on port ' + port);
+})
+//Recipe submission process 
+
 // server.get("/:user", function(req, req){
+// req.params.users
 // 	res.sendFile()
 // });

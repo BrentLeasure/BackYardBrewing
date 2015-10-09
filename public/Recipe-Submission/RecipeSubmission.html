@@ -1,7 +1,7 @@
 <html ng-app="indexModule">
 <head>
 	<meta charset="utf-8">
-	<title>Your Profile</title>
+	<title>Recipe Submission</title>
 
 	<!-- PULLED FROM WEB -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
@@ -11,10 +11,11 @@
 	<!-- GLOBAL -->
 	<link rel="stylesheet" href="../Global/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="../Global/GlobalLayout.css">
-	
+
 	<!-- LOCAL -->
-	<link rel="stylesheet" type="text/css" href="UserProfile.css">
+	<link rel="stylesheet" type="text/css" href="/Recipe-Submission/RecipeSubmission.css">
 </head>
+
 <body ng-controller="bodyController as body" ng-class="{'night-time-mode-body': body.nightMode}" class="body">
 	<div ng-controller="headerController" class="nav-bar">
 		<ul class="nav-list">
@@ -27,21 +28,35 @@
 		
 		</ul>
 	</div>
-	<div class="container">
+	<div ng-controller="RecipesController" class="container global-page-layout">
 		<div class="row">
-			<div class="col-xs-12 global-page-layout">
-			<button ng-click="body.activateNightMode()">night mode</button>
+			<div class="col-xs-12">
+				<button ng-click="body.activateNightMode()">night mode</button>
+				<form ng-submit="createRecipe()">
+					<label>Beer Name</label></br>
+					<input ng-model="recipe.beerAlias"></br>
+					<label>Category</label></br>
+					<select ng-options="beer.alias for beer in beerTypes" ng-model="recipe.selectedCategory" ng-change="filterByCategory(selectedCategory)">
+					</select>
+					<label>Description</label></br>
+					<textarea ng-model="recipe.description" cols="50" rows="5" class="input-box"></textarea></br>
+					<label>Recipe</label></br>
+					<textarea ng-model="recipe.recipe" cols="50" rows="5" class="input-box"></textarea></br>
+					<input type="submit" class="global-button-layout global-button-color recipe-submission-button">
+				</form>
+
 
 			</div>
 		</div>
 	</div>
+
 	<!-- GLOBAL -->
 	<script src="../Global/AngularGlobal.js" type="text/javascript"></script>
 	<script src="../Global/JavaScriptGlobal.js" type="text/javascript"></script>
 	<script src="../Global/FactoryHolder.js" type="text/javascript"></script>
 	
 	<!-- LOCAL -->
-	<script src="UserProfile.js" type="text/javascript"></script>
-	<script src="" type="text/javascript"></script>
+	<script src="../Recipes/RecipesAngular.js" type="text/javascript"></script>
+	<script src="../Recipes/Recipes.js" type="text/javascript"></script>
 </body>
 </html>
