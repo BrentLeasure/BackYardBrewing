@@ -13,13 +13,11 @@ angular.module("indexModule")
 		$scope.WidthChecker = WatchWidthFactory;
 
 		$scope.createRecipe = function(){
-			console.log("hello!")
 			$http.post("/createrecipe", $scope.recipe)
 			.then(function(returnData){
 				for(var key in $scope.recipe){
 					$scope.recipe[key] = "";
 				}
-				console.log(returnData);
 			})
 		}
 

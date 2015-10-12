@@ -6,10 +6,7 @@ var Recipe = function(recipe){
 	this.description = recipe.description;
 	this.recipe = recipe.recipe
 	allRecipes.push(this);
-	console.log(recipe);
 }
-
-
 
 module.exports = {
 	allRecipes : allRecipes, 

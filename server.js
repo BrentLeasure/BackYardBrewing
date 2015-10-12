@@ -17,7 +17,6 @@ server.use(express.static(__dirname + "/public"));
 server.get("/", function(req, res){
 	res.sendFile("Home.html", {root: "./public/Home"})
 });
-
 server.get("/forums", function(req, res){
 	res.sendFile("Forum.html", {root: "./public/Forum"})
 });
@@ -30,8 +29,14 @@ server.get("/recipes", function(req, res){
 server.get("/thebasics", function(req, res){
 	res.sendFile("TheBasics.html", {root: "./public/The-Basics"})
 });
+// server.get("/:user", function(req, req){
+// req.params.users
+// 	res.sendFile()
+// });
+server.get("/:beerAlias", recipeController.getRecipes);
 
-//post routes
+
+//Post Routes
 server.post("/createrecipe", recipeController.createRecipe);
 
 //port
@@ -41,7 +46,3 @@ server.listen(port, function(){
 })
 //Recipe submission process 
 
-// server.get("/:user", function(req, req){
-// req.params.users
-// 	res.sendFile()
-// });
