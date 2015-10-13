@@ -34,14 +34,14 @@
 				<button ng-click="body.activateNightMode()">night mode</button>
 				<form ng-submit="createRecipe()">
 					<label>Beer Name</label></br>
-					<input ng-model="recipe.beerAlias"></br>
+					<input ng-model="recipe.alias"></br>
 					<label>Category</label></br>
 					<select ng-options="beer.alias for beer in beerTypes" ng-model="recipe.selectedCategory" ng-change="filterByCategory(selectedCategory)">
-					</select>
+					</select></br>
 					<label>Description</label></br>
 					<textarea ng-model="recipe.description" cols="50" rows="5" class="input-box"></textarea></br>
 					<label>Recipe</label></br>
-					<textarea ng-model="recipe.recipe" cols="50" rows="5" class="input-box"></textarea></br>
+					<textarea ng-model="recipe.instructions" cols="50" rows="5" class="input-box"></textarea></br>
 					<input type="submit" class="global-button-layout global-button-color recipe-submission-button">
 				</form>
 

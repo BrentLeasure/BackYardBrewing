@@ -12,14 +12,30 @@ angular.module("indexModule")
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
 
+		//==============
+		//RECIPE SUMBISSION
+		//==============
 		$scope.createRecipe = function(){
 			$http.post("/createrecipe", $scope.recipe)
 			.then(function(returnData){
-				for(var key in $scope.recipe){
-					$scope.recipe[key] = "";
-				}
+				console.log("hello!");
+				$scope.recipe = {};
 			})
 		}
+		$scope.getRecipe = function(){
+			$http.get("/:beeralias")
+			.then(function(returnData){
+
+			}), function(error){
+		
+			}
+		}
+
+
+		//==============
+		//RECIPES
+		//==============
+
 
 		window.addEventListener("resize", function(){
 			$scope.WidthChecker.changeNumberOfPages($scope)});
@@ -27,6 +43,8 @@ angular.module("indexModule")
 		$scope.changePage = function(page){
 			$scope.Paginate.changePagination($scope, page);
 		}
+
+
 		//=====================
 		//    LIGHTBOX
 		//=====================

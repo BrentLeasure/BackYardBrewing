@@ -1,14 +1,13 @@
-var allRecipes = [];
+var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/BackYardBrewing");
 
-var Recipe = function(recipe){
-	this.beerAlias = recipe.beerAlias;
-	this.selectedCategory = recipe.selectedCategory;
-	this.description = recipe.description;
-	this.recipe = recipe.recipe
-	allRecipes.push(this);
-}
+var Recipe = mongoose.model("recipe", {
+	alias            : {type : String},
+	selectedCategory : {type : String},
+	description      : {type : String},
+	instructions     : {type : String},
+});
 
-module.exports = {
-	allRecipes : allRecipes, 
+module.exports = { 
 	Recipe     : Recipe
 }
