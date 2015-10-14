@@ -23,9 +23,9 @@ angular.module("indexModule")
 			})
 		}
 		$scope.getRecipe = function(){
-			$http.get("/:beeralias")
+			$http.get("/"+"PUT A BEER NAME HERE!!")
 			.then(function(returnData){
-
+				$scope.recipes = returnData.data;
 			}), function(error){
 		
 			}

@@ -2,11 +2,19 @@
 //requires
 var express = require("express");
 var bodyParser = require("body-parser");
+var session = require("express-session");
 
 var server = express();
 
 var recipeController = require("./controllers/recipeController")
 
+//application configuration
+//resave will keep it true
+server.use(session({
+	secret            : "2CBABA1ITL#ST#1@92",
+	resave            : true,
+	saveUninitialized : false,
+}));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(express.static(__dirname + "/public"));
@@ -33,7 +41,10 @@ server.get("/thebasics", function(req, res){
 // req.params.users
 // 	res.sendFile()
 // });
+
+
 server.get("/:beerAlias", recipeController.getRecipes);
+
 
 
 //Post Routes
