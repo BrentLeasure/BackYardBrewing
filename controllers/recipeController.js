@@ -6,7 +6,7 @@ createRecipe = function(req, res){
 
 		newRecipe.save(function(err, data){
 			if(err){
-				console.log("error");
+				console.log(err);
 			}else{
 				res.send(data);
 			}	
@@ -14,7 +14,7 @@ createRecipe = function(req, res){
 	},
 
 getRecipes = function(req, res){
-	recipeModel.find({selectedCategory: req.params.beerAlias}, function(err, recipes){
+	recipeModel.Recipe.find({selectedCategory: req.params.beerAlias}, function(err, recipes){
 		res.send(recipes);
 	})
 }
