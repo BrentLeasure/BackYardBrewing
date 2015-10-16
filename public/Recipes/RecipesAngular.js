@@ -8,6 +8,7 @@ angular.module("indexModule")
 		$scope.bookmarkPageNumber = 0;
 		$scope.startingElement = 1;
 		$scope.beersPerPage = 18;
+		$scope.recipes;
 
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
@@ -18,12 +19,11 @@ angular.module("indexModule")
 		$scope.createRecipe = function(){
 			$http.post("/createrecipe", $scope.recipe)
 			.then(function(returnData){
-				console.log("hello!");
 				$scope.recipe = {};
 			})
 		}
-		$scope.getRecipe = function(){
-			$http.get("/"+"PUT A BEER NAME HERE!!")
+		$scope.getRecipes = function(beer){
+			$http.get("/beer/"+ beer.alias)
 			.then(function(returnData){
 				$scope.recipes = returnData.data;
 			}), function(error){

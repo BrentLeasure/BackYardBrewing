@@ -6,6 +6,7 @@
 	margin: 3% 3%;
 }
 
+
 /*===================
 	PAGINATION BUTTONS
 ====================*/
@@ -97,7 +98,7 @@
 
 @media screen and (min-width: 1200px){
 	.recipe-button-layout{
-		font-size: 12px;
+		font-size: 15px;
 	}
 }
 /*===============
@@ -136,7 +137,7 @@
 }
 
 @media screen and (max-width: 525px){
-	.beer-list-items{
+	.recipe-button-layout{
 		width: 42%;
 		margin: 3% 3%;
 	}

@@ -37,14 +37,12 @@ server.get("/recipes", function(req, res){
 server.get("/thebasics", function(req, res){
 	res.sendFile("TheBasics.html", {root: "./public/The-Basics"})
 });
-// server.get("/:user", function(req, req){
-// req.params.users
-// 	res.sendFile()
-// });
+server.get("/user/:user", function(req, req){
+	
+});
 
 
-server.get("/:beerAlias", recipeController.getRecipes);
-
+server.get("/beer/:beerAlias", recipeController.getRecipes);
 
 
 //Post Routes
@@ -55,5 +53,4 @@ var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })
-//Recipe submission process 
 

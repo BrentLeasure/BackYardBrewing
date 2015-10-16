@@ -45,6 +45,10 @@
 		 				<div class="user-recipes">
 		 					<a class="global-button-layout global-button-color submit-recipe-button" href="/recipesubmission" target="_blank">Submit a Recipe!</a>
 							<h1 class="beer-info">User Recipes</h1>
+							<p>{{recipes.alias}}</p>
+							<p>{{recipes.selectedCategory}}</p>
+							<p>{{recipes.description}}</p>
+							<p>{{recipes.instructions}}</p>
 						</div>
 					</div>
 				</div>	
@@ -55,7 +59,7 @@
 		<div ng-class="{'turn-off-scroll' : lightBoxState}" class="container global-page-layout">
 			<div class="row">
 
-				<div class="recipe-side-nav col-lg-4 col-lg-push-8">
+				<div class="recipe-side-nav col-lg-12">
 					<button ng-click="body.activateNightMode()">night mode</button>
 					<input ng-change="Paginate.checkUserQuery(this)"class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
 					<div class="pagination-bar">
@@ -66,12 +70,11 @@
 						<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>
 					</div>
 				</div>			
-				<div class="col-lg-8 col-lg-pull-4">
+				<div class="col-lg-12">
 					<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
 
-						<ul class="beers">
-							<a class="global-link-text beer-links" href=""><li class="global-button-layout global-button-color recipe-button-layout">{{beer.alias}}</li>
-							</a>
+						<ul ng-submit="getRecipes(beer)" class="beers">
+							<button type="submit" class="global-link-text beer-links global-button-color recipe-button-layout global-button-layout"><li class="">{{beer.alias}}</li></button>
 						</ul>
 					</div>
 				</div>
