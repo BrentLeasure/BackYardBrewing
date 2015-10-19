@@ -1,7 +1,7 @@
 /*=================
 	RECIPE BUTTON LAYOUT
 ===================*/
-.recipe-button-layout{
+.recipe-layout{
 	width: 25%;
 	margin: 3% 3%;
 }
@@ -79,14 +79,13 @@
 	text-decoration: none;
 	position: relative;
 	display: inline-block;
-	float: left;
+	float: right;
 }
 .submit-recipe-button:hover{
 	text-decoration: none;
 	position: relative;
 	display: inline-block;
 	color: #337ab7;
-	float: left;
 }
 /*===================
 	PAGINATION BAR
@@ -97,7 +96,7 @@
 
 
 @media screen and (min-width: 1200px){
-	.recipe-button-layout{
+	.recipe-layout{
 		font-size: 15px;
 	}
 }
@@ -105,7 +104,7 @@
 	MEDIA QUERIES
 =================*/
 @media screen and (max-width: 992px){
-	.recipe-button-layout{
+	.recipe-layout{
 	width: 38%;
 	margin: 6% 6%;
 }
@@ -137,7 +136,7 @@
 }
 
 @media screen and (max-width: 525px){
-	.recipe-button-layout{
+	.recipe-layout{
 		width: 42%;
 		margin: 3% 3%;
 	}

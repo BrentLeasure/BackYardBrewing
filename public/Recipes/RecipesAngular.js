@@ -23,7 +23,7 @@ angular.module("indexModule")
 			})
 		}
 		$scope.getRecipes = function(beer){
-			$http.get("/beer/"+ beer.alias)
+			$http.get("/beer/" + beer.alias)
 			.then(function(returnData){
 				$scope.recipes = returnData.data;
 			}), function(error){
@@ -35,6 +35,9 @@ angular.module("indexModule")
 		//==============
 		//RECIPES
 		//==============
+		$scope.deleteRecipe = function(beer){
+			$http.delete("/removerecipe", beer);
+		}
 
 		$scope.pass = function(beer){
 			$scope.getRecipes(beer);

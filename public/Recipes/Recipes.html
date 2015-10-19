@@ -43,22 +43,21 @@
 							<p class="beer-info">{{lightBox.about}}</p>
 		 				</div>
 		 				<div class="user-recipes">
-		 					<a class="global-button-layout global-button-color submit-recipe-button" href="/recipesubmission" target="_blank">Submit a Recipe!</a>
 							<h1 class="beer-info">User Recipes</h1>
 							<div ng-repeat="recipe in recipes">
-							<h3>{{recipe.alias}}</h3>
-							<p>{{recipe.description}}</p>
-							<p>{{recipe.instructions}}</p>
+								<div class="recipe-layout">
+									<h3>{{recipe.alias}}</h3>
+									<button class="global-link-text beer-links global-button-color">More Info</button>
+								</div> 
+							</div>
 						</div>
-					</div>
+					</div>	
 				</div>	
-			</div>	
-		</div>
+			</div>
 		
-		<!-- PAGE CONTENT -->
+		<!-- SEARCH BAR -->
 		<div ng-class="{'turn-off-scroll' : lightBoxState}" class="container global-page-layout">
 			<div class="row">
-
 				<div class="recipe-side-nav col-lg-12">
 					<button ng-click="body.activateNightMode()">night mode</button>
 					<input ng-change="Paginate.checkUserQuery(this)"class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
@@ -68,17 +67,20 @@
 						<button  ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="recipe-pagination-button-layout" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
 
 						<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>
+
+						<a class="global-button-layout global-button-color submit-recipe-button" href="/recipesubmission" target="_blank">Submit a Recipe!</a>
 					</div>
-				</div>			
+				</div>	
+
+				<!-- BEER LIST -->		
 				<div class="col-lg-12">
 					<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
 
 						<ul ng-submit="getRecipes(beer)" class="beers">
-							<button ng-click="pass(beer)" class="global-link-text beer-links global-button-color recipe-button-layout global-button-layout"><li class="">{{beer.alias}}</li></button>
+							<button ng-click="pass(beer)" class="global-link-text beer-links global-button-color global-button-layout recipe-layout"><li class="">{{beer.alias}}</li></button>
 						</ul>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

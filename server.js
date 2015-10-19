@@ -21,7 +21,9 @@ server.use(express.static(__dirname + "/public"));
 
 
 
-//Get Routes
+//==============
+//GET ROUTES
+//==============
 server.get("/", function(req, res){
 	res.sendFile("Home.html", {root: "./public/Home"})
 });
@@ -44,11 +46,21 @@ server.get("/user/:user", function(req, req){
 
 server.get("/beer/:beerAlias", recipeController.getRecipes);
 
-
-//Post Routes
+//=============
+//POST ROUTES
+//=============
 server.post("/createrecipe", recipeController.createRecipe);
 
-//port
+
+//==============
+//DELETE ROUTES
+//==============
+server.delete("/deleterecipe", recipeController.deleteRecipe)
+
+
+//============
+//PORT
+//============
 var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
