@@ -190,7 +190,7 @@ GLOBAL MAP ASSOCIATED LIST
 	padding-top: 12px;
 	position: relative;
 	top: 5px;
-	border-bottom: 0px solid;
+	border-bottom: 0px white solid;
 }
 .active-global-maps-list-items li{
 	position: relative;

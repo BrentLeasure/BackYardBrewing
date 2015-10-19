@@ -1,99 +1,53 @@
-<!DOCTYPE html>
-<html ng-app="indexModule">
-
-<head>
-	<meta charset="utf-8">
-	<title>Recipes</title>
-
-	<!-- PULLED FROM WEB -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">   
-
-	 <!-- GLOBAL -->
-	<link rel="stylesheet" href="../Global/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="../Global/GlobalLayout.css">
-	
-	<!-- LOCAL -->
-	<link rel="stylesheet" type="text/css" href="/Recipes/Recipes.css">
-</head>
-
-<body ng-controller="bodyController as body" ng-class="{'night-time-mode-body': body.nightMode}" class="body">
-		<!-- <img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"> -->
-	<div class="nav-bar">
-		<ul  ng-controller="headerController" class="nav-list">
-			<a class="nav-links" href="/"><li class="nav-list-logo"><img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"></li></a>
-			<a class="nav-links" href="/thebasics"><li class="nav-list-items">The Basics</li></a>
-			<a class="nav-links" href="/recipes"><li class="nav-list-items">Recipes</li></a>
-			<a class="nav-links" href="/forums"><li class="nav-list-items">Forums</li></a>
-		</ul>
-		<ul class="nav-list">
-			
-		</ul>
-	</div>
-	<!-- LIGHT BOX -->
-	<div ng-controller="RecipesController">
-		<div class="container">
-			<div class="row">
-				<div ng-show="lightBoxState" class="light-box">
-					<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
-					<div class="light-box-content">
-						<div class="beer-info-box">
-							<h1 class="beer-info">{{lightBox.alias}}</h1>
-							<p class="beer-info">{{lightBox.about}}</p>
-		 				</div>
-		 				<div class="user-recipes">
-							<h1 class="beer-info">User Recipes</h1>
-							<div ng-repeat="recipe in recipes">
-								<div class="recipe-layout">
-									<h3>{{recipe.alias}}</h3>
-									<button class="global-link-text beer-links global-button-color">More Info</button>
-								</div> 
-							</div>
+<!-- LIGHT BOX -->
+<div ng-controller="RecipesController">
+	<div class="container">
+		<div class="row">
+			<div ng-show="lightBoxState" class="light-box">
+				<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
+				<div class="light-box-content">
+					<div class="beer-info-box">
+						<h1 class="beer-info">{{lightBox.alias}}</h1>
+						<p class="beer-info">{{lightBox.about}}</p>
+	 				</div>
+	 				<div class="user-recipes">
+						<h1 class="beer-info">User Recipes</h1>
+						<div ng-repeat="recipe in recipes">
+							<div class="recipe-layout">
+								<h3>{{recipe.alias}}</h3>
+								<button class="global-link-text beer-links global-button-color">More Info</button>
+							</div> 
 						</div>
-					</div>	
-				</div>	
-			</div>
-		
-		<!-- SEARCH BAR -->
-		<div ng-class="{'turn-off-scroll' : lightBoxState}" class="container global-page-layout">
-			<div class="row">
-				<div class="recipe-side-nav col-lg-12">
-					<button ng-click="body.activateNightMode()">night mode</button>
-					<input ng-change="Paginate.checkUserQuery(this)"class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
-					<div class="pagination-bar">
-						<button class="global-page-change-buttons" ng-click="Paginate.moveListBackward(this)">Prev</button>
-
-						<button  ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="recipe-pagination-button-layout" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
-
-						<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>
-
-						<a class="global-button-layout global-button-color submit-recipe-button" href="/recipesubmission" target="_blank">Submit a Recipe!</a>
 					</div>
 				</div>	
+			</div>	
+		</div>
+	
+	<!-- SEARCH BAR -->
+	<div ng-class="{'turn-off-scroll' : lightBoxState}" class="container global-page-layout">
+		<div class="row">
+			<div class="recipe-side-nav col-lg-12">
+				<button ng-click="body.activateNightMode()">night mode</button>
+				<input ng-change="Paginate.checkUserQuery(this)"class="global-search-box" ng-model="userQuery" placeholder="Search Beers"></br>
+				<div class="pagination-bar">
+					<button class="global-page-change-buttons" ng-click="Paginate.moveListBackward(this)">Prev</button>
 
-				<!-- BEER LIST -->		
-				<div class="col-lg-12">
-					<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
+					<button  ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="recipe-pagination-button-layout" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
 
-						<ul ng-submit="getRecipes(beer)" class="beers">
-							<button ng-click="pass(beer)" class="global-link-text beer-links global-button-color global-button-layout recipe-layout"><li class="">{{beer.alias}}</li></button>
-						</ul>
-					</div>
+					<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>
+
+					<a class="global-button-layout global-button-color submit-recipe-button" href="/recipesubmission" target="_blank">Submit a Recipe!</a>
+				</div>
+			</div>	
+
+			<!-- BEER LIST -->		
+			<div class="col-lg-12">
+				<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
+
+					<ul ng-submit="getRecipes(beer)" class="beers">
+						<button ng-click="pass(beer)" class="global-link-text beer-links global-button-color global-button-layout recipe-layout"><li class="">{{beer.alias}}</li></button>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- GLOBAL -->
-	<script src="../Global/AngularGlobal.js" type="text/javascript"></script>
-	<script src="../Global/JavaScriptGlobal.js" type="text/javascript"></script>
-	<script src="../Global/FactoryHolder.js" type="text/javascript"></script>
-
-	<!-- LOCAL -->
-	<script src="/Recipes/Recipes.js" type="text/javascript"></script>
-	<script src="/Recipes/RecipesAngular.js" type="text/javascript"></script>
-
-</body>
-
-</html>
+</div>

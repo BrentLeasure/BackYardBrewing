@@ -13,6 +13,24 @@ angular.module("indexModule")
 			}
 		}
 
+		$scope.brewingEquipmentMap;
+		$scope.initMap = function() {
+			var centerOfMap ={lat: 39.244785, lng: -105.511852};
+
+			$scope.brewingEquipmentMap = new google.maps.Map(document.getElementById('brewingEquipmentMap'), {
+				center: centerOfMap,
+				zoom: 7,
+				scrollwheel: false
+		  	});
+
+		 	var marker = new google.maps.Marker({
+				position: centerOfMap,
+				map: $scope.brewingEquipmentMap,
+				title: 'Hello World!'
+			});
+		}
+
+
 		$scope.ingredients = [
 			{
 				alias: "Hops",

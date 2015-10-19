@@ -1,65 +1,18 @@
-<!DOCTYPE html>
-<html ng-app="indexModule">
+<div ng-controller="forumController" class="container global-page-layout">
+	<div class="row">
+		<div class="col-lg-12">
+			<button ng-click="body.activateNightMode()">night mode</button>
+			<input ng-change="Paginate.checkUserQuery(this)" class="global-search-box forum-search-box" ng-model="userQuery" placeholder="Search Forum">
 
-<head>
-	<title>Forum</title>
+			<button class="global-page-change-buttons" ng-click="Paginate.moveListBackward(this)">Prev</button>
 
-	<!-- PULLED FROM WEB -->
-	<script src ="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+			<button  ng-repeat="page in pagination | limitTo: 5 : startingElement - 1" ng-class="{'forum-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
 
-	<!-- GLOBAL -->
-	<link rel="stylesheet" href="../Global/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="../Global/GlobalLayout.css">
+			<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>	
 
-	<!-- LOCAL -->
-	<link rel="stylesheet" type="text/css" href="/Forum/Forum.css">
-</head>
-
-<body ng-controller="bodyController as body" ng-class="{'night-time-mode-body': body.nightMode}" class="body">
-	<!-- <img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"> -->
-	<div ng-controller="headerController" class="nav-bar">
-		<ul class="nav-list">
-			<a class="nav-links" href="/"><li class="nav-list-logo"><img class="BYB-logo" src="http://i.imgur.com/bSgwOvD.png"></li></a>
-			<a class="nav-links" href="/thebasics"><li class="nav-list-items">The Basics</li></a>
-			<a class="nav-links" href="/recipes"><li class="nav-list-items">Recipes</li></a>
-			<a class="nav-links" href="/forums"><li class="nav-list-items">Forums</li></a>
-		</ul>
-		<ul class="nav-list">
-			
-		</ul>
-
-	</div>
-		<div ng-controller="forumController" class="container global-page-layout">
-			<div class="row">
-				<div class="col-lg-4 col-lg-push-8">
-					<button ng-click="body.activateNightMode()">night mode</button>
-					<input ng-change="Paginate.checkUserQuery(this)" class="global-search-box forum-search-box" ng-model="userQuery" placeholder="Search Forum">
-
-					<button class="global-page-change-buttons" ng-click="Paginate.moveListBackward(this)">Prev</button>
-
-					<button  ng-repeat="page in pagination | limitTo: 5 : startingElement - 1" ng-class="{'forum-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
-
-					<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>	
-
-					<a class="global-button-layout global-link-text forum-button-layout" href="#">Submit a post</a>
-				</div>
-				<div class="col-lg-8 col-lg-pull-4">
-
-
-				</div>
-			</div>
+			<a class="global-button-layout global-link-text forum-button-layout" href="#">Submit a post</a>
 		</div>
-
-	<!-- GLOBAL -->
-	<script src="../Global/AngularGlobal.js" type="text/javascript"></script>
-	<script src="../Global/JavaScriptGlobal.js" type="text/javascript"></script>
-	<script src="../Global/FactoryHolder.js" type="text/javascript"></script>
-	
-	<!-- LOCAL -->
-	<script src="/Forum/ForumAngular.js" type="text/javascript"></script>
-	<script src="/Forum/Forum.js" type="text/javascript"></script>
-</body>
-
-</html>
+		<div class="col-lg-12">
+		</div>
+	</div>
+</div>

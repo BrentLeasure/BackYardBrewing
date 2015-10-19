@@ -25,22 +25,7 @@ server.use(express.static(__dirname + "/public"));
 //GET ROUTES
 //==============
 server.get("/", function(req, res){
-	res.sendFile("Home.html", {root: "./public/Home"})
-});
-server.get("/forums", function(req, res){
-	res.sendFile("Forum.html", {root: "./public/Forum"})
-});
-server.get("/recipesubmission", function(req, res){
-	res.sendFile("RecipeSubmission.html", {root: "./public/Recipe-Submission"})
-});
-server.get("/recipes", function(req, res){
-	res.sendFile("Recipes.html", {root: "./public/Recipes"})
-});
-server.get("/thebasics", function(req, res){
-	res.sendFile("TheBasics.html", {root: "./public/The-Basics"})
-});
-server.get("/user/:user", function(req, req){
-	
+	res.sendFile("/GlobalLayout.html", {root: "./public/Global"})
 });
 
 
