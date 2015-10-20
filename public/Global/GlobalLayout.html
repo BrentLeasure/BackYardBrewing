@@ -43,9 +43,11 @@
 			<a class="nav-links" href="/#/forums"><li class="nav-list-items">Forums</li></a>
 		</ul>
 		<ul class="nav-list-right-side">
-			<li class="nav-list-items-right"><input class="" placeholder="email"></li>
-			<li class="nav-list-items-right"><input type="password" class="" placeholder="password"></li>
-			<li class="nav-list-items-right"><input type="submit" class="" placeholder="password"></li>
+			<form action="/auth/login" method="post">
+				<li class="nav-list-items-right"><input name="email" class="" placeholder="email"></li>
+				<li class="nav-list-items-right"><input name="password" type="password" class="" placeholder="password"></li>
+				<li class="nav-list-items-right"><input type="submit" class="" placeholder="password"></li>
+			</form>
 		</ul>
 	</div>
 

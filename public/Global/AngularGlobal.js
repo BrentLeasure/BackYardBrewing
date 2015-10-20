@@ -4,7 +4,6 @@ angular.module("indexModule", ["ngRoute", "ui.bootstrap"]);
 
 angular.module("indexModule")
 	.config(["$routeProvider", function($routeProvider){
-
 		$routeProvider
 			.when("/", {
 				templateUrl: "/Home/Home.html",
@@ -32,7 +31,7 @@ angular.module("indexModule")
 			})
 	}])
 
-	.service('authService', ['$http', '$location', function($http){
+	.service('authService', ['$http', '$location', function($http, $location){
 		
 		this.authCheck = function(cb){
 			$http.get('/api/me')
@@ -45,7 +44,7 @@ angular.module("indexModule")
 						
 	}])
 	
-	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService" function($scope, $window, $interval, $http, authService){
+	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
 		console.log('AUTH', authService)
 		authService.authCheck(function(user){
 			console.log('USER!', user)
