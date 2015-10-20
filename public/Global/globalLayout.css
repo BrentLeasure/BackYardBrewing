@@ -37,7 +37,7 @@
 /*===============
  	NAVIGATION
  ===============*/
-
+/*LEFT NAV*/
 .nav-bar{
 	top: 0px;
 	position: fixed;
@@ -54,8 +54,6 @@
 	padding: 0px;
 	float: none;
 }
-
-
 
 .nav-list-items{
 	margin-top: 7px;
@@ -85,6 +83,19 @@
 	color: white;
 	background-position:left bottom;
 }
+/*NAV LIST RIGHT*/
+.nav-list-right-side{
+	margin: 0px 100px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float: right;
+}
+
+.nav-list-items-right{
+	margin: 7px 0px 0px 20px;
+	padding: 5px 0px 5px 0px;
+	display: inline-block;
+}
+
 
 /*RIGHT SIDE NAV LIST*/
 .right-nav-bar{
@@ -222,7 +233,6 @@ GLOBAL MAP ASSOCIATED LIST
  MEDIA QUERIES
  ===================*/
 @media screen and (max-width: 925px){
-
 	.nav-bar{
 		font-size: 14px;
 	
