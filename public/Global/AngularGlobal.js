@@ -31,8 +31,26 @@ angular.module("indexModule")
 				controller: ""
 			})
 	}])
-	.controller("headerController", ["$scope", "$window", "$interval", function($scope, $window, $interval){
 
+	.service('authService', ['$http', '$location', function($http){
+		
+		this.authCheck = function(cb){
+			$http.get('/api/me')
+				.then( function(returnData){
+					cb(returnData.data)
+
+				})
+		}
+					
+						
+	}])
+	
+	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService" function($scope, $window, $interval, $http, authService){
+		console.log('AUTH', authService)
+		authService.authCheck(function(user){
+			console.log('USER!', user)
+			$scope.user = user
+		})
 	}])
 	.controller("bodyController", ["NightModeFactory", function( NightModeFactory){
 		
