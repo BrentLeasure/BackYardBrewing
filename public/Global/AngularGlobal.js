@@ -25,6 +25,10 @@ angular.module("indexModule")
 				templateUrl: "/The-Basics/TheBasics.html",
 				controller: "theBasicsController"
 			})
+			.when("/signup", {
+				templateUrl: "/Signup/Signup.html",
+				controller: "signupController"
+			})
 			.when("/user/:user", {
 				tempateUrl: "",
 				controller: ""
@@ -47,7 +51,6 @@ angular.module("indexModule")
 	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
 		console.log('AUTH', authService)
 		authService.authCheck(function(user){
-			console.log('USER!', user)
 			$scope.user = user
 		})
 	}])
