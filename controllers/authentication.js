@@ -55,7 +55,7 @@ var authenticationController = {
       // which will be read and used in the "login" handler above and then redirect
       // to that handler.
       if(!user) {
-		    return res.send({error: 'Error logging in. Please try again.'});
+		    return res.send({error: 'Email or password incorrect'});
       }
       
       // If we make it this far, the user has correctly authenticated with passport

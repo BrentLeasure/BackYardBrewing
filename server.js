@@ -10,11 +10,15 @@ var recipeController = require("./controllers/recipeController")
 
 //application configuration
 //resave will keep it true
-server.use(session({
+server.sessionMiddleware = session({
 	secret            : "2CBABA1ITL#ST#1@92",
 	resave            : true,
 	saveUninitialized : false,
-}));
+});
+sever.use(server.sessionMiddleware);
+
+//End Exxpress Session Setup
+
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(express.static(__dirname + "/public"));

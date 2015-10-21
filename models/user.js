@@ -30,8 +30,7 @@ var userSchema = mongoose.Schema({
  * callback will be called whenever a new user is about to
  * be saved to the database so that we can encrypt the password.
  */
- // var billyBob = new User({----})
- // billyBob.save()
+
 
 // 'chickennuggets' -> '123098sadkhjsASLKJSFLHk4384rn.hjksdflkhjASLKFnkjdsfjhksdfkh'
 
@@ -76,9 +75,9 @@ userSchema.pre('save', function(next){
  * compares those values
  */
 // Constructor.prototype.comparePassword
-userSchema.methods.comparePassword = function(candidatePassword, next){
+userSchema.methods.comparePassword = function(userPassword, next){
   // Use bcrypt to compare the unencrypted value to the encrypted one in the DB
-  bcrypt.compare(candidatePassword, this.password, function(err, isMatch){
+  bcrypt.compare(userPassword, this.password, function(err, isMatch){
     // If there was an error, allow execution to move to the next middleware
     if(err) return next(err);
 
@@ -87,19 +86,7 @@ userSchema.methods.comparePassword = function(candidatePassword, next){
     return next(null, isMatch);
   });
 };
-
-
-// var afterCompare = function(err, match){
-//   if(match){
-//     do the stuff
-//   }
-//   else{
-//     dont do the stuff
-//   }
-// }
-
-// billyBob.comparePassword(req.body.password, afterCompare)
-
+  
 
 // Our user model
 var User = mongoose.model('user', userSchema);
