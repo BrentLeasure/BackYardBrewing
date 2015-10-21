@@ -80,6 +80,10 @@ angular.module("indexModule")
 		//   BEER TYPES
 		//===================
 		//List of Beers To see, select cmd + option + ]
+		//IMPORTANT!! 
+		//TO STORE THIS ON THE BACK END, PUT IN A JSON FILE AND IMPORT TO MONGODB
+		//TO GET THESE TO THE FRONT END FROM THERE, USE AN HTTP REQUEST, AND THEN 
+		//STORE THEM IN A $SCOPE VARIABLE(maybe beerTypes? I don't know, just a thought...)
 		$scope.beerTypes = [
 			{
 			 alias: "Red Ale",

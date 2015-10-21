@@ -8,6 +8,8 @@ var server = express();
 
 var recipeController = require("./controllers/recipeController")
 
+var passportConfig = require('./config/passport');
+var passport = require('passport');
 //application configuration
 //resave will keep it true
 server.sessionMiddleware = session({
@@ -23,7 +25,9 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(express.static(__dirname + "/public"));
 
+server.use(passport.initialize());
 
+server.use(passport.session());
 
 //==============
 //GET ROUTES
@@ -47,7 +51,7 @@ server.post("/createrecipe", recipeController.createRecipe);
 server.delete("/deleterecipe", recipeController.deleteRecipe)
 
 //==============
-//AUTHENTICATION ROUTES
+//PASSPORT AUTHENTICATION ROUTES
 //==============
 var authenticationController = require('./controllers/authentication');
 
@@ -67,6 +71,7 @@ server.get('/auth/logout', authenticationController.logout);
 server.get('/api/me', function(req, res){
 	res.send(req.user)
 })
+
 //============
 //PORT
 //============
