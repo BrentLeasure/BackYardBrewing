@@ -67,14 +67,7 @@
 	background-position: right bottom;
 	transition: background .5s ease;
 }
-.nav-list-logo{
-	margin-top: 7px;
-	text-align: center;
-	width: 10%;
-	padding: 5px 0px 5px 0px;
-	display: inline-block;
-	float: left;
-}
+
 .nav-links{
 	text-decoration: none;
  	color: white;
@@ -122,8 +115,17 @@
 .BYB-logo{
 	display: inline-block;	
 	width: 10%;
-	width: 35px;
-	height: 35px;
+	width: 50px;
+	height: 50px;
+}
+
+.nav-list-logo{
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	width: 10%;
+	padding: 5px 0px 5px 0px;
+	display: inline-block;
+	float: left;
 }
 
 
@@ -249,9 +251,6 @@ GLOBAL MAP ASSOCIATED LIST
 	.nav-bar{
 		font-size: 14px;
 	}
-	.global-signup-button{
-		top: 210px;
-	}
 }
 
 @media screen and (max-width: 888px){	
@@ -276,6 +275,7 @@ GLOBAL MAP ASSOCIATED LIST
 	}
 	.nav-list-items{
 		margin: 0;
+		padding: 15px 0px 15px 0px;
 		background: linear-gradient(to right, #611B19 50%, #611B19 50%);
 		width: 100%;
 		position: relative;
@@ -286,6 +286,7 @@ GLOBAL MAP ASSOCIATED LIST
 	}
 	.nav-list-right-side{
 		margin: 0;
+		padding: 15px 0px 15px 0px;
 		background: linear-gradient(to right, #611B19 50%, #611B19 50%);
 		width: 100%;
 		position: relative;
@@ -302,7 +303,7 @@ GLOBAL MAP ASSOCIATED LIST
 		display: inline-block;
 	}
 	.nav-list-logo{
-		margin: 0px;
+		margin: 0px 0px 0px 0px;
 		text-align: center;
 		width: 100%;
 		padding: 5px 0px 5px 0px;
@@ -323,7 +324,7 @@ GLOBAL MAP ASSOCIATED LIST
 		color: #611B19;
 		margin: 0px 0px 0px 0px;
 		left: 10px;
-		top: 205px;
+		top: 311px;
 	}
 
 	/*====================
@@ -340,14 +341,16 @@ GLOBAL MAP ASSOCIATED LIST
 	.nav-bar{
 		font-size: 13px;
 	}
-
+	.global-signup-button{
+		top: 299px;
+	}
 
 @media screen and (max-width: 640px){
 	.nav-bar{
 		font-size: 12px;
 	}
 	.global-signup-button{
-		top: 190px;
+		top: 293px;
 	}
 }
 

@@ -13,12 +13,12 @@ var passport = require('passport');
 //application configuration
 //resave will keep it true
 
-server.sessionMiddleware = session({
-	secret            : "2CBABA1ITL#ST#1@92",
-	resave            : true,
-	saveUninitialized : false,
-});
-sever.use(server.sessionMiddleware);
+// server.sessionMiddleware = session({
+// 	secret            : "2CBABA1ITL#ST#1@92",
+// 	resave            : true,
+// 	saveUninitialized : false,
+// });
+// sever.use(server.sessionMiddleware);
 
 //End Exxpress Session Setup
 
