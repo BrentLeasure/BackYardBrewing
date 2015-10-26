@@ -47,12 +47,13 @@
 		</ul>
 		<ul class="nav-list-right-side">
 			<form action="/auth/login" method="post">
-				<li class="nav-list-items-right"><input name="email" class="" placeholder="email"></li>
-				<li class="nav-list-items-right"><input name="password" type="password" class="" placeholder="password"></li>
-				<li class="nav-list-items-right"><input type="submit" class="" placeholder="password"><a href="/#/signup" class="global-signup-button">Not a member? Join us!</a></li>
+				<li ng-hide="signedIn" class="nav-list-items-right"><input name="email" class="" placeholder="email"></li>
+				<li ng-hide="signedIn" class="nav-list-items-right"><input name="password" type="password" class="" placeholder="password"></li>
+				<li ng-hide="signedIn" class="nav-list-items-right"><input type="submit" class="" placeholder="password"></li>
 			</form>
-
+				<li ng-hide="signedIn"><a href="/#/signup" class="global-signup-button">Not a member? Join us!</a></li>
 		</ul>
+
 	</div>
 
 	<div ng-view></div>

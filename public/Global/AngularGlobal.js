@@ -43,8 +43,7 @@ angular.module("indexModule")
 					cb(returnData.data)
 
 				})
-		}
-					
+		}			
 						
 	}])
 	

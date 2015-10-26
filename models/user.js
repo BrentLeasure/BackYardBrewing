@@ -1,13 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-/**
- * Create a schema (blueprint) for all users in the database.
- * If you want to collect additional info, add the fields here.
- * We are setting required to true so that if the field is not
- * given, the document is not inserted. Unique will prevent
- * saving if a duplicate entry is found.
- */
+
 var userSchema = mongoose.Schema({
   username: {
 	  type: String,
@@ -32,34 +26,24 @@ var userSchema = mongoose.Schema({
  */
 
 
-// 'chickennuggets' -> '123098sadkhjsASLKJSFLHk4384rn.hjksdflkhjASLKFnkjdsfjhksdfkh'
-
 userSchema.pre('save', function(next){
-
   // First, check to see if the password has been modified. If not, just move on.
   if(!this.isModified('password')) return next();
-
   // Store access to "this", which represents the current user document
   var user = this;
-
   // Generate an encryption "salt." This is a special way of increasing the
   // encryption power by wrapping the given string in a secret string. Something
   // like "secretpasswordsecret" and then encrypting that result.
   bcrypt.genSalt(10, function(err, salt){
-
     // If there was an error, allow execution to move to the next middleware
     if(err) return next(err);
-
     // If we are successful, use the salt to run the encryption on the given password
     bcrypt.hash(user.password, salt, function(err, hash){
-
       // If there was an error, allow execution to move to the next middleware
       if(err) return next(err);
-
       // If the encryption succeeded, then replace the un-encrypted password
       // in the given document with the newly encrypted one.
       user.password = hash;
-
       // Allow execution to move to the next middleware
       return next();
     });
@@ -88,8 +72,6 @@ userSchema.methods.comparePassword = function(userPassword, next){
 };
   
 
-// Our user model
-var User = mongoose.model('user', userSchema);
-
-// Make user model available through exports/require
-module.exports = User;
+module.exports = {
+  User : mongoose.model('user', userSchema);
+}

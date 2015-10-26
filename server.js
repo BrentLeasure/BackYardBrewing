@@ -55,17 +55,15 @@ server.delete("/deleterecipe", recipeController.deleteRecipe)
 //==============
 var authenticationController = require('./controllers/authentication');
 
-// Our get request for viewing the login page
-server.get('/auth/login', authenticationController.login);
-
 // Post received from submitting the login form
 server.post('/auth/login', authenticationController.processLogin);
 
-// Post received from submitting the signup form
 server.post('/auth/signup', authenticationController.processSignup);
 
-// Any requests to log out can be handled at this url
+
 server.get('/auth/logout', authenticationController.logout);
+
+server.get('/auth/login', authenticationController.login);
 
 // This route is designed to send back the logged in user (or undefined if they are NOT logged in)
 server.get('/api/me', function(req, res){
