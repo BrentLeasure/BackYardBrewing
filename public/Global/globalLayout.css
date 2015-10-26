@@ -96,6 +96,9 @@
 	padding: 5px 0px 5px 0px;
 	display: inline-block;
 }
+.nav-list-signup-item{
+	display: inline-block;
+}
 
 
 /*RIGHT SIDE NAV LIST*/
@@ -159,7 +162,8 @@
 	float: right;
 	position: fixed;
 	color: white;
-	margin: 40px 0px 0px 220px;
+	margin: 0px 0px 0px 20px;
+	top: 40px;
 }
 
 /*====================
@@ -246,23 +250,10 @@ GLOBAL MAP ASSOCIATED LIST
 	
 }
 
-@media screen and (max-width: 825px){
-	.nav-bar{
-		
-	}
-
-@media screen and (max-width: 725px){
-	.nav-bar{
-		font-size: 13px;
-	}
-
-@media screen and (max-width: 640px){
-	.nav-bar{
-		font-size: 12px;
-	}
-}
-
-@media screen and (max-width: 625px){	
+@media screen and (max-width: 888px){	
+	/*================
+	NAV BAR INFORMATION
+	=================*/
 	.nav-bar.headerless-nav{
 	width: 100%;
 	position: relative;
@@ -293,6 +284,17 @@ GLOBAL MAP ASSOCIATED LIST
 		border: none;
 		border-bottom: 5px solid black;
 	}
+	.nav-list-right-side{
+		margin: 0;
+		background: linear-gradient(to right, #611B19 50%, #611B19 50%);
+		width: 100%;
+		position: relative;
+		display: block;
+		float: none;
+		border: none;
+		border-bottom: 5px solid black;
+		line-height: 0px;
+	}
 
 	.nav-list-logo{
 		text-align: center;
@@ -306,12 +308,27 @@ GLOBAL MAP ASSOCIATED LIST
 	.nav-bar.headerless-nav{
 		transition: none;
 	}
+	/*PAGE-LAYOUT*/
 
 	.global-page-layout{
 		padding: 150px 0px 0px 0px;
 	}
 
 }
+
+@media screen and (max-width: 725px){
+	.nav-bar{
+		font-size: 13px;
+	}
+
+
+@media screen and (max-width: 640px){
+	.nav-bar{
+		font-size: 12px;
+	}
+}
+
+
 
 
 
