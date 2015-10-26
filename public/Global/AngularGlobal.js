@@ -48,9 +48,11 @@ angular.module("indexModule")
 	}])
 	
 	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
-		console.log('AUTH', authService)
 		authService.authCheck(function(user){
 			$scope.user = user
+			if(user){
+				
+			}
 		})
 	}])
 	.controller("bodyController", ["NightModeFactory", function( NightModeFactory){

@@ -12,6 +12,7 @@ var passportConfig = require('./config/passport');
 var passport = require('passport');
 //application configuration
 //resave will keep it true
+
 server.sessionMiddleware = session({
 	secret            : "2CBABA1ITL#ST#1@92",
 	resave            : true,

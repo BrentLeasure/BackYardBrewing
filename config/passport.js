@@ -1,14 +1,7 @@
 // First, we'll need passport...
 var passport = require('passport');
-
-// We also need the strategy defined by our 'passport-local' module.
-// Strategies are how passport abstracts the logic of working with
-// different login systems like Facebook or Twitter. You can also
-// use multiple strategies to support more auth types.
 var LocalStrategy = require('passport-local').Strategy;
 
-// Since we will be using the user model to control access and
-// persistence, we'll use that as well.
 var User = require('../models/user');
 
 

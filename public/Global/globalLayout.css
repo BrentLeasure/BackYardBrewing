@@ -150,6 +150,13 @@
 	text-decoration: none;
 }
 
+.global-signup-button{
+	float: right;
+	position: fixed;
+	color: white;
+	margin: 0px 0px 0px 20px;
+	top: 40px;
+}
 /*====================
 	GLOBAL PAGE CHANGE BUTTONS
 =====================*/
@@ -158,13 +165,7 @@
 	color: #353230;
 }
 
-.global-signup-button{
-	float: right;
-	position: fixed;
-	color: white;
-	margin: 0px 0px 0px 20px;
-	top: 40px;
-}
+
 
 /*====================
 	GLOBAL SEARCH BOX
@@ -244,20 +245,19 @@ GLOBAL MAP ASSOCIATED LIST
 /*===================
  MEDIA QUERIES
  ===================*/
-@media screen and (max-width: 925px){
+@media screen and (max-width: 965px){
 	.nav-bar{
 		font-size: 14px;
-	
+	}
+	.global-signup-button{
+		top: 210px;
+	}
 }
 
 @media screen and (max-width: 888px){	
 	/*================
 	NAV BAR INFORMATION
 	=================*/
-	.nav-bar.headerless-nav{
-	width: 100%;
-	position: relative;
-	}
 
 	.header-img{
 		display: none;
@@ -295,8 +295,14 @@ GLOBAL MAP ASSOCIATED LIST
 		border-bottom: 5px solid black;
 		line-height: 0px;
 	}
-
+	
+	.nav-list-items-right{
+		margin: 0px 0px 0px 20px;
+		padding: 5px 0px 0px 0px;
+		display: inline-block;
+	}
 	.nav-list-logo{
+		margin: 0px;
 		text-align: center;
 		width: 100%;
 		padding: 5px 0px 5px 0px;
@@ -308,7 +314,21 @@ GLOBAL MAP ASSOCIATED LIST
 	.nav-bar.headerless-nav{
 		transition: none;
 	}
-	/*PAGE-LAYOUT*/
+	/*=================
+		BUTTONS
+	====================*/
+	.global-signup-button{
+		float: left;
+		position: fixed;
+		color: #611B19;
+		margin: 0px 0px 0px 0px;
+		left: 10px;
+		top: 205px;
+	}
+
+	/*====================
+	PAGE-LAYOUT
+	=================*/
 
 	.global-page-layout{
 		padding: 150px 0px 0px 0px;
@@ -325,6 +345,9 @@ GLOBAL MAP ASSOCIATED LIST
 @media screen and (max-width: 640px){
 	.nav-bar{
 		font-size: 12px;
+	}
+	.global-signup-button{
+		top: 190px;
 	}
 }
 

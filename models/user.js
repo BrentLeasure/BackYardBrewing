@@ -25,11 +25,8 @@ var userSchema = mongoose.Schema({
  * be saved to the database so that we can encrypt the password.
  */
 
-
 userSchema.pre('save', function(next){
-  // First, check to see if the password has been modified. If not, just move on.
   if(!this.isModified('password')) return next();
-  // Store access to "this", which represents the current user document
   var user = this;
   // Generate an encryption "salt." This is a special way of increasing the
   // encryption power by wrapping the given string in a secret string. Something
