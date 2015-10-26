@@ -48,12 +48,15 @@ angular.module("indexModule")
 	}])
 	
 	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
+		$scope.signedIn = false;
 		authService.authCheck(function(user){
 			$scope.user = user
+			//if user will return the user or an undefined object
 			if(user){
-				
+				$scope.signedIn = true;
 			}
 		})
+
 	}])
 	.controller("bodyController", ["NightModeFactory", function( NightModeFactory){
 		

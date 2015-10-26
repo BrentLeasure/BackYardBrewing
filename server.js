@@ -13,14 +13,16 @@ var passport = require('passport');
 //application configuration
 //resave will keep it true
 
-// server.sessionMiddleware = session({
-// 	secret            : "2CBABA1ITL#ST#1@92",
-// 	resave            : true,
-// 	saveUninitialized : false,
-// });
-// sever.use(server.sessionMiddleware);
+server.sessionMiddleware = session({
+	secret            : "2CBABA1ITL#ST#1@92",
+	resave            : true,
+	saveUninitialized : false,
+	//look into cookie: cookie takes an object that has key value pairs
+	//max age is worth looking into (express session)
+});
+server.use(server.sessionMiddleware);
 
-//End Exxpress Session Setup
+//End Express Session Setup
 
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
