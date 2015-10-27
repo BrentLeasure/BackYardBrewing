@@ -8,8 +8,15 @@ var recipeSchema = mongoose.Schema({
 	instructions     : {type : String},
 });
 
+var beerTypesSchema = mongoose.Schema({
+	alias	: {type: String},
+	style	: {type: String},
+	about	: {type: String},
+	taste	: {type: String},
+});
 
 
 module.exports = {
-	Recipe : mongoose.model("Recipe", recipeSchema),
+	userRecipe     : mongoose.model("userRecipe", recipeSchema),
+	beerTypes 	   : mongoose.model("beerTypes", beerTypesSchema),
 }

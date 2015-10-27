@@ -8,13 +8,18 @@ getRecipes = function(req, res){
 	})
 }
 getAllRecipes = function(req, res){
-	recipeModel.Recipe.find({}, function(err, recipes){
-		res.send(recipes);
+	recipeModel.beerTypes.find({}, function(err, beers){
+		if(err){
+			console.log(err);
+		}else{
+			res.send(beers);
+		}
+		
 	});
 }
 createRecipe = function(req, res){
 //put an if statement here to check that they are logged in
-	var newRecipe = new recipeModel.Recipe(req.body);
+	var newRecipe = new recipeModel.userRecipe(req.body);
 
 	newRecipe.save(function(err, data){
 		if(err){

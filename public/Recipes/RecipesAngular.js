@@ -10,6 +10,7 @@ angular.module("indexModule")
 		$scope.beersPerPage = 18;
 		$scope.recipes = [{}];
 		$scope.beerTypes = [];	
+		$scope.lastPage;
 
 
 		$scope.Paginate = PaginationFactory;
@@ -90,16 +91,5 @@ angular.module("indexModule")
 			$scope.lightBox.taste = " ";
 			$scope.lightBoxState = false;
 		}
-
-		//===================
-		//   BEER TYPES
-		//===================
-		//List of Beers To see, select cmd + option + ]
-		//IMPORTANT!! 
-		//TO STORE THIS ON THE BACK END, PUT IN A JSON FILE AND IMPORT TO MONGODB
-		//TO GET THESE TO THE FRONT END FROM THERE, USE AN HTTP REQUEST, AND THEN 
-		//STORE THEM IN A $SCOPE VARIABLE(maybe beerTypes? I don't know, just a thought...)
-
-	
-		$scope.getAllRecipes();
+		$scope.getAllRecipes();	
 }]);

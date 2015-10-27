@@ -18,14 +18,6 @@
 }
 
 /*===============
-	Header
- ===============*/
-.header-img{
-	height: 150px;
-	width: 100%;
-}
-
-/*===============
  	GLOBAL PAGE LAYOUT
  ===============*/
 .global-page-layout{
@@ -251,7 +243,7 @@ GLOBAL MAP ASSOCIATED LIST
 	}
 }
 
-@media screen and (max-width: 888px){	
+@media screen and (max-width: 905px){	
 	/*================
 	NAV BAR INFORMATION
 	=================*/
@@ -318,11 +310,11 @@ GLOBAL MAP ASSOCIATED LIST
 	====================*/
 	.global-signup-button{
 		float: left;
-		position: fixed;
+		position: absolute;
 		color: #611B19;
 		margin: 0px 0px 0px 0px;
 		left: 10px;
-		top: 311px;
+		top: 80px;
 	}
 
 	/*====================
@@ -340,7 +332,12 @@ GLOBAL MAP ASSOCIATED LIST
 		font-size: 13px;
 	}
 	.global-signup-button{
-		top: 299px;
+		float: left;
+		position: absolute;
+		color: #611B19;
+		margin: 0px 0px 0px 0px;
+		left: 10px;
+		top: 80px;
 	}
 
 @media screen and (max-width: 640px){
@@ -348,7 +345,12 @@ GLOBAL MAP ASSOCIATED LIST
 		font-size: 12px;
 	}
 	.global-signup-button{
-		top: 293px;
+		float: left;
+		position: absolute;
+		color: #611B19;
+		margin: 0px 0px 0px 0px;
+		left: 10px;
+		top: 80px;
 	}
 }
 

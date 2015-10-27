@@ -13,7 +13,7 @@ angular.module("indexModule")
 				templateUrl: "/Forum/Forum.html",
 				controller: "forumController"
 			})
-			.when("/recipesubbmission", {
+			.when("/recipesubmission", {
 				templateUrl: "/Recipe-Submission/RecipeSubmission.html",
 				controller: "RecipesController"
 			})

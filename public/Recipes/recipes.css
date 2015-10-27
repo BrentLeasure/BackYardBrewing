@@ -77,13 +77,15 @@
 }
 .submit-recipe-button{
 	text-decoration: none;
-	position: relative;
+	position: absolute;
 	display: inline-block;
-	float: right;
+	float: none;
+	right: 100px;
+	top: 50px;
 }
 .submit-recipe-button:hover{
 	text-decoration: none;
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	color: #337ab7;
 }
@@ -99,15 +101,20 @@
 	.recipe-layout{
 		font-size: 15px;
 	}
+	.submit-recipe-button{
+	}
 }
 /*===============
 	MEDIA QUERIES
 =================*/
 @media screen and (max-width: 992px){
+	.submit-recipe-button{
+		right: 50px;
+	}
 	.recipe-layout{
-	width: 38%;
-	margin: 6% 6%;
-}
+		width: 38%;
+		margin: 6% 6%;
+	}
 }	
 
 @media screen and (max-width: 925px){
