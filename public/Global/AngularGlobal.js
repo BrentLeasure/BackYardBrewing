@@ -49,8 +49,13 @@ angular.module("indexModule")
 	
 	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
 		$scope.signedIn = false;
-		authService.authCheck(function(user){
-			$scope.user = user
+		authService.authCheck(function(returnData){
+			if(returnData.err){
+				$scope.loginError = returnData.err;
+				console.log($scope.loginError);
+				$scope.showError = true
+			}
+			$scope.user = returnData
 			//if user will return the user or an undefined object
 			if(user){
 				$scope.signedIn = true;

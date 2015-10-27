@@ -21,7 +21,7 @@ var authenticationController = {
       if(err) return next(err);
      
       if(!user) {
-		    return res.send({error: 'Invalid Email'});
+		    return res.send({error: 'Invalid Email or wrong password'});
       }
 
       performLogin(req, res, next, user);
