@@ -1,4 +1,3 @@
-
 //requires
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -39,8 +38,9 @@ server.get("/", function(req, res){
 	res.sendFile("/GlobalLayout.html", {root: "./public/Global"})
 });
 
-
 server.get("/beer/:beerAlias", recipeController.getRecipes);
+
+server.get("/getAllRecipes", recipeController.getAllRecipes);
 
 //=============
 //POST ROUTES
@@ -48,10 +48,13 @@ server.get("/beer/:beerAlias", recipeController.getRecipes);
 server.post("/createrecipe", recipeController.createRecipe);
 
 
+
 //==============
 //DELETE ROUTES
 //==============
 server.delete("/deleterecipe", recipeController.deleteRecipe)
+
+
 
 //==============
 //PASSPORT AUTHENTICATION ROUTES

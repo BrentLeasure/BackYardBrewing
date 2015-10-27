@@ -18,7 +18,7 @@ passport.serializeUser(function(user, done){
 //  id out of the session and convert it into an actual
 //  user object.
 passport.deserializeUser(function(id, done){
-  User.findById(id, function(err, user){
+  User.User.findById(id, function(err, user){
     done(err, user);
   });
 });
@@ -28,7 +28,7 @@ var localStrategy = new LocalStrategy({ usernameField: 'email', passwordField: '
 
   function(email, password, done){
     //finds user with given email. Returns user information
-    User.findOne({email: email}, function(err, user){
+    User.User.findOne({email: email}, function(err, user){
       //if error, return error to processLogin
       if(err) return done(err);
       // If no user was found with that username, continue to the next middleware

@@ -31,7 +31,7 @@ var authenticationController = {
   },
 
   processSignup: function(req, res, next){
-    var user = new User({
+    var user = new User.User({
       username: req.body.username,
       password: req.body.password,
       email: req.body.email
@@ -58,7 +58,7 @@ var authenticationController = {
   logout: function(req, res){
     req.logout();
 
-    res.redirect('/auth/login');
+    res.redirect('/');
   }
 };
 

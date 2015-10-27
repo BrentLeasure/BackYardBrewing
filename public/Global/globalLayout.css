@@ -9,8 +9,6 @@
 .body{
 	background-color: #FFFFFF;
 	color: #2B2B2B;
-	/*background-color: #2B2B2B;*/
-	/*color: #DFE2DB;*/
 	margin:0; 
 	font-size: 15px;
 }
@@ -63,7 +61,7 @@
 	display: inline-block;
 	float: left;
 	background: linear-gradient(to left, #611B19 50%, #446c91  50%);
-	background-size: 200%;
+	background-size: 1%;
 	background-position: right bottom;
 	transition: background .5s ease;
 }

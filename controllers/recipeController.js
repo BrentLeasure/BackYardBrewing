@@ -7,6 +7,11 @@ getRecipes = function(req, res){
 		res.send(recipes);
 	})
 }
+getAllRecipes = function(req, res){
+	recipeModel.Recipe.find({}, function(err, recipes){
+		res.send(recipes);
+	});
+}
 createRecipe = function(req, res){
 //put an if statement here to check that they are logged in
 	var newRecipe = new recipeModel.Recipe(req.body);
@@ -28,7 +33,8 @@ deleteRecipe = function(req, res){
 
 //recipemodel.recipe.remove
 module.exports = {
-	createRecipe : createRecipe,
-	getRecipes   : getRecipes,
-	deleteRecipe : deleteRecipe,
+	createRecipe  : createRecipe,
+	getRecipes    : getRecipes,
+	deleteRecipe  : deleteRecipe,
+	getAllRecipes : getAllRecipes,
 }
