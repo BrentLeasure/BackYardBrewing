@@ -1,4 +1,3 @@
-// First, we'll need passport...
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
@@ -25,8 +24,6 @@ passport.deserializeUser(function(id, done){
 });
 
 
-// Here we define the strategy for our local authentication.
-// This will be utilized by passport whenever we reference it.
 var localStrategy = new LocalStrategy({ usernameField: 'email', passwordField: 'password',},
 
   function(email, password, done){
