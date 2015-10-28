@@ -36,37 +36,40 @@ angular.module("indexModule")
 	}])
 
 	.service('authService', ['$http', '$location', function($http, $location){
-		
 		this.authCheck = function(cb){
 			$http.get('/api/me')
 				.then( function(returnData){
 					cb(returnData.data)
 
 				})
-		}			
-						
+		}									
 	}])
 	
 	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
-		$scope.signedIn = false;
+
 		authService.authCheck(function(returnData){
-			if(returnData.err){
-				$scope.loginError = returnData.err;
-				console.log($scope.loginError);
-				$scope.showError = true
-			}
-			$scope.user = returnData
-			//if user will return the user or an undefined object
-			if(user){
-				$scope.signedIn = true;
+			if(returnData){
+				console.log('Hey!');
+				$scope.user = returnData;
 			}
 		})
-
+		$scope.loggingIn = function(){
+			$http.post("/auth/login", $scope.login)
+			.then(function(returnData){
+				console.log(returnData);
+					if(returnData.data.theError){
+						$scope.loginError = returnData.data.theError;
+					}else{
+						$scope.user = returnData.data
+						$scope.loginError = "";
+						//user will return the user or an undefined object
+					}
+			});
+		}
 	}])
 	.controller("bodyController", ["NightModeFactory", function( NightModeFactory){
 		
 		this.NightMode = NightModeFactory;
-		
 		this.activateNightMode = function(){
 			this.NightMode.activateNightMode(this);
 		}

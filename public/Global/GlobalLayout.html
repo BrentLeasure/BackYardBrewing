@@ -46,14 +46,14 @@
 			<a class="nav-links" href="/#/forums"><li class="nav-list-items">Forums</li></a>
 		</ul>
 		<ul class="nav-list-right-side">
-			<form action="/auth/login" method="post">
-				<li ng-hide="signedIn" class="nav-list-items-right"><input name="email" class="" placeholder="email"></li>
-				<li ng-hide="signedIn" class="nav-list-items-right"><input name="password" type="password" class="" placeholder="password"></li>
-				<li ng-hide="signedIn" class="nav-list-items-right"><input type="submit" class="" placeholder="password"></li>
+			<form ng-submit="loggingIn()">
+				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.email" class="" placeholder="email"></li>
+				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.password" type="password" class="" placeholder="password"></li>
+				<li ng-hide="user" class="nav-list-items-right"><input type="submit" class="" placeholder="password"></li>
 			</form>
-				<li ng-hide="signedIn" class="nav-list-signup-item"><a href="/#/signup" class="global-signup-button">Not a member? Join us!</a></li>
-				<li ng-show="signedIn" class="nav-list-items-right"><a href="/auth/logout">logout</a></li>
-				<li ng-show="signedIn" class="nav-list-items-right"><a href="/auth/logout">logout</a></li>
+				<h5 ng-show="loginError">{{loginError}}</h5>
+				<li ng-hide="user" class="nav-list-signup-item"><a href="/#/signup" class="global-signup-button">sign up</a></li>
+				<li ng-show="user" class="nav-list-items-right"><a href="/auth/logout">logout</a></li>
 		</ul>
 
 	</div>

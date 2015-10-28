@@ -4,9 +4,11 @@ var User = require('../models/user');
 var performLogin = function(req, res, next, user){
   req.login(user, function(err){
 
-    if(err) return next(err);
-
-    return res.redirect('/');
+    if(err){
+      res.send(err);
+    }else{
+      res.send('/');
+    }
   });
 };
 
@@ -18,13 +20,13 @@ var authenticationController = {
   
   processLogin: function(req, res, next){
     var authFunction = passport.authenticate('local', function(err, user, info){
-      if(err) return next(err);
-     
-      if(!user) {
-		    return res.send({error: 'Invalid Email or wrong password'});
+      if(err){
+        res.send({theError: err});
+      } else if(!user) {
+		    res.send({theError: 'Invalid Email or wrong password'});
+      }else{
+        performLogin(req, res, next, user);
       }
-
-      performLogin(req, res, next, user);
     });
 
     authFunction(req, res, next);
