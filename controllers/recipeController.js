@@ -3,7 +3,7 @@ var recipeModel = require("../models/recipes");
 
 //grabs all recipes based on the category
 getRecipes = function(req, res){
-	recipeModel.Recipe.find({selectedCategory: req.params.beerAlias}, function(err, recipes){
+	recipeModel.userRecipe.find({selectedCategory: req.params.beerAlias}, function(err, recipes){
 		res.send(recipes);
 	})
 }
@@ -30,6 +30,9 @@ createRecipe = function(req, res){
 	})
 },
 
+updateRecipe = function(req, res){
+	
+}
 //THIS ISN'T FINISHED!!!!
 deleteRecipe = function(req, res){
 	//Make an if statement in here seeing if they are logged in

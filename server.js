@@ -16,6 +16,7 @@ server.sessionMiddleware = session({
 	secret            : "2CBABA1ITL#ST#1@92",
 	resave            : true,
 	saveUninitialized : false,
+	cookie: {maxAge: 30000}
 	//look into cookie: cookie takes an object that has key value pairs
 	//max age is worth looking into (express session)
 });
