@@ -52,7 +52,9 @@ angular.module("indexModule")
 		$scope.getUserRecipes = function(beer){
 		}
 
-
+		$scope.isLoggedIn = function(){
+			
+		}
 		//==============
 		//RECIPES
 		//==============

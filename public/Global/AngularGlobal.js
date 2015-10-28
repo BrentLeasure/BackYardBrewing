@@ -46,13 +46,13 @@ angular.module("indexModule")
 	}])
 	
 	.controller("headerController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
-
 		authService.authCheck(function(returnData){
 			if(returnData){
 				console.log('Hey!');
 				$scope.user = returnData;
 			}
 		})
+		
 		$scope.loggingIn = function(){
 			$http.post("/auth/login", $scope.login)
 			.then(function(returnData){
