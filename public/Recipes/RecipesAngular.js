@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$http", "PaginationFactory", "WatchWidthFactory", function($scope, $http, PaginationFactory, WatchWidthFactory){
+	.controller("RecipesController", ["$scope", "$http", "$window", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $http, $window, PaginationFactory, WatchWidthFactory, authService){
 		//===================
 		// PAGINATION
 		//===================
@@ -11,6 +11,7 @@ angular.module("indexModule")
 		$scope.recipes = [{}];
 		$scope.beerTypes = [];	
 		$scope.lastPage;
+		$scope.loggedIn = false;
 
 
 		$scope.Paginate = PaginationFactory;
@@ -53,7 +54,13 @@ angular.module("indexModule")
 		}
 
 		$scope.isLoggedIn = function(){
-			
+			authService.authCheck(function(user){
+				if(user){
+					$window.location.href = "/#/recipesubmission"
+				}else{
+					$scope.loggedIn = true;
+				}
+			})
 		}
 		//==============
 		//RECIPES
