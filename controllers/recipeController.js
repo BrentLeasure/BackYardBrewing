@@ -45,6 +45,8 @@ updateRecipe = function(req, res){
 				recipeModel.userRecipe.update({_id: req.params.id}, {$set: {prop: property}});
 			}
 		}
+	}else{
+		res.send("Error: not logged in.");
 	} 
 }
 
@@ -57,6 +59,8 @@ deleteRecipe = function(req, res){
 				res.send("success!");
 			}
 		})
+	}else{
+		res.send("Error: not logged in.");
 	}
 }
 

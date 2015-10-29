@@ -108,6 +108,12 @@
 	width: 50px;
 	height: 50px;
 }
+.home-img{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	bottom: 10px;
+}
 
 .nav-list-logo{
 	margin: 0px 0px 0px 0px;

@@ -22,8 +22,12 @@ angular.module("indexModule")
 		//==============
 		$scope.createRecipe = function(){
 			var newRecipe = $scope.recipe;
+
 			authService.getUserInfo(function(user){
+				//add the user information to the recipe
+				newRecipe.username = user.username
 				newRecipe.userID = user._id;
+
 				$http.post("/createrecipe", newRecipe)
 				.then(function(returnData){
 					$scope.recipe = {};

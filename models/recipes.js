@@ -7,6 +7,7 @@ var recipeSchema = mongoose.Schema({
 	description      : {type : String},
 	instructions     : {type : String},
 	userID			 : {type : String},
+	username		 : {type : String},
 });
 
 var beerTypesSchema = mongoose.Schema({
