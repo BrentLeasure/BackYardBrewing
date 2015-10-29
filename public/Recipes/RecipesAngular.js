@@ -21,10 +21,14 @@ angular.module("indexModule")
 		//RECIPE SUMBISSION
 		//==============
 		$scope.createRecipe = function(){
-			$http.post("/createrecipe", $scope.recipe)
-			.then(function(returnData){
-				$scope.recipe = {};
-			})
+			var newRecipe = $scope.recipe;
+			authService.getUserInfo(function(user){
+				newRecipe.userID = user._id;
+				$http.post("/createrecipe", newRecipe)
+				.then(function(returnData){
+					$scope.recipe = {};
+				})
+			});
 		}
 		$scope.getRecipes = function(beer){
 			$http.get("/beer/" + beer.alias)
@@ -46,12 +50,28 @@ angular.module("indexModule")
 				}	
 		}
 
+		$scope.getUserRecipes = function(beer){
+		}
+
 		$scope.pass = function(beer){
 			$scope.getRecipes(beer);
 		}
 
-		$scope.getUserRecipes = function(beer){
+		//==============
+		//DELETE RECIPES
+		//==============
+
+		$scope.deleteRecipe = function(recipe){
+			var theRecipe = recipe;
+			$http.delete("/deleterecipe/" + recipe._id)
+			.then(function(){
+				$scope.getRecipes(theRecipe);
+			})
 		}
+
+		//==============
+		//RECIPES
+		//==============
 
 		$scope.isLoggedIn = function(){
 			authService.authCheck(function(user){
@@ -60,16 +80,6 @@ angular.module("indexModule")
 				}else{
 					$scope.loggedIn = true;
 				}
-			})
-		}
-		//==============
-		//RECIPES
-		//==============
-		$scope.deleteRecipe = function(recipe){
-			var theRecipe = recipe;
-			$http.delete("/deleterecipe/" + recipe._id)
-			.then(function(){
-				$scope.getRecipes(theRecipe);
 			})
 		}
 

@@ -6,37 +6,43 @@ angular.module("indexModule")
 	.config(["$routeProvider", function($routeProvider){
 		$routeProvider
 			.when("/", {
-				templateUrl: "/Home/Home.html",
-				controller: "homePageController"
+				templateUrl : "/Home/Home.html",
+				controller  : "homePageController"
 			})
 			.when("/forums", {
-				templateUrl: "/Forum/Forum.html",
-				controller: "forumController"
+				templateUrl : "/Forum/Forum.html",
+				controller  : "forumController"
 			})
 			.when("/recipesubmission", {
-				templateUrl: "/Recipe-Submission/RecipeSubmission.html",
-				controller: "RecipesController"
+				templateUrl : "/Recipe-Submission/RecipeSubmission.html",
+				controller  : "RecipesController"
 			})
 			.when("/recipes", {
-				templateUrl: "/Recipes/Recipes.html",
-				controller: "RecipesController"
+				templateUrl : "/Recipes/Recipes.html",
+				controller  : "RecipesController"
+			})
+			.when("/updaterecipe", {
+				templateUrl : "/Update-Recipe/UpdateRecipe.html",
+				controller  : "RecipesController"
 			})
 			.when("/thebasics", {
-				templateUrl: "/The-Basics/TheBasics.html",
-				controller: "theBasicsController"
+				templateUrl : "/The-Basics/TheBasics.html",
+				controller  : "theBasicsController"
 			})
 			.when("/signup", {
-				templateUrl: "/Signup/Signup.html",
-				controller: "signupController"
+				templateUrl : "/Signup/Signup.html",
+				controller  : "signupController"
 			})
 			.when("/user/:user", {
-				tempateUrl: "",
-				controller: ""
+				tempateUrl  : "User-Profile/UserProfile.html",
+				controller  : "UserController",
+
 			})
+			.otherwise({ templateUrl: "/404/404.html"})
 	}])
 
 	.service('authService', ['$http', '$location', function($http, $location){
-		this.authCheck = function(cb){
+		this.getUserInfo = function(cb){
 			$http.get('/api/me')
 				.then( function(returnData){
 					cb(returnData.data)
@@ -45,10 +51,11 @@ angular.module("indexModule")
 		}									
 	}])
 	
-	.controller("navController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
-		authService.authCheck(function(returnData){
-			if(returnData){
-				$scope.user = returnData;
+	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "$http", "authService", function($scope, $rootScope, $window, $interval, $http, authService){
+		authService.getUserInfo(function(user){
+			if(user){
+				$scope.user = user;
+				$rootScope.user = user;
 			}
 		})
 

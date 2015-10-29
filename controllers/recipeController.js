@@ -11,50 +11,58 @@ getRecipes = function(req, res){
 getAllBeerTypes = function(req, res){
 	recipeModel.beerTypes.find({}, function(err, beers){
 		if(err){
-			console.log(err);
+			res.send(err);
 		}else{
 			res.send(beers);
 		}
 		
 	});
 }
-createRecipe = function(req, res){
-//put an if statement here to check that they are logged in
-	var newRecipe = new recipeModel.userRecipe(req.body);
 
-	newRecipe.save(function(err, data){
-		if(err){
-			console.log(err);
-		}else{
-			res.send(data);
-		}	
-	})
+//updateRecipe
+createRecipe = function(req, res){
+	if(req.user){
+		var newRecipe = new recipeModel.userRecipe(req.body);
+
+		newRecipe.save(function(err, data){
+			if(err){
+				res.send(err);
+			}else{
+				res.send(data);
+			}	
+		})
+	}else{
+		res.send("Error: not logged in.");
+	}
 },
 
 updateRecipe = function(req, res){
-	var beer = req.params;
-	for(var prop in beer){
-		if(beer[prop] != ""){
-			var property = beer[prop];
-			recipeModel.userRecipe.update({_id: req.params.id}, {$set: {prop: property}});
+	if(req.user){
+		var beer = req.params;
+		for(var prop in beer){
+			if(beer[prop] != ""){
+				var property = beer[prop];
+				recipeModel.userRecipe.update({_id: req.params.id}, {$set: {prop: property}});
+			}
 		}
 	} 
 }
 
-//THIS ISN'T FINISHED!!!!
 deleteRecipe = function(req, res){
-	//Make an if statement in here seeing if they are logged in
-	recipeModel.userRecipe.remove({_id: req.params.id}, function(err){
-		if(err){
-			res.send(err);
-		}else{
-			res.send("success!");
-		}
-	})
+	if(req.user){
+		recipeModel.userRecipe.remove({_id: req.params.id}, function(err){
+			if(err){
+				res.send(err);
+			}else{
+				res.send("success!");
+			}
+		})
+	}
 }
 
 //recipemodel.recipe.remove
 module.exports = {
+	updateRecipe	: updateRecipe,
 	createRecipe  	: createRecipe,
 	getRecipes      : getRecipes,
 	deleteRecipe  	: deleteRecipe,

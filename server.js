@@ -48,6 +48,10 @@ server.get("/getAllBeerTypes", recipeController.getAllBeerTypes);
 server.post("/createrecipe", recipeController.createRecipe);
 
 
+//=============
+//PUT ROUTES
+//=============
+server.put("/updaterecipe", recipeController.updateRecipe);
 
 //==============
 //DELETE ROUTES

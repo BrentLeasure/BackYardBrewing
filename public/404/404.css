@@ -2,7 +2,8 @@ body{
 	background-color: #2B2B2B;
 }
 
-.four{
+.not-found-image{
 	position: relative;
-	width: 50%;
+	margin: 15% 0% 0% 13%;
+	width: 75%;
 }
