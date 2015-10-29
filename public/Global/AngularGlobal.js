@@ -48,7 +48,6 @@ angular.module("indexModule")
 	.controller("navController", ["$scope", "$window", "$interval", "$http", "authService", function($scope, $window, $interval, $http, authService){
 		authService.authCheck(function(returnData){
 			if(returnData){
-				console.log('Hey!');
 				$scope.user = returnData;
 			}
 		})
@@ -56,7 +55,6 @@ angular.module("indexModule")
 		$scope.loggingIn = function(){
 			$http.post("/auth/login", $scope.login)
 			.then(function(returnData){
-				console.log(returnData);
 					if(returnData.data.theError){
 						$scope.loginError = returnData.data.theError;
 					}else{

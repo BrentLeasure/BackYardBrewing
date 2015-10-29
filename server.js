@@ -16,9 +16,8 @@ server.sessionMiddleware = session({
 	secret            : "2CBABA1ITL#ST#1@92",
 	resave            : true,
 	saveUninitialized : false,
-	cookie: {maxAge: 30000}
-	//look into cookie: cookie takes an object that has key value pairs
-	//max age is worth looking into (express session)
+	rolling			  : true,
+	cookie			  : {maxAge: 60000 * 60}
 });
 server.use(server.sessionMiddleware);
 
@@ -41,7 +40,7 @@ server.get("/", function(req, res){
 
 server.get("/beer/:beerAlias", recipeController.getRecipes);
 
-server.get("/getAllRecipes", recipeController.getAllRecipes);
+server.get("/getAllBeerTypes", recipeController.getAllBeerTypes);
 
 //=============
 //POST ROUTES
@@ -53,7 +52,7 @@ server.post("/createrecipe", recipeController.createRecipe);
 //==============
 //DELETE ROUTES
 //==============
-server.delete("/deleterecipe", recipeController.deleteRecipe)
+server.delete("/deleterecipe/:id", recipeController.deleteRecipe);
 
 
 

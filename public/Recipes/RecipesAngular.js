@@ -35,8 +35,8 @@ angular.module("indexModule")
 			}
 		}
 
-		$scope.getAllRecipes = function(){
-			$http.get("/getAllRecipes")
+		$scope.getAllBeerTypes = function(){
+			$http.get("/getAllBeerTypes")
 				.then(function(returnData){
 					$scope.beerTypes = returnData.data;
 					$scope.lastPage = Math.ceil($scope.beerTypes.length / $scope.beersPerPage);
@@ -65,12 +65,13 @@ angular.module("indexModule")
 		//==============
 		//RECIPES
 		//==============
-		$scope.deleteRecipe = function(beer){
-			$http.delete("/removerecipe", beer);
+		$scope.deleteRecipe = function(recipe){
+			var theRecipe = recipe;
+			$http.delete("/deleterecipe/" + recipe._id)
+			.then(function(){
+				$scope.getRecipes(theRecipe);
+			})
 		}
-
-		window.addEventListener("resize", function(){
-			$scope.WidthChecker.changeNumberOfPages($scope)});
 
 		$scope.changePage = function(page){
 			$scope.Paginate.changePagination($scope, page);
@@ -100,5 +101,5 @@ angular.module("indexModule")
 			$scope.lightBox.taste = " ";
 			$scope.lightBoxState = false;
 		}
-		$scope.getAllRecipes();	
+		$scope.getAllBeerTypes();	
 }]);
