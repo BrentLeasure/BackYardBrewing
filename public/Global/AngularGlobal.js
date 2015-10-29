@@ -59,6 +59,10 @@ angular.module("indexModule")
 			}
 		})
 
+		$scope.userProfile = function(){
+				
+		}
+
 		$scope.loggingIn = function(){
 			$http.post("/auth/login", $scope.login)
 			.then(function(returnData){
