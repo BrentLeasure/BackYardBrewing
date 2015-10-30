@@ -3,21 +3,18 @@ var User = require('../models/user');
 
 var performLogin = function(req, res, next, user){
   req.login(user, function(err){
-
     if(err){
       res.send(err);
     }else{
-      res.send('/');
+      user.password = "none of your damn business";
+      res.send(user);
     }
   });
 };
 
 //Authentication controller
 var authenticationController = {
-  login: function(req, res){
-   res.sendFile('/html/login.html', {root : './public'})
-  },
-  
+
   processLogin: function(req, res, next){
     var authFunction = passport.authenticate('local', function(err, user, info){
       if(err){

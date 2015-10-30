@@ -7,6 +7,17 @@ getRecipes = function(req, res){
 	})
 }
 
+getUserRecipes = function(req, res){
+	recipeModel.userRecipe.find({userID: req.body._id}, function(err, userRecipes){
+		if(err){
+			res.send(err);
+		}else if(userRecipes == null){
+			res.send("You don't have any Recipes");
+		}else{
+			res.send(userRecipes);
+		}
+	})
+}
 //grabs all the beertypes
 getAllBeerTypes = function(req, res){
 	recipeModel.beerTypes.find({}, function(err, beers){
@@ -50,6 +61,7 @@ updateRecipe = function(req, res){
 	} 
 }
 
+//deletes recipes from the model
 deleteRecipe = function(req, res){
 	if(req.user){
 		recipeModel.userRecipe.remove({_id: req.params.id}, function(err){
@@ -64,11 +76,12 @@ deleteRecipe = function(req, res){
 	}
 }
 
-//recipemodel.recipe.remove
+
 module.exports = {
-	updateRecipe	: updateRecipe,
-	createRecipe  	: createRecipe,
 	getRecipes      : getRecipes,
-	deleteRecipe  	: deleteRecipe,
+	getUserRecipes	: getUserRecipes,
 	getAllBeerTypes : getAllBeerTypes,
+	createRecipe  	: createRecipe,
+	updateRecipe	: updateRecipe,
+	deleteRecipe  	: deleteRecipe,
 }

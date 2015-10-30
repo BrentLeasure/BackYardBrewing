@@ -54,9 +54,6 @@ angular.module("indexModule")
 				}	
 		}
 
-		$scope.getUserRecipes = function(beer){
-		}
-
 		$scope.pass = function(beer){
 			$scope.getRecipes(beer);
 		}
@@ -78,7 +75,7 @@ angular.module("indexModule")
 		//==============
 
 		$scope.isLoggedIn = function(){
-			authService.authCheck(function(user){
+			authService.getUserInfo(function(user){
 				if(user){
 					$window.location.href = "/#/recipesubmission"
 				}else{

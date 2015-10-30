@@ -42,6 +42,8 @@ server.get("/beer/:beerAlias", recipeController.getRecipes);
 
 server.get("/getAllBeerTypes", recipeController.getAllBeerTypes);
 
+server.get("/getUserRecipes", recipeController.getUserRecipes);
+
 //=============
 //POST ROUTES
 //=============
@@ -73,11 +75,14 @@ server.post('/auth/signup', authenticationController.processSignup);
 
 server.get('/auth/logout', authenticationController.logout);
 
-server.get('/auth/login', authenticationController.login);
-
 // This route is designed to send back the logged in user (or undefined if they are NOT logged in)
 server.get('/api/me', function(req, res){
-	res.send(req.user)
+	if(req.user){
+		req.user.password = "none of your damn business";
+		res.send(req.user)
+	}else{
+		res.send(false);
+	}
 })
 
 //============

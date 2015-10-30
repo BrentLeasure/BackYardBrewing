@@ -34,9 +34,8 @@ angular.module("indexModule")
 				controller  : "signupController"
 			})
 			.when("/user/:user", {
-				tempateUrl  : "User-Profile/UserProfile.html",
+				templateUrl  : "User-Profile/UserProfile.html",
 				controller  : "UserController",
-
 			})
 			.otherwise({ templateUrl: "/404/404.html"})
 	}])
@@ -55,14 +54,10 @@ angular.module("indexModule")
 		authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
-				$rootScope.user = user;
+			}else{
+				$scope.user=false;
 			}
-		})
-
-		$scope.userProfile = function(){
-				
-		}
-
+		});
 		$scope.loggingIn = function(){
 			$http.post("/auth/login", $scope.login)
 			.then(function(returnData){
