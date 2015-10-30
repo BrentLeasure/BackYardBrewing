@@ -4,7 +4,7 @@
 			<div ng-show="user" ng-repeat="recipe in userRecipes" class="recipes">		
 			<h4>{{recipe.alias}}</h4>
 			<p>{{recipe.selectedCategory}}</p>
-			<a href="/#/updaterecipe">update</a>
+			<button ng-click"updateUserRecipe(recipe)"></button>
 			</div>
 		</div>
 	</div>
