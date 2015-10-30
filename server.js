@@ -42,7 +42,7 @@ server.get("/beer/:beerAlias", recipeController.getRecipes);
 
 server.get("/getAllBeerTypes", recipeController.getAllBeerTypes);
 
-server.get("/getUserRecipes", recipeController.getUserRecipes);
+server.get("/getUserRecipes/:_id", recipeController.getUserRecipes);
 
 //=============
 //POST ROUTES

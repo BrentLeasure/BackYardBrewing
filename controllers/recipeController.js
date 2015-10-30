@@ -8,10 +8,11 @@ getRecipes = function(req, res){
 }
 
 getUserRecipes = function(req, res){
-	recipeModel.userRecipe.find({userID: req.body._id}, function(err, userRecipes){
+	recipeModel.userRecipe.find({userID: req.params._id}, function(err, userRecipes){
+		console.log(userRecipes);
 		if(err){
 			res.send(err);
-		}else if(userRecipes == null){
+		}else if(!userRecipes){
 			res.send("You don't have any Recipes");
 		}else{
 			res.send(userRecipes);

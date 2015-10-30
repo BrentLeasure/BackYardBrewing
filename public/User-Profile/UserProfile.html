@@ -1,7 +1,11 @@
 <div ng-controller="UserController" class="container">
 	<div class="row">
 		<div class="col-xs-12 global-page-layout">
-			<h1 class="not-logged-in" ng-hide="user">{{notLoggedIn}}</h1>
+			<div ng-show="user" ng-repeat="recipe in userRecipes" class="recipes">		
+			<h4>{{recipe.alias}}</h4>
+			<p>{{recipe.selectedCategory}}</p>
+			<a href="/#/updaterecipe">update</a>
+			</div>
 		</div>
 	</div>
 </div>
