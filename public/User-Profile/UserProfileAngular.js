@@ -8,7 +8,7 @@ angular.module("indexModule")
 			}
 	})
 	$scope.getUserRecipes = function(){
-		$http.get("/getUserRecipes/" + $scope.user._id)
+		$http.get("/getuserrecipes/" + $scope.user._id)
 		.then( function(returnData){
 			if(returnData.data.err){
 				$scope.err = returnData.data.err;	
@@ -22,7 +22,7 @@ angular.module("indexModule")
 		})
 	}
 	$scope.updateUserRecipe = function(recipe){
-		
+	 	$http.get("/updaterecipe", recipe);
 	}
 
 }]);

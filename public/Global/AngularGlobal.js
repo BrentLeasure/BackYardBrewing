@@ -21,10 +21,6 @@ angular.module("indexModule")
 				templateUrl : "/Recipes/Recipes.html",
 				controller  : "RecipesController"
 			})
-			.when("/updaterecipe", {
-				templateUrl : "/Update-Recipe/UpdateRecipe.html",
-				controller  : "RecipesController"
-			})
 			.when("/thebasics", {
 				templateUrl : "/The-Basics/TheBasics.html",
 				controller  : "theBasicsController"
@@ -36,6 +32,10 @@ angular.module("indexModule")
 			.when("/user/:user", {
 				templateUrl : "User-Profile/UserProfile.html",
 				controller  : "UserController",
+			})
+			.when("/changerecipe/:recipeID", {
+				templateUrl : "/Update-Recipe/UpdateRecipe.html",
+				controller  : "UpdateRecipeController",
 			})
 			.otherwise({ templateUrl: "/404/404.html"})
 	}])

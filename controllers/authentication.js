@@ -1,7 +1,7 @@
 var passport = require('passport');
 var User = require('../models/user');
 
-var performLogin = function(req, res, next, user){
+var performLogin = function(req, res, user){
   req.login(user, function(err){
     if(err){
       res.send(err);
@@ -22,11 +22,11 @@ var authenticationController = {
       } else if(!user) {
 		    res.send({theError: 'Invalid Email or wrong password'});
       }else{
-        performLogin(req, res, next, user);
+        performLogin(req, res, user);
       }
     });
 
-    authFunction(req, res, next);
+    authFunction(req, res);
   },
 
   processSignup: function(req, res){
@@ -43,13 +43,14 @@ var authenticationController = {
       if(err) {
         //if 11000, it means there is a user that already exists
         if(err.code === 11000){
-		      res.send({error : 'This user already exists.'})
+          console.log(err);
+		      res.send({error : 'Your username/email is already in use'});
         }else{
 		      res.send({error : 'An error occured, please try again'})
 		    }
         
       }else{
-        performLogin(req, res, next, user);
+        performLogin(req, res, user);
       }
     });
   },

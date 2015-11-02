@@ -17,6 +17,17 @@ angular.module("indexModule")
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
 
+		//==========
+		//GRABBING DATA
+		//==========
+		$http.get("/getallbeertypes")
+		.then(function(returnData){
+			$scope.beerTypes = returnData.data;
+			$scope.lastPage = Math.ceil($scope.beerTypes.length / $scope.beersPerPage);
+			$scope.Paginate.setPagination($scope);
+		}), function(error){
+			console.log(error)
+		}	
 		//==============
 		//RECIPE SUMBISSION
 		//==============
@@ -43,17 +54,6 @@ angular.module("indexModule")
 			}
 		}
 
-		$scope.getAllBeerTypes = function(){
-			$http.get("/getAllBeerTypes")
-				.then(function(returnData){
-					$scope.beerTypes = returnData.data;
-					$scope.lastPage = Math.ceil($scope.beerTypes.length / $scope.beersPerPage);
-					$scope.Paginate.setPagination($scope);
-				}), function(error){
-					console.log(error)
-				}	
-		}
-
 		$scope.pass = function(beer){
 			$scope.getRecipes(beer);
 		}
@@ -69,7 +69,6 @@ angular.module("indexModule")
 				$scope.getRecipes(theRecipe);
 			})
 		}
-
 		//==============
 		//RECIPES
 		//==============
@@ -112,5 +111,4 @@ angular.module("indexModule")
 			$scope.lightBox.taste = " ";
 			$scope.lightBoxState = false;
 		}
-		$scope.getAllBeerTypes();	
 }]);

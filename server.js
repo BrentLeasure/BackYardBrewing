@@ -38,11 +38,18 @@ server.get("/", function(req, res){
 	res.sendFile("/GlobalLayout.html", {root: "./public/Global"})
 });
 
+server.get("/updaterecipe", function(req, res){
+	res.sendFile("/UpdateRecipe.html", {root: "./public/Update-Recipe"})
+});
+
 server.get("/beer/:beerAlias", recipeController.getRecipes);
 
-server.get("/getAllBeerTypes", recipeController.getAllBeerTypes);
+server.get("/getallbeertypes", recipeController.getAllBeerTypes);
 
-server.get("/getUserRecipes/:_id", recipeController.getUserRecipes);
+//MULTIPLE RECIPES
+server.get("/getuserrecipes/:_id", recipeController.getUserRecipes);
+//SINGLE RECIPE
+server.get("/getuserrecipe/:_id", recipeController.getUserRecipe);
 
 //=============
 //POST ROUTES

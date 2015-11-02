@@ -1,10 +1,10 @@
-<div ng-controller="UserController" class="container">
+<div class="container">
 	<div class="row">
 		<div class="col-xs-12 global-page-layout">
 			<div ng-show="user" ng-repeat="recipe in userRecipes" class="recipes">		
 			<h4>{{recipe.alias}}</h4>
 			<p>{{recipe.selectedCategory}}</p>
-			<button ng-click"updateUserRecipe(recipe)"></button>
+			<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
 			</div>
 		</div>
 	</div>

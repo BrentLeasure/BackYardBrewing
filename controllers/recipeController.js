@@ -7,15 +7,27 @@ getRecipes = function(req, res){
 	})
 }
 
+//MULTIPLE RECIPE
 getUserRecipes = function(req, res){
 	recipeModel.userRecipe.find({userID: req.params._id}, function(err, userRecipes){
-		console.log(userRecipes);
 		if(err){
 			res.send(err);
 		}else if(!userRecipes){
 			res.send("You don't have any Recipes");
 		}else{
 			res.send(userRecipes);
+		}
+	})
+}
+//SINGLE RECIPE
+getUserRecipe = function(req, res){
+	recipeModel.userRecipe.findOne({_id: req.params._id}, function(err, userRecipe){
+		if(err){
+			res.send(err);
+		}else if(!userRecipe){
+			res.send("No Recipe");
+		}else{
+			res.send(userRecipe);
 		}
 	})
 }
@@ -31,7 +43,7 @@ getAllBeerTypes = function(req, res){
 	});
 }
 
-//updateRecipe
+
 createRecipe = function(req, res){
 	if(req.user){
 		var newRecipe = new recipeModel.userRecipe(req.body);
@@ -48,15 +60,17 @@ createRecipe = function(req, res){
 	}
 },
 
+//updateRecipe
 updateRecipe = function(req, res){
 	if(req.user){
-		var beer = req.params;
-		for(var prop in beer){
-			if(beer[prop] != ""){
-				var property = beer[prop];
-				recipeModel.userRecipe.update({_id: req.params.id}, {$set: {prop: property}});
+		recipeModel.userRecipe.update({_id: req.body._id}, req.body, function(err){
+			if(err){
+				res.send(err);
+			}else{
+				res.send("success!");
 			}
-		}
+		});
+
 	}else{
 		res.send("Error: not logged in.");
 	} 
@@ -81,6 +95,7 @@ deleteRecipe = function(req, res){
 module.exports = {
 	getRecipes      : getRecipes,
 	getUserRecipes	: getUserRecipes,
+	getUserRecipe 	: getUserRecipe,
 	getAllBeerTypes : getAllBeerTypes,
 	createRecipe  	: createRecipe,
 	updateRecipe	: updateRecipe,
