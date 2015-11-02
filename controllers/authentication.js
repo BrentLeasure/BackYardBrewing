@@ -43,13 +43,14 @@ var authenticationController = {
       if(err) {
         //if 11000, it means there is a user that already exists
         if(err.code === 11000){
-		      return res.send({error : 'This user already exists.'})
+		      res.send({error : 'This user already exists.'})
         }else{
-		      return res.send({error : 'An error occured, please try again'})
+		      res.send({error : 'An error occured, please try again'})
 		    }
         
+      }else{
+        performLogin(req, res, next, user);
       }
-      performLogin(req, res, next, user);
     });
   },
 

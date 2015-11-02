@@ -1,12 +1,14 @@
 <div ng-class="{'turn-off-scroll' : lightBoxState}" class="container global-page-layout">
 	<div class="row">
 		<div class="col-lg-12">
-			<form action="/auth/signup" method="POST">
-				<input name="username" placeholder="User Name">
-				<input name="email" placeholder="Email">
-				<input name="password" type="password" placeholder="Password">
+			<form ng-hide="signedUp" ng-submit="createUser()">
+				<input ng-model="signup.username" placeholder="User Name">
+				<input ng-model="signup.email" placeholder="Email">
+				<input ng-model="signup.password" type="password" placeholder="Password">
 				<input type="submit">
 			</form>
+			<p ng-hide="signedUp">{{err}}</p>
+			<p class="success" ng-show="signedUp">Success!</p>
 		</div>
 	</div>
 </div>

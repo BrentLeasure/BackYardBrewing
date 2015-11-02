@@ -34,7 +34,7 @@ angular.module("indexModule")
 				controller  : "signupController"
 			})
 			.when("/user/:user", {
-				templateUrl  : "User-Profile/UserProfile.html",
+				templateUrl : "User-Profile/UserProfile.html",
 				controller  : "UserController",
 			})
 			.otherwise({ templateUrl: "/404/404.html"})

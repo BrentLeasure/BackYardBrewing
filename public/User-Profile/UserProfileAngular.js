@@ -21,5 +21,8 @@ angular.module("indexModule")
 			}
 		})
 	}
+	$scope.updateUserRecipe = function(recipe){
+		
+	}
 
 }]);

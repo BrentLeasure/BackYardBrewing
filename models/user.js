@@ -25,7 +25,7 @@ var userSchema = mongoose.Schema({
  * be saved to the database so that we can encrypt the password.
  */
 
-userSchema.pre('save', function(next){
+var saveUser = userSchema.pre('save', function(next){
   if(!this.isModified('password')) return next();
   var user = this;
   // Generate an encryption "salt." This is a special way of increasing the
@@ -70,5 +70,6 @@ userSchema.methods.comparePassword = function(userPassword, next){
   
 
 module.exports = {
-  User : mongoose.model('user', userSchema),
+  User : mongoose.model("user", userSchema),
+  save : mongoose.model("user", saveUser),
 }
