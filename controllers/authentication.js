@@ -15,7 +15,7 @@ var performLogin = function(req, res, next, user){
 //Authentication controller
 var authenticationController = {
 
-  processLogin: function(req, res, next){
+  processLogin: function(req, res){
     var authFunction = passport.authenticate('local', function(err, user, info){
       if(err){
         res.send({theError: err});
@@ -29,13 +29,13 @@ var authenticationController = {
     authFunction(req, res, next);
   },
 
-  processSignup: function(req, res, next){
+  processSignup: function(req, res){
     var user = new User.User({
       username: req.body.username,
       password: req.body.password,
       email: req.body.email
     });
-
+     // user.findOne({ username: username }, function (err, user) {
     // Now that the user is created, we'll attempt to save them to the
     // database.
     user.save(function(err, user){
