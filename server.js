@@ -39,7 +39,7 @@ server.get("/", function(req, res){
 });
 
 server.get("/updaterecipe", function(req, res){
-	res.sendFile("/UpdateRecipe.html", {root: "./public/Update-Recipe"})
+	res.sendFile("/RecipeUpdate.html", {root: "./public/Recipe-Update"})
 });
 
 server.get("/beer/:beerAlias", recipeController.getRecipes);

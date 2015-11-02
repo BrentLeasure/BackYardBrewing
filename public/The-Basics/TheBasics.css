@@ -1,6 +1,7 @@
 #brewingEquipmentMap { 
+	top: 140px;
 	position: relative;
-	border: 5px solid #611B19;
+	border: 1px solid gray;
 	border-radius: 7px;
 	width: 600px;
 	height: 400px; 

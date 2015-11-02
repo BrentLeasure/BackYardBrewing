@@ -1,3 +1,6 @@
 .not-logged-in{
 	padding-top: 100px;
 }
+.delete-button{
+	cursor: pointer;
+}

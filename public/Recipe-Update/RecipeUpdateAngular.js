@@ -1,5 +1,5 @@
 angular.module("indexModule")
-.controller("UpdateRecipeController", ["$scope", "$http", "$routeParams", function($scope, $http, $routeParams){		
+.controller("RecipeUpdateController", ["$scope", "$http", "$routeParams", function($scope, $http, $routeParams){		
 		$http.get("/getuserrecipe/" + $routeParams.recipeID)
 		.then(function(returnData){
 			if(returnData.data.error){

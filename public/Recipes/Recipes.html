@@ -43,7 +43,7 @@
 				<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
 
 					<ul ng-submit="getRecipes(beer)" class="beers">
-						<button ng-click="pass(beer)" class="global-link-text beer-links global-button-color global-button-layout recipe-layout"><li class="">{{beer.alias}}</li></button>
+						<button ng-click="pass(beer)" class="global-link-text global-button-color global-button-layout recipe-layout beer-links"><li class="">{{beer.alias}}</li></button>
 					</ul>
 				</div>
 			</div>

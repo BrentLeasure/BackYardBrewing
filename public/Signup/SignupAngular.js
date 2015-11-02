@@ -19,7 +19,7 @@ angular.module("indexModule")
 		})
 	};
 	$scope.delayedRedirect = function(){
-		// $window.location.reload();
-		// $location.path("/");
+		$window.location.reload();
+		$location.path("/");
 	}
 }]);

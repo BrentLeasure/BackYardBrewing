@@ -12,8 +12,6 @@ getUserRecipes = function(req, res){
 	recipeModel.userRecipe.find({userID: req.params._id}, function(err, userRecipes){
 		if(err){
 			res.send(err);
-		}else if(!userRecipes){
-			res.send("You don't have any Recipes");
 		}else{
 			res.send(userRecipes);
 		}

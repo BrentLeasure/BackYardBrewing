@@ -34,8 +34,8 @@ angular.module("indexModule")
 				controller  : "UserController",
 			})
 			.when("/changerecipe/:recipeID", {
-				templateUrl : "/Update-Recipe/UpdateRecipe.html",
-				controller  : "UpdateRecipeController",
+				templateUrl : "/Recipe-Update/RecipeUpdate.html",
+				controller  : "RecipeUpdateController",
 			})
 			.otherwise({ templateUrl: "/404/404.html"})
 	}])

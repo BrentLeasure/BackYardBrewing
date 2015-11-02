@@ -62,13 +62,7 @@ angular.module("indexModule")
 		//DELETE RECIPES
 		//==============
 
-		$scope.deleteRecipe = function(recipe){
-			var theRecipe = recipe;
-			$http.delete("/deleterecipe/" + recipe._id)
-			.then(function(){
-				$scope.getRecipes(theRecipe);
-			})
-		}
+
 		//==============
 		//RECIPES
 		//==============
