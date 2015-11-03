@@ -22,6 +22,7 @@ angular.module("indexModule")
 		//==========
 		$http.get("/getallbeertypes")
 		.then(function(returnData){
+			console.log(returnData.data);
 			$scope.beerTypes = returnData.data;
 			$scope.lastPage = Math.ceil($scope.beerTypes.length / $scope.beersPerPage);
 			$scope.Paginate.setPagination($scope);
