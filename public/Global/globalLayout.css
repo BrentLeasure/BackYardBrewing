@@ -7,7 +7,7 @@
 	body
  ===============*/
 .body{
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	color: #2B2B2B;
 	margin:0; 
 	font-size: 15px;
@@ -56,14 +56,25 @@
 	background-position: right bottom;
 }
 
+.nav-list-item-underline{
+	height: 5px;
+	width: 0%;
+	background-color: white;
+	-webkit-transition: width .5s;
+	transition: width .5s;
+}
+
 .nav-links{
 	text-decoration: none;
  	color: white;
+ 	border: none;
 }
 
 .nav-list-items:hover{
 	color: white;
-	background-position:left bottom;
+}
+.nav-list-items:hover .nav-list-item-underline{
+	width: 100%;
 }
 /*NAV LIST RIGHT*/
 .nav-list-right-side{
@@ -166,9 +177,15 @@
 	margin: 0px 0px 0px 20px;
 	top: 40px;
 }
-/*====================
-	GLOBAL PAGE CHANGE BUTTONS
-=====================*/
+
+.global-submit-button{
+	color: white;
+	border: 1px solid #e2e2e2;
+	text-decoration: none;
+	background-color: #611B19;
+}
+/*	GLOBAL PAGE CHANGE BUTTONS*/
+
 .global-page-change-buttons{
 	text-decoration: none;
 	color: #353230;

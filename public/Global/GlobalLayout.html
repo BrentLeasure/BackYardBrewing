@@ -47,15 +47,15 @@
 	<div ng-controller="navController" class="nav-bar">
 		<ul class="nav-list">
 			<a class="nav-links" href="/#/"><li class="nav-list-logo"><img class="BYB-logo" src="../Prototype.png"></li></a>
-			<a class="nav-links" href="/#/thebasics"><li class="nav-list-items">The Basics</li></a>
-			<a class="nav-links" href="/#/recipes"><li class="nav-list-items">Recipes</li></a>
-			<a class="nav-links" href="/#/forums"><li class="nav-list-items">Forums</li></a>
+			<a class="nav-links" href="/#/thebasics"><li class="nav-list-items">The Basics<div class="nav-list-item-underline"></div></li></a>
+			<a class="nav-links" href="/#/recipes"><li class="nav-list-items">Recipes<div class="nav-list-item-underline"></div></li></a>
+			<a class="nav-links" href="/#/forums"><li class="nav-list-items">Forums<div class="nav-list-item-underline"></div></li></a>
 		</ul>
 		<ul class="nav-list-right-side">
 			<form ng-submit="loggingIn()">
 				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.email" class="" placeholder="email"></li>
 				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.password" type="password" class="" placeholder="password"></li>
-				<li ng-hide="user" class="nav-list-items-right"><input type="submit" class="" placeholder="password"></li>
+				<li ng-hide="user" class="nav-list-items-right"><input type="submit" class="global-submit-button" placeholder="password"></li>
 			</form>
 				<h5 ng-show="loginError">{{loginError}}</h5>
 				<li ng-hide="user" class="nav-list-signup-item"><a href="/#/signup" class="global-signup-button">sign up</a></li>
