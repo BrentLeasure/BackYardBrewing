@@ -57,7 +57,7 @@
 }
 
 .nav-list-item-underline{
-	height: 5px;
+	height: 3px;
 	width: 0%;
 	background-color: white;
 	-webkit-transition: width .5s;
@@ -68,6 +68,9 @@
 	text-decoration: none;
  	color: white;
  	border: none;
+}
+.nav-links:focus{
+	color: white;
 }
 
 .nav-list-items:hover{
@@ -151,8 +154,8 @@
  GLOBAL BUTTON LAYOUT
 =================*/
 .global-button-color{
-	background-color: gray;
-	border: 1px solid gray;
+	background-color: lightgray;
+	border: 1px solid lightgray;
 	color: white;
 }
 
@@ -204,7 +207,7 @@
 	color: lightgray;
 	outline: none;
 	box-shadow: none;
-	border: 2px solid black;
+	border: 2px solid lightgray;
 	border-radius: 25px;
 	padding: 0px 5px 0px 20px;
 	height: 30px;

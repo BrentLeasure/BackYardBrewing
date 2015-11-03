@@ -2,6 +2,7 @@
 	RECIPE BUTTON LAYOUT
 ===================*/
 .recipe-layout{
+	display: inline-block;
 	width: 25%;
 	margin: 3% 3%;
 }
@@ -13,8 +14,9 @@
 .recipe-pagination-button-layout{
 	text-align: center;
 	margin: 0px 1px 0px 1px;
-	border: 1px solid black;
+	border: 1px solid lightgray;
 	background-color: white;
+	color: lightgray;
 	width: 25px;
 	height: 25px;
 }
