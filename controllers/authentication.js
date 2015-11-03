@@ -1,5 +1,5 @@
 var passport = require('passport');
-var User = require('../models/user');
+var userModel = require('../models/user');
 
 var performLogin = function(req, res, user){
   req.login(user, function(err){
@@ -30,7 +30,7 @@ var authenticationController = {
   },
 
   processSignup: function(req, res){
-    var user = new User.User({
+    var user = new userModel.user({
       username: req.body.username,
       password: req.body.password,
       email: req.body.email

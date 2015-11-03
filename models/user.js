@@ -16,6 +16,12 @@ var userSchema = mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  friendsList: {
+    type: Array,
+  },
+  favoriteRecipes: {
+    type: Array,
   }
 });
 

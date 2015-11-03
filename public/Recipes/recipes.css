@@ -20,6 +20,9 @@
 	width: 25px;
 	height: 25px;
 }
+.recipe-pagination-button-layout:hover{
+	color: black;
+}
 /*===================
 	ACTIVE BUTTON
 ====================*/

@@ -21,7 +21,7 @@
  	GLOBAL PAGE LAYOUT
  ===============*/
 .global-page-layout{
-	padding: 90px 50px 0px 50px;
+	padding: 90px 50px 0px;
 }
 
 /*===============
@@ -190,8 +190,14 @@
 /*	GLOBAL PAGE CHANGE BUTTONS*/
 
 .global-page-change-buttons{
+	padding: 2px 7px 0px;
+	border: 1px solid lightgray;;
+	background-color: white;
 	text-decoration: none;
-	color: #353230;
+	color: lightgray;
+}
+.global-page-change-buttons:hover{
+	color: black;
 }
 
 
@@ -199,9 +205,16 @@
 /*====================
 	GLOBAL SEARCH BOX
 ====================*/
-
 .global-search-box{
-	width: 100%;
+	width: 300px;
+	position: relative;
+	height: 100px;
+	left: 1%;
+}
+.global-search-bar{
+	position: absolute;
+	top: 8px;
+	width: 300px;
 	display: block;
 	margin-bottom: 20px;
 	color: lightgray;
@@ -247,9 +260,6 @@ GLOBAL MAP ASSOCIATED LIST
 	bottom: 5px;
 }
 
-.night-time-global-maps-button{
-	background-color: #2B2B2B;
-}
 /*======================
 	BEER-EQUIPMENT-AND-EVENT-BOX
 =========================*/
@@ -268,7 +278,8 @@ GLOBAL MAP ASSOCIATED LIST
 /*===================
  MEDIA QUERIES
  ===================*/
-@media screen and (max-width: 965px){
+
+@media screen and (max-width: 971px){
 	.nav-bar{
 		font-size: 14px;
 	}
@@ -353,7 +364,7 @@ GLOBAL MAP ASSOCIATED LIST
 	=================*/
 
 	.global-page-layout{
-		padding: 170px 0px 0px 0px;
+		padding: 250px 0px 0px 0px;
 	}
 
 }

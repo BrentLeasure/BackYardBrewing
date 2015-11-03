@@ -5,11 +5,11 @@ angular.module("indexModule")
 
 		$scope.activateTab = function(buttonClicked){
 			if(buttonClicked == 1){
-				$scope.weekState = true;
-				$scope.monthState = false;
+				$scope.ingredientsState = true;
+				$scope.equipmentState = false;
 			}else if(buttonClicked == 2){
-				$scope.weekState = false;
-				$scope.monthState = true;
+				$scope.ingredientsState = false;
+				$scope.equipmentState = true;
 			}
 		}
 
