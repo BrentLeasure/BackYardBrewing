@@ -44,7 +44,7 @@ var removeFavoriteRecipe = function(req, res){
 		res.send("You are not logged in.");
 	}
 }
-
+//hello!
 var getFavoriteRecipes = function(req, res){
 	if(user){
 		userModel.user.find({_id: req.body.}, funciton(err, favoriteRecipes)){
