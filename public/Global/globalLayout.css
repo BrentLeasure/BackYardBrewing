@@ -21,7 +21,7 @@
  	GLOBAL PAGE LAYOUT
  ===============*/
 .global-page-layout{
-	padding: 90px 50px 0px;
+	padding: 70px 50px 0px;
 }
 
 /*===============
@@ -387,7 +387,7 @@ GLOBAL MAP ASSOCIATED LIST
 		float: left;
 		position: absolute;
 		color: #611B19;
-		margin: 0px 0px 0px 0px;
+		margin: 5px 0px 0px 0px;
 		left: 10px;
 		top: 80px;
 		border: none;
