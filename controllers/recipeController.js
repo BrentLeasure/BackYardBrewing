@@ -31,7 +31,6 @@ getUserRecipe = function(req, res){
 }
 //grabs all the beertypes
 getAllBeerTypes = function(req, res){
-	console.log(recipeModel);
 	recipeModel.beerTypes.find({}, function(err, beers){
 		if(err){
 			res.send(err);
