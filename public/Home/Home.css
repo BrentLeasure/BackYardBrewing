@@ -5,7 +5,7 @@
 	width: 600px;
 	height: 400px; 
 	opacity: 0.9;
-	left: 12%;
+	left: 0%;
 }
 
 .map-helper-container{
@@ -13,3 +13,10 @@
 	left: 10%;
 }
 
+
+@media screen and (max-width: 445){
+	#eventMap { 
+		width: 400px;
+		height: 300px; 
+	}
+}
