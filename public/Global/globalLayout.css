@@ -402,6 +402,17 @@ GLOBAL MAP ASSOCIATED LIST
 		padding: 270px 0px 0px 0px;
 	}
 }
+@media screen and (max-width: 350){
+	.global-beer-box{
+	position: relative;
+	margin-bottom: 20px;
+	padding: 30px 50px 30px;
+	height: 100%;
+	width: 250px;
+	/*overflow-y: scroll;*/
+	z-index: 1;
+}
+}
 
 
 
