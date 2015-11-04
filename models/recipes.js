@@ -20,5 +20,5 @@ var beerTypesSchema = mongoose.Schema({
 
 module.exports = {
 	userRecipe     : mongoose.model("userRecipe", recipeSchema),
-	beerTypes 	   : mongoose.model("beertypes", beerTypesSchema),
+	beerTypes 	   : mongoose.model("beerTypes", beerTypesSchema),
 }
