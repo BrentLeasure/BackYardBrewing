@@ -57,9 +57,10 @@
 				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.email" class="" placeholder="email"></li>
 				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.password" type="password" class="" placeholder="password"></li>
 				<li ng-hide="user" class="nav-list-items-right"><input type="submit" class="global-submit-button" placeholder="password"></li>
+
+				<li ng-hide="user" class="nav-list-signup-item"><a href="/#/signup" class="global-signup-button">Sign Up</a></li>
 			</form>
 				<h5 ng-show="loginError">{{loginError}}</h5>
-				<li ng-hide="user" class="nav-list-signup-item"><a href="/#/signup" class="global-signup-button">sign up</a></li>
 				<li ng-show="user" class="home-item"><a href="/#/user/{{user.username}}"class="home-button"><img class="home-img"src="../home.png"></a></li>
 				<li ng-show="user" class="global-submit-button nav-list-items-right"><a href="/auth/logout">logout</a></li>
 		</ul>

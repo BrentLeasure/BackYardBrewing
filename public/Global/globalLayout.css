@@ -81,7 +81,7 @@
 }
 /*NAV LIST RIGHT*/
 .nav-list-right-side{
-	margin: 0px 100px 0px 0px;
+	margin: 0px 50px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	float: right;
 }
@@ -92,6 +92,8 @@
 	display: inline-block;
 }
 .nav-list-signup-item{
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 0px;
 	display: inline-block;
 }
 
@@ -174,11 +176,12 @@
 }
 
 .global-signup-button{
-	float: right;
-	position: fixed;
+	font-size: 13px;
 	color: white;
-	margin: 0px 0px 0px 20px;
-	top: 40px;
+	border: 1px solid #e2e2e2;
+	text-decoration: none;
+	background-color: #611B19;
+	padding: 3px 4px;
 }
 
 .global-submit-button{
@@ -186,6 +189,7 @@
 	border: 1px solid #e2e2e2;
 	text-decoration: none;
 	background-color: #611B19;
+	padding: ;
 }
 /*	GLOBAL PAGE CHANGE BUTTONS*/
 
@@ -279,13 +283,16 @@ GLOBAL MAP ASSOCIATED LIST
  MEDIA QUERIES
  ===================*/
 
-@media screen and (max-width: 971px){
+@media screen and (max-width: 1070px){
 	.nav-bar{
 		font-size: 14px;
 	}
+	.nav-list-right-side{
+	margin: 0px 30px 0px 0px;
+	}
 }
 
-@media screen and (max-width: 915px){	
+@media screen and (max-width: 917px){	
 	/*================
 	NAV BAR INFORMATION
 	=================*/
@@ -350,14 +357,7 @@ GLOBAL MAP ASSOCIATED LIST
 	/*=================
 		BUTTONS
 	====================*/
-	.global-signup-button{
-		float: left;
-		position: absolute;
-		color: #611B19;
-		margin: 0px 0px 0px 0px;
-		left: 10px;
-		top: 80px;
-	}
+
 
 	/*====================
 	PAGE-LAYOUT
@@ -373,26 +373,31 @@ GLOBAL MAP ASSOCIATED LIST
 	.nav-bar{
 		font-size: 13px;
 	}
-	.global-signup-button{
-		float: left;
-		position: absolute;
-		color: #611B19;
-		margin: 0px 0px 0px 0px;
-		left: 10px;
-		top: 80px;
-	}
 
 @media screen and (max-width: 640px){
 	.nav-bar{
 		font-size: 12px;
 	}
 	.global-signup-button{
+		font-size: 11px;
+	}
+}
+@media screen and (max-width: 445px){
+	.global-signup-button{
 		float: left;
 		position: absolute;
 		color: #611B19;
 		margin: 0px 0px 0px 0px;
 		left: 10px;
 		top: 80px;
+		border: none;
+		background-color: white;
+		padding: 3px;
+
+
+
+
+
 	}
 }
 
