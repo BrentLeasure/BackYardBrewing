@@ -183,6 +183,9 @@
 	background-color: #611B19;
 	padding: 3px 4px;
 }
+.global-signup-button:hover{
+	text-decoration: none;
+}
 
 .global-submit-button{
 	color: white;
