@@ -387,17 +387,15 @@ GLOBAL MAP ASSOCIATED LIST
 		float: left;
 		position: absolute;
 		color: #611B19;
-		margin: 15px 0px 0px 0px;
+		margin: 20px 0px 0px 0px;
 		left: 10px;
 		top: 80px;
 		border: none;
 		background-color: white;
 		padding: 0px;
-
-
-
-
-
+	}
+	.global-page-layout{
+		padding: 270px 0px 0px 0px;
 	}
 }
 
