@@ -10,11 +10,13 @@
  				</div>
  				<div class="user-recipes">
 					<h1 class="beer-info">User Recipes</h1>
-					<div ng-repeat="recipe in recipes">
-						<div class="recipe-layout">
-							<h3>{{recipe.alias}}</h3>
-							<button class="global-link-text global-button-color beer-links">More Info</button>
-						</div> 
+					<div class="recipe-box">
+						<div class="user-recipes-layout" ng-repeat="recipe in recipes">
+							<div>
+								<h3>{{recipe.alias}}</h3>
+								<button class="global-link-text global-button-color beer-links">More Info</button>
+							</div> 
+						</div>	
 					</div>
 				</div>
 			</div>	
