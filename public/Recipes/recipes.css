@@ -108,7 +108,9 @@
 	padding-left: 10px;
 }
 
-
+/*===============
+	MEDIA QUERIES
+=================*/
 @media screen and (min-width: 1200px){
 	.recipe-layout{
 		font-size: 15px;
@@ -116,9 +118,7 @@
 	.submit-recipe-button{
 	}
 }
-/*===============
-	MEDIA QUERIES
-=================*/
+
 @media screen and (max-width: 992px){
 	.submit-recipe-button{
 		right: 50px;
