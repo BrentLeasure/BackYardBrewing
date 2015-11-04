@@ -184,6 +184,7 @@
 	padding: 3px 4px;
 }
 .global-signup-button:hover{
+	color: white;
 	text-decoration: none;
 }
 
