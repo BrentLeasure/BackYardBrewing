@@ -30,7 +30,7 @@ var authenticationController = {
   },
 
   processSignup: function(req, res){
-    var user = new userModel.user({
+    var user = new userModel.User({
       username: req.body.username,
       password: req.body.password,
       email: req.body.email
