@@ -195,4 +195,8 @@
 	.global-search-box{
 		width: 200px;
 	}
+	.submit-recipe-button{
+	right: 0px;
+	top: 50px;
+	}
 }
