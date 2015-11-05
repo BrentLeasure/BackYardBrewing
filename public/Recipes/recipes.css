@@ -1,6 +1,9 @@
 /*=================
 	RECIPE BUTTON LAYOUT
 ===================*/
+.beers{
+	list-style-type: none;
+}
 .recipe-layout{
 	display: inline-block;
 	width: 25%;
@@ -173,6 +176,10 @@
 	.beer-links{
 		font-size: 7px;
 	}
+	.recipe-layout{
+		width: 42%;
+		margin: 10% 2% 1% 1%;
+	}
 	.global-button-layout{
 		text-align: center;
 		padding: 5px 0px 5px;
@@ -184,10 +191,6 @@
 @media screen and (max-width: 350px){
 	.beer-links{
 		color: black;
-	}
-	.recipe-layout{
-		width: 42%;
-		margin: 10% 2% 1% 1%;
 	}
 	.recipe-pagination-button-layout{
 		width: 25px;
