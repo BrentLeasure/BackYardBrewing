@@ -169,17 +169,21 @@
 		font-size: 10px;
 	}
 }
-@media screen and (max-width: 350px){
+@media screen and (max-width: 360px){
 	.beer-links{
-		color: black;
 		font-size: 7px;
 	}
 	.global-button-layout{
-	text-align: center;
-	padding: 5px 0px 5px;
-	border-radius: 5px;
-	float: left;
-	display: inline-block;
+		text-align: center;
+		padding: 5px 0px 5px;
+		border-radius: 5px;
+		float: left;
+		display: inline-block;
+	}
+}
+@media screen and (max-width: 350px){
+	.beer-links{
+		color: black;
 	}
 	.recipe-layout{
 		width: 42%;
