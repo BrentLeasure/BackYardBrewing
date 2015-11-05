@@ -5,11 +5,12 @@
 	cursor: pointer;
 }
 .recipe-header{
+	top: 50px;
 	left: 0px;
 }
 .user-recipes{
 	left: 0px;
-	margin: 0 auto;
+	margin: 0;
 	padding: 10px;
 	top: 50px;
 	border: 1px solid lightgray;
