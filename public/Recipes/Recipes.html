@@ -33,7 +33,7 @@
 			<div class="pagination-bar">
 				<button class="global-page-change-buttons" ng-click="Paginate.moveListBackward(this)">Prev</button>
 
-				<button  ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="recipe-pagination-button-layout" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
+				<button ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="recipe-pagination-button-layout" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
 
 				<button class="global-page-change-buttons" ng-click="Paginate.moveListForward(this)">Next</button>
 
