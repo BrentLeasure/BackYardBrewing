@@ -192,4 +192,7 @@
 	.global-search-bar{
 		width: 200px;
 	}
+	.global-search-box{
+		width: 200px;
+	}
 }
