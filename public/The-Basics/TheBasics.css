@@ -42,7 +42,7 @@ GLOBAL MAP ASSOCIATED LIST CONTAINER
 }
 
 @media screen and (max-width: 350px){
-	#eventMap { 
+	#brewingEquipmentMap { 
 		width: 290px;
 		height: 300px; 
 	}
