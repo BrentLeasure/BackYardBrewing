@@ -171,6 +171,7 @@
 }
 @media screen and (max-width: 350px){
 	.beer-links{
+		color: black;
 		font-size: 5px;
 	}
 }
