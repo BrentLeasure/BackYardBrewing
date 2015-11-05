@@ -172,11 +172,11 @@
 @media screen and (max-width: 350px){
 	.beer-links{
 		color: black;
-		font-size: 7px;
+		font-size: 8px;
 	}
 	.global-button-layout{
 	text-align: center;
-	padding: 5px 0px 5px;
+	padding: 5px 20px 5px;
 	border-radius: 5px;
 	float: left;
 	display: inline-block;
