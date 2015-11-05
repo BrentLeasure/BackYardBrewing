@@ -9,5 +9,6 @@
 	top: 50px;
 	border: 1px solid lightgray;
 	border-radius: 5px;
-	height: 100%;
+	width: 200px;
+	height: 500px;
 }
