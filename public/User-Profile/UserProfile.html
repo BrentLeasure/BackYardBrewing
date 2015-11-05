@@ -1,13 +1,16 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<div ng-show="user" ng-repeat="recipe in userRecipes" class="user-recipes">		
-			<h4>{{recipe.alias}}</h4>
-			<p>{{recipe.selectedCategory}}</p>
-			<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
-			<a class="delete-button" ng-click="deleteRecipe(recipe)">Delete</a>
-			</div>
-			<p ng-hide="hasRecipes">You don't have any recipes</p>
-		</div>
+			<div class="user-recipes">
+				<div ng-show="user" ng-repeat="recipe in userRecipes">		
+					<h4>{{recipe.alias}}</h4>
+					<p>{{recipe.selectedCategory}}</p>
+					<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
+					<a class="delete-button" ng-click="deleteRecipe(recipe)">Delete</a>
+					</div>
+					<p ng-hide="hasRecipes">You don't have any recipes</p>
+				</div>
+			</div>	
+
 	</div>
 </div>
