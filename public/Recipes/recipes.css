@@ -189,9 +189,7 @@
 		width: 25px;
 		height: 25px;
 	}
-	.global-page-change-buttons{
-		padding: 0px;
-		width: 25px;
-		height: 25px;
+	.global-search-bar{
+		width: 200px;
 	}
 }
