@@ -183,6 +183,10 @@
 	}
 	.recipe-layout{
 		width: 42%;
-		margin: 10% 1% 1% 1%;
+		margin: 10% 2% 1% 1%;
+	}
+	.recipe-pagination-button-layout{
+		width: 10px;
+		height: 10px;
 	}
 }
