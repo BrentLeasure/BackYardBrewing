@@ -157,7 +157,7 @@
 @media screen and (max-width: 525px){
 	.recipe-layout{
 		width: 42%;
-		margin: 3% 3%;
+		margin: 0% 3%;
 	}
 	.beer-links{
 		font-size: 11px;
