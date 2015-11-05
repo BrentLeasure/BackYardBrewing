@@ -174,4 +174,11 @@
 		color: black;
 		font-size: 5px;
 	}
+	.global-button-layout{
+	text-align: center;
+	padding: 5px 5px 5px;
+	border-radius: 5px;
+	float: left;
+	display: inline-block;
+}
 }
