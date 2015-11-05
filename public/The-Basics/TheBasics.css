@@ -39,5 +39,11 @@ GLOBAL MAP ASSOCIATED LIST CONTAINER
 	.global-beer-box{
 		left: 0%;
 	}
+}
 
+@media screen and (max-width: 350px){
+	#eventMap { 
+		width: 290px;
+		height: 300px; 
+	}
 }
