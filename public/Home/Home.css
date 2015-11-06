@@ -9,21 +9,3 @@
 	opacity: 0.9;
 }
 
-.map-helper-container{
-	position: relative;
-	left: 10%;
-}
-
-
-@media screen and (max-width: 445px){
-	#eventMap { 
-		width: 400px;
-		height: 300px; 
-	}
-}
-@media screen and (max-width: 350px){
-	#eventMap { 
-		width: 290px;
-		height: 300px; 
-	}
-}
