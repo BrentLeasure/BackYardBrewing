@@ -73,7 +73,7 @@ angular.module("indexModule")
 		this.showPageChangers = function($scope, $window){
 			 $scope.$apply(function(){
 				$scope.screenWidth = $window.outerWidth;
-			 		if($scope.screenWidth < 600){
+			 		if($scope.screenWidth < 350){
 			 				$scope.pageChangers = false;
 			 			}else{
 			 				$scope.pageChangers = true;
