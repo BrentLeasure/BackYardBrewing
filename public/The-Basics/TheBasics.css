@@ -3,20 +3,14 @@
 	position: relative;
 	border: 1px solid gray;
 	border-radius: 7px;
-	width: 600px;
-	height: 400px; 
-	left: 0%;
+	padding-left: 10px;
+	width: 100%;
+	height: 500px; 
 	opacity: 0.9;
 }
 
 
-/*==================
-GLOBAL MAP ASSOCIATED LIST CONTAINER
-===================*/
-.map-helper-container{
-	position: relative;
-	left: 10%;
-}
+
 
 
 
@@ -24,26 +18,8 @@ GLOBAL MAP ASSOCIATED LIST CONTAINER
    MEDIA QUERIES
 ================*/  
 @media screen and (max-width: 1200px){
-	#brewingEquipmentMap{
+/*	#brewingEquipmentMap{
 		width: 500;
-	}
+	}*/
 }
 
-@media screen and (max-width: 925px){
-	.map-helper-container{
-		left: 4%;
-	}
-	.global-beer-box{
-		left: 0%;
-	}
-}
-
-@media screen and (max-width: 350px){
-	#brewingEquipmentMap { 
-		width: 290px;
-		height: 300px; 
-	}
-	.global-maps-list{
-		padding: 0px;
-	}
-}

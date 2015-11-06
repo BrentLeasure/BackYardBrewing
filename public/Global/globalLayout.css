@@ -21,7 +21,7 @@
  	GLOBAL PAGE LAYOUT
  ===============*/
 .global-page-layout{
-	padding: 70px 50px 0px;
+	padding: 70px 0px 0px;
 }
 
 /*===============
@@ -242,9 +242,10 @@ GLOBAL MAP ASSOCIATED LIST
 .global-maps-list{
 	position: relative;
 	list-style: none;
+	padding: 0px;
 	top: 15px;
 	z-index: 2;
-	width: 490px;
+	width: 100%;
 	margin-left: 0px;
 }
 
@@ -252,7 +253,7 @@ GLOBAL MAP ASSOCIATED LIST
 	border: none;
 	background-color: transparent;
 	padding: 7px;
-	margin-right: 30px;
+	margin-right: 10px;
 }
 
 .global-maps-list-items{
@@ -278,9 +279,9 @@ GLOBAL MAP ASSOCIATED LIST
 .global-beer-box{
 	position: relative;
 	margin-bottom: 20px;
-	padding: 30px 50px 30px;
+	padding-top: 30px;
 	height: 100%;
-	width: 400px;
+	width: 100%;
 	/*overflow-y: scroll;*/
 	z-index: 1;
 }
@@ -412,12 +413,6 @@ GLOBAL MAP ASSOCIATED LIST
 @media screen and (max-width: 355px){
 	.global-search-box{
 		margin-left: 35px;
-	}
-	.global-maps-list{
-		width: 250px;
-	}	
-	.global-beer-box{
-		width: 250px;
 	}
 }
 

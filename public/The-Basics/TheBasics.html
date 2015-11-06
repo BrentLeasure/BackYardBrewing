@@ -1,29 +1,29 @@
 <div class="container">
-	<div class="row">
-		<div class="col-xs-12 col-sm-5">
+	<div>
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 			<h1>What and Where</h1>
-			<div class="map-helper-container">
-				<ul class="global-maps-list">
-					<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': ingredientsState}" ng-click="activateTab(1)"><li>
-					Ingredients
-					</li></button>
-					<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': equipmentState}" ng-click="activateTab(2)"><li class="global-maps-list-items">
-					Equipment
-					</li></button>
-				</ul>
-				<div class="global-beer-box">
-					<div ng-show="ingredientsState">
-						<accordion>
-						  <accordion-group ng-repeat="ingredient in ingredients"heading="{{ingredient.alias}}">{{ingredient.description}}
-						  </accordion-group>	
-						</accordion>
-					</div>	
-					<div ng-show="equipmentState">
-						
-					</div>
+			<ul class="global-maps-list">
+				<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': ingredientsState}" ng-click="activateTab(1)"><li>
+				Ingredients
+				</li></button>
+				<button class="global-maps-buttons" ng-class="{'active-global-maps-list-items': equipmentState}" ng-click="activateTab(2)"><li class="global-maps-list-items">
+				Equipment
+				</li></button>
+			</ul>
+			<div class="global-beer-box">
+				<div ng-show="ingredientsState">
+					<accordion>
+					  <accordion-group ng-repeat="ingredient in ingredients"heading="{{ingredient.alias}}">{{ingredient.description}}
+					  </accordion-group>	
+					</accordion>
+				</div>	
+				<div ng-show="equipmentState">
+					
 				</div>
 			</div>
 		</div>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 			<div id="brewingEquipmentMap" ng-init="initMap()"></div>
+		</div>
 	</div>
 </div>
