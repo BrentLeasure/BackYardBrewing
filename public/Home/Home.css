@@ -1,12 +1,12 @@
 #eventMap { 
 	top: 140px;
+	position: relative;
 	border: 1px solid gray;
 	border-radius: 7px;
+	padding-left: 10px;
 	width: 100%;
-	padding: 0px 10px 10px 10px;
-	height: 400px; 
+	height: 500px; 
 	opacity: 0.9;
-	left: 0%;
 }
 
 .map-helper-container{
