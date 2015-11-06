@@ -30,9 +30,6 @@ GLOBAL MAP ASSOCIATED LIST CONTAINER
 }
 
 @media screen and (max-width: 925px){
-	#brewingEquipmentMap{
-		left: 4%;
-	}
 	.map-helper-container{
 		left: 4%;
 	}
