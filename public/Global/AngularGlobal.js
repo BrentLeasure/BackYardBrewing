@@ -71,11 +71,7 @@ angular.module("indexModule")
 			});
 		}
 	}])
-	.controller("bodyController", ["NightModeFactory", function( NightModeFactory){
+	.controller("bodyController", ["$scope", function($scope){
 		
-		this.NightMode = NightModeFactory;
-		this.activateNightMode = function(){
-			this.NightMode.activateNightMode(this);
-		}
 		
 	}]);

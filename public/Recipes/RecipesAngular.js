@@ -18,9 +18,11 @@ angular.module("indexModule")
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
 
-		$window.addEventListener("resize", function(){
-			$scope.WidthChecker.showPageChangers($scope, $window);
-		});
+		
+		// $window.addEventListener("resize", function(){
+		$scope.WidthChecker.showPageChangers($scope, $window);
+		// });
+		
 		//==========
 		//GRABBING DATA
 		//==========
