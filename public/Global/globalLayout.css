@@ -82,6 +82,9 @@
 .nav-list-items:hover .nav-list-item-underline{
 	width: 100%;
 }
+.nav-list-items:focus .nav-list-item-underline{
+	width: 100%;
+}
 /*NAV LIST RIGHT*/
 .nav-list-right-side{
 	margin: 0px 50px 0px 0px;
