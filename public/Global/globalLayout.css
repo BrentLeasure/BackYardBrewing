@@ -76,6 +76,9 @@
 .nav-list-items:hover{
 	color: white;
 }
+.nav-links:hover{
+	text-decoration: none;
+}
 .nav-list-items:hover .nav-list-item-underline{
 	width: 100%;
 }
@@ -366,6 +369,9 @@ GLOBAL MAP ASSOCIATED LIST
 	/*====================
 	PAGE-LAYOUT
 	=================*/
+	.nav-list-items:hover .nav-list-item-underline{
+		width: 0%;
+	}
 
 	.global-page-layout{
 		padding: 250px 0px 0px 0px;
@@ -387,6 +393,7 @@ GLOBAL MAP ASSOCIATED LIST
 	}
 }
 @media screen and (max-width: 445px){
+
 	.global-signup-button{
 		float: left;
 		position: absolute;
@@ -403,6 +410,9 @@ GLOBAL MAP ASSOCIATED LIST
 	}
 }
 @media screen and (max-width: 355px){
+	.global-search-box{
+		margin-left: 35px;
+	}
 	.global-maps-list{
 		width: 250px;
 	}	

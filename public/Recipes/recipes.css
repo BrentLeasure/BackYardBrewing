@@ -165,11 +165,17 @@
 	.beer-links{
 		font-size: 11px;
 	}
+	.pagination-bar{
+		padding-left: 20%; 
+	}
 }
 
 @media screen and (max-width: 425px){
 	.beer-links{
-		font-size: 10px;
+		font-size: 9px;
+	}
+	.pagination-bar{
+		padding-left: 11%; 
 	}
 }
 @media screen and (max-width: 360px){
@@ -188,6 +194,8 @@
 		display: inline-block;
 	}
 }
+
+/*iphone*/
 @media screen and (max-width: 350px){
 	.beer-links{
 		color: black;
@@ -206,5 +214,8 @@
 	.submit-recipe-button{
 	right: 30%;
 	top: 50px;
+	}
+	.pagination-bar{
+		padding-left: 20%; 
 	}
 }
