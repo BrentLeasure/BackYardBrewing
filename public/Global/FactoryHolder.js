@@ -69,7 +69,7 @@ angular.module("indexModule")
 			//  			$scope.shownPages = 5;
 			//  	}
 		 // 	})
-		 // }
+		 // } hello
 		this.showPageChangers = function($scope, $window){
 			 $scope.$apply(function(){
 				$scope.screenWidth = $window.outerWidth;
