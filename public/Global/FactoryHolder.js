@@ -60,17 +60,27 @@ angular.module("indexModule")
 		};
 	})
 	.service("WatchWidthFactory", function(){
-		 this.changeNumberOfPages = function($scope){
-		 	$scope.$apply(function(){
-			 	var screenWidth = window.outerWidth;
-			 	if(screenWidth <= 1199){
-			 		 	$scope.shownPages = 10;
-			 	}else{
-			 			$scope.shownPages = 5;
-			 	}
+		 // this.changeNumberOfPages = function($scope){
+		 // 	$scope.$apply(function(){
+		 // 		var screenWidth = window.outerWidth;
+			//  	if(screenWidth <= 1199){
+			//  		 	$scope.shownPages = 10;
+			//  	}else{
+			//  			$scope.shownPages = 5;
+			//  	}
+		 // 	})
+		 // }
+		this.showPageChangers = function($scope, $window){
+			 $scope.$apply(function(){
+				$scope.screenWidth = $window.outerWidth;
+			 		if($scope.screenWidth < 600){
+			 				$scope.pageChangers = false;
+			 			}else{
+			 				$scope.pageChangers = true;
+			 			}
 		 	})
 		}
-	})
+		})
 	.service("NightModeFactory", function(){
 		this.activateNightMode = function($scope){
 			$scope.nightMode = !$scope.nightMode;

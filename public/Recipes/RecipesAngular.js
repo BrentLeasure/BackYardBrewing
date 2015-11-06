@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$http", "$window", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $http, $window, PaginationFactory, WatchWidthFactory, authService){
+	.controller("RecipesController", ["$scope", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService){
 		//===================
 		// PAGINATION
 		//===================
@@ -12,11 +12,15 @@ angular.module("indexModule")
 		$scope.beerTypes = [];	
 		$scope.lastPage;
 		$scope.loggedIn = false;
+		$scope.pageChangers = true;	
 
 
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
 
+		$window.addEventListener("resize", function(){
+			$scope.WidthChecker.showPageChangers($scope, $window);
+		});
 		//==========
 		//GRABBING DATA
 		//==========
