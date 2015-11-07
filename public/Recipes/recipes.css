@@ -118,13 +118,11 @@
 	.recipe-layout{
 		font-size: 15px;
 	}
-	.submit-recipe-button{
-	}
 }
 
 @media screen and (max-width: 992px){
 	.submit-recipe-button{
-		right: 50px;
+		right: 60px;
 	}
 	.recipe-layout{
 		width: 38%;
@@ -166,7 +164,7 @@
 		font-size: 11px;
 	}
 	.pagination-bar{
-		padding-left: 20%; 
+		padding-left: 18%; 
 	}
 }
 

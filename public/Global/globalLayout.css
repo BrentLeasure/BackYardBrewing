@@ -398,7 +398,7 @@ MAPS STUFF
 		float: left;
 		position: absolute;
 		color: #611B19;
-		margin: 20px 0px 0px 0px;
+		margin: 5px 0px 0px 0px;
 		left: 10px;
 		top: 80px;
 		border: none;
@@ -410,8 +410,11 @@ MAPS STUFF
 	}
 }
 @media screen and (max-width: 355px){
+	.global-input-box{
+		width: 100px;
+	}
 	.global-search-box{
-		margin-left: 35px;
+		margin-left: 40px;
 	}
 }
 
