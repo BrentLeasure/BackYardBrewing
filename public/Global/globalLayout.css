@@ -12,10 +12,6 @@
 	margin:0; 
 	font-size: 15px;
 }
-.night-time-mode-body{
-	background-color: #2B2B2B;
-	color: #FFFFFF;
-}
 
 /*===============
  	GLOBAL PAGE LAYOUT
@@ -82,7 +78,7 @@
 .nav-list-items:hover .nav-list-item-underline{
 	width: 100%;
 }
-.nav-list-items:focus .nav-list-item-underline{
+.nav-list-items:active .nav-list-item-underline{
 	width: 100%;
 }
 /*NAV LIST RIGHT*/
@@ -104,7 +100,8 @@
 }
 
 
-/*RIGHT SIDE NAV LIST*/
+/*============================
+=============================*/
 .right-nav-bar{
 	top: 0px;
 	position: fixed;
@@ -201,7 +198,10 @@
 	background-color: #611B19;
 	padding: ;
 }
-/*	GLOBAL PAGE CHANGE BUTTONS*/
+
+/*=============================
+	PAGINATION
+===============================*/
 
 .global-page-change-buttons{
 	padding: 2px 7px 0px;
@@ -239,8 +239,9 @@
 	padding: 0px 5px 0px 20px;
 	height: 30px;
 }
+
 /*==================
-GLOBAL MAP ASSOCIATED LIST
+MAPS STUFF
 ===================*/
 .global-maps-list{
 	position: relative;
@@ -285,7 +286,6 @@ GLOBAL MAP ASSOCIATED LIST
 	padding-top: 30px;
 	height: 100%;
 	width: 100%;
-	/*overflow-y: scroll;*/
 	z-index: 1;
 }
 
@@ -307,6 +307,9 @@ GLOBAL MAP ASSOCIATED LIST
 	/*================
 	NAV BAR INFORMATION
 	=================*/
+	.nav-list-items:hover .nav-list-item-underline{
+		width: 0%;
+	}
 
 	.header-img{
 		display: none;
@@ -365,17 +368,10 @@ GLOBAL MAP ASSOCIATED LIST
 	.nav-bar.headerless-nav{
 		transition: none;
 	}
-	/*=================
-		BUTTONS
-	====================*/
-
 
 	/*====================
 	PAGE-LAYOUT
 	=================*/
-	.nav-list-items:hover .nav-list-item-underline{
-		width: 0%;
-	}
 
 	.global-page-layout{
 		padding: 250px 0px 0px 0px;
