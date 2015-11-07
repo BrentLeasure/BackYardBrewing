@@ -14,13 +14,13 @@
 =====================*/
 
 @media screen and (max-width: 415px){
-	#eventMap{
+	#brewingEquipmentMap{
 		height: 350px;
 	}
 }
 
 @media screen and (max-width: 350px){
-	#eventMap{
+	#brewingEquipmentMap{
 		height: 300px;
 	}	
 }
