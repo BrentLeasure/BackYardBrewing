@@ -365,6 +365,9 @@ MAPS STUFF
 		transition: none;
 	}
 
+	.global-signup-button{
+		padding-top: 3px;
+	}
 	/*====================
 	PAGE-LAYOUT
 	=================*/
