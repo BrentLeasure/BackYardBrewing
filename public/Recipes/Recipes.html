@@ -5,16 +5,16 @@
 			<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
 			<div class="light-box-content">
 				<div class="beer-info-box">
-					<h1 class="beer-info">{{lightBox.alias}}</h1>
+					<h1 class="beer-name">{{lightBox.alias}}</h1>
 					<p class="beer-info">{{lightBox.about}}</p>
  				</div>
  				<div class="all-user-recipes">
-					<h1 class="beer-info">User Recipes</h1>
+					<h1 class="user-recipes-header">User Recipes</h1>
 					<div class="recipe-box">
 						<div class="user-recipes-layout" ng-repeat="recipe in recipes">
 							<div>
 								<h3>{{recipe.alias}}</h3>
-								<button class="global-link-text global-button-color beer-links">More Info</button>
+								<button class="global-link-text more-info-button beer-links">More Info</button>
 							</div> 
 						</div>	
 					</div>

@@ -10,12 +10,23 @@
 	margin: 3% 3%;
 }
 .user-recipes-layout{
+	position: static;
+	float: left;
 	display: inline-block;
 	width: 25%;
 	margin: 3% 3%;
 }
 .recipe-box{
-	padding-top: 150px;
+	padding-top: 300px;
+}
+
+/*==================
+	BUTTONS
+====================*/
+.more-info-button{
+	color: white;
+	background-color: rgba(0, 0, 0, .9);
+	border: 1px solid white;
 }
 
 /*===================
@@ -51,9 +62,13 @@
 }
 
 .light-box-close-button{
+	width: 40px;
+	height: 40px;
 	position: relative;
 	float: right;
-	color: #353230;
+	color: white;
+	background-color: rgba(0, 0, 0, .9);
+	border: 1px solid white;
 }
 .light-box{
 	overflow-x: scroll;
@@ -75,13 +90,27 @@
 	top: 50px;
 }
 
-/*STATIC BEER INFORMATION*/
+/*=====================
+STATIC BEER INFORMATION
+========================*/
 .beer-info-box{
 	position: relative;
-	height: 300px;
 }
 .beer-info{
 	float: left;
+	text-align: left;
+}
+.beer-name{
+	border-bottom: 1px solid white;
+	float: left;
+	text-align: left;
+}
+
+.user-recipes-header{
+	border-bottom: 1px solid white;
+	margin-bottom: 0px;
+	float: left;
+	text-align: left;
 }
 
 
@@ -102,7 +131,7 @@
 	text-decoration: none;
 	position: absolute;
 	display: inline-block;
-	color: #337ab7;
+	color: white;
 }
 /*===================
 	PAGINATION BAR

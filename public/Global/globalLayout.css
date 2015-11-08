@@ -10,7 +10,7 @@
 	background-color: #ffffff;
 	color: #2B2B2B;
 	margin:0; 
-	font-size: 15px;
+	font-size: 14px;
 }
 
 /*===============
@@ -179,12 +179,12 @@
 }
 
 .global-signup-button{
-	font-size: 14px;
+	font-size: 13px;
 	color: white;
-	border: 1px solid #e2e2e2;
+	border: 1px solid white;
 	text-decoration: none;
 	background-color: #611B19;
-	padding: 3px 4px;
+	padding: 2.7px 4px;
 }
 .global-signup-button:hover{
 	color: white;
@@ -193,7 +193,7 @@
 
 .global-submit-button{
 	color: white;
-	border: 1px solid #e2e2e2;
+	border: 1px solid white;
 	text-decoration: none;
 	background-color: #611B19;
 	padding: ;
@@ -309,10 +309,6 @@ MAPS STUFF
 	=================*/
 	.nav-list-items:hover .nav-list-item-underline{
 		width: 0%;
-	}
-
-	.header-img{
-		display: none;
 	}
 
 	.nav-bar{
