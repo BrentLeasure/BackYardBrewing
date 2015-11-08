@@ -1,712 +1,608 @@
 [
-			{
-			 "alias": "Red Ale",
-			 "style": "Ale",
-			 "about": "Also known as a American Amber, this style of beer tends to focus on the malts, but hop character can range from low to high. Expect a balanced beer, with toasted malt characters and a light fruitiness in most examples. The range can run from a basic ale, to American brewers who brew faux-Oktoberfest style beers that are actually ales instead of lagers.",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "American Barleywine",
-			 "style": "Ale",
-			 "about": "Despite its name, a Barleywine is very much a beer, albeit a very strong and often intense beer. In fact, it's one of the strongest of the beer styles. Lively and fruity, sometimes sweet, sometimes bittersweet, but always alcoholic. A brew of this strength and complexity can be a challenge to the palate. Expect anything from an amber to dark brown colored beer, with aromas ranging from intense fruits to intense hops. Body is typically thick, alcohol will definitely be perceived, and flavors can range from dominant fruits to palate smacking, resiny hops. 
-
-English varieties are quite different from the American efforts, what sets them apart is usually the American versions are insanely hopped to make for a more bitter and hop flavored brew, typically using American high alpha oil hops. English versions tend to be more rounded and balanced between malt and hops, with a slightly lower alcohol content, though this is not always the case. 
-
-Most Barleywines can be cellared for years and typically age like wine.",
-			 "abv": "8.0-15.0%"
-			},
-			{
-			 "alias": "American Black Ale",
-			 "style": "Ale",
-			 "about": "Also referred to as a Black IPA or Cascadian Dark Ale, ales of this style range from dark brown to pitch black and showcase malty and light to moderate roasty notes and are often quite hoppy generally with the use of American hops. Alcohol can range from average to high depending on if the brewery is going for a dobule / imperial version.",
-			 "abv": "5.0-10.0%"
-			},
-			{
-			 "alias": "American Blonde Ale",
-			 "style": "Ale",
-			 "about": "More or less a creation from the craft-brewery movement, and also reminiscent of the German style Kölsch. Pale straw to deep gold for color. Usually an all malt brew, well attenuated with a lightly malty palate. Most have a subdued fruitiness. Hop character is of the noble variety, or similar, leaving a light to medium bitterness. A balanced beer, light bodied and sometimes lager like.",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "American Brown Ale",
-			 "style": "Ale",
-			 "about": "Spawned from the English Brown Ale, the American version can simply use American ingredients. Many other versions may have additions of coffee or nuts. This style also encompasses Dark Ales. The bitterness and hop flavor has a wide range and the alcohol is not limited to the average either.",
-			 "abv": "4.0-8.0%"
-			},
-			{
-			 "alias": "American Dark Wheat Ale",
-			 "style": "Ale",
-			 "about": "An Americanized version of a Dunkel Weizen, these beers can range within the brown to garnet range. Often cloudy with long-lasting heads. Light to medium body with high level of carbonation. Hop characters will be low to high with some fruitiness from ale fermentation, though most examples use of a fairly neutral ale yeast, resulting in a clean fermentation with little to no diacetyl. Flavors of caramel and toasted malts might be present. ",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "American Double IPA",
-			 "style": "Ale",
-			 "about": "Also known as an Imperial IPA, take an India Pale Ale and feed it steroids, ergo the term Double IPA. Although open to the same interpretation as its sister styles, you should expect something robust, malty, alcoholic and with a hop profile that might rip your tongue out. The Imperial usage comes from Russian Imperial stout, a style of strong stout originally brewed in England for the Russian Imperial Court of the late 1700s; though Double IPA is often the preferred name. 
-",
-			 "abv": "7.0-14.0%"
-			},
-			{
-			 "alias": "American Double Stout",
-			 "style": "Ale",
-			 "about": "The American Double Stout gets some of it inspiration from the Russian Imperial Stout. Many of these are barrel aged, mostly in bourbon / whiskey barrels, while some are infused with coffee or chocolate. Alcohol ranges vary, but tend to be quite big, and bigger than traditional Russian Imperial Stouts. Most tend to have cleaner alcohol flavors, higher hop levels, and more residual sweetness. Very full-bodied with rich roasted flavors far surpassing normal stouts.
-",
-			 "abv": "7.0-12.0%"
-			},
-			{
-			 "alias": "American IPA",
-			 "style": "Ale",
-			 "about": "The American IPA is a different soul from the reincarnated IPA style. More flavorful than the withering English IPA, color can range from very pale golden to reddish amber. Hops are typically American with a big herbal and / or citric character, bitterness is high as well. Moderate to medium bodied with a balancing malt backbone.",
-			 "abv": "5.5-7.5%"
-			},
-			{
-			 "alias": "American Pale Ale",
-			 "style": "Ale",
-			 "about": "Of British origin, this style is now popular worldwide and the use of local ingredients, or imported, produces variances in character from region to region. Generally, expect a good balance of malt and hops. Fruity esters and diacetyl can vary from none to moderate, and bitterness can range from lightly floral to pungent. ",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "American Pale Wheat Ale",
-			 "style": "Ale",
-			 "about": "An Americanized version of a Hefe Weizen, these beers range within the pale to golden range in color. Reminiscent of a Hefe Weizen in appearance, unless filtered. Long-lasting head with a light to medium body, higher carbonation is proper. German Weizen flavors and aromas of banana esters and clove-like phenols will not be found. Most use a substantial percentage of wheat malt. Hop character will be low to high but most are moderate in bitterness. There may be some fruitiness from ale fermentation though most examples use of a fairly neutral ale yeast, resulting in a clean fermentation with little to no diacetyl. 
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "American Porter",
-			 "style": "Ale",
-			 "about": "Inspired from the now wavering English Porter, the American Porter is the ingenuous creation from that. Thankfully with lots of innovation and originality American brewers have taken this style to a new level. Whether it is highly hopping the brew, using smoked malts, or adding coffee or chocolate to complement the burnt flavor associated with this style. Some are even barrel aged in Bourbon or whiskey barrels. The hop bitterness range is quite wide but most are balanced. Many are just easy drinking session porters as well.",
-			 "abv": "4.0-7.5%"
-			},
-			{
-			 "alias": "American Stout",
-			 "style": "Ale",
-			 "about": "Inspired from English & Irish Stouts, the American Stout is the ingenuous creation from that. Thankfully with lots of innovation and originality American brewers have taken this style to a new level. Whether it is highly hopping the brew or adding coffee or chocolate to complement the roasted flavors associated with this style. Some are even barrel aged in Bourbon or whiskey barrels. The hop bitterness range is quite wide but most are balanced. Many are just easy drinking session stouts as well. 
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "American Strong Ale",
-			 "style": "Ale",
-			 "about": "Catch all style category for beers from 7.0 percent alcohol by volume and above. Some may even be as high as 25% abv. Characteristics will greatly vary; some have similarities to Barley-wines and Old Ales. Barrel aging is certainly not out of the question.",
-			 "abv": "7.0-25.0%"
-			},
-			{
-			 "alias": "American Wild Ale",
-			 "style": "Ale",
-			 "about": "Sometimes Belgian influenced, American Wild Ales are beers that are introduced to wild yeast or bacteria, such as: Brettanomyces (Brettanomyces Bruxellensis, Brettanomyces Lambicus or Brettanomyces Anomolus), Pediococcus or Lactobacillus. This introduction may occur from oak barrels that have been previously inoculated, pitched into the beer, or gained from various "sour mash" techniques. Regardless of which and how, these little creatures often leave a funky calling card that can be quite strange, interesting, pleasing to many, but also often deemed as undesirable by many.
-",
-			 "abv": "5.0-7.0%"
-			},
-			{
-			 "alias": "Black & Tan",
-			 "style": "Ale",
-			 "about": "This applies to pre-blended packaged beers, where a brewery will blend a dark ale with a light ale or lager. It's by no means a traditional style of beer, but rather brewers capitalizing on the concept practiced at bars where the beers are physically layered.",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Chile Beer",
-			 "style": "Ale",
-			 "about": "Typically basic light colored ales, but sometimes lagers, brewers will add various hot pepper juice, oils, or actual peppers to the beer - jalapeño chiles being the most common pepper used. Hotness can range from a subtle spiciness to palate scorching.",
-			 "abv": "4.5-6.0%"
-			},
-			{
-			 "alias": "Cream Ale",
-			 "style": "Ale",
-			 "about": "Cream Ales, spawned from the American light lager style, are brewed as an ale though are sometimes finished with a lager yeast or lager beer mixed in. Adjuncts such as corn or rice are used to lighten the body. It is no uncommon for smaller craft brewers to brew all malt Cream Ales. Pale straw to pale gold color. Low hop bittering and some hop aroma though some micros have given the style more of a hop character. Well carbonated and well attenuated.
-",
-			 "abv": "4.0-8.0%"
-			},
-			{
-			 "alias": "Pumpkin Ale",
-			 "style": "Ale",
-			 "about": "Often released as a fall seasonal, Pumpkin Ales are quite varied. Some brewers opt to add hand-cut pumpkins and drop them in the mash, while others use puree or pumpkin flavoring. These beers also tend to be spiced with pumpkin pie spices, like: ground ginger, nutmeg, cloves, cinnamon, and allspice. Pumpkin Ales are typically mild, with little to no bitterness, a malty backbone, with some spice often taking the lead. Many will contain a starchy, slightly thick-ish, mouthfeel too. In our opinion, best versions use real pumpkin, while roasting the pumpkin can also add tremendous depth of character for even better results, though both methods are time-consuming and tend to drive brewmasters insane.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Rye Beer",
-			 "style": "Ale",
-			 "about": "Not to be confused with a German Roggenbier, beers that fall into this category contain a notable amount of rye grain in the grist bill. Bitterness tends to be moderate, to allow the often spicy and sour-like rye characteristics to pull through.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Wheatwine",
-			 "style": "Ale",
-			 "about": "A somewhat recent and over-looked American strong ale, the Wheatwine (or Wheat Wine) is akin to a Barleywine in strength, but contains a large portion of wheat malt; upwards of 50%. The wheat provides a soft and fluffy mouthfeel. Color and bitterness varies.
-",
-			 "abv": "9.0-14.0%"
-			},
-			{
-			 "alias": "Belgian Dark Ale",
-			 "style": "Belgian Ale",
-			 "about": "Belgian Darks offer a massive range of characters. Colors play within the amber to light brown to deep garnet hues, with thick, rocky heads of great retention. Aromas can be anywhere from traces of yeast, spiced, malty, floral and even slightly intoxicating. Flavors from dry and spiced, to sweet and malty. Most have a low level of bitterness.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Belgian IPA",
-			 "style": "Belgian Ale",
-			 "about": "Inspired by the American India Pale Ale (IPA) and Double IPA, more and more Belgian brewers are brewing hoppy pale colored ales for the US market (like Chouffe & Urthel), and there's been an increase of Belgian IPAs being brewed by American brewers. Generally, Belgian IPAs are considered too hoppy by Belgian beer drinkers. 
-
-Various malts are used, but the beers of the style are finished with Belgian yeast strains (bottle-conditioned) and the hops employed tend to be American. You'll generally find a cleaner bitterness vs. American styles, and a pronounced dry edge (very Belgian), often akin to an IPA crossed with a Belgian Tripel. Alcohol by volume is on the high side. Many examples are quite cloudy, and feature tight lacing, excellent retention, and fantastic billowy heads that mesmerize (thanks, in part, to the hops). 
-",
-			 "abv": "6.0-12.0%"
-			},
-			{
-			 "alias": "Belgian Pale Ale",
-			 "style": "Belgian Ale",
-			 "about": "Belgian Pales consume the Belgian brewing scene, and were initially brewed to compete with Pilseners during the WWII time frame. They differ from other regional Pale Ale varieties, by traditionally being less bitter, using aged hops for a delicate hop finish, and boasting sweetish to toasty malt overtones. They should be decanted properly, leaving the yeast in the bottle. This will showcase their brilliant color range from pale straw yellow to amber hues. Most will be crowned with thick, clinging, rocky white heads. Flavors and aromas will vary. Some have natural spice characters from yeast and hops, while others are spiced. ",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Belgian Strong Dark Ale",
-			 "style": "Belgian Ale",
-			 "about": "On the same path as the Belgian Dark Ale but obviously higher in alcohol with more of an all around character. The alcohol character can be deceivingly hidden or can be very bold and in your face. Look for lots of complexity within a delicate palate. Hop and malt character can vary, most are fruity and may have mild dark malt flavors. Phenols will range from minimal to high and most will be light on the hops. All in all most are spicy and alcoholic.
-",
-			 "abv": "7.0-15.0%"
-			},
-			{
-			 "alias": "Belgian Strong Pale Ale",
-			 "style": "Belgian Ale",
-			 "about": "Like a Belgian Pale Ale, the strong versions will also be pale to golden in color. What sets them apart is a much higher alcohol content that can range from hidden to spicy to devastatingly present. Expect a complex and powerful ale, yet delicate with rounded flavors and big, billowy, rocky, white head. Hop and malt character can vary, most are fruity and quite hoppy, but hop flavor and aroma will generally be within the low range and artfully balanced. 
-",
-			 "abv": "7.0-12.0%"
-			},
-			{
-			 "alias": "Bière de Champagne",
-			 "style": "Belgian Ale",
-			 "about": "Also known as Bière Brut, the Bière de Champagne has much potential within the beer industry as a top-shelf crossover beer. Primarily brewed in Belgium, these beers typically undergo a lengthy maturation. Some are even cave-aged in the Champagne region of France and are then subjected to remuage and dégorgement, which is the methode de champenoise process of removing yeast from the bottle. Most are delicate, high in alcohol, highly carbonated and sometimes spiced. Color can range from very pale to dark hues.",
-			 "abv": "10.0-14.0%"
-			},
-			{
-			 "alias": "Bière de Garde",
-			 "style": "Belgian Ale",
-			 "about": "The Biere de Garde is golden to deep copper or light brown in color. They are moderate to medium in body. This style of beer is characterized by a toasted malt aroma, slight malt sweetness in flavor, and medium hop bitterness. Noble-type hop aromas and flavors should be low to medium. Fruity esters can be light to medium in intensity. Flavor of alcohol is evident. Earthy, cellar-like, musty aromas and flavors are okay. Diacetyl should not be perceived but chill haze is okay. Often bottle conditioned with some yeast character.
-",
-			 "abv": "6.0-8.0%"
-			},
-			{
-			 "alias": "Dubbel",
-			 "style": "Belgian Ale",
-			 "about": "The Belgian Dubbel is a rich malty beer with some spicy / phenolic and mild alcoholic characteristics. Not as much fruitiness as the Belgian Strong Dark Ale but some dark fruit aromas and flavors may be present. Mild hop bitterness with no lingering hop flavors. It may show traits of a steely caramel flavor from the use of crystal malt or dark candy sugar. Look for a medium to full body with an expressive carbonation. 
-
-Traditionally a Trappist Ale, many brew similar Abbey Dubbels to try and emulate the originals (Trappist Westvleteren 8, Westmalle Trappist Dubbel & Chimay Première).",
-			 "abv": "6.5-9.0%"
-			},
-			{
-			 "alias": "Faro",
-			 "style": "Ale",
-			 "about": "A blended Lambic with the addition of candi sugar for a lighter, quite sweet and more palatable beer. Commonly spiced with pepper, orange peel and coriander.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Flanders Oud Bruin",
-			 "style": "Ale",
-			 "about": "Oud Bruins, not restricted to, but concentrated in Flanders, are light to medium-bodied, deep copper to brown in colour. They are extremely varied, characterized by a slight vinegar or lactic sourness and spiciness to smooth and sweet. A fruity-estery character is apparent with no hop flavor or aroma. Low to medium bitterness. Very small quantities of diacetyl are acceptable. Roasted malt character in aroma and flavor is acceptable, at low levels. Oak-like or woody characters may be pleasantly integrated into overall palate. Typically old and new Brown ales are blended, like Lambics.
-",
-			 "abv": "4.0-8.0%"
-			},
-			{
-			 "alias": "Flanders Red Ale",
-			 "style": "Ale",
-			 "about": "Flanders Reds are commonly referred to as the red beers of West Flanders. Belgian Red Beers are typically light-bodied brews with reddish-brown colors. They are infamous for their distinct sharp, fruity, sour and tart flavors which are created by special yeast strains. Very complex beers, they are produced under the age old tradition of long-term cask aging in oak, and the blending of young and old beers.
-",
-			 "abv": "4.0-8.0%"
-			},
-			{
-			 "alias": "Gueuze",
-			 "style": "Ale",
-			 "about": "A traditional Belgian blend of young and old Lambics, which are then bottle after blending, then aged for 2-3 years to produce a dryer, fruitier and more intense style of Lambic. There is no hop character, some are filtered and force carbonated if not pasteurized as well. Some say that this is the more harsh lambic as the sourness is pretty intense.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Lambic-Fruit",
-			 "style": "Ale",
-			 "about": "In the case of Fruit Lambics, whole fruits are traditionally added after spontaneous fermentation has started. Kriek (cherries), Frambroise (raspberries), Pï¿½che (peach) and Cassis (black currant) are common fruits, all producing subtle to intense fruit characters respectively. Once the fruit is added, the beer is subjected to additional maturation before bottling. Malt and hop characters are generally low to allow the fruit to consume the palate. Alcohol content tends to be low. 
-
-Some breweries opt to use fruit / sugar syrups vs. whole fruits, producing very nontraditional sweet versions of the style.",
-			 "abv": "3.0-8.0%"
-			},
-			{
-			 "alias": "Lambic-Unblended",
-			 "style": "Ale",
-			 "about": "A spontaneous fermented unblended ale that is indigenous to the Senne Valley of Belgium, a large portion of wheat brings out the crispness though the flavor is dominated with a unique tartness from the wild yeast and bacteria that inoculate the brew from both airborne and tainted barrels that they ferment in. Light bodied with little hop flavor or bitterness. Look for hard cider, white wine or similar tartness. Lambics are aged before consumption to ensure that the tartness has mellowed.
-",
-			 "abv": "3.0-6.0%"
-			},
-			{
-			 "alias": "Quadrupel",
-			 "style": "Ale",
-			 "about": "Inspired by the Trappist brewers of Belgium, a Quadrupel is a Belgian style ale of great strength with bolder flavor compared to its Dubbel and Tripel sister styles. Typically a dark creation that ranges within the deep red, brown and garnet hues. Full bodied with a rich malty palate. Phenols are usually at a moderate level. Sweet with a low bitterness yet a well perceived alcohol. ",
-			 "abv": "9.0-13.0%"
-			},
-			{
-			 "alias": "Saison",
-			 "style": "Ale",
-			 "about": "Saisons are sturdy farmhouse ale that was traditionally brewed in the winter, to be consumed throughout the summer months. Not so long ago it was close to being an endangered style, but over recent years there's been a massive revival; especially in the US. 
-
-This is a very complex style; many are very fruity in the aroma and flavor. Look for earthy yeast tones, mild to moderate tartness. Lots of spice and with a medium bitterness. They tend to be semi-dry with many only having touch of sweetness.
-",
-			 "abv": "5.0-8.0%"
-			},
-			{
-			 "alias": "Tripel",
-			 "style": "Ale",
-			 "about": "The name Tripel actually stems from part of the brewing process, in which brewers use up to three times the amount of malt than a standard Trappist Simple. Traditionally, Tripels are bright yellow to gold in color, which is a shade or two darker than the average Pilsener. Head should be big, dense and creamy. Aroma and flavor runs along complex, spicy phenolic, powdery yeast, fruity/estery with a sweet finish. Sweetness comes from both the pale malts and the higher alcohol. Bitterness is up there for a beer with such a light body for its strength, but at times is barely perceived amongst the even balance of malts and hops. The lighter body comes from the use of Belgian candy sugar (up to 25% sucrose), which not only lightens the body, but also adds complex alcoholic aromas and flavors. Small amounts of spices are sometimes added as well. 
-",
-			 "abv": "8.0-12.0%"
-			},
-			{
-			 "alias": "Witbier",
-			 "style": "Ale",
-			 "about": "A Belgian Style ale that's very pale and cloudy in appearance due to it being unfiltered and the high level of wheat, and sometimes oats, that's used in the mash. Always spiced, generally with coriander, orange peel and other oddball spices or herbs in the back ground. The crispness and slight twang comes from the wheat and the lively level of carbonation. This is one style that many brewers in the US have taken a liking to and have done a very good job of staying to style. Sometimes served with a lemon, but if you truly want to enjoy the untainted subtleties of this style you'll ask for yours without one. Often referred to as white beers (witbieren) due to the cloudiness / yeast in suspension.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Baltic Porter",
-			 "style": "English Ale",
-			 "about": "Porters of the late 1700's were quite strong compared to todays standards, easily surpassing 7% alcohol by volume. Some brewers made a stronger, more robust version, to be shipped across the North Sea, dubbed a Baltic Porter. In general, the styles dark brown color covered up cloudiness and the smoky/roasted brown malts and bitter tastes masked brewing imperfections. The addition of stale ale also lent a pleasant acidic flavor to the style, which made it quite popular. These issues were quite important given that most breweries were getting away from pub brewing and opening up breweries that could ship beer across the world.
-",
-			 "abv": "7.0-10.0%"
-			},
-			{
-			 "alias": "Braggot",
-			 "style": "English Ale",
-			 "about": "The Braggot is quite an old drink, there is a mentioned in Chaucer, Canterbury Tales in the late 1300s, and there are earlier references dating even further back to the 12th century in Ireland. Braggot is simply made by blending spices and herbs with mead and beer, to produce a strong concoction with uncommon flavors. Many taverns would make this blend right at the bar though brewers would also blend them as well. ",
-			 "abv": "6.0-12.0%"
-			},
-			{
-			 "alias": "English Barleywine",
-			 "style": "English Ale",
-			 "about": " Lively and fruity, sometimes sweet, sometimes bittersweet, but always alcoholic. A brew of this strength and complexity can be a challenge to the palate. Expect anything from an amber to dark brown colored beer, with aromas ranging from intense fruits to intense hops. Body is typically thick, alcohol will definitely be perceived, and flavors can range from dominant fruits to palate smacking, resiny hops. 
-
-English varieties are quite different from the American efforts, what sets them apart is usually the American versions are insanely hopped to make for a more bitter and hop flavored brew, typically using American high alpha oil hops. English version tend to be more rounded and balanced between malt and hops, with a slightly lower alcohol content, though this is not always the case. ",
-			 "abv": " 7.0-12.0%"
-			},
-			{
-			 "alias": "English Bitter",
-			 "style": "English Ale",
-			 "about": "The Bitter style came from brewers who wanted to differentiate these ales from other mild brews, enter pale malts and more hops. Most are gold to copper in colour and are light bodied. Low carbonation. Alcohol should be low and not perceived. Hop bitterness is moderate to assertive. Most have a fruitiness in the aroma and flavor, diacetyl can also be present. These are traditionally served cask conditioned, but many breweries have bottled versions.
-",
-			 "abv": "3.0-5.0%"
-			},
-			{
-			 "alias": "English Brown Ale",
-			 "style": "English Ale",
-			 "about": "Spawned from the Mild Ale, Brown Ales tend to be maltier and sweeter on the palate, with a fuller body. Color can range from reddish brown to dark brown. Some versions will lean towards fruity esters, while others tend to be drier with nutty characters. All seem to have a low hop aroma and bitterness.",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "English Dark Mild Ale",
-			 "style": "English Ale",
-			 "about": "The quintessential British session beer, like its name suggests, a Mild is known for its low level of hops character. Alcohol content is traditionally very low. Grainy to toasty malts might be present, but expect some body from the high dextrins produced in brewing. Low carbonation with a near still, bubbly head. Colors can range from gold to dark brown. Traditionally a draft beer made popular in London and the Midlands of England.
-",
-			 "abv": "2.0-6.0%"
-			},
-			{
-			 "alias": "English IPA",
-			 "style": "English Ale",
-			 "about": "First brewed in England and exported for the British troops in India during the late 1700s. To withstand the voyage, IPA's were basically tweaked Pale Ales that were, in comparison, much more malty, boasted a higher alcohol content and were well-hopped, as hops are a natural preservative. Historians believe that an IPA was then watered down for the troops, while officers and the elite would savor the beer at full strength. The English IPA has a lower alcohol due to taxation over the decades. The leaner the brew the less amount of malt there is and less need for a strong hop presence which would easily put the brew out of balance. Some brewers have tried to recreate the origianl IPA with strengths close to 8-9% abv.
-",
-			 "abv": "4.0-6.5%"
-			},
-			{
-			 "alias": "English Pale Ale",
-			 "style": "English Ale",
-			 "about": "The English Pale Ale can be traced back to the city of Burton-upon-Trent, a city with an abundance of rich hard water. This hard water helps with the clarity as well as enhancing the hop bitterness. This ale can be from golden to reddish amber in color with generally a good head retention. A mix of fruity, hoppy, earthy, buttery and malty aromas and flavors can be found. Typically all ingredients are English.
-",
-			 "abv": "3.8-6.0%"
-			},
-			{
-			 "alias": "English Pale Mild Ale",
-			 "style": "English Ale",
-			 "about": "Similar to an ordinary bitter yet not as hoppy, the English Pale Mild Ale is a delicate malty brew. Hops are generally mild with a balancing bitterness. Fruitiness, sulfur and buttery diacetyl may be present. The low alcohol range makes this ale a perfect session brew.",
-			 "abv": "3.0-5.0%"
-			},
-			{
-			 "alias": "English Porter",
-			 "style": "English Ale",
-			 "about": "Porter is said to have been popular with transportation workers of Central London, hence the name. Most traditional British brewing documentation from the 1700s state that Porter was a blend of three different styles: an old ale (stale or soured), a new ale (brown or pale ale) and a weak one (mild ale), with various combinations of blending and staleness. The end result was also commonly known as "Entire Butt" or "Three Threads" and had a pleasing taste of neither new nor old. It was the first truly engineered beer, catering to the public's taste, playing a critical role in quenching the thirst of the UKs Industrial Revolution and lending an arm in building the mega-breweries of today. 
-
-Porter saw a comeback during the homebrewing and micro-brewery revolution of the late 1970s and early 80s, in the US. Modern-day Porters are typically brewed using a pale malt base with the addition of black malt, crystal, chocolate or smoked brown malt. The addition of roasted malt is uncommon, but used occasionally. Some brewers will also age their beers after inoculation with live bacteria to create an authentic taste. Hop bitterness is moderate on the whole and color ranges from brown to black. Overall they remain very complex and interesting beers.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "English Stout",
-			 "style": "English Ale",
-			 "about": "As mysterious as they look, stouts are typically dark brown to pitch black in color. A common profile amongst Stouts, but not in all cases, is the use of roasted barley (unmalted barley that is kilned to the point of being charred) which lends a dry character to the beer as well as a huge roasted flavor that can range from burnt to coffee to chocolate. A different balance of hops is up to the brewers preference, but the roasted character must be there.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "English Strong Ale",
-			 "style": "English Ale",
-			 "about": "Bigger than a Pale Ale yet smaller than a Barleywine the English Strong Ale is a rich and complex beer. Many are unfiltered and bottle conditioned. The color tends to land somewhere between amber and reddish copper. They usually have a bold fruity, estery and malty mix. Hops can vary from mild bitterness to a full blown hop character with a bold hop flavor and aroma. The alcohol can be quite noticeable, a hint of solvent is possible.
-",
-			 "abv": "5.5-7.5%"
-			},
-			{
-			 "alias": "Extra Strong Bitter",
-			 "style": "English Ale",
-			 "about": "Also known as the Extra Special Bitter, ESBs are essentially more aggressive and more balanced Bitters, both in alcohol and hop character, but nothing overpowering. Color range will be similar, though leaning towards the darker end of the scale; dark golds to copper. Low carbonation. Malts tend to be more pronounced, often toasty and fruity, with maybe some notes diacetyl. And despite "bitter" being in its name, ESBs are not really all that bitter. They key to an ESB is balance.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Foriegn Stout",
-			 "style": "English Ale",
-			 "about": "Also known as the Export Stout, Foreign Stouts are a special style of stout that is brewed bigger than normal for a long journey, the more traditional Foreign / Export Stouts will be found in the tropical regions of the world. Higher in alcohol with a very pronounced roasted character. 
-",
-			 "abv": "6.0-9.0%"
-			},
-			{
-			 "alias": "Milk Stout",
-			 "style": "English Ale",
-			 "about": "Also known as the Sweet Stout, Milk Stouts are basically stouts that have a larger amount of residual dextrins and unfermented sugars that give the brew more body and a sweetness that counters the roasted character. Milk Stouts are very similar to Sweet Stouts, but brewers add unfermentable sugars, usually lactose, to the brew kettle to add body and some sweetness.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Oatmeal Stout",
-			 "style": "English Ale",
-			 "about": "These are generally medium to full bodied stouts that have an unreal smoothness to them from the addition of oats to the mash. The oats not only add a lot of smoothness to the mouth feel but give a touch of sweetness that is unlike any other type of stout. Both levels of roasted flavor and hop character will vary.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Old Ale",
-			 "style": "English Ale",
-			 "about": "Old Ales, also referred to in the past as Stock Ales, are low attenuated beers with high levels of dextrins, creating a full malt body with plenty of character. Old Ales of a hundred plus years ago were often transfered into vats to mature, hence the name. 
-
-Rich dark amber in color to a very dark brown; near black. Tamed aromatics. Although bittering levels can greatly vary, expect common fruity, vinous, intense malts and sharp alcohol characteristics. The often racy but mellow attitude of the beer may also include acidic notes, raisins and black currants. Vintage varieties may have a low level of oxidation. Stronger versions may have similarities to a port wine. Brewers may also inoculate a portion of the batch with Brettanomyces lambicus and age for an extended period of time to achieve an old-school acidic character.
-",
-			 "abv": "4.0-12.0%"
-			},
-			{
-			 "alias": "Russian Imperial Stout",
-			 "style": "English Ale",
-			 "about": "Inspired by brewers back in the 1800's to win over the Russian Czar, this is the king of stouts, boasting high alcohol by volumes and plenty of malt character. Low to moderate levels of carbonation with huge roasted, chocolate and burnt malt flavours. Often dry. Suggestions of dark fruit and flavors of higher alcohols are quite evident. Hop character can vary from none, to balanced to aggressive.
-",
-			 "abv": "8.0-12.0%"
-			},
-			{
-			 "alias": "Winter Warmer",
-			 "style": "English Ale",
-			 "about": "These malty sweet offerings tend to be a favorite winter seasonal. Big malt presence, both in flavor and body. The color ranges from brownish reds to nearly pitch black. Hop bitterness is generally low, leveled and balanced, but hop character can be pronounced. Alcohol warmth is not uncommon. 
-
-Many English versions contain no spices, though some brewers of spiced winter seasonal ales will slap Winter Warmer on the label. Those that are spiced, tend to follow the wassail tradition of blending robust ales with mixed spices, before hops became the chief spice in beer. American varieties many have a larger presences of hops both in bitterness and flavor.
-",
-			 "abv": "5.5-8.0%"
-			},
-			{
-			 "alias": "Sahti",
-			 "style": "Finnish Ale",
-			 "about": "Said to be one of the only primitive beers to survive in Western Europe, Sahti is a farmhouse ale with roots in Finland. First brewed by peasants in the 1500s, mashing (steeping of grains) went down in wooden barrels, and then that mash would be scooped into a hand-carved wooden trough (a kuurna) with a bed of juniper twigs that acted as a filter. The bung at the bottom of the kuurna would be pulled to allow the sweet wort (liquid infusion from the mash) to pass through the twig filter, followed by wort recirculation and a hot water sparge (rinsing of the grains), all of which created a juniper infusion of sorts. 
-
-Sahti is also referred to as being turbid, because the wort isnt boiled after lautering (separation of spent grain and liquid), leaving loads of proteins behind, thus providing tremendous body. A low-flocculating Finnish bakers yeast creates a cloudy unfiltered beer, with an abundance of sediment. Traditional Sahti is not typically hopped, so the task of balancing is left up to the juniper twigs, which impart an unusual resiny character and also act as a preservative. Some have compared Sahtis to German Hefeweizens, though we find them to be more akin to the Lambics of Belgium due to the exposure to wild yeast and bacteria, and its signature tartness.",
-			 "abv": "7.0-11.0%"
-			},
-			{
-			 "alias": "Altbier",
-			 "style": "German Ale",
-			 "about": "A Düsseldorf specialty, an Altbier is a German style brown ale, the alt literally translates to old in German, and traditionally Altbiers are conditioned for a longer than normal periods of time. Other sources note that alt is derived from the Latin word altus, which means high and refers to the rising yeast. Take your pick, but the extended conditioning mellows out the ale's fruitiness and produces an exceptionally smooth and delicate brew. The color ranges from amber to dark brown, medium in carbonation with a great balance between malt and hops. ",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Berliner Weissbier",
-			 "style": "German Ale",
-			 "about": "Berliner Weisse is a top-fermented, bottle conditioned wheat beer made with both traditional warm-fermenting yeasts and lactobacillus culture. They have a rapidly vanishing head and a clear, pale golden straw-coloured appearance. The taste is refreshing, tart, sour and acidic, with a lemony-citric fruit sharpness and almost no hop bitterness. 
-",
-			 "abv": "2.0-5.0%"
-			},
-			{
-			 "alias": "Dunkelweizen",
-			 "style": "German Ale",
-			 "about": "Similar to a Hefeweizen, these southern Germany wheat beers are brewed as darker versions (Dunkel means dark) with deliciously complex malts and a low balancing bitterness. Most are brown and murky (from the yeast). The usual clove and fruity (banana) characters will be present, some may even taste like banana bread.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Gose",
-			 "style": "German Ale",
-			 "about": "An old German beer style from Leipzig, Gose is an unfiltered wheat beer made with 50-60% malted wheat, which creates a cloudy yellow color and provides a refreshing crispness and twang. A Gose will have a low hop bitterness and a complementary dryness and spice from the use of ground coriander seeds and a sharpness from the addition of salt. Like Berliner Weisse beers, a Gose will sometimes be laced with various flavored and colored syrups. This is to balance out the addition of lactic acid that is added to the boil. 
-",
-			 "abv": "4.0-5.0%"
-			},
-			{
-			 "alias": "Hefeweizen",
-			 "style": "German Ale",
-			 "about": "A south German style of wheat beer (weissbier) made with a typical ratio of 50:50, or even higher, wheat. A yeast that produces a unique phenolic flavors of banana and cloves with an often dry and tart edge, some spiciness, bubblegum or notes of apples. Little hop bitterness, and a moderate level of alcohol. The 'Hefe' prefix means 'with yeast', hence the beers unfiltered and cloudy appearance. Poured into a traditional Weizen glass, the Hefeweizen can be one sexy looking beer. 
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Kölsch",
-			 "style": "German Ale",
-			 "about": "First only brewed in Köln, Germany, now many American brewpubs and a hand full of breweries have created their own version of this obscure style. Light to medium in body with a very pale color, hop bitterness is medium to slightly assertive. A somewhat vinous (grape-y from malts) and dry flavor make up the rest.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Kristalweizen",
-			 "style": "German Ale",
-			 "about": "A filtered version of a Hefeweizen, showcasing bright and clear bodies from pale straw to light amber. Overall character will be more clean and softer on the palate, and the common banana and phenols will be more subtle.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Roggenbier",
-			 "style": "German Ale",
-			 "about": "A traditional German style rye beer that typically contains very large portions of rye. Expect a very pronounced spiciness and sour-like rye character, malty flavor, and a clean hop character. Often unfiltered and bottle-conditioned, Roggenbiers tend to be rather turbid and foamy.",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Weizenbock",
-			 "style": "German Ale",
-			 "about": "A more powerful Dunkel Weizen (of bock strength), with a pronounced estery alcohol character, perhaps some spiciness from this, and bolder and more complex malt characters of dark fruits.
-",
-			 "abv": "7.0-10.0%"
-			},
-			{
-			 "alias": "Irish Dry Stout",
-			 "style": "Irish Ale",
-			 "about": "One of the most common stouts, Dry Irish Stout tend to have light-ish bodies to keep them on the highly drinkable side. They're usually a lower carbonation brew and served on a nitro system for that creamy, masking effect. Bitterness comes from both roasted barley and a generous dose of hops, though the roasted character will be more noticeable. Examples of the style are, of course, the big three, Murphy's, Beamish, and Guinness, however there are many American brewed Dry Stouts that are comparable, if not better.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Irish Red Ale",
-			 "style": "Irish Ale",
-			 "about": "A bit sweet, with a lightly hopped tea-like flavor, and an even dextrinous body, Irish Red Ales are easy to please. Look for well-rounded and blanced flavors, and a pleasant toasted malt character in many examples. A drying finish is common.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Kvass",
-			 "style": "Russian Ale",
-			 "about": "Kvass is Russian for 'leaven' and is a 16th century beer-like beverage made with grains - wheat, rye, barley, etc - or dark rye bread, and often has additions of sugars, birch sap, berries, fruits; the process is akin to ancient beer brewing. It's basically a fermentation of what's around with a simple bakers yeast. It's low in alcohol and often flavored with herbs or fruits to knock the bitter edge out. 
-",
-			 "abv": "0.5-2.5%"
-			},
-			{
-			 "alias": "Scotch Ale",
-			 "style": "Scottish Ale",
-			 "about": "Also known as the Wee Heavy, Scotch Ales are strong ales. In the 19th century Scotland, they'd also be known as 160/-, a nomenclature based on the now obsolete shilling currency.",
-			 "abv": "6.0-10.00%"
-			},
-			{
-			 "alias": "Scottish Ale",
-			 "style": "Scottish Ale",
-			 "about": "The Scottish style of ales break down into Light, Heavy and Export. In the 19th century Scotland, a nomenclature, based on the now obsolete shilling currency, was devised in order to distinguish each. 60/- (light), 70/- (heavy), 80/- (export), 90/- to 160/- for Scotch Ales. ",
-			 "abv": "6.0-10.0%"
-			},
-			{
-			 "alias": "Scottish Gruit",
-			 "style": "Scottish Ale",
-			 "about": "Also known as the Ancient Herbed Ale, this category recognizes the ancient ales. Beers of yore, the way beers were probably brewed throughout the Middle Ages in Continental Europe. Gruit is mainly a concoction of : sweet gale (Myrica gale), yarrow (Achillea millefolium), and wild rosemary (Ledum palustre). Other herbs, spices, and berries might be used to create interesting and pleasant aroma and flavor of green- and herbal-tea. These ancient ales may be highly intoxicating and aphrodisiacal when consumed in significant quantity. Historically, it has been said to stimulate the mind, create euphoria, and enhance sexual drive. 
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "American Adjunct Lager",
-			 "style": "American Lager",
-			 "about": "Light bodied, pale, fizzy lagers made popular by the large macro-breweries (large breweries) of America after prohibition. Low bitterness, thin malts, and moderate alcohol. Focus is less on flavor and more on mass-production and consumption, cutting flavor and sometimes costs with adjunct cereal grains, like rice and corn.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "American Red Lager",
-			 "style": "American Lager",
-			 "about": "Also known as the American Amber, the American Red Lager is sort of catch-all category, these lagers boast a bit more malt backbone and overall character than their lighter sister styles. Bitterness is generally low.",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "American Double Pilsner",
-			 "style": "American Lager",
-			 "about": "Also known as the American Imperial Pilsner, the American Double Pilsner is similar to a Pilsner in appearance, but expect a more pronounced malty backbone and an intense bitterness. Malt flavors tend to be quite sweet in many examples. Alcohol can be quite aggressive and lend some spicy notes to the flavor.
-",
-			 "abv": "6.5-9.0%"
-			},
-			{
-			 "alias": "American Malt Liquor",
-			 "style": "American Lager",
-			 "about": "For the most part, Malt Liquor beers are sold in the infamous 40 oz sized bottles. Straw to pale amber in color, most use excessive amounts of adjuncts, such as corn, rice, refined brewers sugar (dextrose) and as a result there are very few all malt brewed malt liquors. Hops are barely used, just enough is added to balance off any cloyingness. Higher alcohol versions tend to have a loads of fusel alcohol, which gives off solvent or fuel like aromas and flavors. They are attenuated very well, meaning a higher ratio of fermentable sugars are present over other beers, but without using as many ingredients and still ending up with a high alcohol content. Some breweries enable the use of special enzymes to further breakdown the malt and adjuncts so they will yield a larger percentage of alcohol. This makes for quite a dry beer, with only a small amount of unfermented sugars and a kick that will knock you on your ass.
-",
-			 "abv": "6.0-9.0%"
-			},
-			{
-			 "alias": "American Pale Lager",
-			 "style": "American Lager",
-			 "about": "Sometimes referred to as all-malt, this category of beer refers to lagers brewed without cereal adjuncts (mainly rice or corn). Though often still yellow and fizzy, these beers will display a broader depth of malt flavor and a more complex bitterness vs. their adjunct counterparts.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "California Common",
-			 "style": "American Lager",
-			 "about": "Also known as a California Steam Beer, The California Common is a unique 100% American style lager. It's usually brewed with a special strain of lager yeast that works better at warmer temperatures. This method dates back to the late 1800's in California when refrigeration was a great luxury. The brewers back then had to improvise to cool the beer down, so shallow fermenters were used. So in a way the lager yeast was trained to ferment quicker at warmer temperatures. Today's examples are light amber to tawny in color, medium bodied with a malty character. Mildly fruity with an assertive hop bitterness. 
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Light Lager",
-			 "style": "American Lager",
-			 "about": "The Light Lager is generally a lighter version of a breweries premium lager, some are lower in alcohol but all are lower in calories and carbohydrates compared to other beers. Typically a high amount of cereal adjuncts like rice or corn are used to help lighten the beer as much as possible. Very low in malt flavor with a light and dry body. The hop character is low and should only balance with no signs of flavor or aroma. European versions are about half the alcohol (2.5-3.5% abv) as their regular beer yet show more flavor (some use 100% malt) then the American counterparts. For the most part this style has the least amount of flavor than any other style of beer.
-",
-			 "abv": "2.5-5.0%"
-			},
-			{
-			 "alias": "Low Alcohol Beer",
-			 "style": "Non Alcohol",
-			 "about": "Low Alcohol Beer is also commonly known as Non Alcohol (NA) beer, which is a fallacy as all of these beers still contain small amounts of alcohol. Low Alcohol Beers are generally subjected to one of two things: a controlled brewing process that results in a low alcohol content, or the alcohol is removed using a reverse-osmosis method which passes alcohol through a permeable membrane. 
-
-Very light on aroma, body, and flavor.",
-			 "abv": "0.1-1.0%"
-			},
-			{
-			 "alias": "Czech Pilsener",
-			 "style": "Czech Lager",
-			 "about": "The birth of Pilsner beer can be traced back to its namesake, the ancient city of Plzen (or Pilsen) which is situated in the western half of the Czech Republic in what was once Czechoslovakia and previously part of the of Bohemian Kingdom. Pilsner beer was first brewed back in the 1840's when the citizens, brewers and maltsters of Plzen formed a brewer's guild and called it the People's Brewery of Pilsen. 
-
-The Czech Pilsner, or sometimes known as the Bohemian Pilsner, is light straw to golden color and crystal clear. Hops are very prevalent usually with a spicy bitterness and or a spicy floral flavor and aroma, notably one of the defining characteristics of the Saaz hop. Smooth and crisp with a clean malty palate, many are grassy. Some of the originals will show some archaic yeast characteristics similar to very mild buttery or fusel (rose like alcohol) flavors and aromas.
-",
-			 "abv": "4.5-5.5%"
-			},
-			{
-			 "alias": "Euro Dark Lager",
-			 "style": "European Lager",
-			 "about": "The Euro Dark Lager is a slightly stronger and malty/sweeter version a typical lager. The flavors should be notable but still somewhat muted, as the malts overshadow the hops. The aroma should have minimal malt or hop tones. Color should be amber to medium brown.",
-			 "abv": "5.0-7.0%"
-			},
-			{
-			 "alias": "Euro Pale Lager",
-			 "style": "European Lager",
-			 "about": "Similar to the Munich Helles story, many European countries reacted to the popularity of early pale lagers by brewing their own. Hop flavor is significant and of noble varieties, bitterness is moderate, and both are backed by a solid malt body and sweetish notes from an all-malt base.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Euro Strong Lager",
-			 "style": "European Lager",
-			 "about": "Many breweries around the world brew a stronger version of their regular lager. For the US there is the Ice Beer & Malt Liquor, both have a high amount of rice or corn to lighten the flavor. Many European & Asian breweries have a strong lager similar to the Malt Liquor though there is more malt use or it is all malt. Many breweries rush the fermentation or the brew will be too light and signs of higher alcohols will be noticed in the aroma and flavor.
-",
-			 "abv": "7.0-11.0%"
-			},
-			{
-			 "alias": "Bock",
-			 "style": "German Lager",
-			 "about": "The origins of Bock beer are quite uncharted. Back in medieval days German monasteries would brew a strong beer for sustenance during their Lenten fasts. Some believe the name Bock came from the shortening of Einbeck thus beck to bock. Others believe it is more of a pagan or old world influence that the beer was only to be brewed during the sign of the Capricorn goat, hence the goat being associated with Bock beers. Basically, this beer was a symbol of better times to come and moving away from winter. 
-
-As for the beer itself in modern day, it is a bottom fermenting lager that generally takes extra months of lagering (cold storage) to smooth out such a strong brew. Bock beer in general is stronger than your typical lager, more of a robust malt character with a dark amber to brown hue. Hop bitterness can be assertive enough to balance though must not get in the way of the malt flavor, most are only lightly hopped. 
-",
-			 "abv": "5.5-7.5%"
-			},
-			{
-			 "alias": "Doppelbock",
-			 "style": "German Lager",
-			 "about": "Doppelbocks, as the name might suggest, are typically even stronger Bocks and contain enough malty goodness that theyve been considered a meal in a glass for centuries. Generally they have a very full-bodied flavor and are darker than their little Bock brothers and sisters and a higher level of alcohol too. They range in color from dark amber to nearly black, and dark versions often have slight chocolate or roasted characters.",
-			 "abv": "6.5-9.0%"
-			},
-			{
-			 "alias": "Dortmunder Lager",
-			 "style": "German Lager",
-			 "about": "Also known as the Export Lager, Dortmunder Lagers were made popular in the 19th century in Dortmund, Germany. These pale golden lagers exhibit a classic clean character with notes of biscuity malts. Bitterness is akin to a German Pilsner with an aromatic aroma. Mouthfeel is firm and even, with an overall dry tone.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Eisbock",
-			 "style": "German Lager",
-			 "about": "Eisbocks are created by freezing off a portion of the water, and removing it from the beer. This form of concentration, of sorts, increases the beer's body, flavor, and alcohol content. They can range from near black to as light as tawny red. Hop bitterness and flavor are mostly cast aside with a big alcohol presence replacing it, which can range from sweet to spicy, and fruity to often times fusel. Look for a heavy or almost syrupy body with tons of malty flavor.
-",
-			 "abv": "9.0-15.0%"
-			},
-			{
-			 "alias": "German Pilsener",
-			 "style": "German Lager",
-			 "about": "The Pilsner beer was first brewed in Bohemia, a German-speaking province in the old Austrian Empire. Pilsner is one of the most popular styles of lager beers in Germany, and in many other countries. Its often spelled as 	Pilsener, and often times abbreviated, or spoken in slang, as Pils. 
-
-Classic German Pilsners are very light straw to golden in color. Head should be dense and rich. They are also well-hopped, brewed using Noble hops such has Saaz, Hallertauer, Hallertauer Mittelfrüh, Tettnanger, Styrian Goldings, Spalt, Perle, and Hersbrucker. These varieties exhibit a spicy herbal or floral aroma and flavor, often times a bit coarse on the palate, and distribute a flash of citrus-like zest--hop bitterness can be high.",
-			 "abv": "4.0-5.5%"
-			},
-			{
-			 "alias": "Kellerbier",
-			 "style": "German Lager",
-			 "about": "Also known as the Zwickelbier, Kellerbiers are unfiltered and unpasteurized lagers that date back to at least the Middle Ages. The beer is matured, unbunged (beer is exposed), in deep vaults. The final product is a smooth, naturally cloudy beer that's rich in vitamins (from the yeast). Hop bitterness can be high and alcohol will vary. Zwickel Bier is similar to a Keller, but not as pronounced.",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Maibock",
-			 "style": "German Lager",
-			 "about": "Also known as the Helles Bock, the Maibock style of beer tends to be lighter in color than other Bock beers and often has a significant hop character with a noticeable alcohol around the same as a traditional Bock. Maibocks are customarily served in the spring and are oftentimes interrelated with spring festivals and celebrations more often in the month of May.
-",
-			 "abv": "5.7-8.0%"
-			},
-			{
-			 "alias": "Märzen",
-			 "style": "German Lager",
-			 "about": "Before refrigeration, it was nearly impossible to brew beer in the summer due to the hot weather and bacterial infections. Brewing ended with the coming of spring, and began again in the fall. Most were brewed in March (Märzen). Also known as the Oktoberfest, these brews were kept in cold storage over the spring and summer months, or brewed at a higher gravity, so theyd keep. Märzenbier is full-bodied, rich, toasty, typically dark copper in color with a medium to high alcohol content. 
-
-The common Munich Oktoberfest beer served at Wies'n (the location at which Munich celebrates its Oktoberfest) contains roughly 5.0-6.0% alcohol by volume, is dark/copper in color, has a mild hop profile and is typically labeled as a Bavarian Märzenbier in style.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Munich Dunkel Lager",
-			 "style": "German Lager",
-			 "about": "An old friend of Bavaria, Munich Dunkels are smooth, rich and complex, but without being heady or heavy. They boast brilliant ruby hues from the large amounts of Munich malts used, and these malts also lend a fuller-bodied beer. The decoction brewing process also lends much depth and richness. Bitterness is often moderate, with just enough to balance out any sweetness. Hop varieties used tend to be of the German noble varieties, like: Tetnang and Hallertau.
-",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Munich Helles Lager",
-			 "style": "German Lager",
-			 "about": "When the golden and clean lagers of Plzen (Bohemia) became all the rage in the mid-1800's, München brewers feared that Germans would start drinking the Czech beer vs. their own. Munich Helles Lager was their answer to meet the demand. A bit more malty, they often share the same spicy hop characters of Czech Pils, but are a bit more subdued and in balance with malts. Helles is German for bright.",
-			 "abv": "4.0-6.0%"
-			},
-			{
-			 "alias": "Rauchbier",
-			 "style": "German Lager",
-			 "about": "The Rauchbier style is an old German beer style, its origins go back to the 1500's and to the district of Franconia and the town of Bamberg. It's typically of dark colour and has similarities of the Oktoberfestbier. Green malts are literally dried over an open fire of beech wood, imparting a unique smokiness (rauch is German for smoke), the usage of which produces beers of an acquired taste. Imagine a smokiness so robust, so assertive, that it tastes of spiced, smoked meat. 
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Schwarzbier",
-			 "style": "German Lager",
-			 "about": "Schwarzbier (shvahrts-beer), is simply German for black beer. It doesnt mean that its necessarily heavy or light in body, although they tend to lean towards light. Unlike other dark beers, like porters or stouts, they are not overly bitter with burnt and roasted malt characteristics that the others tend to depend on. Instead, hops are used for a good portion of the bitterness. Very refreshing and soul lifting beers, they also make a great alternative for the Winter. Especially when you are looking for a lighter beer, but one with depth of colour and taste.
-",
-			 "abv": "4.4 – 5.4%"
-			},
-			{
-			 "alias": "Vienna Lager",
-			 "style": "German Lager",
-			 "about": "Named after the city in which it orginated, a traditional Vienna lager is brewed using a three step decoction boiling process. Munich, Pilsner, Vienna toasted and dextrin malts are used, as well wheat in some cases. Subtle hops, crisp, with residual sweetness. 
-
-Although German in origin and rare these days, some classic examples come from Mexico, such as: Dos Equis and Negra Modelo. A result of late 19th century immigrant brewers from Austria.
-",
-			 "abv": "3.5-6.5%"
-			},
-			{
-			 "alias": "Happoshu",
-			 "style": "Japanese Lager",
-			 "about": "Japanese beer companies produce what's called Happoshu, which is sparkling low malt beverage. Since the tax for Happoshu is much less than the tax for beer, happoshu is cheaper than beer. For that reason, Happoshu has become very popular in Japan. Happoshu classification occurs when an ingredient other than malt, hops, rice, corn, kaoliang, potato, starch, or sugar is used, or if the malt ratio is less than 67%.
-",
-			 "abv": "4.0-7.0%"
-			},
-			{
-			 "alias": "Japanese Rice Lager",
-			 "style": "Japanese Lager",
-			 "about": "Similar to Macro / Adjunct Lagers, wherein the beer's grist bill is cut by using large portions of rice, but not enough to be classified as Happoshu. Pale yellow in color, soft hop nose, and expect a rounded, firm malty character, moderate bitterness, and a trademark dry finish.
-",
-			 "abv": "4.0-5.0%"
-			}
+    {
+        "alias": "Red Ale",
+        "style": "Ale",
+        "about": "Also known as a American Amber, this style of beer tends to focus on the malts, but hop character can range from low to high. Expect a balanced beer, with toasted malt characters and a light fruitiness in most examples. The range can run from a basic ale, to American brewers who brew faux-Oktoberfest style beers that are actually ales instead of lagers.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "American Barleywine",
+        "style": "Ale",
+        "about": "Despite its name, a Barleywine is very much a beer, albeit a very strong and often intense beer. In fact, it's one of the strongest of the beer styles. Lively and fruity, sometimes sweet, sometimes bittersweet, but always alcoholic. A brew of this strength and complexity can be a challenge to the palate. Expect anything from an amber to dark brown colored beer, with aromas ranging from intense fruits to intense hops. Body is typically thick, alcohol will definitely be perceived, and flavors can range from dominant fruits to palate smacking, resiny hops. English varieties are quite different from the American efforts, what sets them apart is usually the American versions are insanely hopped to make for a more bitter and hop flavored brew, typically using American high alpha oil hops. English versions tend to be more rounded and balanced between malt and hops, with a slightly lower alcohol content, though this is not always the case. Most Barleywines can be cellared for years and typically age like wine.",
+        "abv": "8.0-15.0%"
+    },
+    {
+        "alias": "American Black Ale",
+        "style": "Ale",
+        "about": "Also referred to as a Black IPA or Cascadian Dark Ale, ales of this style range from dark brown to pitch black and showcase malty and light to moderate roasty notes and are often quite hoppy generally with the use of American hops. Alcohol can range from average to high depending on if the brewery is going for a dobule / imperial version.",
+        "abv": "5.0-10.0%"
+    },
+    {
+        "alias": "American Blonde Ale",
+        "style": "Ale",
+        "about": "More or less a creation from the craft-brewery movement, and also reminiscent of the German style Kölsch. Pale straw to deep gold for color. Usually an all malt brew, well attenuated with a lightly malty palate. Most have a subdued fruitiness. Hop character is of the noble variety, or similar, leaving a light to medium bitterness. A balanced beer, light bodied and sometimes lager like.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "American Brown Ale",
+        "style": "Ale",
+        "about": "Spawned from the English Brown Ale, the American version can simply use American ingredients. Many other versions may have additions of coffee or nuts. This style also encompasses Dark Ales. The bitterness and hop flavor has a wide range and the alcohol is not limited to the average either.",
+        "abv": "4.0-8.0%"
+    },
+    {
+        "alias": "American Dark Wheat Ale",
+        "style": "Ale",
+        "about": "An Americanized version of a Dunkel Weizen, these beers can range within the brown to garnet range. Often cloudy with long-lasting heads. Light to medium body with high level of carbonation. Hop characters will be low to high with some fruitiness from ale fermentation, though most examples use of a fairly neutral ale yeast, resulting in a clean fermentation with little to no diacetyl. Flavors of caramel and toasted malts might be present. ",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "American Double IPA",
+        "style": "Ale",
+        "about": "Also known as an Imperial IPA, take an India Pale Ale and feed it steroids, ergo the term Double IPA. Although open to the same interpretation as its sister styles, you should expect something robust, malty, alcoholic and with a hop profile that might rip your tongue out. The Imperial usage comes from Russian Imperial stout, a style of strong stout originally brewed in England for the Russian Imperial Court of the late 1700s; though Double IPA is often the preferred name.",
+        "abv": "7.0-14.0%"
+    },
+    {
+        "alias": "American Double Stout",
+        "style": "Ale",
+        "about": "The American Double Stout gets some of it inspiration from the Russian Imperial Stout. Many of these are barrel aged, mostly in bourbon / whiskey barrels, while some are infused with coffee or chocolate. Alcohol ranges vary, but tend to be quite big, and bigger than traditional Russian Imperial Stouts. Most tend to have cleaner alcohol flavors, higher hop levels, and more residual sweetness. Very full-bodied with rich roasted flavors far surpassing normal stouts.",
+        "abv": "7.0-12.0%"
+    },
+    {
+        "alias": "American IPA",
+        "style": "Ale",
+        "about": "The American IPA is a different soul from the reincarnated IPA style. More flavorful than the withering English IPA, color can range from very pale golden to reddish amber. Hops are typically American with a big herbal and / or citric character, bitterness is high as well. Moderate to medium bodied with a balancing malt backbone.",
+        "abv": "5.5-7.5%"
+    },
+    {
+        "alias": "American Pale Ale",
+        "style": "Ale",
+        "about": "Of British origin, this style is now popular worldwide and the use of local ingredients, or imported, produces variances in character from region to region. Generally, expect a good balance of malt and hops. Fruity esters and diacetyl can vary from none to moderate, and bitterness can range from lightly floral to pungent. ",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "American Pale Wheat Ale",
+        "style": "Ale",
+        "about": "An Americanized version of a Hefe Weizen, these beers range within the pale to golden range in color. Reminiscent of a Hefe Weizen in appearance, unless filtered. Long-lasting head with a light to medium body, higher carbonation is proper. German Weizen flavors and aromas of banana esters and clove-like phenols will not be found. Most use a substantial percentage of wheat malt. Hop character will be low to high but most are moderate in bitterness. There may be some fruitiness from ale fermentation though most examples use of a fairly neutral ale yeast, resulting in a clean fermentation with little to no diacetyl.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "American Porter",
+        "style": "Ale",
+        "about": "Inspired from the now wavering English Porter, the American Porter is the ingenuous creation from that. Thankfully with lots of innovation and originality American brewers have taken this style to a new level. Whether it is highly hopping the brew, using smoked malts, or adding coffee or chocolate to complement the burnt flavor associated with this style. Some are even barrel aged in Bourbon or whiskey barrels. The hop bitterness range is quite wide but most are balanced. Many are just easy drinking session porters as well.",
+        "abv": "4.0-7.5%"
+    },
+    {
+        "alias": "American Stout",
+        "style": "Ale",
+        "about": "Inspired from English & Irish Stouts, the American Stout is the ingenuous creation from that. Thankfully with lots of innovation and originality American brewers have taken this style to a new level. Whether it is highly hopping the brew or adding coffee or chocolate to complement the roasted flavors associated with this style. Some are even barrel aged in Bourbon or whiskey barrels. The hop bitterness range is quite wide but most are balanced. Many are just easy drinking session stouts as well.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "American Strong Ale",
+        "style": "Ale",
+        "about": "Catch all style category for beers from 7.0 percent alcohol by volume and above. Some may even be as high as 25% abv. Characteristics will greatly vary; some have similarities to Barley-wines and Old Ales. Barrel aging is certainly not out of the question.",
+        "abv": "7.0-25.0%"
+    },
+    {
+        "alias": "American Wild Ale",
+        "style": "Ale",
+        "about": "Sometimes Belgian influenced, American Wild Ales are beers that are introduced to wild yeast or bacteria, such as: Brettanomyces (Brettanomyces Bruxellensis, Brettanomyces Lambicus or Brettanomyces Anomolus), Pediococcus or Lactobacillus. This introduction may occur from oak barrels that have been previously inoculated, pitched into the beer, or gained from various sourmash techniques. Regardless of which and how, these little creatures often leave a funky calling card that can be quite strange, interesting, pleasing to many, but also often deemed as undesirable by many.",
+        "abv": "5.0-7.0%"
+    },
+    {
+        "alias": "Black & Tan",
+        "style": "Ale",
+        "about": "This applies to pre-blended packaged beers, where a brewery will blend a dark ale with a light ale or lager. It's by no means a traditional style of beer, but rather brewers capitalizing on the concept practiced at bars where the beers are physically layered.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Chile Beer",
+        "style": "Ale",
+        "about": "Typically basic light colored ales, but sometimes lagers, brewers will add various hot pepper juice, oils, or actual peppers to the beer - jalapeño chiles being the most common pepper used. Hotness can range from a subtle spiciness to palate scorching.",
+        "abv": "4.5-6.0%"
+    },
+    {
+        "alias": "Cream Ale",
+        "style": "Ale",
+        "about": "Cream Ales, spawned from the American light lager style, are brewed as an ale though are sometimes finished with a lager yeast or lager beer mixed in. Adjuncts such as corn or rice are used to lighten the body. It is no uncommon for smaller craft brewers to brew all malt Cream Ales. Pale straw to pale gold color. Low hop bittering and some hop aroma though some micros have given the style more of a hop character. Well carbonated and well attenuated.",
+        "abv": "4.0-8.0%"
+    },
+    {
+        "alias": "Pumpkin Ale",
+        "style": "Ale",
+        "about": "Often released as a fall seasonal, Pumpkin Ales are quite varied. Some brewers opt to add hand-cut pumpkins and drop them in the mash, while others use puree or pumpkin flavoring. These beers also tend to be spiced with pumpkin pie spices, like: ground ginger, nutmeg, cloves, cinnamon, and allspice. Pumpkin Ales are typically mild, with little to no bitterness, a malty backbone, with some spice often taking the lead. Many will contain a starchy, slightly thick-ish, mouthfeel too. In our opinion, best versions use real pumpkin, while roasting the pumpkin can also add tremendous depth of character for even better results, though both methods are time-consuming and tend to drive brewmasters insane.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Rye Beer",
+        "style": "Ale",
+        "about": "Not to be confused with a German Roggenbier, beers that fall into this category contain a notable amount of rye grain in the grist bill. Bitterness tends to be moderate, to allow the often spicy and sour-like rye characteristics to pull through.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Wheatwine",
+        "style": "Ale",
+        "about": "A somewhat recent and over-looked American strong ale, the Wheatwine (or Wheat Wine) is akin to a Barleywine in strength, but contains a large portion of wheat malt; upwards of 50%. The wheat provides a soft and fluffy mouthfeel. Color and bitterness varies.",
+        "abv": "9.0-14.0%"
+    },
+    {
+        "alias": "Belgian Dark Ale",
+        "style": "Belgian Ale",
+        "about": "Belgian Darks offer a massive range of characters. Colors play within the amber to light brown to deep garnet hues, with thick, rocky heads of great retention. Aromas can be anywhere from traces of yeast, spiced, malty, floral and even slightly intoxicating. Flavors from dry and spiced, to sweet and malty. Most have a low level of bitterness.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Belgian IPA",
+        "style": "Belgian Ale",
+        "about": "Inspired by the American India Pale Ale (IPA) and Double IPA, more and more Belgian brewers are brewing hoppy pale colored ales for the US market (like Chouffe & Urthel), and there's been an increase of Belgian IPAs being brewed by American brewers. Generally, Belgian IPAs are considered too hoppy by Belgian beer drinkers. Various malts are used, but the beers of the style are finished with Belgian yeast strains (bottle-conditioned) and the hops employed tend to be American. You'll generally find a cleaner bitterness vs. American styles, and a pronounced dry edge (very Belgian), often akin to an IPA crossed with a Belgian Tripel. Alcohol by volume is on the high side. Many examples are quite cloudy, and feature tight lacing, excellent retention, and fantastic billowy heads that mesmerize (thanks, in part, to the hops).",
+        "abv": "6.0-12.0%"
+    },
+    {
+        "alias": "Belgian Pale Ale",
+        "style": "Belgian Ale",
+        "about": "Belgian Pales consume the Belgian brewing scene, and were initially brewed to compete with Pilseners during the WWII time frame. They differ from other regional Pale Ale varieties, by traditionally being less bitter, using aged hops for a delicate hop finish, and boasting sweetish to toasty malt overtones. They should be decanted properly, leaving the yeast in the bottle. This will showcase their brilliant color range from pale straw yellow to amber hues. Most will be crowned with thick, clinging, rocky white heads. Flavors and aromas will vary. Some have natural spice characters from yeast and hops, while others are spiced. ",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Belgian Strong Dark Ale",
+        "style": "Belgian Ale",
+        "about": "On the same path as the Belgian Dark Ale but obviously higher in alcohol with more of an all around character. The alcohol character can be deceivingly hidden or can be very bold and in your face. Look for lots of complexity within a delicate palate. Hop and malt character can vary, most are fruity and may have mild dark malt flavors. Phenols will range from minimal to high and most will be light on the hops. All in all most are spicy and alcoholic.",
+        "abv": "7.0-15.0%"
+    },
+    {
+        "alias": "Belgian Strong Pale Ale",
+        "style": "Belgian Ale",
+        "about": "Like a Belgian Pale Ale, the strong versions will also be pale to golden in color. What sets them apart is a much higher alcohol content that can range from hidden to spicy to devastatingly present. Expect a complex and powerful ale, yet delicate with rounded flavors and big, billowy, rocky, white head. Hop and malt character can vary, most are fruity and quite hoppy, but hop flavor and aroma will generally be within the low range and artfully balanced.",
+        "abv": "7.0-12.0%"
+    },
+    {
+        "alias": "Bière de Champagne",
+        "style": "Belgian Ale",
+        "about": "Also known as Bière Brut, the Bière de Champagne has much potential within the beer industry as a top-shelf crossover beer. Primarily brewed in Belgium, these beers typically undergo a lengthy maturation. Some are even cave-aged in the Champagne region of France and are then subjected to remuage and dégorgement, which is the methode de champenoise process of removing yeast from the bottle. Most are delicate, high in alcohol, highly carbonated and sometimes spiced. Color can range from very pale to dark hues.",
+        "abv": "10.0-14.0%"
+    },
+    {
+        "alias": "Bière de Garde",
+        "style": "Belgian Ale",
+        "about": "The Biere de Garde is golden to deep copper or light brown in color. They are moderate to medium in body. This style of beer is characterized by a toasted malt aroma, slight malt sweetness in flavor, and medium hop bitterness. Noble-type hop aromas and flavors should be low to medium. Fruity esters can be light to medium in intensity. Flavor of alcohol is evident. Earthy, cellar-like, musty aromas and flavors are okay. Diacetyl should not be perceived but chill haze is okay. Often bottle conditioned with some yeast character.",
+        "abv": "6.0-8.0%"
+    },
+    {
+        "alias": "Dubbel",
+        "style": "Belgian Ale",
+        "about": "The Belgian Dubbel is a rich malty beer with some spicy / phenolic and mild alcoholic characteristics. Not as much fruitiness as the Belgian Strong Dark Ale but some dark fruit aromas and flavors may be present. Mild hop bitterness with no lingering hop flavors. It may show traits of a steely caramel flavor from the use of crystal malt or dark candy sugar. Look for a medium to full body with an expressive carbonation. Traditionally a Trappist Ale, many brew similar Abbey Dubbels to try and emulate the originals (Trappist Westvleteren 8, Westmalle Trappist Dubbel & Chimay Première).",
+        "abv": "6.5-9.0%"
+    },
+    {
+        "alias": "Faro",
+        "style": "Ale",
+        "about": "A blended Lambic with the addition of candi sugar for a lighter, quite sweet and more palatable beer. Commonly spiced with pepper, orange peel and coriander.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Flanders Oud Bruin",
+        "style": "Ale",
+        "about": "Oud Bruins, not restricted to, but concentrated in Flanders, are light to medium-bodied, deep copper to brown in colour. They are extremely varied, characterized by a slight vinegar or lactic sourness and spiciness to smooth and sweet. A fruity-estery character is apparent with no hop flavor or aroma. Low to medium bitterness. Very small quantities of diacetyl are acceptable. Roasted malt character in aroma and flavor is acceptable, at low levels. Oak-like or woody characters may be pleasantly integrated into overall palate. Typically old and new Brown ales are blended, like Lambics.",
+        "abv": "4.0-8.0%"
+    },
+    {
+        "alias": "Flanders Red Ale",
+        "style": "Ale",
+        "about": "Flanders Reds are commonly referred to as the red beers of West Flanders. Belgian Red Beers are typically light-bodied brews with reddish-brown colors. They are infamous for their distinct sharp, fruity, sour and tart flavors which are created by special yeast strains. Very complex beers, they are produced under the age old tradition of long-term cask aging in oak, and the blending of young and old beers.",
+        "abv": "4.0-8.0%"
+    },
+    {
+        "alias": "Gueuze",
+        "style": "Ale",
+        "about": "A traditional Belgian blend of young and old Lambics, which are then bottle after blending, then aged for 2-3 years to produce a dryer, fruitier and more intense style of Lambic. There is no hop character, some are filtered and force carbonated if not pasteurized as well. Some say that this is the more harsh lambic as the sourness is pretty intense.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Lambic-Fruit",
+        "style": "Ale",
+        "about": "In the case of Fruit Lambics, whole fruits are traditionally added after spontaneous fermentation has started. Kriek (cherries), Frambroise (raspberries), Pï¿½che (peach) and Cassis (black currant) are common fruits, all producing subtle to intense fruit characters respectively. Once the fruit is added, the beer is subjected to additional maturation before bottling. Malt and hop characters are generally low to allow the fruit to consume the palate. Alcohol content tends to be low. Some breweries opt to use fruit / sugar syrups vs. whole fruits, producing very nontraditional sweet versions of the style.",
+        "abv": "3.0-8.0%"
+    },
+    {
+        "alias": "Lambic-Unblended",
+        "style": "Ale",
+        "about": "A spontaneous fermented unblended ale that is indigenous to the Senne Valley of Belgium, a large portion of wheat brings out the crispness though the flavor is dominated with a unique tartness from the wild yeast and bacteria that inoculate the brew from both airborne and tainted barrels that they ferment in. Light bodied with little hop flavor or bitterness. Look for hard cider, white wine or similar tartness. Lambics are aged before consumption to ensure that the tartness has mellowed.",
+        "abv": "3.0-6.0%"
+    },
+    {
+        "alias": "Quadrupel",
+        "style": "Ale",
+        "about": "Inspired by the Trappist brewers of Belgium, a Quadrupel is a Belgian style ale of great strength with bolder flavor compared to its Dubbel and Tripel sister styles. Typically a dark creation that ranges within the deep red, brown and garnet hues. Full bodied with a rich malty palate. Phenols are usually at a moderate level. Sweet with a low bitterness yet a well perceived alcohol. ",
+        "abv": "9.0-13.0%"
+    },
+    {
+        "alias": "Saison",
+        "style": "Ale",
+        "about": "Saisons are sturdy farmhouse ale that was traditionally brewed in the winter, to be consumed throughout the summer months. Not so long ago it was close to being an endangered style, but over recent years there's been a massive revival; especially in the US. This is a very complex style; many are very fruity in the aroma and flavor. Look for earthy yeast tones, mild to moderate tartness. Lots of spice and with a medium bitterness. They tend to be semi-dry with many only having touch of sweetness.",
+        "abv": "5.0-8.0%"
+    },
+    {
+        "alias": "Tripel",
+        "style": "Ale",
+        "about": "The name Tripel actually stems from part of the brewing process, in which brewers use up to three times the amount of malt than a standard Trappist Simple. Traditionally, Tripels are bright yellow to gold in color, which is a shade or two darker than the average Pilsener. Head should be big, dense and creamy. Aroma and flavor runs along complex, spicy phenolic, powdery yeast, fruity/estery with a sweet finish. Sweetness comes from both the pale malts and the higher alcohol. Bitterness is up there for a beer with such a light body for its strength, but at times is barely perceived amongst the even balance of malts and hops. The lighter body comes from the use of Belgian candy sugar (up to 25% sucrose), which not only lightens the body, but also adds complex alcoholic aromas and flavors. Small amounts of spices are sometimes added as well.",
+        "abv": "8.0-12.0%"
+    },
+    {
+        "alias": "Witbier",
+        "style": "Ale",
+        "about": "A Belgian Style ale that's very pale and cloudy in appearance due to it being unfiltered and the high level of wheat, and sometimes oats, that's used in the mash. Always spiced, generally with coriander, orange peel and other oddball spices or herbs in the back ground. The crispness and slight twang comes from the wheat and the lively level of carbonation. This is one style that many brewers in the US have taken a liking to and have done a very good job of staying to style. Sometimes served with a lemon, but if you truly want to enjoy the untainted subtleties of this style you'll ask for yours without one. Often referred to as white beers (witbieren) due to the cloudiness / yeast in suspension.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Baltic Porter",
+        "style": "English Ale",
+        "about": "Porters of the late 1700's were quite strong compared to todays standards, easily surpassing 7% alcohol by volume. Some brewers made a stronger, more robust version, to be shipped across the North Sea, dubbed a Baltic Porter. In general, the styles dark brown color covered up cloudiness and the smoky/roasted brown malts and bitter tastes masked brewing imperfections. The addition of stale ale also lent a pleasant acidic flavor to the style, which made it quite popular. These issues were quite important given that most breweries were getting away from pub brewing and opening up breweries that could ship beer across the world.",
+        "abv": "7.0-10.0%"
+    },
+    {
+        "alias": "Braggot",
+        "style": "English Ale",
+        "about": "The Braggot is quite an old drink, there is a mentioned in Chaucer, Canterbury Tales in the late 1300s, and there are earlier references dating even further back to the 12th century in Ireland. Braggot is simply made by blending spices and herbs with mead and beer, to produce a strong concoction with uncommon flavors. Many taverns would make this blend right at the bar though brewers would also blend them as well. ",
+        "abv": "6.0-12.0%"
+    },
+    {
+        "alias": "English Barleywine",
+        "style": "English Ale",
+        "about": " Lively and fruity, sometimes sweet, sometimes bittersweet, but always alcoholic. A brew of this strength and complexity can be a challenge to the palate. Expect anything from an amber to dark brown colored beer, with aromas ranging from intense fruits to intense hops. Body is typically thick, alcohol will definitely be perceived, and flavors can range from dominant fruits to palate smacking, resiny hops. English varieties are quite different from the American efforts, what sets them apart is usually the American versions are insanely hopped to make for a more bitter and hop flavored brew, typically using American high alpha oil hops. English version tend to be more rounded and balanced between malt and hops, with a slightly lower alcohol content, though this is not always the case.",
+        "abv": " 7.0-12.0%"
+    },
+    {
+        "alias": "English Bitter",
+        "style": "English Ale",
+        "about": "The Bitter style came from brewers who wanted to differentiate these ales from other mild brews, enter pale malts and more hops. Most are gold to copper in colour and are light bodied. Low carbonation. Alcohol should be low and not perceived. Hop bitterness is moderate to assertive. Most have a fruitiness in the aroma and flavor, diacetyl can also be present. These are traditionally served cask conditioned, but many breweries have bottled versions.",
+        "abv": "3.0-5.0%"
+    },
+    {
+        "alias": "English Brown Ale",
+        "style": "English Ale",
+        "about": "Spawned from the Mild Ale, Brown Ales tend to be maltier and sweeter on the palate, with a fuller body. Color can range from reddish brown to dark brown. Some versions will lean towards fruity esters, while others tend to be drier with nutty characters. All seem to have a low hop aroma and bitterness.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "English Dark Mild Ale",
+        "style": "English Ale",
+        "about": "The quintessential British session beer, like its name suggests, a Mild is known for its low level of hops character. Alcohol content is traditionally very low. Grainy to toasty malts might be present, but expect some body from the high dextrins produced in brewing. Low carbonation with a near still, bubbly head. Colors can range from gold to dark brown. Traditionally a draft beer made popular in London and the Midlands of England.",
+        "abv": "2.0-6.0%"
+    },
+    {
+        "alias": "English IPA",
+        "style": "English Ale",
+        "about": "First brewed in England and exported for the British troops in India during the late 1700s. To withstand the voyage, IPA's were basically tweaked Pale Ales that were, in comparison, much more malty, boasted a higher alcohol content and were well-hopped, as hops are a natural preservative. Historians believe that an IPA was then watered down for the troops, while officers and the elite would savor the beer at full strength. The English IPA has a lower alcohol due to taxation over the decades. The leaner the brew the less amount of malt there is and less need for a strong hop presence which would easily put the brew out of balance. Some brewers have tried to recreate the origianl IPA with strengths close to 8-9% abv.",
+        "abv": "4.0-6.5%"
+    },
+    {
+        "alias": "English Pale Ale",
+        "style": "English Ale",
+        "about": "The English Pale Ale can be traced back to the city of Burton-upon-Trent, a city with an abundance of rich hard water. This hard water helps with the clarity as well as enhancing the hop bitterness. This ale can be from golden to reddish amber in color with generally a good head retention. A mix of fruity, hoppy, earthy, buttery and malty aromas and flavors can be found. Typically all ingredients are English.",
+        "abv": "3.8-6.0%"
+    },
+    {
+        "alias": "English Pale Mild Ale",
+        "style": "English Ale",
+        "about": "Similar to an ordinary bitter yet not as hoppy, the English Pale Mild Ale is a delicate malty brew. Hops are generally mild with a balancing bitterness. Fruitiness, sulfur and buttery diacetyl may be present. The low alcohol range makes this ale a perfect session brew.",
+        "abv": "3.0-5.0%"
+    },
+    {
+        "alias": "English Porter",
+        "style": "English Ale",
+        "about": "Porter is said to have been popular with transportation workers of Central London, hence the name. Most traditional British brewing documentation from the 1700s state that Porter was a blend of three different styles: an old ale (stale or soured), a new ale (brown or pale ale) and a weak one (mild ale), with various combinations of blending and staleness. The end result was also commonly known as 'EntireButt' or 'ThreeThreads' and had a pleasing taste of neither new nor old. It was the first truly engineered beer, catering to the public's taste, playing a critical role in quenching the thirst of the UKs Industrial Revolution and lending an arm in building the mega-breweries of today. Porter saw a comeback during the homebrewing and micro-brewery revolution of the late 1970s and early 80s, in the US. Modern-day Porters are typically brewed using a pale malt base with the addition of black malt, crystal, chocolate or smoked brown malt. The addition of roasted malt is uncommon, but used occasionally. Some brewers will also age their beers after inoculation with live bacteria to create an authentic taste. Hop bitterness is moderate on the whole and color ranges from brown to black. Overall they remain very complex and interesting beers.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "English Stout",
+        "style": "English Ale",
+        "about": "As mysterious as they look, stouts are typically dark brown to pitch black in color. A common profile amongst Stouts, but not in all cases, is the use of roasted barley (unmalted barley that is kilned to the point of being charred) which lends a dry character to the beer as well as a huge roasted flavor that can range from burnt to coffee to chocolate. A different balance of hops is up to the brewers preference, but the roasted character must be there.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "English Strong Ale",
+        "style": "English Ale",
+        "about": "Bigger than a Pale Ale yet smaller than a Barleywine the English Strong Ale is a rich and complex beer. Many are unfiltered and bottle conditioned. The color tends to land somewhere between amber and reddish copper. They usually have a bold fruity, estery and malty mix. Hops can vary from mild bitterness to a full blown hop character with a bold hop flavor and aroma. The alcohol can be quite noticeable, a hint of solvent is possible.",
+        "abv": "5.5-7.5%"
+    },
+    {
+        "alias": "Extra Strong Bitter",
+        "style": "English Ale",
+        "about": "Also known as the Extra Special Bitter, ESBs are essentially more aggressive and more balanced Bitters, both in alcohol and hop character, but nothing overpowering. Color range will be similar, though leaning towards the darker end of the scale; dark golds to copper. Low carbonation. Malts tend to be more pronounced, often toasty and fruity, with maybe some notes diacetyl. And despite bitter being in its name, ESBs are not really all that bitter. They key to an ESB is balance.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Foriegn Stout",
+        "style": "English Ale",
+        "about": "Also known as the Export Stout, Foreign Stouts are a special style of stout that is brewed bigger than normal for a long journey, the more traditional Foreign / Export Stouts will be found in the tropical regions of the world. Higher in alcohol with a very pronounced roasted character.",
+        "abv": "6.0-9.0%"
+    },
+    {
+        "alias": "Milk Stout",
+        "style": "English Ale",
+        "about": "Also known as the Sweet Stout, Milk Stouts are basically stouts that have a larger amount of residual dextrins and unfermented sugars that give the brew more body and a sweetness that counters the roasted character. Milk Stouts are very similar to Sweet Stouts, but brewers add unfermentable sugars, usually lactose, to the brew kettle to add body and some sweetness.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Oatmeal Stout",
+        "style": "English Ale",
+        "about": "These are generally medium to full bodied stouts that have an unreal smoothness to them from the addition of oats to the mash. The oats not only add a lot of smoothness to the mouth feel but give a touch of sweetness that is unlike any other type of stout. Both levels of roasted flavor and hop character will vary.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Old Ale",
+        "style": "English Ale",
+        "about": "Old Ales, also referred to in the past as Stock Ales, are low attenuated beers with high levels of dextrins, creating a full malt body with plenty of character. Old Ales of a hundred plus years ago were often transfered into vats to mature, hence the name. Rich dark amber in color to a very dark brown; near black. Tamed aromatics. Although bittering levels can greatly vary, expect common fruity, vinous, intense malts and sharp alcohol characteristics. The often racy but mellow attitude of the beer may also include acidic notes, raisins and black currants. Vintage varieties may have a low level of oxidation. Stronger versions may have similarities to a port wine. Brewers may also inoculate a portion of the batch with Brettanomyces lambicus and age for an extended period of time to achieve an old-school acidic character.",
+        "abv": "4.0-12.0%"
+    },
+    {
+        "alias": "Russian Imperial Stout",
+        "style": "English Ale",
+        "about": "Inspired by brewers back in the 1800's to win over the Russian Czar, this is the king of stouts, boasting high alcohol by volumes and plenty of malt character. Low to moderate levels of carbonation with huge roasted, chocolate and burnt malt flavours. Often dry. Suggestions of dark fruit and flavors of higher alcohols are quite evident. Hop character can vary from none, to balanced to aggressive.",
+        "abv": "8.0-12.0%"
+    },
+    {
+        "alias": "Winter Warmer",
+        "style": "English Ale",
+        "about": "These malty sweet offerings tend to be a favorite winter seasonal. Big malt presence, both in flavor and body. The color ranges from brownish reds to nearly pitch black. Hop bitterness is generally low, leveled and balanced, but hop character can be pronounced. Alcohol warmth is not uncommon. Many English versions contain no spices, though some brewers of spiced winter seasonal ales will slap Winter Warmer on the label. Those that are spiced, tend to follow the wassail tradition of blending robust ales with mixed spices, before hops became the chief spice in beer. American varieties many have a larger presences of hops both in bitterness and flavor.",
+        "abv": "5.5-8.0%"
+    },
+    {
+        "alias": "Sahti",
+        "style": "Finnish Ale",
+        "about": "Said to be one of the only primitive beers to survive in Western Europe, Sahti is a farmhouse ale with roots in Finland. First brewed by peasants in the 1500s, mashing (steeping of grains) went down in wooden barrels, and then that mash would be scooped into a hand-carved wooden trough (a kuurna) with a bed of juniper twigs that acted as a filter. The bung at the bottom of the kuurna would be pulled to allow the sweet wort (liquid infusion from the mash) to pass through the twig filter, followed by wort recirculation and a hot water sparge (rinsing of the grains), all of which created a juniper infusion of sorts. Sahti is also referred to as being turbid, because the wort isnt boiled after lautering (separation of spent grain and liquid), leaving loads of proteins behind, thus providing tremendous body. A low-flocculating Finnish bakers yeast creates a cloudy unfiltered beer, with an abundance of sediment. Traditional Sahti is not typically hopped, so the task of balancing is left up to the juniper twigs, which impart an unusual resiny character and also act as a preservative. Some have compared Sahtis to German Hefeweizens, though we find them to be more akin to the Lambics of Belgium due to the exposure to wild yeast and bacteria, and its signature tartness.",
+        "abv": "7.0-11.0%"
+    },
+    {
+        "alias": "Altbier",
+        "style": "German Ale",
+        "about": "A Düsseldorf specialty, an Altbier is a German style brown ale, the alt literally translates to old in German, and traditionally Altbiers are conditioned for a longer than normal periods of time. Other sources note that alt is derived from the Latin word altus, which means high and refers to the rising yeast. Take your pick, but the extended conditioning mellows out the ale's fruitiness and produces an exceptionally smooth and delicate brew. The color ranges from amber to dark brown, medium in carbonation with a great balance between malt and hops. ",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Berliner Weissbier",
+        "style": "German Ale",
+        "about": "Berliner Weisse is a top-fermented, bottle conditioned wheat beer made with both traditional warm-fermenting yeasts and lactobacillus culture. They have a rapidly vanishing head and a clear, pale golden straw-coloured appearance. The taste is refreshing, tart, sour and acidic, with a lemony-citric fruit sharpness and almost no hop bitterness.",
+        "abv": "2.0-5.0%"
+    },
+    {
+        "alias": "Dunkelweizen",
+        "style": "German Ale",
+        "about": "Similar to a Hefeweizen, these southern Germany wheat beers are brewed as darker versions (Dunkel means dark) with deliciously complex malts and a low balancing bitterness. Most are brown and murky (from the yeast). The usual clove and fruity (banana) characters will be present, some may even taste like banana bread.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Gose",
+        "style": "German Ale",
+        "about": "An old German beer style from Leipzig, Gose is an unfiltered wheat beer made with 50-60% malted wheat, which creates a cloudy yellow color and provides a refreshing crispness and twang. A Gose will have a low hop bitterness and a complementary dryness and spice from the use of ground coriander seeds and a sharpness from the addition of salt. Like Berliner Weisse beers, a Gose will sometimes be laced with various flavored and colored syrups. This is to balance out the addition of lactic acid that is added to the boil.",
+        "abv": "4.0-5.0%"
+    },
+    {
+        "alias": "Hefeweizen",
+        "style": "German Ale",
+        "about": "A south German style of wheat beer (weissbier) made with a typical ratio of 50:50, or even higher, wheat. A yeast that produces a unique phenolic flavors of banana and cloves with an often dry and tart edge, some spiciness, bubblegum or notes of apples. Little hop bitterness, and a moderate level of alcohol. The 'Hefe' prefix means 'with yeast', hence the beers unfiltered and cloudy appearance. Poured into a traditional Weizen glass, the Hefeweizen can be one sexy looking beer.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Kölsch",
+        "style": "German Ale",
+        "about": "First only brewed in Köln, Germany, now many American brewpubs and a hand full of breweries have created their own version of this obscure style. Light to medium in body with a very pale color, hop bitterness is medium to slightly assertive. A somewhat vinous (grape-y from malts) and dry flavor make up the rest.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Kristalweizen",
+        "style": "German Ale",
+        "about": "A filtered version of a Hefeweizen, showcasing bright and clear bodies from pale straw to light amber. Overall character will be more clean and softer on the palate, and the common banana and phenols will be more subtle.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Roggenbier",
+        "style": "German Ale",
+        "about": "A traditional German style rye beer that typically contains very large portions of rye. Expect a very pronounced spiciness and sour-like rye character, malty flavor, and a clean hop character. Often unfiltered and bottle-conditioned, Roggenbiers tend to be rather turbid and foamy.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Weizenbock",
+        "style": "German Ale",
+        "about": "A more powerful Dunkel Weizen (of bock strength), with a pronounced estery alcohol character, perhaps some spiciness from this, and bolder and more complex malt characters of dark fruits.",
+        "abv": "7.0-10.0%"
+    },
+    {
+        "alias": "Irish Dry Stout",
+        "style": "Irish Ale",
+        "about": "One of the most common stouts, Dry Irish Stout tend to have light-ish bodies to keep them on the highly drinkable side. They're usually a lower carbonation brew and served on a nitro system for that creamy, masking effect. Bitterness comes from both roasted barley and a generous dose of hops, though the roasted character will be more noticeable. Examples of the style are, of course, the big three, Murphy's, Beamish, and Guinness, however there are many American brewed Dry Stouts that are comparable, if not better.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Irish Red Ale",
+        "style": "Irish Ale",
+        "about": "A bit sweet, with a lightly hopped tea-like flavor, and an even dextrinous body, Irish Red Ales are easy to please. Look for well-rounded and blanced flavors, and a pleasant toasted malt character in many examples. A drying finish is common.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Kvass",
+        "style": "Russian Ale",
+        "about": "Kvass is Russian for 'leaven' and is a 16th century beer-like beverage made with grains - wheat, rye, barley, etc - or dark rye bread, and often has additions of sugars, birch sap, berries, fruits; the process is akin to ancient beer brewing. It's basically a fermentation of what's around with a simple bakers yeast. It's low in alcohol and often flavored with herbs or fruits to knock the bitter edge out.",
+        "abv": "0.5-2.5%"
+    },
+    {
+        "alias": "Scotch Ale",
+        "style": "Scottish Ale",
+        "about": "Also known as the Wee Heavy, Scotch Ales are strong ales. In the 19th century Scotland, they'd also be known as 160/-, a nomenclature based on the now obsolete shilling currency.",
+        "abv": "6.0-10.00%"
+    },
+    {
+        "alias": "Scottish Ale",
+        "style": "Scottish Ale",
+        "about": "The Scottish style of ales break down into Light, Heavy and Export. In the 19th century Scotland, a nomenclature, based on the now obsolete shilling currency, was devised in order to distinguish each. 60/- (light), 70/- (heavy), 80/- (export), 90/- to 160/- for Scotch Ales. ",
+        "abv": "6.0-10.0%"
+    },
+    {
+        "alias": "Scottish Gruit",
+        "style": "Scottish Ale",
+        "about": "Also known as the Ancient Herbed Ale, this category recognizes the ancient ales. Beers of yore, the way beers were probably brewed throughout the Middle Ages in Continental Europe. Gruit is mainly a concoction of : sweet gale (Myrica gale), yarrow (Achillea millefolium), and wild rosemary (Ledum palustre). Other herbs, spices, and berries might be used to create interesting and pleasant aroma and flavor of green- and herbal-tea. These ancient ales may be highly intoxicating and aphrodisiacal when consumed in significant quantity. Historically, it has been said to stimulate the mind, create euphoria, and enhance sexual drive.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "American Adjunct Lager",
+        "style": "American Lager",
+        "about": "Light bodied, pale, fizzy lagers made popular by the large macro-breweries (large breweries) of America after prohibition. Low bitterness, thin malts, and moderate alcohol. Focus is less on flavor and more on mass-production and consumption, cutting flavor and sometimes costs with adjunct cereal grains, like rice and corn.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "American Red Lager",
+        "style": "American Lager",
+        "about": "Also known as the American Amber, the American Red Lager is sort of catch-all category, these lagers boast a bit more malt backbone and overall character than their lighter sister styles. Bitterness is generally low.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "American Double Pilsner",
+        "style": "American Lager",
+        "about": "Also known as the American Imperial Pilsner, the American Double Pilsner is similar to a Pilsner in appearance, but expect a more pronounced malty backbone and an intense bitterness. Malt flavors tend to be quite sweet in many examples. Alcohol can be quite aggressive and lend some spicy notes to the flavor.",
+        "abv": "6.5-9.0%"
+    },
+    {
+        "alias": "American Malt Liquor",
+        "style": "American Lager",
+        "about": "For the most part, Malt Liquor beers are sold in the infamous 40 oz sized bottles. Straw to pale amber in color, most use excessive amounts of adjuncts, such as corn, rice, refined brewers sugar (dextrose) and as a result there are very few all malt brewed malt liquors. Hops are barely used, just enough is added to balance off any cloyingness. Higher alcohol versions tend to have a loads of fusel alcohol, which gives off solvent or fuel like aromas and flavors. They are attenuated very well, meaning a higher ratio of fermentable sugars are present over other beers, but without using as many ingredients and still ending up with a high alcohol content. Some breweries enable the use of special enzymes to further breakdown the malt and adjuncts so they will yield a larger percentage of alcohol. This makes for quite a dry beer, with only a small amount of unfermented sugars and a kick that will knock you on your ass.",
+        "abv": "6.0-9.0%"
+    },
+    {
+        "alias": "American Pale Lager",
+        "style": "American Lager",
+        "about": "Sometimes referred to as all-malt, this category of beer refers to lagers brewed without cereal adjuncts (mainly rice or corn). Though often still yellow and fizzy, these beers will display a broader depth of malt flavor and a more complex bitterness vs. their adjunct counterparts.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "California Common",
+        "style": "American Lager",
+        "about": "Also known as a California Steam Beer, The California Common is a unique 100% American style lager. It's usually brewed with a special strain of lager yeast that works better at warmer temperatures. This method dates back to the late 1800's in California when refrigeration was a great luxury. The brewers back then had to improvise to cool the beer down, so shallow fermenters were used. So in a way the lager yeast was trained to ferment quicker at warmer temperatures. Today's examples are light amber to tawny in color, medium bodied with a malty character. Mildly fruity with an assertive hop bitterness.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Light Lager",
+        "style": "American Lager",
+        "about": "The Light Lager is generally a lighter version of a breweries premium lager, some are lower in alcohol but all are lower in calories and carbohydrates compared to other beers. Typically a high amount of cereal adjuncts like rice or corn are used to help lighten the beer as much as possible. Very low in malt flavor with a light and dry body. The hop character is low and should only balance with no signs of flavor or aroma. European versions are about half the alcohol (2.5-3.5% abv) as their regular beer yet show more flavor (some use 100% malt) then the American counterparts. For the most part this style has the least amount of flavor than any other style of beer.",
+        "abv": "2.5-5.0%"
+    },
+    {
+        "alias": "Low Alcohol Beer",
+        "style": "Non Alcohol",
+        "about": "Low Alcohol Beer is also commonly known as Non Alcohol (NA) beer, which is a fallacy as all of these beers still contain small amounts of alcohol. Low Alcohol Beers are generally subjected to one of two things: a controlled brewing process that results in a low alcohol content, or the alcohol is removed using a reverse-osmosis method which passes alcohol through a permeable membrane. Very light on aroma, body, and flavor.",
+        "abv": "0.1-1.0%"
+    },
+    {
+        "alias": "Czech Pilsener",
+        "style": "Czech Lager",
+        "about": "The birth of Pilsner beer can be traced back to its namesake, the ancient city of Plzen (or Pilsen) which is situated in the western half of the Czech Republic in what was once Czechoslovakia and previously part of the of Bohemian Kingdom. Pilsner beer was first brewed back in the 1840's when the citizens, brewers and maltsters of Plzen formed a brewer's guild and called it the People's Brewery of Pilsen. The Czech Pilsner, or sometimes known as the Bohemian Pilsner, is light straw to golden color and crystal clear. Hops are very prevalent usually with a spicy bitterness and or a spicy floral flavor and aroma, notably one of the defining characteristics of the Saaz hop. Smooth and crisp with a clean malty palate, many are grassy. Some of the originals will show some archaic yeast characteristics similar to very mild buttery or fusel (rose like alcohol) flavors and aromas.",
+        "abv": "4.5-5.5%"
+    },
+    {
+        "alias": "Euro Dark Lager",
+        "style": "European Lager",
+        "about": "The Euro Dark Lager is a slightly stronger and malty/sweeter version a typical lager. The flavors should be notable but still somewhat muted, as the malts overshadow the hops. The aroma should have minimal malt or hop tones. Color should be amber to medium brown.",
+        "abv": "5.0-7.0%"
+    },
+    {
+        "alias": "Euro Pale Lager",
+        "style": "European Lager",
+        "about": "Similar to the Munich Helles story, many European countries reacted to the popularity of early pale lagers by brewing their own. Hop flavor is significant and of noble varieties, bitterness is moderate, and both are backed by a solid malt body and sweetish notes from an all-malt base.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Euro Strong Lager",
+        "style": "European Lager",
+        "about": "Many breweries around the world brew a stronger version of their regular lager. For the US there is the Ice Beer & Malt Liquor, both have a high amount of rice or corn to lighten the flavor. Many European & Asian breweries have a strong lager similar to the Malt Liquor though there is more malt use or it is all malt. Many breweries rush the fermentation or the brew will be too light and signs of higher alcohols will be noticed in the aroma and flavor.",
+        "abv": "7.0-11.0%"
+    },
+    {
+        "alias": "Bock",
+        "style": "German Lager",
+        "about": "The origins of Bock beer are quite uncharted. Back in medieval days German monasteries would brew a strong beer for sustenance during their Lenten fasts. Some believe the name Bock came from the shortening of Einbeck thus beck to bock. Others believe it is more of a pagan or old world influence that the beer was only to be brewed during the sign of the Capricorn goat, hence the goat being associated with Bock beers. Basically, this beer was a symbol of better times to come and moving away from winter. As for the beer itself in modern day, it is a bottom fermenting lager that generally takes extra months of lagering (cold storage) to smooth out such a strong brew. Bock beer in general is stronger than your typical lager, more of a robust malt character with a dark amber to brown hue. Hop bitterness can be assertive enough to balance though must not get in the way of the malt flavor, most are only lightly hopped.",
+        "abv": "5.5-7.5%"
+    },
+    {
+        "alias": "Doppelbock",
+        "style": "German Lager",
+        "about": "Doppelbocks, as the name might suggest, are typically even stronger Bocks and contain enough malty goodness that theyve been considered a meal in a glass for centuries. Generally they have a very full-bodied flavor and are darker than their little Bock brothers and sisters and a higher level of alcohol too. They range in color from dark amber to nearly black, and dark versions often have slight chocolate or roasted characters.",
+        "abv": "6.5-9.0%"
+    },
+    {
+        "alias": "Dortmunder Lager",
+        "style": "German Lager",
+        "about": "Also known as the Export Lager, Dortmunder Lagers were made popular in the 19th century in Dortmund, Germany. These pale golden lagers exhibit a classic clean character with notes of biscuity malts. Bitterness is akin to a German Pilsner with an aromatic aroma. Mouthfeel is firm and even, with an overall dry tone.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Eisbock",
+        "style": "German Lager",
+        "about": "Eisbocks are created by freezing off a portion of the water, and removing it from the beer. This form of concentration, of sorts, increases the beer's body, flavor, and alcohol content. They can range from near black to as light as tawny red. Hop bitterness and flavor are mostly cast aside with a big alcohol presence replacing it, which can range from sweet to spicy, and fruity to often times fusel. Look for a heavy or almost syrupy body with tons of malty flavor.",
+        "abv": "9.0-15.0%"
+    },
+    {
+        "alias": "German Pilsener",
+        "style": "German Lager",
+        "about": "The Pilsner beer was first brewed in Bohemia, a German-speaking province in the old Austrian Empire. Pilsner is one of the most popular styles of lager beers in Germany, and in many other countries. Its often spelled as Pilsener, and often times abbreviated, or spoken in slang, as Pils. Classic German Pilsners are very light straw to golden in color. Head should be dense and rich. They are also well-hopped, brewed using Noble hops such has Saaz, Hallertauer, Hallertauer Mittelfrüh, Tettnanger, Styrian Goldings, Spalt, Perle, and Hersbrucker. These varieties exhibit a spicy herbal or floral aroma and flavor, often times a bit coarse on the palate, and distribute a flash of citrus-like zest--hop bitterness can be high.",
+        "abv": "4.0-5.5%"
+    },
+    {
+        "alias": "Kellerbier",
+        "style": "German Lager",
+        "about": "Also known as the Zwickelbier, Kellerbiers are unfiltered and unpasteurized lagers that date back to at least the Middle Ages. The beer is matured, unbunged (beer is exposed), in deep vaults. The final product is a smooth, naturally cloudy beer that's rich in vitamins (from the yeast). Hop bitterness can be high and alcohol will vary. Zwickel Bier is similar to a Keller, but not as pronounced.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Maibock",
+        "style": "German Lager",
+        "about": "Also known as the Helles Bock, the Maibock style of beer tends to be lighter in color than other Bock beers and often has a significant hop character with a noticeable alcohol around the same as a traditional Bock. Maibocks are customarily served in the spring and are oftentimes interrelated with spring festivals and celebrations more often in the month of May.",
+        "abv": "5.7-8.0%"
+    },
+    {
+        "alias": "Märzen",
+        "style": "German Lager",
+        "about": "Before refrigeration, it was nearly impossible to brew beer in the summer due to the hot weather and bacterial infections. Brewing ended with the coming of spring, and began again in the fall. Most were brewed in March (Märzen). Also known as the Oktoberfest, these brews were kept in cold storage over the spring and summer months, or brewed at a higher gravity, so theyd keep. Märzenbier is full-bodied, rich, toasty, typically dark copper in color with a medium to high alcohol content. The common Munich Oktoberfest beer served at Wies'n (the location at which Munich celebrates its Oktoberfest) contains roughly 5.0-6.0% alcohol by volume, is dark/copper in color, has a mild hop profile and is typically labeled as a Bavarian Märzenbier in style.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Munich Dunkel Lager",
+        "style": "German Lager",
+        "about": "An old friend of Bavaria, Munich Dunkels are smooth, rich and complex, but without being heady or heavy. They boast brilliant ruby hues from the large amounts of Munich malts used, and these malts also lend a fuller-bodied beer. The decoction brewing process also lends much depth and richness. Bitterness is often moderate, with just enough to balance out any sweetness. Hop varieties used tend to be of the German noble varieties, like: Tetnang and Hallertau.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Munich Helles Lager",
+        "style": "German Lager",
+        "about": "When the golden and clean lagers of Plzen (Bohemia) became all the rage in the mid-1800's, München brewers feared that Germans would start drinking the Czech beer vs. their own. Munich Helles Lager was their answer to meet the demand. A bit more malty, they often share the same spicy hop characters of Czech Pils, but are a bit more subdued and in balance with malts. Helles is German for bright.",
+        "abv": "4.0-6.0%"
+    },
+    {
+        "alias": "Rauchbier",
+        "style": "German Lager",
+        "about": "The Rauchbier style is an old German beer style, its origins go back to the 1500's and to the district of Franconia and the town of Bamberg. It's typically of dark colour and has similarities of the Oktoberfestbier. Green malts are literally dried over an open fire of beech wood, imparting a unique smokiness (rauch is German for smoke), the usage of which produces beers of an acquired taste. Imagine a smokiness so robust, so assertive, that it tastes of spiced, smoked meat.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Schwarzbier",
+        "style": "German Lager",
+        "about": "Schwarzbier (shvahrts-beer), is simply German for black beer. It doesnt mean that its necessarily heavy or light in body, although they tend to lean towards light. Unlike other dark beers, like porters or stouts, they are not overly bitter with burnt and roasted malt characteristics that the others tend to depend on. Instead, hops are used for a good portion of the bitterness. Very refreshing and soul lifting beers, they also make a great alternative for the Winter. Especially when you are looking for a lighter beer, but one with depth of colour and taste.",
+        "abv": "4.4 – 5.4%"
+    },
+    {
+        "alias": "Vienna Lager",
+        "style": "German Lager",
+        "about": "Named after the city in which it orginated, a traditional Vienna lager is brewed using a three step decoction boiling process. Munich, Pilsner, Vienna toasted and dextrin malts are used, as well wheat in some cases. Subtle hops, crisp, with residual sweetness. Although German in origin and rare these days, some classic examples come from Mexico, such as: Dos Equis and Negra Modelo. A result of late 19th century immigrant brewers from Austria.",
+        "abv": "3.5-6.5%"
+    },
+    {
+        "alias": "Happoshu",
+        "style": "Japanese Lager",
+        "about": "Japanese beer companies produce what's called Happoshu, which is sparkling low malt beverage. Since the tax for Happoshu is much less than the tax for beer, happoshu is cheaper than beer. For that reason, Happoshu has become very popular in Japan. Happoshu classification occurs when an ingredient other than malt, hops, rice, corn, kaoliang, potato, starch, or sugar is used, or if the malt ratio is less than 67%.",
+        "abv": "4.0-7.0%"
+    },
+    {
+        "alias": "Japanese Rice Lager",
+        "style": "Japanese Lager",
+        "about": "Similar to Macro / Adjunct Lagers, wherein the beer's grist bill is cut by using large portions of rice, but not enough to be classified as Happoshu. Pale yellow in color, soft hop nose, and expect a rounded, firm malty character, moderate bitterness, and a trademark dry finish.",
+        "abv": "4.0-5.0%"
+    }
 ]
-
-
