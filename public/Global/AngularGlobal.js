@@ -71,7 +71,6 @@ angular.module("indexModule")
 			});
 		}
 	}])
-	.controller("bodyController", ["$scope", function($scope){
-		
+	.controller("bodyController", ["$scope", "$window", function($scope, $window){
 		
 	}]);
