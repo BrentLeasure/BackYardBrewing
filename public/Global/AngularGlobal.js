@@ -1,5 +1,5 @@
 //setting the 
-angular.module("indexModule", ["ngRoute", "ui.bootstrap"]);
+angular.module("indexModule", ["ngRoute", "ui.bootstrap", "ngCookies"]);
 
 
 angular.module("indexModule")
@@ -22,7 +22,7 @@ angular.module("indexModule")
 				controller  : "RecipesController"
 			})
 			.when("/thebasics", {
-				templateUrl : "/The-Basics/TheBasics.html",
+				templateUrl : "/TheBasics/TheBasics.html",
 				controller  : "theBasicsController"
 			})
 			.when("/signup", {
@@ -30,8 +30,12 @@ angular.module("indexModule")
 				controller  : "signupController"
 			})
 			.when("/user/:user", {
-				templateUrl : "User-Profile/UserProfile.html",
+				templateUrl : "UserProfile/UserProfile.html",
 				controller  : "UserController",
+			})
+			.when("/moreinfo/:recipe", {
+				templateUrl : "/Recipe-MoreInfo/MoreRecipeInfo.html",
+				controller  : "RecipeInfoController",
 			})
 			.when("/changerecipe/:recipeID", {
 				templateUrl : "/Recipe-Update/RecipeUpdate.html",

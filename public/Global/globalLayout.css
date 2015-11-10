@@ -72,15 +72,15 @@
 .nav-list-items:hover{
 	color: white;
 }
+
 .nav-links:hover{
 	text-decoration: none;
 }
+
 .nav-list-items:hover .nav-list-item-underline{
 	width: 100%;
 }
-.nav-list-items:active .nav-list-item-underline{
-	width: 100%;
-}
+
 /*NAV LIST RIGHT*/
 .nav-list-right-side{
 	margin: 0px 50px 0px 0px;

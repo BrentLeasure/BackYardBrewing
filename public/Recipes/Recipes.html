@@ -14,7 +14,7 @@
 						<div class="user-recipes-layout" ng-repeat="recipe in recipes">
 							<div>
 								<h3>{{recipe.alias}}</h3>
-								<button class="global-link-text more-info-button beer-links">More Info</button>
+								<button class="global-link-text more-info-button beer-links" ng-click="recipeInfo(recipe)" >More Info</button>
 							</div> 
 						</div>	
 					</div>
@@ -24,7 +24,6 @@
 	</div>
 
 <!-- SEARCH BAR -->
-<div ng-class="{'turn-off-scroll' : lightBoxState}" class=
 	<div class="row">
 		<div class="recipe-side-nav col-lg-12">
 		<div class="global-search-box">

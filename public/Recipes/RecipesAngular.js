@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService){
+	.controller("RecipesController", ["$scope", "$cookies", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $cookies, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService){
 		//===================
 		// PAGINATION
 		//===================
@@ -60,14 +60,15 @@ angular.module("indexModule")
 			}
 		}
 
+		$scope.recipeInfo = function(recipe){
+			$cookies.putObject("recipe", recipe);
+
+			$window.location.href = "/#/moreinfo/" + recipe.alias; 
+		}
+
 		$scope.pass = function(beer){
 			$scope.getRecipes(beer);
 		}
-
-		//==============
-		//DELETE RECIPES
-		//==============
-
 
 		//==============
 		//RECIPES
