@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$cookies", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $cookies, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService){
+	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $rootScope, $cookies, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService){
 		//===================
 		// PAGINATION
 		//===================
@@ -13,6 +13,7 @@ angular.module("indexModule")
 		$scope.lastPage;
 		$scope.loggedIn = false;
 		$scope.pageChangers = true;	
+		$rootScope.turnOffScroll = false;
 
 
 		$scope.Paginate = PaginationFactory;
@@ -104,6 +105,7 @@ angular.module("indexModule")
 			$scope.lightBox.about = beer.about;
 			$scope.lightBox.taste = beer.taste;
 			$scope.lightBoxState = true;
+			$rootScope.turnOffScroll = true;
 		}
 
 		$scope.lightBoxOff = function(){
@@ -111,5 +113,6 @@ angular.module("indexModule")
 			$scope.lightBox.about = " ";
 			$scope.lightBox.taste = " ";
 			$scope.lightBoxState = false;
+			$rootScope.turnOffScroll = false;
 		}
 }]);

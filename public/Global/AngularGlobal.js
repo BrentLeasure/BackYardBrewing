@@ -43,7 +43,7 @@ angular.module("indexModule")
 			})
 			.otherwise({ templateUrl: "/404/404.html"})
 	}])
-
+	
 	.service('authService', ['$http', '$location', function($http, $location){
 		this.getUserInfo = function(cb){
 			$http.get('/api/me')
@@ -75,6 +75,6 @@ angular.module("indexModule")
 			});
 		}
 	}])
-	.controller("bodyController", ["$scope", "$window", function($scope, $window){
-		
+	.controller("bodyController", ["$scope", "$rootScope", "$window", function($scope, $rootScope, $window){
+	
 	}]);

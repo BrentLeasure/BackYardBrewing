@@ -58,7 +58,7 @@
 
 <body ng-controller="bodyController as body" class="body">
 		<!-- NAV BAR -->
-	<div ng-controller="navController" class="nav-bar">
+	<div ng-controller="navController" class="nav-bar" ng-hide="turnOffScroll">
 		<ul class="nav-list">
 			<a class="nav-links" href="/#/"><li class="nav-list-logo"><img class="logo" src="../Prototype.png"></li></a>
 			<a class="nav-links" href="/#/thebasics"><li class="nav-list-items">The Basics<div class="nav-list-item-underline"></div></li></a>
@@ -79,10 +79,10 @@
 		</ul>
 
 	</div>
-	<div class="global-page-layout wrap">
+	<div class="global-page-layout wrap" ng-class="{'turn-off-scroll' : turnOffScroll}">
 		<div ng-view class="main"></div>
 	</div>
-	<div class="footer">
+	<div class="footer" ng-hide="turnOffScroll">
 		<a class="footer-info end-element" href="">Terms and Conditions</a>
 		<a class="footer-info" href="">About beer Pal</a>
 		<a class="footer-info" href="">Contact us</a>
