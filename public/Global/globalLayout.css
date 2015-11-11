@@ -99,6 +99,7 @@ html, body{height: 100%;}
 	padding: 5px 0px 5px 0px;
 	display: inline-block;
 }
+
 .nav-list-signup-item{
 	margin: 0px 0px 0px 10px;
 	padding: 0px 0px 0px 0px;
@@ -231,6 +232,21 @@ html, body{height: 100%;}
 	color: white;
 	text-decoration: none;
 }
+
+.global-logout-button{
+	font-size: 13px;
+	color: white;
+	border: 1px solid white;
+	text-decoration: none;
+	background-color: #611B19;
+	padding: 2.7px 4px;
+}
+
+.global-logout-button:hover{
+	color: white;
+	text-decoration: none;
+}
+
 
 .global-submit-button{
 	color: white;
@@ -445,7 +461,7 @@ MAPS STUFF
 		color: #611B19;
 		margin: 5px 0px 0px 0px;
 		left: 10px;
-		top: 80px;
+		top: 85px;
 		border: none;
 		background-color: white;
 		padding: 0px;

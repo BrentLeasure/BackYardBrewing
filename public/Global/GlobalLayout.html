@@ -75,7 +75,7 @@
 			</form>
 				<h5 ng-show="loginError">{{loginError}}</h5>
 				<li ng-show="user" class="home-item"><a href="/#/user/{{user.username}}"class="home-button"><img class="home-img"src="../home.png"></a></li>
-				<li ng-show="user" class="global-submit-button nav-list-items-right"><a href="/auth/logout">logout</a></li>
+				<li ng-show="user" class="nav-list-items-right"><a class="global-logout-button" href="/auth/logout">logout</a></li>
 		</ul>
 
 	</div>
