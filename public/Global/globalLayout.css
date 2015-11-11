@@ -16,6 +16,7 @@ html, body{height: 100%;}
 }
 .main{
 	overflow: auto;
+	overflow-y: hidden;
 	padding-bottom: 60px;
 }
 
@@ -167,7 +168,7 @@ html, body{height: 100%;}
 ========================*/
 .footer{
 	position: relative;
-	margin-top: -50px;
+	margin-top: -60px;
 	height: 60px;
 	clear: both;
 	width: 100%;
