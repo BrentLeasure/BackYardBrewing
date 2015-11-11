@@ -1,9 +1,13 @@
-body{
+.body{
 	background-color: #2B2B2B;
 }
 
+.text{
+	color: white;
+	margin-left: 26%;
+}
 .not-found-image{
 	position: relative;
-	margin: 15% 0% 0% 13%;
+	margin: 0% 0% 0% 13%;
 	width: 75%;
 }
