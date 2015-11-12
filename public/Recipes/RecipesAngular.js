@@ -20,9 +20,12 @@ angular.module("indexModule")
 		$scope.WidthChecker = WatchWidthFactory;
 
 		
-		// $window.addEventListener("resize", function(){
-		$scope.WidthChecker.showPageChangers($scope, $window);
-		// });
+		
+		$scope.WidthChecker.showPageChangers($scope, $window)
+		$scope.checkWidth = function(){
+			$scope.WidthChecker.showPageChangers($scope, $window)
+		}
+		$interval($scope.checkWidth, 5000);
 		
 		//==========
 		//GRABBING DATA

@@ -62,7 +62,7 @@ angular.module("indexModule")
 	.service("WatchWidthFactory", function(){
 			this.showPageChangers = function($scope, $window){
 					$scope.screenWidth = $window.outerWidth;
-				 		if($scope.screenWidth < 400){
+				 		if($scope.screenWidth < 500){
 				 				$scope.pageChangers = false;
 				 			}else{
 				 				$scope.pageChangers = true;

@@ -80,9 +80,6 @@ html, body{height: 100%;}
 	color: white;
 }
 
-.nav-links:hover{
-	text-decoration: none;
-}
 
 .nav-list-items:hover .nav-list-item-underline{
 	width: 100%;
@@ -198,80 +195,37 @@ html, body{height: 100%;}
 	right: 10px;
 }
 
-/*===============
- GLOBAL BUTTON LAYOUT
-=================*/
+
 .global-button-color{
-	background-color: lightgray;
+	position: relative;
+	top: 1px;
+	background: #611B19;
+	color: white;
+}
+
+.global-button-color:hover{
+	background: #611B19;
+	color: white;	
+}
+
+.global-button-color:focus{
+	background: #611B19;
+	color: white;	
+	border: 1px solid white;
+}
+
+.global-button-color:active{
+	background-color: #611B19;
+	color: white;	
+	border: 1px solid white;
+}
+
+.input-box{
+	position: relative;
 	border: 1px solid lightgray;
-	color: white;
-}
-
-.global-button-layout{
-	text-align: center;
-	padding: 12px 5px 12px;
 	border-radius: 5px;
-	float: left;
-	display: inline-block;
+	top: 2px;
 }
-
-.global-link-text{
-	text-align: center;
-	color: white;
-	text-decoration: none;
-}
-
-.global-signup-button{
-	font-size: 13px;
-	color: white;
-	border: 1px solid white;
-	text-decoration: none;
-	background-color: #611B19;
-	padding: 2.7px 4px;
-}
-.global-signup-button:hover{
-	color: white;
-	text-decoration: none;
-}
-
-.global-logout-button{
-	font-size: 13px;
-	color: white;
-	border: 1px solid white;
-	text-decoration: none;
-	background-color: #611B19;
-	padding: 2.7px 4px;
-}
-
-.global-logout-button:hover{
-	color: white;
-	text-decoration: none;
-}
-
-
-.global-submit-button{
-	color: white;
-	border: 1px solid white;
-	text-decoration: none;
-	background-color: #611B19;
-	padding: ;
-}
-
-/*=============================
-	PAGINATION
-===============================*/
-
-.global-page-change-buttons{
-	padding: 2px 7px 0px;
-	border: 1px solid lightgray;;
-	background-color: white;
-	text-decoration: none;
-	color: lightgray;
-}
-.global-page-change-buttons:hover{
-	color: black;
-}
-
 
 
 /*====================
@@ -357,7 +311,7 @@ MAPS STUFF
 		font-size: 14px;
 	}
 	.nav-list-right-side{
-	margin: 0px 30px 0px 0px;
+		margin: 0px 30px 0px 0px;
 	}
 }
 
@@ -423,9 +377,6 @@ MAPS STUFF
 		transition: none;
 	}
 
-	.global-signup-button{
-		padding-top: 3px;
-	}
 	/*====================
 	PAGE-LAYOUT
 	=================*/
@@ -446,9 +397,7 @@ MAPS STUFF
 	.nav-bar{
 		font-size: 12px;
 	}
-	.global-signup-button{
-		font-size: 11px;
-	}
+
 	.footer-info{
 		font-size: 10px;
 		margin: 0% 0% 0% 2%;
@@ -456,7 +405,7 @@ MAPS STUFF
 	}
 }
 @media screen and (max-width: 445px){
-	.global-signup-button{
+	.signup-button{
 		float: left;
 		position: absolute;
 		color: #611B19;
@@ -475,11 +424,8 @@ MAPS STUFF
 	.footer-info{
 		font-size: 8px;
 	}
-	.global-signup-button{
+	.signup-button{
 		top: 90px;
-	}
-	.global-input-box{
-		width: 110px;
 	}
 	.global-search-box{
 		margin-left: 40px;

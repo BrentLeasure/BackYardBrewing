@@ -67,15 +67,15 @@
 		</ul>
 		<ul class="nav-list-right-side">
 			<form ng-submit="loggingIn()">
-				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.email" class="global-input-box" placeholder="email"></li>
-				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.password" type="password" class="global-input-box" placeholder="password"></li>
-				<li ng-hide="user" class="nav-list-items-right"><input type="submit" class="global-submit-button" placeholder="password"></li>
+				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.email" class="input-box" placeholder="email"></li>
+				<li ng-hide="user" class="nav-list-items-right"><input ng-model="login.password" type="password" class="input-box" placeholder="password"></li>
+				<li ng-hide="user" class="nav-list-items-right"><input type="submit" class="btn btn-default btn-xs global-button-color" placeholder="password"></li>
 
-				<li ng-hide="user" class="nav-list-signup-item"><a href="/#/signup" class="global-signup-button">Sign Up</a></li>
+				<li ng-hide="user" class="nav-list-signup-item"><a href="/#/signup" class="btn btn-default btn-xs global-button-color signup-button">Sign Up</a></li>
 			</form>
 				<h5 ng-show="loginError">{{loginError}}</h5>
 				<li ng-show="user" class="home-item"><a href="/#/user/{{user.username}}"class="home-button"><img class="home-img"src="../home.png"></a></li>
-				<li ng-show="user" class="nav-list-items-right"><a class="global-logout-button" href="/auth/logout">logout</a></li>
+				<li ng-show="user" class="nav-list-items-right"><a class="btn btn-default btn-xs global-button-color" href="/auth/logout">logout</a></li>
 		</ul>
 
 	</div>

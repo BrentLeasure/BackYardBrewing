@@ -5,10 +5,31 @@
 	list-style-type: none;
 }
 .recipe-layout{
+	float: left;
 	display: inline-block;
 	width: 25%;
 	margin: 3% 3%;
 }
+.button-padding{
+	margin: 0px 5px 0px 5px;
+}
+.button-color{
+	color: #D3D3D3;
+}
+.button-color:hover{
+	background-color: rgba(97,27,25, .9);
+	color: white;
+}
+.button-color:focus{
+	color: #D3D3D3;
+	background-color: white;
+}
+.button-color:active{
+	color: #D3D3D3;
+	background-color: white;
+}
+}
+
 .user-recipes-layout{
 	position: static;
 	float: left;
@@ -20,30 +41,9 @@
 	padding-top: 300px;
 }
 
-/*==================
-	BUTTONS
-====================*/
-.more-info-button{
-	color: white;
-	background-color: rgba(0, 0, 0, .9);
-	border: 1px solid white;
-}
 
-/*===================
-	PAGINATION BUTTONS
-====================*/
-.recipe-pagination-button-layout{
-	text-align: center;
-	margin: 0px 1px 0px 1px;
-	border: 1px solid lightgray;
-	background-color: white;
-	color: lightgray;
-	width: 25px;
-	height: 25px;
-}
-.recipe-pagination-button-layout:hover{
-	color: black;
-}
+
+
 /*===================
 	ACTIVE BUTTON
 ====================*/
@@ -119,20 +119,14 @@ STATIC BEER INFORMATION
 .all-user-recipes{
 	position: relative;
 }
-.submit-recipe-button{
-	text-decoration: none;
+.submit-recipe{
 	position: absolute;
 	display: inline-block;
 	float: none;
 	right: 100px;
 	top: 50px;
 }
-.submit-recipe-button:hover{
-	text-decoration: none;
-	position: absolute;
-	display: inline-block;
-	color: white;
-}
+
 /*===================
 	PAGINATION BAR
 ===================*/
@@ -224,13 +218,6 @@ STATIC BEER INFORMATION
 
 /*iphone*/
 @media screen and (max-width: 350px){
-	.beer-links{
-		color: black;
-	}
-	.recipe-pagination-button-layout{
-		width: 25px;
-		height: 25px;
-	}
 	.global-search-bar{
 		width: 200px;
 	}
