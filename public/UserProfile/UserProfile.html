@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-12" ng-show="user">
 			<h2 class="recipe-header">Your Recipes</h2>
 			<div class="user-recipes">
-				<div ng-show="user" ng-repeat="recipe in userRecipes">		
+				<div ng-repeat="recipe in userRecipes">		
 					<h4>{{recipe.alias}}</h4>
 					<p>{{recipe.selectedCategory}}</p>
 					<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
@@ -12,6 +12,8 @@
 					<p ng-hide="hasRecipes">You don't have any recipes</p>
 				</div>
 			</div>	
-
+			<div class="user-favorite-recipes">
+				
+			</div>
 	</div>
 </div>

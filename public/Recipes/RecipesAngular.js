@@ -65,8 +65,8 @@ angular.module("indexModule")
 		}
 
 		$scope.recipeInfo = function(recipe){
+			$rootScope.turnOffScroll = false;
 			$cookies.putObject("recipe", recipe);
-
 			$window.location.href = "/#/moreinfo/" + recipe.alias; 
 		}
 
