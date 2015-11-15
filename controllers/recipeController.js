@@ -72,7 +72,6 @@ createRecipe = function(req, res){
 	if(req.user){
 		//checks if any
 		for(variable in body){
-			console.log(variable + " = " + body[variable]);
 			if(body[variable] === null){
 				nullVariable = variable;
 				nullVar = true;
