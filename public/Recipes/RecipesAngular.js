@@ -14,13 +14,15 @@ angular.module("indexModule")
 		$scope.loggedIn = false;
 		$scope.pageChangers = true;	
 		$rootScope.turnOffScroll = false;
-		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null}
+		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null};
 
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
 
 		
-		
+		//================
+		//CHECKING WIDTH
+		//================
 		$scope.WidthChecker.showPageChangers($scope, $window)
 		$scope.checkWidth = function(){
 			$scope.WidthChecker.showPageChangers($scope, $window)
@@ -38,6 +40,7 @@ angular.module("indexModule")
 		}), function(error){
 			console.log(error)
 		}	
+
 		//==============
 		//RECIPE SUMBISSION
 		//==============
@@ -50,11 +53,13 @@ angular.module("indexModule")
 				$http.post("/createrecipe", newRecipe)
 				.then(function(returnData){
 					console.log(returnData);
-					// if(returnData){
-						
-					// }else{
-					// 	$scope.recipe = {};
-					// }
+					if(returnData.data.err){
+						$scope.err = returnData.data.message;
+						$scope.hasError = true;
+					}else{
+						$scope.hasError = false;
+						$scope.recipe = {};
+					}
 				})
 			});
 		}
@@ -67,13 +72,14 @@ angular.module("indexModule")
 			}
 		}
 
+		$scope.pass = function(beer){
+			$scope.getRecipes(beer);
+		}
+		
 		$scope.recipeInfo = function(recipe){
 			RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipe);
 		}
 
-		$scope.pass = function(beer){
-			$scope.getRecipes(beer);
-		}
 
 		//==============
 		//RECIPES

@@ -1,6 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
+			<p class="error" ng-show="hasError">{{err}}</p>
 			<form ng-submit="createRecipe()">
 				<label>Beer Name</label></br>
 				<input ng-model="recipe.alias"></br>

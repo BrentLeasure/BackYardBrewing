@@ -19,6 +19,9 @@ html, body{height: 100%;}
 	overflow-y: hidden;
 	padding-bottom: 60px;
 }
+.error{
+	color: red;
+}
 
 /*===============
  	GLOBAL PAGE LAYOUT
