@@ -113,8 +113,8 @@ updateRecipe = function(req, res){
 		});
 
 	}else{
-		sendBackError = {err: true, message: ""}
-		res.send("Error: not logged in.");
+		sendBackError = {err: true, message: "You are not logged in."}
+		res.send(sendBackError);
 	} 
 }
 
@@ -123,6 +123,7 @@ updateRecipe = function(req, res){
 // DELETE RECIPE
 //===============
 deleteRecipe = function(req, res){
+	var sendBackError;
 	if(req.user){
 		recipeModel.userRecipe.remove({_id: req.params.id}, function(err){
 			if(err){
@@ -132,7 +133,8 @@ deleteRecipe = function(req, res){
 			}
 		})
 	}else{
-		res.send("Error: not logged in.");
+		sendBackError = {err: true, message: "You are not logged in."}	
+		res.send(sendBackError);
 	}
 }
 
