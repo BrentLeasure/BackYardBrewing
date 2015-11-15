@@ -1,5 +1,5 @@
 angular.module("indexModule")
-.controller("UserController", ["$scope", "$http", "$window", "authService", function($scope, $http, $window, authService){
+.controller("UserController", ["$scope", "$rootScope","$http", "$cookies", "$window", "authService", "RecipeService", function($scope, $rootScope, $http, $cookies, $window, authService, RecipeService){
 	authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
@@ -10,7 +10,6 @@ angular.module("indexModule")
 	$scope.getUserRecipes = function(){
 		$http.get("/getuserrecipes/" + $scope.user._id)
 		.then( function(returnData){
-			console.log(returnData);
 			if(returnData.data.err){
 				$scope.err = returnData.data.err;	
 			}else if(returnData.data.length == 0){
@@ -31,6 +30,9 @@ angular.module("indexModule")
 				$window.location.reload();
 			})
 		}
+	}
+	$scope.recipeInfo = function(recipe){
+		RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipe);
 	}
 
 }]);

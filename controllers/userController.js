@@ -47,7 +47,7 @@ var removeFavoriteRecipe = function(req, res){
 //hello!
 var getFavoriteRecipes = function(req, res){
 	if(user){
-		userModel.user.find({_id: req.body.}, funciton(err, favoriteRecipes)){
+		userModel.user.find({_id: req.body._id}, funciton(err, favoriteRecipes)){
 			if(err){
 				res.send(err);
 			}else{

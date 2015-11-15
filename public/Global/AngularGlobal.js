@@ -44,15 +44,7 @@ angular.module("indexModule")
 			.otherwise({ templateUrl: "/404/404.html"})
 	}])
 	
-	.service('authService', ['$http', '$location', function($http, $location){
-		this.getUserInfo = function(cb){
-			$http.get('/api/me')
-				.then( function(returnData){
-					cb(returnData.data)
 
-				})
-		}									
-	}])
 	
 	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "$http", "authService", function($scope, $rootScope, $window, $interval, $http, authService){
 		authService.getUserInfo(function(user){

@@ -4,7 +4,6 @@ angular.module("indexModule")
 		$scope.setRecipeInfo = function(){
 			if($scope.recipeInfo === undefined){
 				$scope.recipeInfo = $cookies.getObject("recipe");
-				console.log($scope.recipeInfo);
 
 			}
 		}

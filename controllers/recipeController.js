@@ -44,8 +44,14 @@ getAllBeerTypes = function(req, res){
 
 createRecipe = function(req, res){
 	if(req.user){
+		var body = req.body
+		for(variable in body){
+			console.log(variable + " = " + body[variable]);
+			if(body[variable] === null){
+				res.status(500).send(variable + " Cannot be empty");
+			}
+		}
 		var newRecipe = new recipeModel.userRecipe(req.body);
-
 		newRecipe.save(function(err, data){
 			if(err){
 				res.send(err);

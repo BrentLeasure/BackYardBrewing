@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", function($scope, $rootScope, $cookies, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService){
+	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", "RecipeService", function($scope, $rootScope, $cookies, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService, RecipeService){
 		//===================
 		// PAGINATION
 		//===================
@@ -14,7 +14,7 @@ angular.module("indexModule")
 		$scope.loggedIn = false;
 		$scope.pageChangers = true;	
 		$rootScope.turnOffScroll = false;
-
+		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null}
 
 		$scope.Paginate = PaginationFactory;
 		$scope.WidthChecker = WatchWidthFactory;
@@ -43,15 +43,18 @@ angular.module("indexModule")
 		//==============
 		$scope.createRecipe = function(){
 			var newRecipe = $scope.recipe;
-
 			authService.getUserInfo(function(user){
 				//add the user information to the recipe
 				newRecipe.username = user.username
 				newRecipe.userID = user._id;
-
 				$http.post("/createrecipe", newRecipe)
 				.then(function(returnData){
-					$scope.recipe = {};
+					console.log(returnData);
+					// if(returnData){
+						
+					// }else{
+					// 	$scope.recipe = {};
+					// }
 				})
 			});
 		}
@@ -65,9 +68,7 @@ angular.module("indexModule")
 		}
 
 		$scope.recipeInfo = function(recipe){
-			$rootScope.turnOffScroll = false;
-			$cookies.putObject("recipe", recipe);
-			$window.location.href = "/#/moreinfo/" + recipe.alias; 
+			RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipe);
 		}
 
 		$scope.pass = function(beer){

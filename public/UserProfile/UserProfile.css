@@ -10,11 +10,13 @@
 	width: 210px;
 }
 .user-recipes{
+	position: relative;
+	margin: 0px 0px 30px 0px;
 	left: 0px;
-	margin: 0;
 	padding: 10px;
 	border: 1px solid lightgray;
 	border-radius: 5px;
 	width: 210px;
-	height: 600px;
+	height: 400px;
+	overflow: scroll
 }

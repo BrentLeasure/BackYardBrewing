@@ -58,17 +58,9 @@ angular.module("indexModule")
 			changePagination: changePagination,
 			setPagination: setPagination
 		};
-	})
-	.service("WatchWidthFactory", function(){
-			this.showPageChangers = function($scope, $window){
-					$scope.screenWidth = $window.outerWidth;
-				 		if($scope.screenWidth < 500){
-				 				$scope.pageChangers = false;
-				 			}else{
-				 				$scope.pageChangers = true;
-				 			}
-			}
-		})
+})
+
+
 
 
 

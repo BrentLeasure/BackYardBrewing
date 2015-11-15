@@ -9,12 +9,12 @@
 					<p class="beer-info">{{lightBox.about}}</p>
  				</div>
  				<div class="all-user-recipes">
-					<h1 class="user-recipes-header">User Recipes</h1>
+					<h1 class="user-recipes-header"><span class="user-recipes-bottom-border">User Recipes</span></h1>
 					<div class="recipe-box">
-						<div class="user-recipes-layout" ng-repeat="recipe in recipes">
+						<div ng-repeat="recipe in recipes">
 							<div>
 								<h3>{{recipe.alias}}</h3>
-								<button class=" beer-links" ng-click="recipeInfo(recipe)" >More Info</button>
+								<button class="beer-links btn btn-sm btn-default more-info" ng-click="recipeInfo(recipe)">More Info</button>
 							</div> 
 						</div>	
 					</div>
