@@ -4,10 +4,12 @@
 			<h2 class="recipe-header">Your Recipes</h2>
 			<div class="user-recipes">
 				<div ng-repeat="recipe in userRecipes">		
-					<button ng-click="recipeInfo(recipe)"><h4>{{recipe.alias}}</h4></button>
+					<h3 class="recipe-name">{{recipe.alias}}</h3>
+					<h4><u>Style</u></h4>
 					<p>{{recipe.selectedCategory}}</p>
 					<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
 					<a class="delete-button" ng-click="deleteRecipe(recipe)">Delete</a>
+					<button ng-click="recipeInfo(recipe)" class="recipe-info-button">more info</button>
 					</div>
 					<p ng-hide="hasRecipes">You don't have any recipes</p>
 			</div>

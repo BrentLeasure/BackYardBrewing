@@ -20,3 +20,19 @@
 	height: 400px;
 	overflow: scroll
 }
+.recipe-info-button{
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	background:none;
+	border:none;
+	width: 72px;
+	font-size:1em;
+	color: #337AB7;
+	height: 20px;
+}
+.recipe-info-button:hover{
+	 color: #23527c;
+	 border-bottom: 1px solid #23527c;
+
+}
