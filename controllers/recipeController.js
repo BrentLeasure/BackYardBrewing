@@ -69,6 +69,7 @@ createRecipe = function(req, res){
 		var nullVariable;
 		var body = req.body
 		var nullVar = false;
+		var counter = 0;
 	if(req.user){
 		//checks if any
 		for(variable in body){
@@ -77,10 +78,11 @@ createRecipe = function(req, res){
 				nullVar = true;
 				break;
 			}
+			counter++;
 		}
 
-		if(nullVar){
-			sendBackError = {err: true, message: "Don't leave any blanks!"};
+		if(nullVar || counter < 4){
+			sendBackError = {err: true, message: "You cannot leave any of these fields blank"};
 			res.send(sendBackError);
 		}else{
 			var newRecipe = new recipeModel.userRecipe(req.body);
