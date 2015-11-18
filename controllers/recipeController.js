@@ -97,7 +97,7 @@ createRecipe = function(req, res){
 	}else{
 		sendBackError = {err: true, message: "You are not logged in."};
 	}
-},
+}
 
 //================
 // UPDATE RECIPE
