@@ -388,12 +388,10 @@ MAPS STUFF
 		padding: 250px 0px 0px 0px;
 	}
 
-}
-
-@media screen and (max-width: 725px){
 	.nav-bar{
-		font-size: 13px;
+		font-size: 12px;
 	}
+}
 
 
 @media screen and (max-width: 640px){

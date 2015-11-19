@@ -9,7 +9,7 @@
 					<p>{{recipe.selectedCategory}}</p>
 					<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
 					<a class="delete-button" ng-click="deleteRecipe(recipe)">Delete</a>
-					<button ng-click="recipeInfo(recipe)" class="recipe-info-button">more info</button>
+					<button ng-click="recipeInfo(recipe._id)" class="recipe-info-button">more info</button>
 					</div>
 					<p ng-hide="hasRecipes">You don't have any recipes</p>
 			</div>

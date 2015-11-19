@@ -14,10 +14,9 @@
 	margin: 0px 0px 30px 0px;
 	left: 0px;
 	padding: 10px;
-	border: 1px solid lightgray;
-	border-radius: 5px;
-	width: 210px;
-	height: 400px;
+	border-top: 1px solid lightgray;
+	width: 200px;
+	height: 500px;
 	overflow: scroll
 }
 .recipe-info-button{

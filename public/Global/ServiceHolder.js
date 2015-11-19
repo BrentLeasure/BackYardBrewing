@@ -20,9 +20,9 @@ angular.module("indexModule")
 })
 
 .service("RecipeService", function(){
-	this.recipeInfo = function($scope, $cookies, $window, $rootScope, recipe){
+	this.recipeInfo = function($scope, $cookies, $window, $rootScope, recipeID){
 		$rootScope.turnOffScroll = false;
-		$cookies.putObject("recipe", recipe);
-		$window.location.href = "/#/moreinfo/" + recipe.alias; 
+		$cookies.put("recipeID", recipeID);
+		$window.location.href = "/#/moreinfo/" + recipeID;
 	}
 })

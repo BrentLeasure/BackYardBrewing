@@ -31,8 +31,8 @@ angular.module("indexModule")
 			})
 		}
 	}
-	$scope.recipeInfo = function(recipe){
-		RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipe);
+	$scope.recipeInfo = function(recipeID){
+		RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipeID);
 	}
 
 }]);

@@ -65,7 +65,7 @@ getAllBeerTypes = function(req, res){
 //===================
 createRecipe = function(req, res){
 		//creating variables
-		var sendBackError = {};
+		var sendBackError = {err: false};
 		var nullVariable;
 		var body = req.body
 		var nullVar = false;
@@ -78,10 +78,17 @@ createRecipe = function(req, res){
 				nullVar = true;
 				break;
 			}
+			if(variable == "instructions"){
+				if(body[variable].length < 500){
+					sendBackError = {err: true, message: "Your instructions are too short. (you need at least 500 characters)"};
+				}
+			}
 			counter++;
 		}
-
-		if(nullVar || counter < 4){
+		if(sendBackError.err){
+			res.send(sendBackError);
+		}
+		else if(nullVar || counter < 4){
 			sendBackError = {err: true, message: "You cannot leave any of these fields blank"};
 			res.send(sendBackError);
 		}else{
