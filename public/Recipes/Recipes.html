@@ -8,16 +8,12 @@
 					<h1 class="beer-name">{{lightBox.alias}}</h1>
 					<p class="beer-info">{{lightBox.about}}</p>
  				</div>
- 				<div class="all-user-recipes">
-					<h1 class="user-recipes-header"><span class="user-recipes-bottom-border">User Recipes</span></h1>
-					<div class="recipe-box">
-						<div ng-repeat="recipe in recipes">
-							<div>
-								<h3>{{recipe.alias}}</h3>
-								<button class="beer-links btn btn-sm btn-default more-info" ng-click="recipeInfo(recipe._id)">More Info</button>
-							</div> 
-						</div>	
-					</div>
+				<h1 class="user-recipes-header"><span class="user-recipes-bottom-border">User Recipes</span></h1>
+				<div class="recipe-box">
+					<div ng-repeat="recipe in recipes" class="user-recipe-layout">
+							<h3>{{recipe.alias}}</h3>
+							<button class="beer-links btn btn-sm btn-default more-info" ng-click="recipeInfo(recipe._id)">More Info</button>
+					</div>	
 				</div>
 			</div>	
 		</div>	

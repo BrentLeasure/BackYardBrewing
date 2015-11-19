@@ -10,6 +10,12 @@
 	width: 25%;
 	margin: 3% 3%;
 }
+.user-recipe-layout{
+	float: left;
+	display: inline-block;
+	width: 25%;
+	margin: 3% 3%;
+}
 .button-padding{
 	margin: 0px 5px 0px 5px;
 }
@@ -39,12 +45,8 @@
 }
 }
 
-.user-recipes-layout{
-	color: black;
-}
-
 .recipe-box{
-	float: left;
+	position: relative;
 }
 
 
@@ -123,11 +125,6 @@ STATIC BEER INFORMATION
 }
 
 
-
-/*USER RECIPES AREA*/
-.all-user-recipes{
-	position: relative;
-}
 .submit-recipe{
 	position: absolute;
 	display: inline-block;
