@@ -5,7 +5,7 @@ var recipeModel = require("../models/recipes");
 
 var addFavoriteRecipe = function(req, res){
 	if(user){
-		recipeModel.userRecipe.findOne({_id: req.body._id}, funciton(err, recipe){
+		recipeModel.userRecipe.findOne({_id: req.body._id}, function(err, recipe){
 			if(err){
 				res.send(err);
 			}else{
@@ -20,13 +20,14 @@ var addFavoriteRecipe = function(req, res){
 		})
 
 	}else{
-		res.send("Not logged in")
+		var sendBackError = {err: true, message: "You are not logged in."}
+		res.send(sendBackError);
 	}
 }
 
 var removeFavoriteRecipe = function(req, res){
 	if(user){
-		recipeModel.userRecipe.findOne({_id: req.body._id}, funciton(err, recipe){
+		recipeModel.userRecipe.findOne({_id: req.body._id}, function(err, recipe){
 			if(err){
 				res.send(err);
 			}else{
@@ -38,23 +39,25 @@ var removeFavoriteRecipe = function(req, res){
 					}
 				});	
 			}
-		}
+		})
 
 	}else{
-		res.send("You are not logged in.");
+		var sendBackError = {err: true, message: "You are not logged in."}
+		res.send(sendBackError);
 	}
 }
 //hello!
 var getFavoriteRecipes = function(req, res){
 	if(user){
-		userModel.user.find({_id: req.body._id}, funciton(err, favoriteRecipes)){
+		userModel.user.find({_id: req.body._id}, function(err, favoriteRecipes){
 			if(err){
 				res.send(err);
 			}else{
 				res.send(favoriteRecipes);
 			}
-		}
+		})
 	}else{
-		res.send("You are note logged in.");
+		var sendBackError = {err: true, message: "You are not logged in."}
+		res.send(sendBackError);
 	}
 }

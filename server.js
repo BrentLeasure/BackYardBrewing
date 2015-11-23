@@ -1,11 +1,15 @@
-//requires
+//===============
+//  REQUIRES
+//===============
 var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 
 var server = express();
 
-var recipeController = require("./controllers/recipeController")
+var recipeController = require("./controllers/RecipeController")
+var favRecipeController = require("./controllers/favRecipeController")
+var authenticationController = require('./controllers/Authentication');
 
 var passportConfig = require('./config/passport');
 var passport = require('passport');
@@ -72,7 +76,6 @@ server.delete("/deleterecipe/:id", recipeController.deleteRecipe);
 //==============
 //PASSPORT AUTHENTICATION ROUTES
 //==============
-var authenticationController = require('./controllers/authentication');
 
 // Post received from submitting the login form
 server.post('/auth/login', authenticationController.processLogin);
@@ -95,7 +98,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })
