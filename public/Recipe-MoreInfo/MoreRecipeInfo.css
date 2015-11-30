@@ -2,6 +2,19 @@
 	padding: 0px 0px 0px 30px;
 }
 
+.add-recipe-button{
+	font-size: 20px;
+	padding: 0px 10px 2px;
+	position: relative;
+	float: right;
+	color: #CCCCCC;
+}
+
+.add-recipe-button:hover{
+	background-color: rgba(97,27,25, .9);
+	color: white;
+}
+
 .inline-block{
 	display: inline-block;
 }

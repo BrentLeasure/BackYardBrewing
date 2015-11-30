@@ -4,7 +4,7 @@
 			<form ng-submit="updateRecipe(recipe)">
 				<input ng-model="recipe.alias" placehoder="{{recipe.alias}}">
 				<input ng-model="recipe.description" placeholder="{{recipe.description}}">
-				<input ng-model="recipe.instructions" placeholder="{{recipe.instructions}}">
+				<textarea ng-model="recipe.instructions" cols="50" rows="5" placeholder="{{recipe.instructions}}"></textarea>
 				<input type="submit">
 			</form>
 		</div>

@@ -3,7 +3,7 @@ var recipeModel = require("../models/recipes");
 
 
 //================
-// GET ALL RECIPES
+// GET ALL RECIPES IN SELECTED CATEGORY
 //================
 getRecipes = function(req, res){
 	recipeModel.userRecipe.find({selectedCategory: req.params.beerAlias}, function(err, recipes){
