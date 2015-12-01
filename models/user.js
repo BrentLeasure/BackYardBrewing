@@ -18,7 +18,7 @@ var userSchema = mongoose.Schema({
     required: true
   },
   friendsList: {
-    type: Array,
+    type: Array, "default" : []
   },
   favoriteRecipes: {
     type: Array,

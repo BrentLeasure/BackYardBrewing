@@ -9,10 +9,22 @@ angular.module("indexModule")
 						console.log("there was an error");
 						$scope.err = returnData.data.err;
 					}else{
-						console.log(returnData.data);
 						$scope.recipe = returnData.data;
 					}
 				})
 		}
 		$scope.setRecipeInfo();
+		$scope.addToFavorites = function(recipe){
+			$scope.recipeTemp = recipe;
+			$http.post("/addFavoriteRecipe", recipe)
+			.then(function(returnData){
+				if(returnData.data.err){
+					$scope.err = returnData.data.err;
+					console.log(returnData.data.err);
+				}else{
+					$scope.success = returnData.data;
+					console.log("success!");
+				}
+			})
+		}
 }])

@@ -8,7 +8,7 @@ var session = require("express-session");
 var server = express();
 
 var recipeController = require("./controllers/RecipeController")
-var favRecipeController = require("./controllers/favRecipeController")
+var favRecipeController = require("./controllers/FavRecipeController")
 var authenticationController = require('./controllers/Authentication');
 
 var passportConfig = require('./config/passport');
@@ -55,11 +55,13 @@ server.get("/getuserrecipes/:_id", recipeController.getUserRecipes);
 //SINGLE RECIPE
 server.get("/getuserrecipe/:_id", recipeController.getUserRecipe);
 
+server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
+
 //=============
 //POST ROUTES
 //=============
 server.post("/createrecipe", recipeController.createRecipe);
-
+server.post("/addFavoriteRecipe", favRecipeController.addFavoriteRecipe);
 
 //=============
 //PUT ROUTES
