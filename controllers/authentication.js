@@ -18,11 +18,10 @@ var authenticationController = {
   processLogin: function(req, res){
     var authFunction = passport.authenticate('local', function(err, user, info){
       if(err){
-        var sendBackError = {err: true, message: err}
-        res.send(sendBackError);;
+        res.send(err);;
       } else if(!user) {
-        var sendBackError = {err: true, message: "Invalid email or wrong password"};
-		    res.send(sendBackError);
+        var err = "There isn't an account with that email";
+		    res.send(err);
       }else{
         performLogin(req, res, user);
       }
@@ -45,11 +44,11 @@ var authenticationController = {
       if(err) {
         //if 11000, it means there is a user that already exists
         if(err.code === 11000){
-          var sendBackError = {err: true, message: "Your username/email is already in use"};
-		      res.send(sendBackError);
+          var err = "Your username/email is already in use";
+		      res.send(err);
         }else{
-          var sendBackError = {err: true, message: "An error has occured. Please try again"};
-		      res.send(sendBackError);
+          var err = "An error has occured. Please try again";
+		      res.send(err);
 		    }
         
       }else{

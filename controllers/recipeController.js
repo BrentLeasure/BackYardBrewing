@@ -65,7 +65,6 @@ getAllBeerTypes = function(req, res){
 //===================
 createRecipe = function(req, res){
 		//creating variables
-		var sendBackError = {err: false};
 		var nullVariable;
 		var body = req.body
 		var nullVar = false;
@@ -80,17 +79,17 @@ createRecipe = function(req, res){
 			}
 			if(variable == "instructions"){
 				if(body[variable].length < 500){
-					sendBackError = {err: true, message: "Your instructions are too short. (you need at least 500 characters)"};
+					var err = "Your instructions are too short. (you need at least 500 characters)";
 				}
 			}
 			counter++;
 		}
-		if(sendBackError.err){
-			res.send(sendBackError);
+		if(err){
+			res.send(err);
 		}
 		else if(nullVar || counter < 4){
-			sendBackError = {err: true, message: "You cannot leave any of these fields blank"};
-			res.send(sendBackError);
+			var err = "You cannot leave any of these fields blank";
+			res.send(err);
 		}else{
 			var newRecipe = new recipeModel.userRecipe(req.body);
 			newRecipe.save(function(err, data){
@@ -102,7 +101,8 @@ createRecipe = function(req, res){
 			})
 		}
 	}else{
-		sendBackError = {err: true, message: "You are not logged in."};
+		var err = "You are not logged in.";
+		res.send(err);
 	}
 }
 
@@ -110,7 +110,7 @@ createRecipe = function(req, res){
 // UPDATE RECIPE
 //===============
 updateRecipe = function(req, res){
-	var sendBackError;
+	var err;
 	if(req.user){
 		recipeModel.userRecipe.update({_id: req.body._id}, req.body, function(err){
 			if(err){
@@ -121,8 +121,8 @@ updateRecipe = function(req, res){
 		});
 
 	}else{
-		sendBackError = {err: true, message: "You are not logged in."}
-		res.send(sendBackError);
+		var err = "You are not logged in.";
+		res.send(err);
 	} 
 }
 
@@ -131,7 +131,7 @@ updateRecipe = function(req, res){
 // DELETE RECIPE
 //===============
 deleteRecipe = function(req, res){
-	var sendBackError;
+	var err;
 	if(req.user){
 		recipeModel.userRecipe.remove({_id: req.params.id}, function(err){
 			if(err){
@@ -141,8 +141,8 @@ deleteRecipe = function(req, res){
 			}
 		})
 	}else{
-		sendBackError = {err: true, message: "You are not logged in."}	
-		res.send(sendBackError);
+		var err = "You are not logged in.";
+		res.send(err);
 	}
 }
 

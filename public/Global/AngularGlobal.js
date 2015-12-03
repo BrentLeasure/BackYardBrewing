@@ -58,7 +58,7 @@ angular.module("indexModule")
 			$http.post("/auth/login", $scope.login)
 			.then(function(returnData){
 					if(returnData.data.err){
-						$scope.loginError = returnData.data.message;
+						$scope.loginError = returnData.data.err;
 					}else{
 						$scope.user = returnData.data
 						$scope.loginError = "";

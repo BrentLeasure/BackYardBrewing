@@ -9,7 +9,7 @@ angular.module("indexModule")
 	})
 	$scope.getUserRecipes = function(){
 		$http.get("/getuserrecipes/" + $scope.user._id)
-		.then( function(returnData){
+		.then(function(returnData){
 			if(returnData.data.err){
 				$scope.err = returnData.data.err;	
 			}else if(returnData.data.length == 0){
@@ -21,6 +21,13 @@ angular.module("indexModule")
 			}
 		})
 	}
+	$scope.getFavoriteRecipes = function(){
+		$http.get("/getFavoriteRecipes")
+		.then(function(returnData){
+
+		})
+	}
+
 	$scope.deleteRecipe = function(recipe){
 		var deleteIt = confirm("Are you sure you want to delete your recipe?");
 		if(deleteIt){

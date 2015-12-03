@@ -6,7 +6,6 @@ angular.module("indexModule")
 				$http.get("/getuserrecipe/" + $scope.recipeID)
 				.then( function(returnData){
 					if(returnData.data.err){
-						console.log("there was an error");
 						$scope.err = returnData.data.err;
 					}else{
 						$scope.recipe = returnData.data;
@@ -20,10 +19,8 @@ angular.module("indexModule")
 			.then(function(returnData){
 				if(returnData.data.err){
 					$scope.err = returnData.data.err;
-					console.log(returnData.data.err);
 				}else{
 					$scope.success = returnData.data;
-					console.log("success!");
 				}
 			})
 		}

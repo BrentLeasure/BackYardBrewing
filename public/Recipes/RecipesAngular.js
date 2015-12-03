@@ -56,7 +56,7 @@ angular.module("indexModule")
 				.then(function(returnData){
 			
 					if(returnData.data.err){
-						$scope.err = returnData.data.message;
+						$scope.err = returnData.data.err;
 						$scope.hasError = true;
 					}else{
 						$scope.hasError = false;

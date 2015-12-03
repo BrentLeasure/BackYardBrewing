@@ -5,7 +5,7 @@ var recipeModel = require("../models/recipes");
 
 var addFavoriteRecipe = function(req, res){
 	if(req.user){
-		userModel.User.update({_id: req.user._id}, {$push :{favoriteRecipes: {name: req.body.alias, _id: req.body._id}}}, function(err){
+		userModel.User.update({_id: req.user._id}, {$push :{favoriteRecipes: {name: req.body.alias, _id: req.body._id, selectedCategory: req.body.selectedCategory}}}, function(err){
 			if(err){
 				res.send(err);
 			}else{
@@ -13,8 +13,8 @@ var addFavoriteRecipe = function(req, res){
 			}
 		});
 	}else{
-		var sendBackError = {err: true, message: "You are not logged in."}
-		res.send(sendBackError);
+		var err = "You are not logged in.";
+		res.send(err);
 	}
 }
 
@@ -24,7 +24,7 @@ var removeFavoriteRecipe = function(req, res){
 			if(err){
 				res.send(err);
 			}else{
-				userModel.User.update({_id: user._id}, {$pull :{favoriteRecipes: {name: recipe.alias, _id: recipe._id}}}, function(err){
+				userModel.User.update({_id: user._id}, {$pull :{favoriteRecipes: {_id: recipe._id}}}, function(err){
 					if(err){
 						res.send(err);
 					}else{
@@ -35,8 +35,8 @@ var removeFavoriteRecipe = function(req, res){
 		})
 
 	}else{
-		var sendBackError = {err: true, message: "You are not logged in."}
-		res.send(sendBackError);
+		var err = "You are not logged in.";
+		res.send(err);
 	}
 }
 //hello!
@@ -50,8 +50,8 @@ var getFavoriteRecipes = function(req, res){
 			}
 		})
 	}else{
-		var sendBackError = {err: true, message: "You are not logged in."}
-		res.send(sendBackError);
+		var err = "you are not logged in";
+		res.send(err);
 	}
 }
 
