@@ -57,6 +57,7 @@ angular.module("indexModule")
 		$scope.loggingIn = function(){
 			$http.post("/auth/login", $scope.login)
 			.then(function(returnData){
+				console.log(returnData);
 					if(returnData.data.err){
 						$scope.loginError = returnData.data.err;
 					}else{

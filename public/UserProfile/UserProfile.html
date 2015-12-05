@@ -2,18 +2,20 @@
 	<div class="row">
 		<div class="col-xs-2 side-bar-col">
 			<div class="user-side-bar">
-				<h3>Welcome back, {{user.username}}</h3>
+				<h5>{{user.username}}</h5>
 			</div>
 		</div>
 		<div class="col-xs-10">
 			<div>
-				<div ng-repeat="recipe in userRecipes" class="user-recipes">		
-					<h3 class="recipe-name">{{recipe.alias}}</h3>
-					<h4><u>Style</u></h4>
-					<p>{{recipe.selectedCategory}}</p>
-					<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
-					<a class="delete-button" ng-click="deleteRecipe(recipe)">Delete</a>
-					<button ng-click="recipeInfo(recipe._id)" class="recipe-info-button">more info</button>
+				<div ng-repeat="recipe in userRecipes" class="user-recipes-layout">		
+					<div class="recipes-font">
+						<h3 class="recipe-name">{{recipe.alias}}</h3>
+						<h4><u>Style</u></h4>
+						<p>{{recipe.selectedCategory}}</p>
+						<a href="/#/changerecipe/{{recipe._id}}">Edit</a>
+						<a class="delete-button" ng-click="deleteRecipe(recipe)">Delete</a>
+						<button ng-click="recipeInfo(recipe._id)" class="recipe-info-button">more info</button>
+					</div>
 				</div>
 					<p ng-hide="hasRecipes">You don't have any recipes</p>
 			</div>

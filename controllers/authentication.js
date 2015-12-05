@@ -18,10 +18,10 @@ var authenticationController = {
   processLogin: function(req, res){
     var authFunction = passport.authenticate('local', function(err, user, info){
       if(err){
-        res.send(err);;
+        res.send(err);
       } else if(!user) {
-        var err = "There isn't an account with that email";
-		    res.send(err);
+        var err = {err: "There isn't an account with that email"};
+        res.send(err)
       }else{
         performLogin(req, res, user);
       }
