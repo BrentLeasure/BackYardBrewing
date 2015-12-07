@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("homePageController", ["$scope", function($scope){
+	.controller("EventsController", ["$scope", function($scope){
 		$scope.weekState = true;
 		$scope.monthState = false;
 

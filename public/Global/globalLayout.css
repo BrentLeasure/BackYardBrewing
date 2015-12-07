@@ -88,24 +88,6 @@ html, body{height: 100%;}
 	width: 100%;
 }
 
-/*NAV LIST RIGHT*/
-.nav-list-right-side{
-	margin: 0px 50px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	float: right;
-}
-
-.nav-list-items-right{
-	margin: 12px 0px 0px 20px;
-	padding: 5px 0px 5px 0px;
-	display: inline-block;
-}
-
-.nav-list-signup-item{
-	margin: 0px 0px 0px 10px;
-	padding: 0px 0px 0px 0px;
-	display: inline-block;
-}
 
 
 /*============================
@@ -221,13 +203,6 @@ html, body{height: 100%;}
 	background-color: #611B19;
 	color: white;	
 	border: 1px solid white;
-}
-
-.input-box{
-	position: relative;
-	border: 1px solid lightgray;
-	border-radius: 5px;
-	top: 2px;
 }
 
 
@@ -406,17 +381,6 @@ MAPS STUFF
 	}
 }
 @media screen and (max-width: 445px){
-	.signup-button{
-		float: left;
-		position: absolute;
-		color: #611B19;
-		margin: 5px 0px 0px 0px;
-		left: 10px;
-		top: 88px;
-		border: none;
-		background-color: white;
-		padding: 0px;
-	}
 	.global-page-layout{
 		padding: 270px 0px 0px 0px;
 	}
@@ -425,9 +389,7 @@ MAPS STUFF
 	.footer-info{
 		font-size: 8px;
 	}
-	.signup-button{
-		top: 90px;
-	}
+
 	.global-search-box{
 		margin-left: 40px;
 	}

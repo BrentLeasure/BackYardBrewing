@@ -1,32 +1,21 @@
 angular.module("indexModule")
-	.controller("homePageController", ["$scope", function($scope){
-		$scope.weekState = true;
-		$scope.monthState = false;
-
-		$scope.activateTab = function(buttonClicked){
-			if(buttonClicked == 1){
-				$scope.weekState = true;
-				$scope.monthState = false;
-			}else if(buttonClicked == 2){
-				$scope.weekState = false;
-				$scope.monthState = true;
+.controller("homePageController", ["$scope", "$http", "authService", function($scope, $http, authService){
+	authService.getUserInfo(function(user){
+			if(user){
+				$scope.user = user;
+			}else{
+				$scope.user=false;
 			}
-		}
-
-		$scope.eventMap;
-		$scope.initMap = function(){
-			$scope.centerOfMap ={lat: 39.244785, lng: -105.511852};
-
-			$scope.eventMap = new google.maps.Map(document.getElementById('eventMap'), {
-				center: $scope.centerOfMap,
-				zoom: 7,
-				scrollwheel: false
-		  	});
-
-		 	$scope.marker = new google.maps.Marker({
-				position: $scope.centerOfMap,
-				map: $scope.eventMap,
-				title: 'Hello World!'
+		});
+		$scope.loggingIn = function(){
+			$http.post("/auth/login", $scope.login)
+			.then(function(returnData){
+					if(returnData.data.err){
+						$scope.loginError = returnData.data.err;
+					}else{
+						$scope.user = returnData.data
+						$scope.loginError = "";
+					}
 			});
 		}
-	}]);
+}])

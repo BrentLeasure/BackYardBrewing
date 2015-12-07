@@ -9,6 +9,10 @@ angular.module("indexModule")
 				templateUrl : "/Home/Home.html",
 				controller  : "homePageController"
 			})
+			.when("/events", {
+				templateUrl : "/Events/Events.html",
+				controller  : "EventsController"
+			})
 			.when("/forums", {
 				templateUrl : "/Forum/Forum.html",
 				controller  : "forumController"
@@ -46,26 +50,8 @@ angular.module("indexModule")
 	
 
 	
-	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "$http", "authService", function($scope, $rootScope, $window, $interval, $http, authService){
-		authService.getUserInfo(function(user){
-			if(user){
-				$scope.user = user;
-			}else{
-				$scope.user=false;
-			}
-		});
-		$scope.loggingIn = function(){
-			$http.post("/auth/login", $scope.login)
-			.then(function(returnData){
-				console.log(returnData);
-					if(returnData.data.err){
-						$scope.loginError = returnData.data.err;
-					}else{
-						$scope.user = returnData.data
-						$scope.loginError = "";
-					}
-			});
-		}
+	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", function($scope, $rootScope, $window, $interval, $http, authService){
+		
 	}])
 	.controller("bodyController", ["$scope", "$rootScope", "$window", function($scope, $rootScope, $window){
 	
