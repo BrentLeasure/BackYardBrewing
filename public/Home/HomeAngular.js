@@ -1,5 +1,5 @@
 angular.module("indexModule")
-.controller("homePageController", ["$scope", "$http", "authService", function($scope, $http, authService){
+.controller("homePageController", ["$scope", "$http", "$window", "authService", function($scope, $http, $window, authService){
 	authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
@@ -15,6 +15,7 @@ angular.module("indexModule")
 					}else{
 						$scope.user = returnData.data
 						$scope.loginError = "";
+						$window.location.href = "/#/user/" + $scope.user.username;
 					}
 			});
 		}

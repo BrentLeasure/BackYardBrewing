@@ -50,8 +50,16 @@ angular.module("indexModule")
 	
 
 	
-	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", function($scope, $rootScope, $window, $interval, $http, authService){
-		
+	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "authService", function($scope, $rootScope, $window, $interval, authService){
+		$scope.route = function(){
+			authService.getUserInfo(function(user){
+				if(user){
+					$window.location.href = "/#/user/" + user.username;
+				}else{
+					$window.location.href = "/#/"
+				}
+			})
+		}
 	}])
 	.controller("bodyController", ["$scope", "$rootScope", "$window", function($scope, $rootScope, $window){
 	

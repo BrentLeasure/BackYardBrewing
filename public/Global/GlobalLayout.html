@@ -9,7 +9,7 @@
 	<!-- PULLED FROM WEB -->
 	<script src ="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
 
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-cookies.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js" type="text/javascript"></script>
 
 	<script src ="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js" type="text/javascript"></script>
 	
@@ -60,7 +60,7 @@
 		<!-- NAV BAR -->
 	<div ng-controller="navController" class="nav-bar" ng-hide="turnOffScroll">
 		<ul class="nav-list">
-			<a class="nav-links" href="/#/"><li class="nav-list-logo"><img class="logo" src="../Prototype.png"></li></a>
+			<button class="home-button" ng-click="route()"><li class=""><img class="logo" src="../Prototype.png"></li></button>
 			<a class="nav-links" href="/#/events"><li class="nav-list-items">Events<div class="nav-list-item-underline"></div></li></a>
 			<a class="nav-links" href="/#/thebasics"><li class="nav-list-items">The Basics<div class="nav-list-item-underline"></div></li></a>
 			<a class="nav-links" href="/#/recipes"><li class="nav-list-items">Recipes<div class="nav-list-item-underline"></div></li></a>
