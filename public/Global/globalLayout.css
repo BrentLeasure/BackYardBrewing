@@ -95,6 +95,7 @@ html, body{height: 100%;}
 	LOGO
 ================*/
 .logo{
+	list-style-type: none;
 	display: inline-block;	
 	width: 10%;
 	width: 50px;
