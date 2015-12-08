@@ -15,8 +15,8 @@ angular.module("indexModule")
 					}else{
 						$scope.user = returnData.data
 						$scope.loginError = "";
-						$window.location.reload();
 						$window.location.href = "/#/user/" + $scope.user.username;
+						$window.location.reload();
 					}
 			});
 		}
