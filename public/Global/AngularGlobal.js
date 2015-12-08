@@ -50,7 +50,15 @@ angular.module("indexModule")
 	
 
 	
-	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "authService", function($scope, $rootScope, $window, $interval, authService){
+	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "WatchWidthFactory", "authService", function($scope, $rootScope, $window, $interval, WatchWidthFactory, authService){
+		$scope.WidthChecker = WatchWidthFactory;
+
+		$scope.WidthChecker.pageWidth($rootScope, $scope, $window)
+		$scope.checkWidth = function(){
+			$scope.WidthChecker.pageWidth($rootScope, $scope, $window)
+		}
+		$interval($scope.checkWidth, 1000);
+
 		$scope.route = function(){
 			authService.getUserInfo(function(user){
 				if(user){
@@ -60,6 +68,7 @@ angular.module("indexModule")
 				}
 			})
 		}
+
 	}])
 	.controller("bodyController", ["$scope", "$rootScope", "$window", function($scope, $rootScope, $window){
 	

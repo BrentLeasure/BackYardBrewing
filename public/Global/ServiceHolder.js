@@ -9,12 +9,12 @@ angular.module("indexModule")
 	}									
 }])
 .service("WatchWidthFactory", function(){
-	this.showPageChangers = function($scope, $window){
+	this.pageWidth = function($rootScope, $scope, $window){
 		$scope.screenWidth = $window.outerWidth;
-	 		if($scope.screenWidth < 500){
-	 				$scope.pageChangers = false;
+	 		if($scope.screenWidth < 770){
+	 				$rootScope.screenSize = false;
 	 			}else{
-	 				$scope.pageChangers = true;
+	 				$rootScope.screenSize = true;
 	 		}
 	}
 })

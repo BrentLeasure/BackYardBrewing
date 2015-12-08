@@ -17,17 +17,6 @@ angular.module("indexModule")
 		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null};
 
 		$scope.Paginate = PaginationFactory;
-		$scope.WidthChecker = WatchWidthFactory;
-
-		
-		//================
-		//CHECKING WIDTH
-		//================
-		$scope.WidthChecker.showPageChangers($scope, $window)
-		$scope.checkWidth = function(){
-			$scope.WidthChecker.showPageChangers($scope, $window)
-		}
-		$interval($scope.checkWidth, 5000);
 		
 		//==========
 		//GRABBING DATA
