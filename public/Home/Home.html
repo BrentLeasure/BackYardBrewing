@@ -4,17 +4,15 @@
 			<ul class="nav-list-right-side">
 			<form ng-submit="loggingIn()">
 
-				<li ng-hide="user" class="signin-input-li"><input ng-model="login.email" class="input-box" placeholder="email"></li>
+				<li class="signin-input-li"><input ng-model="login.email" class="input-box" placeholder="email"></li>
 
-				<li ng-hide="user" class="signin-input-li"><input ng-model="login.password" type="password" class="input-box" placeholder="password"></li></br>
+				<li class="signin-input-li"><input ng-model="login.password" type="password" class="input-box" placeholder="password"></li></br>
 
-				<li ng-hide="user" class="signup-li"><button type="submit" class="btn btn-default btn global-button-color signin-button" placeholder="password">login</button></li></br>
+				<li class="signup-li"><button type="submit" class="btn btn-default btn global-button-color signin-button" placeholder="password">login</button></li></br>
 
-				<li ng-hide="user" class="signup-li"><a href="/#/signup" class="btn btn-default btn global-button-color signup-button">Sign Up</a></li>
+				<li class="signup-li"><a href="/#/signup" class="btn btn-default btn global-button-color signup-button">Sign Up</a></li>
 			</form>
 				<h5 class="error" ng-show="loginError">{{loginError}}</h5>
-				<li ng-show="user" class="home-item"><a href="/#/user/{{user.username}}"class="home-button"><img class="home-img"src="../user-icon.png"></a></li>
-				<li ng-show="user" class="signup-li"><a class="btn btn-default btn-xs global-button-color" href="/auth/logout">logout</a></li>
 		</ul>
 		</div>
 	</div>

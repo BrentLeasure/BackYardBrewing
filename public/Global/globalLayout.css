@@ -85,6 +85,12 @@ html, body{height: 100%;}
 	width: 100%;
 }
 
+
+.logout{
+	display: inline-block;
+	margin: 17px 10px 0px 0px;
+	float: right;
+}
 /*===============
 	LOGO
 ================*/
@@ -280,17 +286,7 @@ MAPS STUFF
 
 	.nav-list{
 		margin: 0px;
-	}
-	
-	.nav-list-logo{
-		margin: 0px 0px 0px 0px;
-		text-align: center;
-		width: 100%;
-		padding: 5px 0px 5px 0px;
-		display: block;
-		float: none;
-		border-bottom: 5px solid black;
-	}
+	}	
 
 	/*====================
 	PAGE-LAYOUT
@@ -308,7 +304,7 @@ MAPS STUFF
 @media screen and (max-width: 770px){
 	.nav-list-items{
 		margin-top: 0px;
-		width: 17%;
+		width: 16%;
 	}
 }
 @media screen and (max-width: 640px){
@@ -327,9 +323,16 @@ MAPS STUFF
 	.footer-info{
 		font-size: 8px;
 	}
-
+	
+	.nav-list-items{
+		width: 15%;
+	}
+	
 	.global-search-box{
 		margin-left: 40px;
+	}
+	.logout{
+		margin-right: 5px;
 	}
 }
 
