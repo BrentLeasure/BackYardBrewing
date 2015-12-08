@@ -51,6 +51,14 @@ angular.module("indexModule")
 
 	
 	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "WatchWidthFactory", "authService", function($scope, $rootScope, $window, $interval, WatchWidthFactory, authService){
+		authService.getUserInfo(function(user){
+			if(user){
+				$scope.user = user;
+			}else{
+				$scope.user=false;
+			}
+		});
+
 		$scope.WidthChecker = WatchWidthFactory;
 
 		$scope.WidthChecker.pageWidth($rootScope, $scope, $window)
