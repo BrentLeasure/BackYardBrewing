@@ -281,6 +281,7 @@ MAPS STUFF
 	/*================
 	NAV BAR INFORMATION
 	=================*/
+
 	.nav-list-items:hover .nav-list-item-underline{
 		width: 0%;
 	}
@@ -302,7 +303,15 @@ MAPS STUFF
 	}
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 800px){
+	.home-button{
+		margin-top: 5px;
+	}
+	
+	.logout{
+		margin-right: 5px;
+	}
+
 	.nav-list-items{
 		margin-top: 0px;
 		width: 16%;
@@ -332,9 +341,7 @@ MAPS STUFF
 	.global-search-box{
 		margin-left: 40px;
 	}
-	.logout{
-		margin-right: 5px;
-	}
+
 }
 
 
