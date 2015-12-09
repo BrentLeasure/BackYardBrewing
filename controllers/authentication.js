@@ -20,7 +20,7 @@ var authenticationController = {
       if(err){
         res.send(err);
       } else if(!user) {
-        var err = {err: "There isn't an account with that email"};
+        var err = {err: "Your password or email is incorrect"};
         res.send(err)
       }else{
         performLogin(req, res, user);
