@@ -304,10 +304,7 @@ MAPS STUFF
 }
 
 @media screen and (max-width: 800px){
-	.home-button{
-		margin-top: 5px;
-	}
-	
+
 	.logout{
 		margin-right: 5px;
 	}
