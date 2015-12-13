@@ -13,7 +13,7 @@ var addFavoriteRecipe = function(req, res){
 			}
 		});
 	}else{
-		var err = "You are not logged in.";
+		var err = {err: "You are not logged in."};
 		res.send(err);
 	}
 }
@@ -35,7 +35,7 @@ var removeFavoriteRecipe = function(req, res){
 		})
 
 	}else{
-		var err = "You are not logged in.";
+		var err = {err: "You are not logged in."};
 		res.send(err);
 	}
 }
@@ -50,7 +50,7 @@ var getFavoriteRecipes = function(req, res){
 			}
 		})
 	}else{
-		var err = "you are not logged in";
+		var err = {err: "You are not logged in."};
 		res.send(err);
 	}
 }

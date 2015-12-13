@@ -1,4 +1,4 @@
-.button-length{
+.user-info-buttons{
 	width: 120px;
 	border-radius: 0px;
 }
@@ -67,4 +67,17 @@
 	.no-bottom{
 		border: 1px solid #CCCCCC;
 	}
+}
+@media screen and (max-width: 640px){
+		.user-info-buttons{
+			font-size: 10px;
+			width: 72px;
+		}
+}
+@media screen and (max-width: 400px){
+		.user-info-buttons{
+			padding-left: 5px;
+			font-size: 7px;
+			width: 50px;
+		}
 }
