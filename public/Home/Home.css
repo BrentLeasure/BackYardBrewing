@@ -29,6 +29,10 @@
 .signin-button{
 	padding: 5px 61px 5px;
 }
+.signin-button:hover{
+	color: white;
+	background-color: #611B19;
+}
 
 .signup-li{
 	margin: 12px 0px 0px 0px;
@@ -37,6 +41,11 @@
 
 .signup-button{
 	padding: 5px 51px 5px;
+}
+
+.signup-button:hover{
+	color: white;
+	background-color: #611B19;
 }
 
 .input-box{

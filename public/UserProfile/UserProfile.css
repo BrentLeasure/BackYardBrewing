@@ -1,12 +1,20 @@
+.button-length{
+	width: 120px;
+	border-radius: 0px;
+}
+
+.no-bottom{
+	border-bottom: none;
+}
+
 .not-logged-in{
 	padding-top: 100px;
 }
 .side-bar-col{
-	padding-left: 0px;
+	padding-left: 2px;
 }
 .user-side-bar{
 	float: left;
-	width: 150px;
 }
 .delete-button{
 	cursor: pointer;
@@ -48,9 +56,15 @@
 	}
 }
 
+
 @media screen and (max-width: 992px){
 	.user-recipes-layout{
 		width: 38%;
 		margin: 6% 6%;
+	}
+}
+@media screen and (max-width: 767px){
+	.no-bottom{
+		border: 1px solid #CCCCCC;
 	}
 }

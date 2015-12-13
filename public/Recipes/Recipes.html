@@ -26,12 +26,11 @@
 			<input ng-change="Paginate.checkUserQuery(this)"class="global-search-bar" ng-model="userQuery" placeholder="Search Beers"></br>
 		</div>
 			<div class="pagination-bar">
-				<button ng-show="screenSize" class="btn btn-sm btn-default button-color" ng-click="Paginate.moveListBackward(this)">Prev</button>
+					<button ng-show="screenSize" class="btn btn-sm btn-default button-color" ng-click="Paginate.moveListBackward(this)">Prev</button>
 
-				<div ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="btn btn-group btn-default button-padding button-color" role="group" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</div>
+					<button ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="btn btn-group btn-default button-padding button-color" role="group" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
 
-				<button ng-show="screenSize" class="btn btn-sm btn-default button-color" ng-click="Paginate.moveListForward(this)">Next</button>
-
+					<button ng-show="screenSize" class="btn btn-sm btn-default button-color" ng-click="Paginate.moveListForward(this)">Next</button>
 				<button ng-click="isLoggedIn()" class="btn btn-default submit-recipe button-color" target="_blank">Submit a Recipe!</button>
 			</div>
 		</div>	

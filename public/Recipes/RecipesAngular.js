@@ -43,7 +43,6 @@ angular.module("indexModule")
 				
 				$http.post("/createrecipe", newRecipe)
 				.then(function(returnData){
-			
 					if(returnData.data.err){
 						$scope.err = returnData.data.err;
 						$scope.hasError = true;

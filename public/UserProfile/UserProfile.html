@@ -1,12 +1,19 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xs-2 side-bar-col">
+		<div class="col-xs-12 col-sm-2 side-bar-col">
 			<div class="user-side-bar">
-				<h5>{{user.username}}</h5>
+				<h5>{{user.username}}</h5></br>
+					<button class="btn btn-default no-bottom button-length button-color">Your Recipes</button>
+					<button class="btn btn-default no-bottom button-length button-color">Favorites</button>
+					<button class="btn btn-default no-bottom button-length button-color">Friends</button>
+					<button class="btn btn-default no-bottom button-length button-color">Comments</button>
+					<button class="btn btn-default button-length button-color">Submitted</button>
+				
 			</div>
 		</div>
-		<div class="col-xs-10">
-			<div>
+		<div class="col-xs-12 col-sm-10">
+			<div class"the user's recipes">
+				<h1>Your Recipes</h1>
 				<div ng-repeat="recipe in userRecipes" class="user-recipes-layout">		
 					<div class="recipes-font">
 						<h3 class="recipe-name">{{recipe.alias}}</h3>

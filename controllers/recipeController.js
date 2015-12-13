@@ -79,7 +79,7 @@ createRecipe = function(req, res){
 			}
 			if(variable == "instructions"){
 				if(body[variable].length < 500){
-					var err = "Your instructions are too short. (you need at least 500 characters)";
+					var err = {err:"Your instructions are too short. (you need at least 500 characters)"};
 				}
 			}
 			counter++;
@@ -88,7 +88,7 @@ createRecipe = function(req, res){
 			res.send(err);
 		}
 		else if(nullVar || counter < 4){
-			var err = "You cannot leave any of these fields blank";
+			var err = {err: "You cannot leave any of these fields blank"};
 			res.send(err);
 		}else{
 			var newRecipe = new recipeModel.userRecipe(req.body);
@@ -101,7 +101,7 @@ createRecipe = function(req, res){
 			})
 		}
 	}else{
-		var err = "You are not logged in.";
+		var err = {err: "You are not logged in."};
 		res.send(err);
 	}
 }
@@ -121,7 +121,7 @@ updateRecipe = function(req, res){
 		});
 
 	}else{
-		var err = "You are not logged in.";
+		var err = {err: "You are not logged in."};
 		res.send(err);
 	} 
 }
@@ -141,7 +141,7 @@ deleteRecipe = function(req, res){
 			}
 		})
 	}else{
-		var err = "You are not logged in.";
+		var err = {err: "You are not logged in."};
 		res.send(err);
 	}
 }
