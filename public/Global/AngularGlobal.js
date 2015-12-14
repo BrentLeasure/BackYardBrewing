@@ -75,6 +75,8 @@ angular.module("indexModule")
 			authService.getUserInfo(function(user){
 				if(!user){
 					$window.location.href = "/#/"
+				}else{
+					$window.location.href = "/#/user/" + user.username;
 				}
 			})
 		}

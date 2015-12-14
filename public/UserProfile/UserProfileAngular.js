@@ -1,12 +1,21 @@
 angular.module("indexModule")
 .controller("UserController", ["$scope", "$rootScope","$http", "$cookies", "$window", "authService", "RecipeService", function($scope, $rootScope, $http, $cookies, $window, authService, RecipeService){
+	$scope.buttonArray = [true, false, false, false];
+	$scope.previousButton = 0;
 	authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
 				$scope.greeting = "Welcome back" + $scope.user.username + "!";	
 				$scope.getUserRecipes();
+			}else{
+				$window.location.href = "/#/"
 			}
 	})
+	$scope.changeActiveButton = function(activeButton){
+		$scope.buttonArray[$scope.previousButton] = false;
+		$scope.previousButton = activeButton;
+		$scope.buttonArray[activeButton] = true;
+	}
 	$scope.getUserRecipes = function(){
 		$http.get("/getuserrecipes/" + $scope.user._id)
 		.then(function(returnData){
