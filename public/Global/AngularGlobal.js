@@ -54,6 +54,7 @@ angular.module("indexModule")
 		authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
+				$window.location.href = "/#/user/" + user.username;
 			}else{
 				$scope.user=false;
 			}
@@ -69,9 +70,7 @@ angular.module("indexModule")
 
 		$scope.route = function(){
 			authService.getUserInfo(function(user){
-				if(user){
-					$window.location.href = "/#/user/" + user.username;
-				}else{
+				if(!user){
 					$window.location.href = "/#/"
 				}
 			})
