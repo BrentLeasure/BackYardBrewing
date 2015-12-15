@@ -7,6 +7,7 @@ angular.module("indexModule")
 				$scope.user = user;
 				$scope.greeting = "Welcome back" + $scope.user.username + "!";	
 				$scope.getUserRecipes();
+				$scope.getFavoriteRecipes();
 			}else{
 				$window.location.href = "/#/"
 			}
@@ -33,7 +34,15 @@ angular.module("indexModule")
 	$scope.getFavoriteRecipes = function(){
 		$http.get("/getFavoriteRecipes")
 		.then(function(returnData){
-
+			console.log(returnData.data);
+			if(returnData.data.err){
+				$scope.err = returnData.data.err;
+			}else if(returnData.data.length == 0){
+				$scope.hasFavorites = false;
+			}else{
+				$scope.hasFavorites = true;
+				$scope.userFavorites = returnData.data;
+			}
 		})
 	}
 

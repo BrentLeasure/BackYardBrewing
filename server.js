@@ -57,6 +57,7 @@ server.get("/getuserrecipe/:_id", recipeController.getUserRecipe);
 
 server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
 
+
 //=============
 //POST ROUTES
 //=============
@@ -100,7 +101,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })

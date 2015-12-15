@@ -30,6 +30,10 @@
 			</div>
 			<div ng-show="buttonArray[1]" id="user-favorite-recipes">
 				<h1>Favorite Recipes</h1>
+				<div ng-repeat="favorite in userFavorites" class="user-recipes-layout">
+					<h3>{{favorite.name}}</h3>
+					<p>{{favorite.selectedCategory}}</p>
+					<a ng-click="recipeInfo(favorite._id)" class="recipe-info-button">more info</button>
 			</div>
 			<div ng-show="buttonArray[2]" id="user-comments-list">
 				<h1>Comments</h1>

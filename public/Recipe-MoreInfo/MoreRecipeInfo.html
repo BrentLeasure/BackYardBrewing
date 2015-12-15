@@ -1,18 +1,22 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<button title="add to favorites" ng-click="addToFavorites(recipe)" class="btn btn-group btn-default add-recipe-button">+</button>
-			<h1><u>{{recipe.alias}}</u></h1>
-			<div class="selected-beer-info">
-				<p class="inline-block">Beer by</p> <a href="">{{recipe.username}}</a>
-				<h4>Category</h4>
-				<p>{{recipe.selectedCategory}}</p></br>
-				<h4>Description</h4>
-				<p>{{recipe.description}}</p></br>
-				<h4>Instructions</h4>
-				<p>{{recipe.instructions}}
-			</div>
+					<p ng-show="err" class="error"> {{err}} </p>
+					<h1 ng-show="noRecipe"> {{notFound}}</h1>
 
+			<div ng-hide="noRecipe">
+				<button title="add to favorites" ng-click="addToFavorites(recipe)" class="btn btn-group btn-default add-recipe-button">+</button>
+				<h1><u>{{recipe.alias}}</u></h1>
+				<div class="selected-beer-info">
+					<p class="inline-block">Beer by</p> <a href="">{{recipe.username}}</a>
+					<h4>Category</h4>
+					<p>{{recipe.selectedCategory}}</p></br>
+					<h4>Description</h4>
+					<p>{{recipe.description}}</p></br>
+					<h4>Instructions</h4>
+					<p>{{recipe.instructions}}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

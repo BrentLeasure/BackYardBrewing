@@ -38,7 +38,7 @@ getUserRecipe = function(req, res){
 		if(err){
 			res.send(err);
 		}else if(!userRecipe){
-			res.send("No Recipe");
+			res.send(null);
 		}else{
 			res.send(userRecipe);
 		}
