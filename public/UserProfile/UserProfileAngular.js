@@ -58,18 +58,20 @@ angular.module("indexModule")
 		})
 	}
 
-	$scope.removeFavoriteRecipe = function(favorite){
-		var deleteIt = confirm("Are you sure you want to remove this recipe from your favorites?");
-		if(deleteIt){
-			$http.delete("/removeFavoriteRecipe", favorite._id)
-			.then(function(returnData){
-				if(returnData.data.err){
-				}else{
-					$window.location.reload();
-				}
-			})
-		}
+$scope.removeFavoriteRecipe = function(favorite){
+	var deleteIt = confirm("Are you sure you want to remove this recipe from your favorites?");
+	if(deleteIt){
+		$http.put("/removeFavoriteRecipe", favorite)
+		.then(function(returnData){
+			if(returnData.data.err){
+				$scope.err = returnData.data.err;
+			}else{
+				$scope.err = "";
+				$window.location.reload();
+			}
+		})
 	}
+}
 
 
 }]);

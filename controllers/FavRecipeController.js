@@ -5,8 +5,8 @@ var recipeModel = require("../models/recipes");
 
 var addFavoriteRecipe = function(req, res){
 	if(req.user){
-		userModel.User.findOne({_id: req.body._id}, function(err, recipe){
-			if(recipe){
+		userModel.User.findOne({favoriteRecipes: {_id: req.body._id}}, function(err, recipe){
+			if(!recipe){
 				userModel.User.update({_id: req.user._id}, {$push :{favoriteRecipes: {name: req.body.alias, _id: req.body._id, selectedCategory: req.body.selectedCategory}}}, function(err){
 					if(err){
 						res.send(err);

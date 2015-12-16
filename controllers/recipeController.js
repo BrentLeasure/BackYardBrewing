@@ -131,7 +131,6 @@ updateRecipe = function(req, res){
 // DELETE RECIPE
 //===============
 deleteRecipe = function(req, res){
-	var err;
 	if(req.user){
 		recipeModel.userRecipe.remove({_id: req.params.id}, function(err){
 			if(err){

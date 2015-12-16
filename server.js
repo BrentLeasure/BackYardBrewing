@@ -68,12 +68,13 @@ server.post("/addFavoriteRecipe", favRecipeController.addFavoriteRecipe);
 //PUT ROUTES
 //=============
 server.put("/updaterecipe", recipeController.updateRecipe);
+server.put("/removeFavoriteRecipe", favRecipeController.removeFavoriteRecipe);	
 
 //==============
 //DELETE ROUTES
 //==============
 server.delete("/deleterecipe/:id", recipeController.deleteRecipe);
-server.delete("/removeFavoriteRecipe", favRecipeController.removeFavoriteRecipe);	
+
 
 
 //==============
@@ -101,7 +102,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })
