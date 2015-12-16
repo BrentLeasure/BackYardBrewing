@@ -60,7 +60,6 @@ var authenticationController = {
   // logs the user out
   logout: function(req, res){
     req.logout();
-
     res.redirect('/');
   }
 };

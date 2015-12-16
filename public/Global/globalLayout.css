@@ -308,7 +308,8 @@ MAPS STUFF
 	.logout{
 		margin-right: 5px;
 	}
-
+}
+@media screen and (max-width: 769px){
 	.nav-list-items{
 		margin-top: 0px;
 		width: 16%;

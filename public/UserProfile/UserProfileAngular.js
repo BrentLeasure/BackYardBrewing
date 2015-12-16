@@ -5,7 +5,6 @@ angular.module("indexModule")
 	authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
-				$scope.greeting = "Welcome back" + $scope.user.username + "!";	
 				$scope.getUserRecipes();
 				$scope.getFavoriteRecipes();
 			}else{
@@ -31,21 +30,6 @@ angular.module("indexModule")
 			}
 		})
 	}
-	$scope.getFavoriteRecipes = function(){
-		$http.get("/getFavoriteRecipes")
-		.then(function(returnData){
-			console.log(returnData.data);
-			if(returnData.data.err){
-				$scope.err = returnData.data.err;
-			}else if(returnData.data.length == 0){
-				$scope.hasFavorites = false;
-			}else{
-				$scope.hasFavorites = true;
-				$scope.userFavorites = returnData.data;
-			}
-		})
-	}
-
 	$scope.deleteRecipe = function(recipe){
 		var deleteIt = confirm("Are you sure you want to delete your recipe?");
 		if(deleteIt){
@@ -59,5 +43,33 @@ angular.module("indexModule")
 	$scope.recipeInfo = function(recipeID){
 		RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipeID);
 	}
+
+	$scope.getFavoriteRecipes = function(){
+		$http.get("/getFavoriteRecipes")
+		.then(function(returnData){
+			if(returnData.data.err){
+				$scope.err = returnData.data.err;
+			}else if(returnData.data.length == 0){
+				$scope.hasFavorites = false;
+			}else{
+				$scope.hasFavorites = true;
+				$scope.userFavorites = returnData.data;
+			}
+		})
+	}
+
+	$scope.removeFavoriteRecipe = function(favorite){
+		var deleteIt = confirm("Are you sure you want to remove this recipe from your favorites?");
+		if(deleteIt){
+			$http.delete("/removeFavoriteRecipe", favorite._id)
+			.then(function(returnData){
+				if(returnData.data.err){
+				}else{
+					$window.location.reload();
+				}
+			})
+		}
+	}
+
 
 }]);
