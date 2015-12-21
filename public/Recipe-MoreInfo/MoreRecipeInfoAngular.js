@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipeInfoController", ["$scope", "$http", "$cookies", function($scope, $http, $cookies){
+	.controller("RecipeInfoController", ["$scope", "$http", "$cookies", "$window", function($scope, $http, $cookies, $window){
 		$scope.recipeInfo;
 		$scope.getRecipeInfo = function(){
 				$scope.recipeID = $cookies.get("recipeID");
@@ -25,7 +25,9 @@ angular.module("indexModule")
 				if(returnData.data.err){
 					$scope.err = returnData.data.err;
 				}else{
+					console.log();
 					$scope.success = returnData.data;
+					$window.location.reload();
 				}
 			})
 		}

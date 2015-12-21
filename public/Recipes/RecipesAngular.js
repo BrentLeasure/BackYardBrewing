@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "PaginationFactory", "WatchWidthFactory", "authService", "RecipeService", function($scope, $rootScope, $cookies, $http, $window, $interval, PaginationFactory, WatchWidthFactory, authService, RecipeService){
+	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "PaginationFactory", "WatchWidthFactory", "authService", "RecipeService", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, PaginationFactory, WatchWidthFactory, authService, RecipeService){
 		//===================
 		// PAGINATION
 		//===================
@@ -49,6 +49,9 @@ angular.module("indexModule")
 					}else{
 						$scope.hasError = false;
 						$scope.recipe = {};
+						$timeout(function(){
+							$window.location.reload();
+						},2000)
 					}
 				})
 			});
