@@ -11,6 +11,7 @@ var addFavoriteRecipe = function(req, res){
 					if(err){
 						res.send(err);
 					}else{
+						console.log(req.user.favoriteRecipes);
 						res.send("success!");
 					}
 				});

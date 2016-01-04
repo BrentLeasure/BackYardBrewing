@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipeInfoController", ["$scope", "$http", "$cookies", "$window", function($scope, $http, $cookies, $window){
+	.controller("RecipeInfoController", ["$scope", "$rootScope", "$http", "$cookies", "$window", "RecipeService", function($scope, $rootScope, $http, $cookies, $window, RecipeService){
 		$scope.recipeInfo;
 		$scope.getRecipeInfo = function(){
 				$scope.recipeID = $cookies.get("recipeID");
@@ -19,15 +19,13 @@ angular.module("indexModule")
 		}
 		$scope.getRecipeInfo();
 		$scope.addToFavorites = function(recipe){
-			$scope.recipeTemp = recipe;
 			$http.post("/addFavoriteRecipe", recipe)
 			.then(function(returnData){
 				if(returnData.data.err){
 					$scope.err = returnData.data.err;
 				}else{
-					console.log();
 					$scope.success = returnData.data;
-					$window.location.reload();
+					$window.location.reload()
 				}
 			})
 		}
