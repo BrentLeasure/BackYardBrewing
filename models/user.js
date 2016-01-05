@@ -21,7 +21,7 @@ var userSchema = mongoose.Schema({
     type: Array, "default" : []
   },
   favoriteRecipes: {
-    type: Array,
+    type: Array, "default" : []
   }
 });
 

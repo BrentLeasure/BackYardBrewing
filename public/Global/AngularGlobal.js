@@ -57,7 +57,6 @@ angular.module("indexModule")
 		authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
-				$scope.route();
 			}else{
 				$scope.user=false;
 			}
