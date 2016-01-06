@@ -25,7 +25,6 @@ angular.module("indexModule")
 					$scope.err = returnData.data.err;
 				}else{
 					$scope.success = returnData.data;
-					$window.location.reload()
 				}
 			})
 		}

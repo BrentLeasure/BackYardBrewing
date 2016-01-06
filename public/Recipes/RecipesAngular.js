@@ -15,8 +15,8 @@ angular.module("indexModule")
 		$scope.pageChangers = true;	
 		$rootScope.turnOffScroll = false;
 		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null};
-
 		$scope.Paginate = PaginationFactory;
+		$scope.recipe.instructions = "";
 		
 		//==========
 		//GRABBING DATA
@@ -72,7 +72,6 @@ angular.module("indexModule")
 		$scope.recipeInfo = function(recipeID){
 			RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipeID);
 		}
-
 
 		//==============
 		//RECIPES
