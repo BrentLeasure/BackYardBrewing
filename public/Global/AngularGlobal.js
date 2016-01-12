@@ -48,6 +48,9 @@ angular.module("indexModule")
 				templateUrl : "/Recipe-Update/RecipeUpdate.html",
 				controller  : "RecipeUpdateController",
 			})
+			.when("/AboutMe", {
+				templateUrl : "/InfoPages/AboutMe.html",
+			})
 			.otherwise({ templateUrl: "/404/404.html"})
 	}])
 	

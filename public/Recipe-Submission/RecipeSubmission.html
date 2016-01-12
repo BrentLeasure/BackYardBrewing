@@ -9,10 +9,11 @@
 				<select ng-options="beer.alias as beer.alias for beer in beerTypes" ng-model="recipe.selectedCategory" ng-change="filterByCategory(selectedCategory)">
 				</select></br>
 				<label>Description</label></br>
-				<textarea ng-model="recipe.description" cols="50" rows="5" class="input-box"></textarea></br>
+				<textarea maxlength="500" ng-model="recipe.description" cols="50" rows="5" class="input-box"></textarea></br>
+				<p>Character count: {{recipe.description.length}} out of 500</p>
 				<label>Instructions</label></br>
-				<textarea ng-model="recipe.instructions" cols="50" rows="5" class="input-box"></textarea></br>
-				<p> character count: {{recipe.instructions.length}}</p> 
+				<textarea maxlength="1000" ng-model="recipe.instructions" cols="50" rows="5" class="input-box"></textarea></br>
+				<p> Character count: {{recipe.instructions.length}} out of 1000 (Minimum: 500)</p> 
 				<input type="submit" class="button-color btn btn-default"></br>
 			</form>
 		</div>

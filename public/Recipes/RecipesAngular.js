@@ -17,6 +17,7 @@ angular.module("indexModule")
 		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null};
 		$scope.Paginate = PaginationFactory;
 		$scope.recipe.instructions = "";
+		$scope.recipe.description = "";
 		
 		//==========
 		//GRABBING DATA
