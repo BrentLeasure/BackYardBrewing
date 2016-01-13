@@ -10,6 +10,16 @@
 	width: 25%;
 	margin: 3% 3%;
 }
+
+.recipe-layout.ng-enter {
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+.recipe-layout.ng-enter.ng-enter-active{
+	opacity: 1;
+}
 .user-recipe-layout{
 	float: left;
 	display: inline-block;

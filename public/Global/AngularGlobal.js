@@ -1,5 +1,5 @@
 //setting the 
-angular.module("indexModule", ["ngRoute", "ui.bootstrap", "ngCookies"]);
+angular.module("indexModule", ["ngRoute", "ui.bootstrap", "ngCookies", "ngAnimate"]);
 
 
 angular.module("indexModule")
