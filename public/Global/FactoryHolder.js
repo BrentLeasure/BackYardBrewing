@@ -8,6 +8,7 @@ angular.module("indexModule")
 				$scope.pageNumber = $scope.bookmarkPageNumber;
 			}
 		}
+		console.log("Hello world!");
 
 		moveListForward = function($scope){
 			if($scope.pageNumber < $scope.lastPage){
