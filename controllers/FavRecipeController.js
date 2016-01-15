@@ -11,7 +11,13 @@ var addFavoriteRecipe = function(req, res){
 		else{
 			userModel.User.find({favoriteRecipes: {$elemMatch: {_id: req.body._id}}}, function(err, recipe){
 				if(recipe.length == 0){
-					pushToFavoriteRecipe(req, req);
+					userModel.User.update({_id: req.user._id}, {$push :{favoriteRecipes: {name: req.body.alias, _id: req.body._id, selectedCategory: req.body.selectedCategory}}}, function(err){
+						if(err){
+							res.send(err);
+						}else{
+							res.send("success!");
+						}
+					});
 				}else{
 					var err = {err:"You already added this recipe!"};
 					res.send(err);
@@ -23,17 +29,6 @@ var addFavoriteRecipe = function(req, res){
 		res.send(err);
 	}
 }
-
-var pushToFavoriteRecipe = function(req, res){
-	userModel.User.update({_id: req.user._id}, {$push :{favoriteRecipes: {name: req.body.alias, _id: req.body._id, selectedCategory: req.body.selectedCategory}}}, function(err){
-		if(err){
-			res.send(err);
-		}else{
-			res.send("success!");
-		}
-	});
-}
-
 
 var removeFavoriteRecipe = function(req, res){
 	if(req.user){
