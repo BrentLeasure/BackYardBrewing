@@ -41,20 +41,22 @@ angular.module("indexModule")
 				//add the user information to the recipe
 				newRecipe.username = user.username
 				newRecipe.userID = user._id;
+
+				console.log(newRecipe.image);
 				
-				$http.post("/createrecipe", newRecipe)
-				.then(function(returnData){
-					if(returnData.data.err){
-						$scope.err = returnData.data.err;
-						$scope.hasError = true;
-					}else{
-						$scope.hasError = false;
-						$scope.recipe = {};
-						$timeout(function(){
-							$window.location.reload();
-						},2000)
-					}
-				})
+				// $http.post("/createrecipe", newRecipe)
+				// .then(function(returnData){
+				// 	if(returnData.data.err){
+				// 		$scope.err = returnData.data.err;
+				// 		$scope.hasError = true;
+				// 	}else{
+				// 		$scope.hasError = false;
+				// 		$scope.recipe = {};
+				// 		$timeout(function(){
+				// 			$window.location.reload();
+				// 		},2000)
+				// 	}
+				// })
 			});
 		}
 		$scope.getRecipes = function(beer){
