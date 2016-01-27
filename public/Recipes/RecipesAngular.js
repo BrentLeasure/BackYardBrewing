@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "PaginationFactory", "WatchWidthFactory", "authService", "RecipeService", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, PaginationFactory, WatchWidthFactory, authService, RecipeService){
+	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "PaginationFactory", "WatchWidthFactory", "authService", "RecipeService", "multipartForm", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, PaginationFactory, WatchWidthFactory, authService, RecipeService, multipartForm){
 		//===================
 		// PAGINATION
 		//===================
@@ -14,7 +14,7 @@ angular.module("indexModule")
 		$scope.loggedIn = false;
 		$scope.pageChangers = true;	
 		$rootScope.turnOffScroll = false;
-		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null};
+		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null, username: null, userID: null};
 		$scope.Paginate = PaginationFactory;
 		$scope.recipe.instructions = "";
 		$scope.recipe.description = "";
@@ -35,29 +35,15 @@ angular.module("indexModule")
 		//RECIPE SUMBISSION
 		//==============
 		$scope.createRecipe = function(){
-			var newRecipe = $scope.recipe;
+			var uploadUrl = "/createrecipe";
 			authService.getUserInfo(function(user){
-				
 				//add the user information to the recipe
-				newRecipe.username = user.username
-				newRecipe.userID = user._id;
-
-				console.log(newRecipe.image);
-				
-				// $http.post("/createrecipe", newRecipe)
-				// .then(function(returnData){
-				// 	if(returnData.data.err){
-				// 		$scope.err = returnData.data.err;
-				// 		$scope.hasError = true;
-				// 	}else{
-				// 		$scope.hasError = false;
-				// 		$scope.recipe = {};
-				// 		$timeout(function(){
-				// 			$window.location.reload();
-				// 		},2000)
-				// 	}
-				// })
+				$scope.recipe.username = user.username
+				$scope.recipe.userID = user._id;
 			});
+			console.log($scope.recipe);
+			multipartForm.post(uploadUrl, $scope.recipe)
+
 		}
 		$scope.getRecipes = function(beer){
 			$http.get("/beer/" + beer.alias)

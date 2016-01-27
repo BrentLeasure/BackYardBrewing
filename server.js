@@ -4,8 +4,10 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
-
+var multer = require("multer");
+var upload = multer({ dest: "./uploads"})
 var server = express();
+
 
 var recipeController = require("./controllers/RecipeController")
 var favRecipeController = require("./controllers/FavRecipeController")
@@ -13,6 +15,7 @@ var authenticationController = require('./controllers/Authentication');
 
 var passportConfig = require('./config/passport');
 var passport = require('passport');
+
 //application configuration
 //resave will keep it true
 
@@ -30,6 +33,7 @@ server.use(server.sessionMiddleware);
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(express.static(__dirname + "/public"));
+
 
 server.use(passport.initialize());
 
@@ -61,13 +65,16 @@ server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
 //=============
 //POST ROUTES
 //=============
-server.post("/createrecipe", recipeController.createRecipe);
+server.post("/createrecipe", function(req, res){
+	console.log(req.body);
+});
 server.post("/addFavoriteRecipe", favRecipeController.addFavoriteRecipe);
 
 //=============
 //PUT ROUTES
 //=============
 server.put("/updaterecipe", recipeController.updateRecipe);
+// server.put("/updaterecipe", recipeController.updateRecipe);
 server.put("/removeFavoriteRecipe", favRecipeController.removeFavoriteRecipe);	
 
 //==============
@@ -102,7 +109,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })

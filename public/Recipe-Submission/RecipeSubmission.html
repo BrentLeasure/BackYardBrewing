@@ -6,7 +6,7 @@
 				<label>Beer Name</label></br>
 				<input ng-model="recipe.alias"></br>
 				<label>Image</label></br>
-				<input file-model="recipe.image" type="file" accept="image/*">
+				<input type="file" file-model="recipe.image">
 				<label>Category</label></br>
 				<select ng-options="beer.alias as beer.alias for beer in beerTypes" ng-model="recipe.selectedCategory" ng-change="filterByCategory(selectedCategory)">
 				</select></br>
