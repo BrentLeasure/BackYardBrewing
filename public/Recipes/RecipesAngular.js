@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "PaginationFactory", "WatchWidthFactory", "authService", "RecipeService", "multipartForm", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, PaginationFactory, WatchWidthFactory, authService, RecipeService, multipartForm){
+	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "$location", "PaginationFactory", "authService", "RecipeService", "multipartForm", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, $location, PaginationFactory, authService, RecipeService, multipartForm){
 		//===================
 		// PAGINATION
 		//===================
@@ -35,15 +35,25 @@ angular.module("indexModule")
 		//RECIPE SUMBISSION
 		//==============
 		$scope.createRecipe = function(){
-			var uploadUrl = "/createrecipe";
+			// var uploadUrl = "/createrecipe";
 			authService.getUserInfo(function(user){
+				console.log("made it!");
 				//add the user information to the recipe
-				$scope.recipe.username = user.username
+				$scope.recipe.username = user.username;
 				$scope.recipe.userID = user._id;
+				console.log($scope.recipe);
+				$http.post("/createrecipe", $scope.recipe)
+				.then(function(returnData){
+					if(returnData.data.err){
+						console.log(returnData.data.err)
+						$scope.hasError = returnData.data.err;
+					}else{
+						$scope.successful = "success!";
+						$scope.recipe = null;
+					}
+				})
 			});
-			console.log($scope.recipe);
-			multipartForm.post(uploadUrl, $scope.recipe)
-
+			// multipartForm.post(uploadUrl, $scope.recipe);
 		}
 		$scope.getRecipes = function(beer){
 			$http.get("/beer/" + beer.alias)

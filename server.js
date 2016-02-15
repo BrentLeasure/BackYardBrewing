@@ -65,9 +65,8 @@ server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
 //=============
 //POST ROUTES
 //=============
-server.post("/createrecipe", function(req, res){
-	console.log(req.body);
-});
+server.post("/createrecipe", recipeController.createRecipe);
+
 server.post("/addFavoriteRecipe", favRecipeController.addFavoriteRecipe);
 
 //=============

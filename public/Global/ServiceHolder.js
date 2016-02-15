@@ -29,13 +29,13 @@ angular.module("indexModule")
 
 .service("multipartForm", ["$http", function($http){
 	this.post = function(uploadUrl, data){
-		console.log(uploadUrl);
 		var fd = new FormData();
-		for(var key in data)
-			fd.append(key, data[key])
+		for(key in data){
+			fd.append(key, data[key]);
+		}
 		$http.post(uploadUrl, fd, {
 			transformRequest: angular.identity,
 			headers: {"Content-Type" : undefined}
-		})
+		});
 	}
 }]);

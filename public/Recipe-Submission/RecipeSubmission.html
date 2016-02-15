@@ -1,12 +1,13 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<p class="error" ng-show="hasError">{{err}}</p>
+			<p class="error" ng-show="hasError">{{hasError}}</p>
+			<p class="success" ng-show="successful">{{successful}}</p>
 			<form ng-submit="createRecipe()">
 				<label>Beer Name</label></br>
 				<input ng-model="recipe.alias"></br>
-				<label>Image</label></br>
-				<input type="file" file-model="recipe.image">
+<!-- 				<label>Image</label></br>
+				<input type="file" file-model="recipe.image"> -->
 				<label>Category</label></br>
 				<select ng-options="beer.alias as beer.alias for beer in beerTypes" ng-model="recipe.selectedCategory" ng-change="filterByCategory(selectedCategory)">
 				</select></br>

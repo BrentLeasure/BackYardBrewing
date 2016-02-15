@@ -23,6 +23,9 @@ html, body{height: 100%;}
 .error{
 	color: red;
 }
+.success{
+	color: green;
+}
 
 /*===============
  	GLOBAL PAGE LAYOUT
