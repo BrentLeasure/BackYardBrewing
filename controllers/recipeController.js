@@ -65,45 +65,46 @@ getAllBeerTypes = function(req, res){
 //===================
 createRecipe = function(req, res){
 		//creating variables
-		var nullVariable;
-		var body = req.body
-		var nullVar = false;
-		var counter = 0;
-	if(req.user){
-		//checks if any
-		for(variable in body){
-			if(body[variable] === null){
-				nullVariable = variable;
-				nullVar = true;
-				break;
-			}
-			if(variable == "instructions"){
-				if(body[variable].length < 500){
-					var err = {err:"Your instructions are too short. (you need at least 500 characters)"};
-				}
-			}
-			counter++;
-		}
-		if(err){
-			res.send(err);
-		}
-		else if(nullVar || counter < 4){
-			var err = {err: "You cannot leave any of these fields blank"};
-			res.send(err);
-		}else{
-			var newRecipe = new recipeModel.userRecipe(req.body);
-			newRecipe.save(function(err, data){
-				if(err){
-					res.send(err);
-				}else{
-					res.send(data);
-				}	
-			})
-		}
-	}else{
-		var err = {err: "You are not logged in."};
-		res.send(err);
-	}
+		console.log(req.body);
+	// 	var nullVariable;
+	// 	var body = req.body
+	// 	var nullVar = false;
+	// 	var counter = 0;
+	// if(req.user){
+	// 	//checks if any
+	// 	for(variable in body){
+	// 		if(body[variable] === null){
+	// 			nullVariable = variable;
+	// 			nullVar = true;
+	// 			break;
+	// 		}
+	// 		if(variable == "instructions"){
+	// 			if(body[variable].length < 500){
+	// 				var err = {err:"Your instructions are too short. (you need at least 500 characters)"};
+	// 			}
+	// 		}
+	// 		counter++;
+	// 	}
+	// 	if(err){
+	// 		res.send(err);
+	// 	}
+	// 	else if(nullVar || counter < 4){
+	// 		var err = {err: "You cannot leave any of these fields blank"};
+	// 		res.send(err);
+	// 	}else{
+	// 		var newRecipe = new recipeModel.userRecipe(req.body);
+	// 		newRecipe.save(function(err, data){
+	// 			if(err){
+	// 				res.send(err);
+	// 			}else{
+	// 				res.send(data);
+	// 			}	
+	// 		})
+	// 	}
+	// }else{
+	// 	var err = {err: "You are not logged in."};
+	// 	res.send(err);
+	// }
 }
 
 //================

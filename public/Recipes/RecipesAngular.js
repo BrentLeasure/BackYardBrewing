@@ -14,7 +14,7 @@ angular.module("indexModule")
 		$scope.loggedIn = false;
 		$scope.pageChangers = true;	
 		$rootScope.turnOffScroll = false;
-		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null, username: null, userID: null};
+		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null, username: null, userID: null, image: null};
 		$scope.Paginate = PaginationFactory;
 		$scope.recipe.instructions = "";
 		$scope.recipe.description = "";
@@ -35,25 +35,24 @@ angular.module("indexModule")
 		//RECIPE SUMBISSION
 		//==============
 		$scope.createRecipe = function(){
-			// var uploadUrl = "/createrecipe";
 			authService.getUserInfo(function(user){
-				console.log("made it!");
-				//add the user information to the recipe
+				// add the user information to the recipe
 				$scope.recipe.username = user.username;
 				$scope.recipe.userID = user._id;
-				console.log($scope.recipe);
-				$http.post("/createrecipe", $scope.recipe)
-				.then(function(returnData){
-					if(returnData.data.err){
-						console.log(returnData.data.err)
-						$scope.hasError = returnData.data.err;
-					}else{
-						$scope.successful = "success!";
-						$scope.recipe = null;
-					}
-				})
+				// console.log($scope.recipe);
+				// $http.post("/createrecipe", $scope.recipe)
+				// .then(function(returnData){
+				// 	if(returnData.data.err){
+				// 		console.log(returnData.data.err)
+				// 		$scope.hasError = returnData.data.err;
+				// 	}else{
+				// 		$scope.successful = "success!";
+				// 		$scope.recipe = null;
+				// 	}
+				// })
 			});
-			// multipartForm.post(uploadUrl, $scope.recipe);
+			console.log($scope.recipe);
+			multipartForm.post("/createrecipe", $scope.recipe);
 		}
 		$scope.getRecipes = function(beer){
 			$http.get("/beer/" + beer.alias)

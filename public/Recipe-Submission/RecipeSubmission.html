@@ -3,22 +3,20 @@
 		<div class="col-xs-12">
 			<p class="error" ng-show="hasError">{{hasError}}</p>
 			<p class="success" ng-show="successful">{{successful}}</p>
-			<form ng-submit="createRecipe()">
-				<label>Beer Name</label></br>
-				<input ng-model="recipe.alias"></br>
-<!-- 				<label>Image</label></br>
-				<input type="file" file-model="recipe.image"> -->
-				<label>Category</label></br>
-				<select ng-options="beer.alias as beer.alias for beer in beerTypes" ng-model="recipe.selectedCategory" ng-change="filterByCategory(selectedCategory)">
-				</select></br>
-				<label>Description</label></br>
-				<textarea maxlength="500" ng-model="recipe.description" cols="50" rows="5" class="input-box"></textarea></br>
-				<p>Character count: {{recipe.description.length}} out of 500</p>
-				<label>Instructions</label></br>
-				<textarea maxlength="1000" ng-model="recipe.instructions" cols="50" rows="5" class="input-box"></textarea></br>
-				<p> Character count: {{recipe.instructions.length}} out of 1000 (Minimum: 500)</p> 
-				<input type="submit" class="button-color btn btn-default"></br>
-			</form>
+			<label>Beer Name</label></br>
+			<input ng-model="recipe.alias"></br>
+			<label>Image</label></br>
+			<input type="file" file-model="recipe.image">
+			<label>Category</label></br>
+			<select ng-options="beer.alias as beer.alias for beer in beerTypes" ng-model="recipe.selectedCategory" ng-change="filterByCategory(selectedCategory)">
+			</select></br>
+			<label>Description</label></br>
+			<textarea maxlength="500" ng-model="recipe.description" cols="50" rows="5" class="input-box"></textarea></br>
+			<p>Character count: {{recipe.description.length}} out of 500</p>
+			<label>Instructions</label></br>
+			<textarea maxlength="1000" ng-model="recipe.instructions" cols="50" rows="5" class="input-box"></textarea></br>
+			<p> Character count: {{recipe.instructions.length}} out of 1000 (Minimum: 500)</p> 
+			<button ng-click="createRecipe()" class="button-color btn btn-default">submit</button></br>
 		</div>
 	</div>
 </div>
