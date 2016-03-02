@@ -56,7 +56,7 @@ angular.module("indexModule")
 	
 
 	
-	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "WatchWidthFactory", "authService", function($scope, $rootScope, $window, $interval, WatchWidthFactory, authService){
+	.controller("navController", ["$scope", "$rootScope", "$window", "$interval", "$location", "WatchWidthFactory", "authService", function($scope, $rootScope, $window, $interval, $location, WatchWidthFactory, authService){
 		authService.getUserInfo(function(user){
 			if(user){
 				$scope.user = user;
@@ -64,6 +64,10 @@ angular.module("indexModule")
 				$scope.user=false;
 			}
 		});
+
+		$scope.isActive = function(location){
+			return location === $location.path();
+		}
 
 		$scope.WidthChecker = WatchWidthFactory;
 

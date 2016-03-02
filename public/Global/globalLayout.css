@@ -63,7 +63,7 @@ html, body{height: 100%;}
 	display: inline-block;
 }
 
-.nav-list-item-underline{
+.underline{
 	height: 3px;
 	width: 0%;
 	background-color: white;
@@ -85,7 +85,11 @@ html, body{height: 100%;}
 	color: white;
 }
 
-.nav-list-items:hover .nav-list-item-underline{
+
+.nav-list-items:hover .underline{
+	width: 100%;
+}
+.active{
 	width: 100%;
 }
 
