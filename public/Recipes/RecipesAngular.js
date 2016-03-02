@@ -39,7 +39,6 @@ angular.module("indexModule")
 				// add the user information to the recipe
 				$scope.recipe.username = user.username;
 				$scope.recipe.userID = user._id;
-				// console.log($scope.recipe);
 				// $http.post("/createrecipe", $scope.recipe)
 				// .then(function(returnData){
 				// 	if(returnData.data.err){
@@ -51,7 +50,6 @@ angular.module("indexModule")
 				// 	}
 				// })
 			});
-			console.log($scope.recipe);
 			multipartForm.post("/createrecipe", $scope.recipe);
 		}
 		$scope.getRecipes = function(beer){

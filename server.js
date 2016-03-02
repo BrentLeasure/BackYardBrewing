@@ -65,7 +65,7 @@ server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
 //=============
 //POST ROUTES
 //=============
-server.post("/createrecipe", recipeController.createRecipe);
+server.post("/createrecipe", upload.single("image"), recipeController.createRecipe);
 
 server.post("/addFavoriteRecipe", favRecipeController.addFavoriteRecipe);
 
