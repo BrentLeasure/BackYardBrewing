@@ -5,7 +5,22 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var multer = require("multer");
-var upload = multer({ dest: "./uploads"})
+var crypto = require("crypto");
+var path = require("path");
+var storage = multer.diskStorage({
+  destination: './uploads/',
+  filename: function (req, file, cb) {
+    crypto.pseudoRandomBytes(16, function (err, raw) {
+      if (err){
+      	return cb(err);
+      } 
+
+      cb(null, raw.toString('hex') + path.extname(file.originalname))
+    })
+  }
+})
+
+var upload = multer({ storage: storage })
 var server = express();
 
 
@@ -108,7 +123,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })
