@@ -14,6 +14,7 @@ angular.module("indexModule")
 						$scope.noRecipe = false;
 						$scope.err = "";
 						$scope.recipe = returnData.data;
+						$http.get("/getImage/" + $scope.recipe.imageID);
 					}
 				})
 		}

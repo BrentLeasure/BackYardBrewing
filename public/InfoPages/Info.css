@@ -1,13 +1,32 @@
 .me{
+	border: solid black;
+	border-radius: 5px;
 	float: left;
 	margin: 0px 10px 10px 0px;
 	width: 200px;
 	height: 200px;
 }
 
+.btn{
+	border: none;
+}
+
 .about-me{
 	padding: 20px 0px 20px;
 }
 .about-me-buttons{
-	padding: 20px 0px 20px 300px;
+	padding: 20px 0px 20px 0px;
 }
+
+.skillBox{
+	float: left;
+	display: inline;
+	border: solid black;
+	border-radius: 5px;
+	height: 100px;
+	width: 100px;
+	margin: 3% 3%;
+}
+
+
+

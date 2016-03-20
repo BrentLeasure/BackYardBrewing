@@ -1,21 +1,44 @@
 <div class="container">
 	<div class="row">
-		<div class="col-lg-5 about-me">
-			<img class="me" src="/../Me.png">
-		</div>
-		<div class="col-lg-6 about-me-buttons">
-			<button class="btn btn-default">About Me</button> <button class="btn btn-default">My Skills</button> <button class="btn btn-default">Spare Time</button>
+		<div class="col-lg-12 about-me-buttons">
+			<button class="btn btn-default" data-target="#myCarousel" data-slide-to="0">About Me</button>
+			<button class="btn btn-default" data-target="#myCarousel" data-slide-to="1">My Skills</button> 
+			<button class="btn btn-default" data-target="#myCarousel" data-slide-to="2">Spare Time</button>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
-			<p>Hello, my name is <a href="https://www.linkedin.com/in/brentonleasure" target="_blank">Brent Leasure.</a> Welcome to my website!</p>
+			
+			<div id="myCarousel" class="carousel slide" data-ride="">
+				<div class="carousel-inner">
+					<div class="item active">
+						<img class="me" src="/../Me.png">
+						<p>Hello, my name is <a href="https://www.linkedin.com/in/brentonleasure" target="_blank">Brent Leasure.</a> Welcome to my website!</p>
 
-			<p>Recently, I graduated from RefactorU, where I learned to develop and deploy a functional website. Currently, I am applying my skillsets to this website, which I regularly update on my <a href="https://github.com/SilentCartographer" target="_blank">Github.</a> I am looking to use my abilities in a junior developer role (and if you're reading this, most likely to the one you have available!). While I am searching for a full time position, I am currently tutoring through a company called KidCodeIt.</p>
+						<p>Recently, I graduated from RefactorU, where I learned to develop and deploy a functional web page. Currently, I am applying my skillsets to this site, which I regularly update on my <a href="https://github.com/SilentCartographer" target="_blank">Github.</a> I am currently working as a junior developer at a start up in Boulder named the Up Beet Kitchen. Our goal is to teach people how to cook for themselves and escape our unhealthy trends of instant food. Besides cooking, we're also passionate about community, and we hope to get people closer with our work. On the side I am tutoring at a company called KidCodeIt. the company is exactly as it sounds; developers teach younger kids the crazyness that is webdevelopment</p>
 
-			<p>Aside from my programming abilities, I have a great passion for craft brewing, hiking, skiing and climbing. All of which I enjoy doing as often as possible.</p>
+						<p> Thanks for stoping by and enjoy your stay!</p>
 
-			<p> Thanks for stoping by and enjoy your stay!</p>
+					</div>
+
+					<div class="item">
+						<a><img class="skillBox" src="../html5.png"></a>
+						<img class="skillBox" src="../css3.png">
+						<img class="skillBox" src="../bootstrap.png">
+						<img class="skillBox" src="../jquery.png">
+						<img class="skillBox" src="../AngularJS.png">
+						<img class="skillBox" src="../NodeJS.png">
+						<img class="skillBox" src="../PHP.png">
+						<img class="skillBox" src="../mongodb.png">
+					</div>
+
+				
+					<div class="item">
+						
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
