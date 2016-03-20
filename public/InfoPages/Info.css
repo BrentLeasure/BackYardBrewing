@@ -7,7 +7,10 @@
 	height: 200px;
 }
 
-.btn{
+.item{
+	height: 600px;
+}
+.aboutMeButton{
 	border: none;
 }
 
