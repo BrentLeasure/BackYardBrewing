@@ -29,7 +29,13 @@
 	height: 100px;
 	width: 100px;
 	margin: 3% 3%;
+	-moz-transition: border-radius .50s;
+	-o-transition: border-radius .50s;
+	-webkit-transition: border-radius .50s;
+	transition: border-radius .50s;
 }
 
-
+.skillBox:hover{
+		border-radius: 100%;
+}
 

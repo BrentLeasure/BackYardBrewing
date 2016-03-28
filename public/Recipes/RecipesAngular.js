@@ -16,6 +16,7 @@ angular.module("indexModule")
 		$rootScope.turnOffScroll = false;
 		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null, username: null, userID: null, image: null};
 		$scope.Paginate = PaginationFactory;
+		$scope.mpForm = multipartForm;
 		$scope.recipe.instructions = "";
 		$scope.recipe.description = "";
 		
@@ -39,8 +40,17 @@ angular.module("indexModule")
 				// add the user information to the recipe
 				$scope.recipe.username = user.username;
 				$scope.recipe.userID = user._id;
-				multipartForm.post("/createrecipe", $scope.recipe);
+				$scope.mpForm.post("/createrecipe", $scope.recipe).then(function(returnData){
+					if(returnData.data.err){
+						$scope.hasError = returnData.data.err;
+						$scope.successful = "";
+					}else{
+						$scope.hasError = "";
+						$scope.successful = "success!";
+					}
+				})
 			});
+
 			
 		}
 		$scope.getRecipes = function(beer){

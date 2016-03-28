@@ -57,8 +57,27 @@ angular.module("indexModule")
 			moveListBackward: moveListBackward,
 			changePagination: changePagination,
 			setPagination: setPagination
-		};
+		}
+
+
 })
+.factory("multipartForm", ["$http",  function($http){
+	post = function(uploadUrl, data){
+		var fd = new FormData();
+		var data;
+		for(key in data){
+			fd.append(key, data[key]);
+		}
+
+		return $http.post(uploadUrl, fd, {
+			transformRequest: angular.identity,
+			headers: {"Content-Type" : undefined}
+		})
+	}
+	return {
+		post: post
+	}
+}]);
 
 
 

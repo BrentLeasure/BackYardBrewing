@@ -65,13 +65,15 @@ getAllBeerTypes = function(req, res){
 //===================
 createRecipe = function(req, res){
 		//creating variables
-		console.log(req.body);
 		var nullVariable;
 		var body = req.body
 		var nullVar = false;
 		var counter = 0;
+	if(req.file === undefined){
+		var err = {err:"You need to include a picture!"};
+	}else{
 		body.image = req.file.filename;
-		console.log(body.image);
+	}
 	if(req.user){
 		//checks if any variables are null
 		for(variable in body){
