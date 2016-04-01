@@ -72,7 +72,7 @@
 
 <body ng-controller="bodyController as body" class="body">
 		<!-- NAV BAR -->
-	<nav class="navbar navbar-inverse navbar-static-top">		
+	<nav class="navbar navbar-default navbar-static-top">		
 		<div ng-controller="navController" class="" ng-hide="turnOffScroll">
 			<div class="navbar-header">
 				<button class="home-button" ng-click="route()"><li class=""><img class="logo" src="../Logo.png"></li></button>
@@ -104,14 +104,13 @@
 		<div ng-view class="main"></div>
 	</div>
 	
-	<nav class="navbar navbar-inverse navbar-static-top">
+	
 		<div class="footer" ng-hide="turnOffScroll">
 			<a class="footer-info end-element" href="">Terms and Conditions</a>
 			<a class="footer-info" href="#/AboutMe">About Me</a>
 			<a class="footer-info" href="">Contact us</a>
 			<img class="logo footer-logo" src="../Logo.png">
 		</div>
-	</nav>
 
 
 	<!-- ============================================ FILES ============================================ -->

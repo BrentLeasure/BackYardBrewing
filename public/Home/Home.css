@@ -5,6 +5,7 @@
 }
 .welcome{
 	color: white;
+	animation: fadein 1s;
 }
 .user-box{
 	position: relative;
@@ -15,19 +16,19 @@
 	background: #611B19;
 	float: right;
 }
-.signin-input-li{
+/*.signin-input-li{
 	margin: 5px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	display: inline-block;
-}
+}*/
 
 .signin-li{
 	margin: 12px 0px 0px 0px;
-	display: inline-block;
+	display: inline;
 }
 
 .signin-button{
-	padding: 5px 61px 5px;
+	padding: 5px 31px 5px;
 }
 .signin-button:hover{
 	color: white;
@@ -37,26 +38,35 @@
 .signup-li{
 	margin: 12px 0px 0px 0px;
 	display: inline-block;
-	animation: fadein 1s;
+	
 }
 
 .signup-button{
 	padding: 5px 51px 5px;
+	animation: fadein 1s;
 }
 
 .signup-button:hover{
 	color: white;
 	background-color: #611B19;
 }
-
-.input-box{
+.dropdown{
+	display: inline-block;
+	margin-right: 60px;
+	animation: fadein 1s;
+}
+.dropdown-menu {
+    width: 600px !important;
+  	height: 500px;
+}
+/*.input-box{
 	width: 250px;
 	padding: 10px 10px 10px;
 	position: relative;
 	border: 1px solid lightgray;
 	border-radius: 5px;
 	top: 2px;
-}
+}*/
 
 @keyframes fadein {
     from {

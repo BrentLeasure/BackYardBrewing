@@ -72,8 +72,9 @@ server.get("/getallbeertypes", recipeController.getAllBeerTypes);
 server.get("/getImage/:id", function (req, res) {
   // Validate that req.params.id is 16 bytes hex string
   // Get the stored image type for this image
-  res.setHeader('Content-Type', storedMimeType)
-  fs.createReadStream(path.join('/uploads/', req.params.id)).pipe(res)
+  console.log(req.params)
+  // res.setHeader('Content-Type', req.params.mimetype)
+  fs.createReadStream(path.join('/uploads/', req.params.filename)).pipe(res)
 })
 
 //MULTIPLE RECIPES

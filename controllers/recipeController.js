@@ -72,8 +72,9 @@ createRecipe = function(req, res){
 	if(req.file === undefined){
 		var err = {err:"You need to include a picture!"};
 	}else{
-		req.body.image = req.file.filename;
+		req.body.image = req.file;
 	}
+	console.log(req.body.image);
 	if(req.user){
 		//checks if any variables are null
 		for(variable in body){

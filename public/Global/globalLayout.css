@@ -32,25 +32,46 @@ html, body{height: 100%;}
  	NAVIGATION
  ===============*/
  .navbar-default{
- 	margin-bottom: 0px;
+ 	background-color: #611B19;
+ 	border: none;
  }
+ 
  .navbar-static-top{
  	margin-bottom: 0px;
  }
-.navbar-nav > li > a, .navbar-brand {
-    padding-top: 10px !important; 
-    padding-bottom:0 !important;
-    height: 28px;
+
+.navbar-toggle{
+	border: none;
 }
-.navbar {min-height:28px !important;}
+.navbar-default .navbar-nav > li > a{
+	margin: 0px 2px;
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+.navbar-right{
+	margin-right: 5px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: transparent;
+}
+
 /*===============
 	LOGO
 ================*/
 .logo{
 	display: inline-block;	
 	width: 10%;
-	width: 35px;
-	height: 35px;
+	width: 50px;
+	height: 50px;
 }
 
 .icons{

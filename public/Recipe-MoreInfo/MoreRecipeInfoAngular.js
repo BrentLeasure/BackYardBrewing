@@ -14,7 +14,6 @@ angular.module("indexModule")
 						$scope.noRecipe = false;
 						$scope.err = "";
 						$scope.recipe = returnData.data;
-						console.log(returnData.data);
 						$http.get("/getImage/" + $scope.recipe.image).then(function(returnData){
 							console.log(returnData);
 						})
