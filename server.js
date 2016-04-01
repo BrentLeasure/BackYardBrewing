@@ -14,7 +14,7 @@ var storage = multer.diskStorage({
       if (err){
       	return cb(err);
       } 
-
+      console.log(path.extname(file.originalname));
       cb(null, raw.toString('hex') + path.extname(file.originalname))
     })
   }
@@ -73,7 +73,7 @@ server.get("/getImage/:id", function (req, res) {
   // Validate that req.params.id is 16 bytes hex string
   // Get the stored image type for this image
   res.setHeader('Content-Type', storedMimeType)
-  fs.createReadStream(path.join(UPLOAD_PATH, req.params.id)).pipe(res)
+  fs.createReadStream(path.join('/uploads/', req.params.id)).pipe(res)
 })
 
 //MULTIPLE RECIPES
@@ -130,7 +130,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })

@@ -27,86 +27,30 @@ html, body{height: 100%;}
 	color: green;
 }
 
-/*===============
- 	GLOBAL PAGE LAYOUT
- ===============*/
-.global-page-layout{
-	padding-top: 150px;
-}
 
 /*===============
  	NAVIGATION
  ===============*/
-/*LEFT NAV*/
-.nav-bar{
-	top: 0px;
-	position: relative;
-	background-color: #611B19;
-	margin: 0px;
-	width: 100%;
-	height: 60px;
-	left: 0%;
-	z-index: 100;
+ .navbar-default{
+ 	margin-bottom: 0px;
+ }
+ .navbar-static-top{
+ 	margin-bottom: 0px;
+ }
+.navbar-nav > li > a, .navbar-brand {
+    padding-top: 10px !important; 
+    padding-bottom:0 !important;
+    height: 28px;
 }
- 
-.nav-list{
-	margin: 0;
-	padding: 0px;
-	float: none;
-}
-
-.nav-list-items{
-	margin-top: 12px;
-	text-align: center;
-	width: 10%;
-	padding: 5px 0px 5px 0px;
-	display: inline-block;
-}
-
-.underline{
-	height: 3px;
-	width: 0%;
-	background-color: white;
-	-webkit-transition: width .5s;
-	transition: width .5s;
-}
-
-.nav-links{
-	text-decoration: none;
- 	color: white;
- 	border: none;
-}
-
-.nav-links:focus{
-	color: white;
-}
-
-.nav-list-items:hover{
-	color: white;
-}
-
-
-.nav-list-items:hover .underline{
-	width: 100%;
-}
-.active{
-	width: 100%;
-}
-
-
-.logout{
-	display: inline-block;
-	margin: 17px 10px 0px 0px;
-	float: right;
-}
+.navbar {min-height:28px !important;}
 /*===============
 	LOGO
 ================*/
 .logo{
 	display: inline-block;	
 	width: 10%;
-	width: 50px;
-	height: 50px;
+	width: 35px;
+	height: 35px;
 }
 
 .icons{
@@ -302,9 +246,9 @@ MAPS STUFF
 	PAGE-LAYOUT
 	=================*/
 
-	.global-page-layout{
+/*	.global-page-layout{
 		padding: 250px 0px 0px 0px;
-	}
+	}*/
 
 	.nav-bar{
 		font-size: 14px;

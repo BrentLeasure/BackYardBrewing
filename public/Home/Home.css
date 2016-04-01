@@ -37,6 +37,7 @@
 .signup-li{
 	margin: 12px 0px 0px 0px;
 	display: inline-block;
+	animation: fadein 1s;
 }
 
 .signup-button{
@@ -55,4 +56,37 @@
 	border: 1px solid lightgray;
 	border-radius: 5px;
 	top: 2px;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
