@@ -3,9 +3,8 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<h3 class="welcome">Welcome to Beer-Pal!</h3>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle signin-button" type="button" data-toggle="dropdown">Existing User<span class="caret"></span></button>
-				<ul class="dropdown-menu">
+				<button class="btn btn-default signin-button" type="button">Existing User</button>
+				<ul>	
 				<form ng-submit="loggingIn()">
 					<li class="signin-input-li"><input ng-model="login.email" class="input-box" placeholder="email"></li></br>
 
@@ -16,7 +15,6 @@
 				</form>
 				<h5 class="error" ng-show="loginError">{{loginError}}</h5>
 				</ul>
-			</div>
 			<a href="/#/signup" class="btn btn-default btn signup-button">Sign Up</a>
 						
 		</div>

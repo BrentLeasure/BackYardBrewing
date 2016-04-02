@@ -29,6 +29,7 @@
 
 .signin-button{
 	padding: 5px 31px 5px;
+	animation: fadein 1s;
 }
 .signin-button:hover{
 	color: white;
@@ -51,13 +52,12 @@
 	background-color: #611B19;
 }
 .dropdown{
-	display: inline-block;
 	margin-right: 60px;
 	animation: fadein 1s;
 }
 .dropdown-menu {
     width: 600px !important;
-  	height: 500px;
+  	height: 700px !important;
 }
 /*.input-box{
 	width: 250px;

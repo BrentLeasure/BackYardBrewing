@@ -21,6 +21,8 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js">
 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-lightbox/0.11.0/angular-bootstrap-lightbox.min.css">
+
 	<!-- GLOBAL -->
 	<link rel="stylesheet" href="../Global/normalize.css"/>
 	
@@ -64,7 +66,8 @@
 
 	<!-- LOCAL UPDATE RECIPE-->
 	<link rel="stylesheet" type="text/css" href="/Temp/Temp.css">
-		
+	
+
 </head>
 
 
@@ -72,8 +75,8 @@
 
 <body ng-controller="bodyController as body" class="body">
 		<!-- NAV BAR -->
-	<nav class="navbar navbar-default navbar-static-top">		
-		<div ng-controller="navController" class="" ng-hide="turnOffScroll">
+	<nav class="navbar navbar-default navbar-static-top" ng-hide="turnOffScroll">		
+		<div ng-controller="navController" class="">
 			<div class="navbar-header">
 				<button class="home-button" ng-click="route()"><li class=""><img class="logo" src="../Logo.png"></li></button>
 			   	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -114,7 +117,8 @@
 
 
 	<!-- ============================================ FILES ============================================ -->
-
+	<!-- PULLED FROM WEB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-lightbox/0.11.0/angular-bootstrap-lightbox.min.js"></script>
 	<!-- GLOBAL -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD-QBAroiKyXO6TdT1XiZZ898OTt2BONY"></script>
     <script src="../Global/AngularGlobal.js" type="text/javascript"></script>
