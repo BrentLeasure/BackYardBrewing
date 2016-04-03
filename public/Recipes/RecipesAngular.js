@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "$location", "PaginationFactory", "authService", "RecipeService", "multipartForm", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, $location, PaginationFactory, authService, RecipeService, multipartForm){
+	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "$location", "$uibModal", "PaginationFactory", "authService", "RecipeService", "multipartForm", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, $location, $uibModal, PaginationFactory, authService, RecipeService, multipartForm){
 		//===================
 		// PAGINATION
 		//===================
@@ -13,12 +13,12 @@ angular.module("indexModule")
 		$scope.lastPage;
 		$scope.loggedIn = false;
 		$scope.pageChangers = true;	
-		$rootScope.turnOffScroll = false;
 		$scope.recipe = {alias: null, selectedCategory: null, description: null, instructions: null, username: null, userID: null, image: null};
 		$scope.Paginate = PaginationFactory;
 		$scope.mpForm = multipartForm;
 		$scope.recipe.instructions = "";
 		$scope.recipe.description = "";
+		$scope.animationsEnabled = true;
 		
 		//==========
 		//GRABBING DATA
@@ -53,17 +53,18 @@ angular.module("indexModule")
 
 			
 		}
-		$scope.getRecipes = function(beer){
+		$scope.getRecipes = function(size, beer){
 			$http.get("/beer/" + beer.alias)
 			.then(function(returnData){
-				$scope.recipes = returnData.data;
+				$scope.open(size, returnData.data, beer)
 			}), function(error){
 				console.log(error);
 			}
+
 		}
 
-		$scope.pass = function(beer){
-			$scope.getRecipes(beer);
+		$scope.pass = function(size, beer){
+			$scope.getRecipes(size, beer);
 		}
 		
 		$scope.recipeInfo = function(recipeID){
@@ -92,26 +93,41 @@ angular.module("indexModule")
 		//=====================
 		//    LIGHTBOX
 		//=====================
-		$scope.lightBoxState = false;
-		$scope.lightBox = {
-			alias: "",
-			about: "",
-			taste: "",
-		};
+		$scope.open = function (size, recipes, beer) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'myModalContent.html',
+				controller: 'ModalInstanceCtrl',
+				size: size,
+				resolve: {
+					beer: function () {
+						return [beer, recipes];
+					}
+				}
+	    	});
+    	};
 
-		$scope.lightBoxOn = function(beer){
-			$scope.lightBox.alias = beer.alias;
-			$scope.lightBox.about = beer.about;
-			$scope.lightBox.taste = beer.taste;
-			$scope.lightBoxState = true;
-			$rootScope.turnOffScroll = true;
-		}
+		// $scope.lightBoxState = false;
+		// $scope.lightBox = {
+		// 	alias: "",
+		// 	about: "",
+		// 	taste: "",
+		// };
 
-		$scope.lightBoxOff = function(){
-			$scope.lightBox.alias = " ";
-			$scope.lightBox.about = " ";
-			$scope.lightBox.taste = " ";
-			$scope.lightBoxState = false;
-			$rootScope.turnOffScroll = false;
-		}
+		// $scope.lightBoxOn = function(beer){
+		// 	$scope.lightBox.alias = beer.alias;
+		// 	$scope.lightBox.about = beer.about;
+		// 	$scope.lightBox.taste = beer.taste;
+		// 	$scope.lightBoxState = true;
+		// 	$rootScope.turnOffScroll = true;
+		// }
+
+		// $scope.lightBoxOff = function(){
+		// 	$scope.lightBox.alias = " ";
+		// 	$scope.lightBox.about = " ";
+		// 	$scope.lightBox.taste = " ";
+		// 	$scope.lightBoxState = false;
+		// 	$rootScope.turnOffScroll = false;
+		// }
 }]);
+

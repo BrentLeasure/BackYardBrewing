@@ -1,23 +1,21 @@
 <!-- LIGHT BOX -->
 <div class="container">
-	<div class="row">
-		<div ng-show="lightBoxState" class="light-box">
-			<button ng-click="lightBoxOff()" class="light-box-close-button">X</button>
-			<div class="light-box-content">
-				<div class="beer-info-box">
-					<h1 class="beer-name">{{lightBox.alias}}</h1>
-					<p class="beer-info">{{lightBox.about}}</p>
- 				</div>
-				<h1 class="user-recipes-header"><span class="user-recipes-bottom-border">User Recipes</span></h1>
-				<div class="recipe-box">
-					<div ng-repeat="recipe in recipes" class="user-recipe-layout">
+	<script type="text/ng-template" id="myModalContent.html">
+		<div class="modal-footer">
+            <button class="btn btn-warning" type="button" ng-click="cancel()">x</button>
+        </div>
+        <div class="modal-header">
+            <h3 class="modal-title"><u>{{beer.alias}}</u></h3>
+            <h5> <b>STYLE:</b> {{beer.style}} <b class="abv">ABV:</b> {{beer.abv}} </h5><br>
+            <p>{{beer.about}}</p>
+        </div>
+        <div class="modal-body">
+         			<div ng-repeat="recipe in recipes">
 							<h3>{{recipe.alias}}</h3>
 							<button class="beer-links btn btn-sm btn-default more-info" ng-click="recipeInfo(recipe._id)">More Info</button>
 					</div>	
-				</div>
-			</div>	
-		</div>	
-	</div>
+        </div>
+    </script>
 
 <!-- SEARCH BAR -->
 	<div class="row">
@@ -37,9 +35,9 @@
 
 		<!-- BEER LIST -->		
 		<div class="col-lg-12">
-			<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage" ng-click="lightBoxOn(beer)">
+			<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage">
 				<ul ng-submit="getRecipes(beer)" class="beers ">
-					<button ng-click="pass(beer)" class="btn btn-default recipe-layout beer-links button-color"><li>{{beer.alias}}</li></button>
+					<button ng-click="pass('lg', beer)" class="btn btn-default recipe-layout beer-links button-color"><li>{{beer.alias}}</li></button>
 				</ul>
 			</div>
 		</div>
