@@ -27,6 +27,10 @@ html, body{height: 100%;}
 	color: green;
 }
 
+.row{
+	animation: fadein .5s;
+}
+
 
 /*===============
  	NAVIGATION
@@ -162,7 +166,10 @@ html, body{height: 100%;}
 	border: 1px solid white;
 }
 
-
+.close-btn{
+	margin: 10px 10px 0px 0px;
+	float: right;
+}
 /*====================
 	GLOBAL SEARCH BOX
 ====================*/
@@ -313,6 +320,41 @@ MAPS STUFF
 		margin-left: 40px;
 	}
 
+}
+
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
