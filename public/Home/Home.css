@@ -8,8 +8,10 @@
 	animation: fadein 1s;
 }
 .login-box{
+	overflow-x: hidden;
 	position: relative;
 	top: 200px;
+	width: 600px;
 	height: 400px;
 	left: 20%;
 }
@@ -55,6 +57,7 @@
 		margin-bottom: 50px;
 	}
 	.login-box{
+		width: 200px;
 		top: 100px;
 		left: 30%;
 	}
