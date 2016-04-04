@@ -1,6 +1,6 @@
 <!-- LIGHT BOX -->
 <div class="container">
-	<script type="text/ng-template" id="myModalContent.html">
+	<script type="text/ng-template" id="recipeModal.html">
 		<div class="modal-footer">
             <button class="btn btn-warning" type="button" ng-click="cancel()">x</button>
         </div>
@@ -10,10 +10,11 @@
             <p>{{beer.about}}</p>
         </div>
         <div class="modal-body">
-         			<div ng-repeat="recipe in recipes">
-							<h3>{{recipe.alias}}</h3>
-							<button class="beer-links btn btn-sm btn-default more-info" ng-click="recipeInfo(recipe._id)">More Info</button>
-					</div>	
+        	<h3><u>User Recipes</u></h3>
+ 			<div ng-repeat="recipe in recipes">	
+				<h3>{{recipe.alias}}</h3>
+				<button class="beer-links btn btn-sm btn-default more-info" ng-click="recipeInfo(recipe._id)">More Info</button>
+			</div>	
         </div>
     </script>
 

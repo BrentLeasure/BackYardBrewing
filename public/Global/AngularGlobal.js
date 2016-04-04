@@ -90,18 +90,5 @@ angular.module("indexModule")
 	}])
 	.controller("bodyController", ["$scope", "$rootScope", "$window", function($scope, $rootScope, $window){
 	
-	}])
-	.controller('ModalInstanceCtrl', ["$scope", "$uibModalInstance", "beer", function($scope, $uibModalInstance, beer) {
-
-		$scope.beer = beer[0];
-		$scope.recipes = beer[1];
-		console.log($scope.recipes);
-
-		$scope.ok = function () {
-			$uibModalInstance.close($scope.selected.item);
-		};
-
-		$scope.cancel = function () {
-			$uibModalInstance.dismiss('cancel');
-		};
 	}]);
+	

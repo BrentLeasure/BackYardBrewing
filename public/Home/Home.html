@@ -1,10 +1,11 @@
 <img class="background" src="../Background.png">
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-xs-12">
-			<h3 class="welcome">Welcome to Beer-Pal!</h3>
-				<button class="btn btn-default signin-button" type="button">Existing User</button>
-				<ul>	
+	<script type="text/ng-template" id="loginModal.html">
+		<div class="modal-footer">
+            <button class="btn btn-warning" type="button" ng-click="cancel()">x</button>
+        </div>
+        <div class="modal-header">
+			<ul>	
 				<form ng-submit="loggingIn()">
 					<li class="signin-input-li"><input ng-model="login.email" class="input-box" placeholder="email"></li></br>
 
@@ -14,7 +15,15 @@
 
 				</form>
 				<h5 class="error" ng-show="loginError">{{loginError}}</h5>
-				</ul>
+			</ul>
+    	
+        </div>
+    </script>
+	<div class="row">
+		<div class="col-xs-12">
+			<h3 class="welcome">Welcome to Beer-Pal!</h3>
+				<button class="btn btn-default signin-button" type="button" ng-click="open('sm')">Existing User</button>
+				
 			<a href="/#/signup" class="btn btn-default btn signup-button">Sign Up</a>
 						
 		</div>

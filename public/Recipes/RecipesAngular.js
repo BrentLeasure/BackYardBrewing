@@ -1,5 +1,5 @@
 angular.module("indexModule")
-	.controller("RecipesController", ["$scope", "$rootScope", "$cookies", "$http", "$window", "$interval", "$timeout", "$location", "$uibModal", "PaginationFactory", "authService", "RecipeService", "multipartForm", function($scope, $rootScope, $cookies, $http, $window, $interval, $timeout, $location, $uibModal, PaginationFactory, authService, RecipeService, multipartForm){
+	.controller("RecipesController", ["$scope", "$http", "$window", "$interval", "$timeout", "$location", "$uibModal", "PaginationFactory", "authService", "multipartForm", function($scope, $http, $window, $interval, $timeout, $location, $uibModal, PaginationFactory, authService, multipartForm){
 		//===================
 		// PAGINATION
 		//===================
@@ -67,9 +67,7 @@ angular.module("indexModule")
 			$scope.getRecipes(size, beer);
 		}
 		
-		$scope.recipeInfo = function(recipeID){
-			RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipeID);
-		}
+		
 
 		//==============
 		//RECIPES
@@ -96,8 +94,8 @@ angular.module("indexModule")
 		$scope.open = function (size, recipes, beer) {
 			var modalInstance = $uibModal.open({
 				animation: $scope.animationsEnabled,
-				templateUrl: 'myModalContent.html',
-				controller: 'ModalInstanceCtrl',
+				templateUrl: 'recipeModal.html',
+				controller: 'RecipeModal',
 				size: size,
 				resolve: {
 					beer: function () {
@@ -107,27 +105,18 @@ angular.module("indexModule")
 	    	});
     	};
 
-		// $scope.lightBoxState = false;
-		// $scope.lightBox = {
-		// 	alias: "",
-		// 	about: "",
-		// 	taste: "",
-		// };
+}])
+.controller('recipeModal', ["$scope", "$uibModalInstance", "RecipeService", "$cookies", "$window", "$rootScope", "beer", function($scope, $uibModalInstance, RecipeService, $cookies, $window, $rootScope, beer) {
 
-		// $scope.lightBoxOn = function(beer){
-		// 	$scope.lightBox.alias = beer.alias;
-		// 	$scope.lightBox.about = beer.about;
-		// 	$scope.lightBox.taste = beer.taste;
-		// 	$scope.lightBoxState = true;
-		// 	$rootScope.turnOffScroll = true;
-		// }
+	$scope.beer = beer[0];
+	$scope.recipes = beer[1];
 
-		// $scope.lightBoxOff = function(){
-		// 	$scope.lightBox.alias = " ";
-		// 	$scope.lightBox.about = " ";
-		// 	$scope.lightBox.taste = " ";
-		// 	$scope.lightBoxState = false;
-		// 	$rootScope.turnOffScroll = false;
-		// }
+	$scope.recipeInfo = function(recipeID){		
+		RecipeService.recipeInfo($scope, $cookies, $window, $rootScope, recipeID);
+		$uibModalInstance.dismiss('cancel');
+	}
+	$scope.cancel = function () {
+		$uibModalInstance.dismiss('cancel');
+	};
 }]);
 
