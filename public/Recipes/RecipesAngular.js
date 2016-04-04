@@ -95,7 +95,7 @@ angular.module("indexModule")
 			var modalInstance = $uibModal.open({
 				animation: $scope.animationsEnabled,
 				templateUrl: 'recipeModal.html',
-				controller: 'RecipeModal',
+				controller: 'recipeModal',
 				size: size,
 				resolve: {
 					beer: function () {
