@@ -23,7 +23,7 @@ angular.module("indexModule")
 	    	});
     	};
 }])
-.controller("loginModal", ["$scope", "$http", "$window", function($scope, $http, $window){
+.controller("loginModal", ["$scope", "$http", "$window", "$uibModalInstance", function($scope, $http, $window, $uibModalInstance){
 	$scope.loggingIn = function(){
 		$http.post("/auth/login", $scope.login)
 		.then(function(returnData){
@@ -37,7 +37,7 @@ angular.module("indexModule")
 				}
 		});
 	}
-	$scope.cancel = function () {
+	$scope.cancel = function() {
 		$uibModalInstance.dismiss('cancel');
 	};
 }]);
