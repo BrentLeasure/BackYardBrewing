@@ -3,10 +3,7 @@
 	height: 100%;
 	position: absolute;
 }
-.welcome{
-	color: white;
-	animation: fadein 1s;
-}
+
 .login-box{
 	overflow-x: hidden;
 	position: relative;
