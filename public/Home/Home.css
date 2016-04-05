@@ -45,20 +45,10 @@
 	border-radius: 5px;
 	top: 2px;
 }
-@media screen and (min-width: 1000px){
+/*@media screen and (min-width: 1000px){
 	.login-box{
 		left: 30%;
 	}
-}
+}*/
 
-@media screen and (max-width: 770px){
-	.signin-button{
-		display: block;
-		margin-bottom: 50px;
-	}
-	.login-box{
-		width: 200px;
-		top: 100px;
-		left: 30%;
-	}
-}
+

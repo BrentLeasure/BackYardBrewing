@@ -73,9 +73,7 @@
 /*=================
 	LIGHT BOX
 ==================*/
-.modal-lg{
-	width: 800px;
-}
+
 .abv{
 	padding-left: 5em;
 }
@@ -124,9 +122,24 @@ STATIC BEER INFORMATION
 /*===============
 	MEDIA QUERIES
 =================*/
+
+@media screen and (min-width: 800px){
+	.modal-lg{
+		width: 800px;
+	}
+}
+@media screen and (min-width: 1000px){
+	.modal-lg{
+		width: 1000px;
+	}
+}
+
 @media screen and (min-width: 1200px){
 	.recipe-layout{
 		font-size: 15px;
+	}
+	.modal-lg{
+		width: 1200px;
 	}
 }
 
@@ -151,6 +164,7 @@ STATIC BEER INFORMATION
 	.beer-links{
 		font-size: 13px;
 	}
+
 }
 
 @media screen and (max-width: 725px){
@@ -162,6 +176,9 @@ STATIC BEER INFORMATION
 @media screen and (max-width: 625px){
 	.beer-links{
 		font-size: 11px;
+	}
+	.modal-md{
+		width: 500px;
 	}
 }
 

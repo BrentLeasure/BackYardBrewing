@@ -289,10 +289,15 @@ MAPS STUFF
 		margin-right: 5px;
 	}
 }
-@media screen and (max-width: 769px){
-	.nav-list-items{
-		margin-top: 0px;
-		width: 16%;
+@media screen and (max-width: 770px){
+	.signin-button{
+		display: block;
+		margin-bottom: 50px;
+	}
+	.login-box{
+		width: 200px;
+		top: 100px;
+		left: 30%;
 	}
 }
 @media screen and (max-width: 640px){
@@ -303,9 +308,7 @@ MAPS STUFF
 	}
 }
 @media screen and (max-width: 445px){
-	.global-page-layout{
-		padding: 270px 0px 0px 0px;
-	}
+
 }
 @media screen and (max-width: 355px){
 	.footer-info{
