@@ -39,18 +39,14 @@
 	color: white;
 }
 .button-color{
-	color: #D3D3D3;
+	/*color: #D3D3D3;*/
 }
 .button-color:hover{
-	background-color: rgba(97,27,25, .9);
+	background-color: rgba(154, 51, 52, .9);
 	color: white;
 }
-.button-color:focus{
-	color: #D3D3D3;
-	background-color: white;
-}
 .button-color:active{
-	color: #D3D3D3;
+	/*color: black;*/
 	background-color: white;
 }
 }
@@ -66,7 +62,7 @@
 	ACTIVE BUTTON
 ====================*/
 .recipe-active-page{
-	background-color: rgba(97,27,25, .9);
+	background-color: rgba(154,51,52, .9);
 	color: white;
 }
 

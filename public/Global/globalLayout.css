@@ -13,7 +13,7 @@ html, body{height: 100%;}
 	background-color: #ffffff;
 	margin:0; 
 	font-size: 14px;
-	color: #ACACAC;
+	/*color: #ACACAC;*/
 }
 .main{
 	overflow: auto;
@@ -36,7 +36,7 @@ html, body{height: 100%;}
  	NAVIGATION
  ===============*/
  .navbar-default{
- 	background-color: #611B19;
+ 	background-color: #9A3334;
  	border: none;
  }
  
@@ -115,7 +115,7 @@ html, body{height: 100%;}
 	height: 60px;
 	clear: both;
 	width: 100%;
-	background-color: #611B19;
+	background-color: #9A3334;
 	z-index: 900; 
 }
 
@@ -145,17 +145,17 @@ html, body{height: 100%;}
 .global-button-color{
 	position: relative;
 	top: 1px;
-	background: #611B19;
+	background: #9A3334;
 	color: white;
 }
 
 .global-button-color:hover{
-	background: #611B19;
+	background: #9A3334;
 	color: white;	
 }
 
 .global-button-color:focus{
-	background: #611B19;
+	background: #9A3334;
 	color: white;	
 	border: 1px solid white;
 }
