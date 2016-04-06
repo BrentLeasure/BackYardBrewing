@@ -12,7 +12,7 @@
 
 					<li><input ng-model="login.password" type="password" class="input-box" placeholder="password"></li></br>
 
-					<li><button type="submit" class="btn btn-default btn signin-button">login</button></li></br>
+					<li><button type="submit" class="btn btn-default btn modal-button">login</button></li></br>
 
 				</form>
 				<h5 class="error" ng-show="loginError">{{loginError}}</h5>
@@ -31,7 +31,7 @@
 					<li><input class="input-box" ng-model="signup.username" placeholder="User Name"></li></br>
 					<li><input class="input-box" ng-model="signup.email" placeholder="Email"></li></br>
 					<li><input class="input-box" ng-model="signup.password" type="password" placeholder="Password"></li></br>
-					<li><button type="submit" class="btn btn-default btn signin-button">Sign up</button></li>
+					<li><button type="submit" class="btn btn-default btn modal-button">Sign up</button></li>
 				</form>
 				<p class="red-text" ng-hide="signedUp">{{err}}</p>
 				<p class="success" ng-show="signedUp">Success!</p>

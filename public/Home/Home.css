@@ -8,10 +8,12 @@
 
 
 .signin-button{
+	padding: 5px 35px 5px;
+}
+.modal-button{
 	/*float: left;*/
 	padding: 5px 35px 5px;
 }
-
 .signin-button:hover{
 	color: white;
 	background-color: #9A3334;
@@ -37,9 +39,10 @@
 	border-radius: 5px;
 	top: 2px;
 }
-
-.modal-sm{
-	width: 600px;
+@media screen and (min-width: 771px){
+	.modal-sm{
+		width: 600px;
+	}
 }
 @media screen and (min-width: 992px){
 	.login-box{
@@ -64,6 +67,7 @@
 
 @media screen and (max-width: 770px){
 	.login-box{
+		top: 75px;
 		left: 33%;
 	}
 
@@ -72,9 +76,8 @@
 		padding: 5px 51px 5px;
 	}
 	.signin-button{
-		float: none;
 		padding: 5px 35px 5px;
 		display: block;
-		margin-bottom: 50px;
+		margin-bottom: 325px;
 	}
 }
