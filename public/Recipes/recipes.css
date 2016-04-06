@@ -42,7 +42,7 @@
 	/*color: #D3D3D3;*/
 }
 .button-color:hover{
-	background-color: rgba(154, 51, 52, .9);
+	background-color: rgba(135, 45, 46, .9);
 	color: white;
 }
 .button-color:active{
@@ -62,7 +62,7 @@
 	ACTIVE BUTTON
 ====================*/
 .recipe-active-page{
-	background-color: rgba(154,51,52, .9);
+	background-color: rgba(135, 45, 46, .9);
 	color: white;
 }
 

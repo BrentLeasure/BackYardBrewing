@@ -49,10 +49,24 @@ html, body{height: 100%;}
  	NAVIGATION
  ===============*/
  .navbar-default{
- 	background-color: #9A3334;
+ 	background-color: #872d2e;
  	border: none;
  }
  
+ .home-btn{
+	background-color: #872d2e;
+	border: none;
+}
+.navbar-default .navbar-brand {
+ 	color: white;
+ }
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+	color: white;
+}
+.home-btn:hover{
+
+}
 
 
 .navbar-toggle{
@@ -84,7 +98,7 @@ html, body{height: 100%;}
 	height: 60px;
 	clear: both;
 	width: 100%;
-	background-color: #9A3334;
+	background-color: #872d2e;
 	z-index: 900; 
 }
 
@@ -111,40 +125,26 @@ html, body{height: 100%;}
 }
 
 
-.home-btn{
-	background-color: #9A3334;
-	border: none;
-}
-.navbar-default .navbar-brand {
- 	color: white;
- }
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
-	color: white;
-}
-.home-btn:hover{
-
-}
 .global-button-color{
 	position: relative;
 	top: 1px;
-	background: #9A3334;
+	background: #872d2e;
 	color: white;
 }
 
 .global-button-color:hover{
-	background: #9A3334;
+	background: #872d2e;
 	color: white;	
 }
 
 .global-button-color:focus{
-	background: #9A3334;
+	background: #872d2e;
 	color: white;	
 	border: 1px solid white;
 }
 
 .global-button-color:active{
-	background-color: #611B19;
+	background-color: #872d2e;
 	color: white;	
 	border: 1px solid white;
 }

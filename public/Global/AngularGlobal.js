@@ -10,14 +10,12 @@ angular.module("indexModule")
 				controller  : "homePageController"
 			})
 			.when("/events", {
-				templateUrl: "/Temp/Temp.html"
-				// templateUrl : "/Events/Events.html",
-				// controller  : "EventsController"
+				templateUrl : "/Events/Events.html",
+				controller  : "EventsController"
 			})
 			.when("/forums", {
-				templateUrl: "/Temp/Temp.html"
-				// templateUrl : "/Forum/Forum.html",
-				// controller  : "forumController"
+				templateUrl : "/Forum/Forum.html",
+				controller  : "forumController"
 			})
 			.when("/recipesubmission", {
 				templateUrl : "/Recipe-Submission/RecipeSubmission.html",
@@ -28,9 +26,9 @@ angular.module("indexModule")
 				controller  : "RecipesController"
 			})
 			.when("/thebasics", {
-				templateUrl: "/Temp/Temp.html"
-				// templateUrl : "/TheBasics/TheBasics.html",
-				// controller  : "theBasicsController"
+				// templateUrl: "/Temp/Temp.html"
+				templateUrl : "/TheBasics/TheBasics.html",
+				controller  : "theBasicsController"
 			})
 			.when("/signup", {
 				templateUrl : "/Signup/Signup.html",
