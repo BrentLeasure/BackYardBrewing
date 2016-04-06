@@ -53,9 +53,7 @@ html, body{height: 100%;}
  	border: none;
  }
  
- .navbar-static-top{
- 	margin-bottom: 0px;
- }
+
 
 .navbar-toggle{
 	border: none;
@@ -63,11 +61,6 @@ html, body{height: 100%;}
 .navbar-default .navbar-nav > li > a{
 	margin: 0px 2px;
 	color: white;
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-	color: white;
-	border-bottom: 1px solid white;
 }
 
 .navbar-right{
@@ -237,6 +230,13 @@ MAPS STUFF
 /*===================
  MEDIA QUERIES
  ===================*/
+@media screen and (min-width: 768px){
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding-bottom: 5px;
+		color: white;
+		border-bottom: 1px solid white;
+	}
+}
 
 @media screen and (max-width: 1070px){
 	.nav-bar{
