@@ -9,11 +9,24 @@ angular.module("indexModule")
 			}
 		});
 	
-		$scope.open = function (size) {
+		$scope.openLogin = function (size) {
 			var modalInstance = $uibModal.open({
 				animation: $scope.animationsEnabled,
 				templateUrl: 'loginModal.html',
 				controller: 'loginModal',
+				size: size,
+				resolve: {
+					// beer: function () {
+					// 	return [beer, recipes];
+					// }
+				}
+	    	});
+    	};
+    	$scope.openSignup = function (size) {
+			var modalInstance = $uibModal.open({
+				animation: $scope.animationsEnabled,
+				templateUrl: 'signupModal.html',
+				controller: 'signupModal',
 				size: size,
 				resolve: {
 					// beer: function () {
@@ -38,6 +51,33 @@ angular.module("indexModule")
 		});
 	}
 	$scope.cancel = function() {
+		$uibModalInstance.dismiss('cancel');
+	};
+}])
+.controller("signupModal", ["$scope", "$http", "$location", "$timeout", "$window", "$uibModalInstance", "authService", function($scope, $http, $location, $timeout, $window, $uibModalInstance, authService){
+	$scope.signedUp = false; 
+	$scope.createUser = function(){
+		$http.post("/auth/signup", $scope.signup)
+		.then(function(returnData){
+			console.log(returnData);
+			if(returnData.data.error){
+				console.log(returnData.data.error);
+				$scope.err = returnData.data.error;
+			}else{
+				$scope.signedUp = true;
+				$scope.signup = "";
+				$scope.err="";
+				$timeout(function(){
+					$scope.delayedRedirect();
+				}, 2000)
+			}
+		})
+	};
+	$scope.delayedRedirect = function(){
+		$window.location.reload();
+		$location.path("/");
+	}
+		$scope.cancel = function() {
 		$uibModalInstance.dismiss('cancel');
 	};
 }]);

@@ -120,12 +120,12 @@ STATIC BEER INFORMATION
 =================*/
 
 @media screen and (min-width: 800px){
-	.modal-lg{
+	.modal-md{
 		width: 800px;
 	}
 }
 @media screen and (min-width: 1000px){
-	.modal-lg{
+	.modal-md{
 		width: 1000px;
 	}
 }
@@ -134,7 +134,7 @@ STATIC BEER INFORMATION
 	.recipe-layout{
 		font-size: 15px;
 	}
-	.modal-lg{
+	.modal-md{
 		width: 1200px;
 	}
 }

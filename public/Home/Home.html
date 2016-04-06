@@ -20,12 +20,31 @@
 		</div>
     	
     </script>
+    <script type="text/ng-template" id="signupModal.html">
+            <button class="btn btn-default close-btn button-color" type="button" ng-click="cancel()">x</button>
+        <div class="modal-header">
+        	<h3>Sign up</h3>
+        </div>
+        <div class="modal-body">
+			<ul style="list-style: none;">	
+				<form ng-hide="signedUp" ng-submit="createUser()">
+					<li><input class="input-box" ng-model="signup.username" placeholder="User Name"></li></br>
+					<li><input class="input-box" ng-model="signup.email" placeholder="Email"></li></br>
+					<li><input class="input-box" ng-model="signup.password" type="password" placeholder="Password"></li></br>
+					<li><button type="submit" class="btn btn-default btn signin-button">Sign up</button></li>
+				</form>
+				<p class="red-text" ng-hide="signedUp">{{err}}</p>
+				<p class="success" ng-show="signedUp">Success!</p>
+			</ul>
+		</div>
+    	
+    </script>
 	<div class="row">
-			<h3>Welcome to Beer-Pal!</h3>
+			<h3>Welcome to Beer-Pal</h3>
 			<div class="login-box">	
-					<button class="btn btn-default signin-button" type="button" ng-click="open('sm')">Existing User</button>
+					<button class="btn btn-default signin-button" type="button" ng-click="openLogin('sm')">Existing User</button>
 					
-					<a href="/#/signup" class="btn btn-default btn signup-button">Sign Up</a>					
+					<button class="btn btn-default btn signup-button" type="button" ng-click="openSignup('sm')">Sign Up</a>					
 			</div>
 	</div>
 </div>

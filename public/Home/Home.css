@@ -8,7 +8,7 @@
 
 
 .signin-button{
-	float: left;
+	/*float: left;*/
 	padding: 5px 35px 5px;
 }
 
@@ -29,6 +29,7 @@
 }
 
 .input-box{
+	display: block;
 	width: 250px;
 	padding: 10px 10px 10px;
 	position: relative;
@@ -37,7 +38,9 @@
 	top: 2px;
 }
 
-
+.modal-sm{
+	width: 600px;
+}
 @media screen and (min-width: 992px){
 	.login-box{
 		left: 23%;
@@ -61,7 +64,7 @@
 
 @media screen and (max-width: 770px){
 	.login-box{
-		left: 35%;
+		left: 33%;
 	}
 
 	.signup-button{
