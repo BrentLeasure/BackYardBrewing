@@ -1,21 +1,14 @@
-.background{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
-
 .login-box{
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	position: relative;
-	top: 200px;
+	top: 100px;
 	width: 600px;
-	height: 400px;
-	left: 20%;
+	left: 15%;
 }
 
 
 .signin-button{
-	margin-right: 200px;
+	float: left;
 	padding: 5px 35px 5px;
 }
 
@@ -26,6 +19,7 @@
 
 
 .signup-button{
+	float: right;
 	padding: 5px 51px 5px;
 }
 
@@ -42,10 +36,42 @@
 	border-radius: 5px;
 	top: 2px;
 }
-/*@media screen and (min-width: 1000px){
+
+
+@media screen and (min-width: 992px){
 	.login-box{
-		left: 30%;
+		left: 23%;
 	}
-}*/
+}
+@media screen and (min-width: 1040px){
+	.login-box{
+			left: 21%;
+	}
+}
+@media screen and (min-width: 1090px){
+	.login-box{
+			left: 20%;
+	}
+}
+@media screen and (min-width: 1200px){
+	.login-box{
+		left: 24%;
+	}	
+}
 
+@media screen and (max-width: 770px){
+	.login-box{
+		left: 35%;
+	}
 
+	.signup-button{
+		float: none;
+		padding: 5px 51px 5px;
+	}
+	.signin-button{
+		float: none;
+		padding: 5px 35px 5px;
+		display: block;
+		margin-bottom: 50px;
+	}
+}

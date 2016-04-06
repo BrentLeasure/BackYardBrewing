@@ -15,6 +15,13 @@ html, body{height: 100%;}
 	font-size: 14px;
 	/*color: #ACACAC;*/
 }
+.background{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	top: 30%;
+	margin-left: 37%;
+}
 .main{
 	overflow: auto;
 	overflow-y: hidden;
@@ -31,6 +38,12 @@ html, body{height: 100%;}
 	animation: fadein .5s;
 }
 
+.logo-white{
+	display: inline-block;	
+	width: 10%;
+	width: 50px;
+	height: 50px;
+}
 
 /*===============
  	NAVIGATION
@@ -68,44 +81,7 @@ html, body{height: 100%;}
 	background-color: transparent;
 }
 
-/*===============
-	LOGO
-================*/
-.logo{
-	display: inline-block;	
-	width: 10%;
-	width: 50px;
-	height: 50px;
-}
 
-.icons{
-	margin-top: 5px;
-	display: inline-block;	
-	width: 40px;
-	height: 40px;
-}
-
-.home-img{
-	display: inline-block;
-	width: 10%;
-	width: 35px;
-	height: 30px;
-}
-.home-button{
-	list-style-type: none;
-	background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    float: left;
-}
-.home-item{
-	margin: 0px 20px 0px 35px;
-	padding: 5px 0px 0px 0px;
-	display: inline-block;
-}
 /*======================
 	FOOTER
 ========================*/
@@ -142,6 +118,20 @@ html, body{height: 100%;}
 }
 
 
+.home-btn{
+	background-color: #9A3334;
+	border: none;
+}
+.navbar-default .navbar-brand {
+ 	color: white;
+ }
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+	color: white;
+}
+.home-btn:hover{
+
+}
 .global-button-color{
 	position: relative;
 	top: 1px;
@@ -290,15 +280,10 @@ MAPS STUFF
 	}
 }
 @media screen and (max-width: 770px){
-	.signin-button{
-		display: block;
-		margin-bottom: 50px;
+	.background{
+		margin-left: 25%;
 	}
-	.login-box{
-		width: 200px;
-		top: 100px;
-		left: 30%;
-	}
+
 }
 @media screen and (max-width: 640px){
 	.footer-info{
@@ -306,9 +291,14 @@ MAPS STUFF
 		margin: 0% 0% 0% 2%;
 		left: 10px;
 	}
+	.background{
+		margin-left: 20%;
+	}
 }
 @media screen and (max-width: 445px){
-
+	.background{
+		margin-left: 15%;
+	}
 }
 @media screen and (max-width: 355px){
 	.footer-info{
