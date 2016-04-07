@@ -9,18 +9,22 @@ html, body{height: 100%;}
 /*===============
 	body 
  ===============*/
+.bottom-padding{
+	margin-bottom: 40px;
+}
 .body{
 	background-color: #F3EFE0;
 	margin:0; 
 	font-size: 14px;
-	/*color: #ACACAC;*/
 }
 .background{
 	position: absolute;
+	top: 50%;
+	left: 50%;
 	width: 300px;
 	height: 300px;
-	top: 30%;
-	margin-left: 37%;
+	margin-top: -150px; 
+   	margin-left: -150px;
 }
 .main{
 	overflow: auto;
@@ -255,33 +259,19 @@ MAPS STUFF
 	.nav-list-items:hover .nav-list-item-underline{
 		width: 0%;
 	}
-
-	.nav-list{
-		margin: 0px;
-	}	
-
-	/*====================
-	PAGE-LAYOUT
-	=================*/
-
-/*	.global-page-layout{
-		padding: 250px 0px 0px 0px;
-	}*/
-
-	.nav-bar{
-		font-size: 14px;
-	}
 }
 
 @media screen and (max-width: 800px){
-
 	.logout{
 		margin-right: 5px;
 	}
 }
 @media screen and (max-width: 770px){
 	.background{
-		margin-left: 25%;
+		width: 200px;
+		height: 200px;
+		margin-top: -100px; 
+   		margin-left: -100px;
 	}
 
 }
@@ -291,18 +281,14 @@ MAPS STUFF
 		margin: 0% 0% 0% 2%;
 		left: 10px;
 	}
-	.background{
-		margin-left: 20%;
-	}
+
 }
-@media screen and (max-width: 445px){
-	.background{
-		margin-left: 15%;
-	}
-}
-@media screen and (max-width: 355px){
+@media screen and (max-width: 360px){
 	.footer-info{
 		font-size: 8px;
+	}
+	.bottom-padding{
+		margin-bottom: 70px;
 	}
 	
 	.nav-list-items{

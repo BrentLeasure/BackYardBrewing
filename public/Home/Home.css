@@ -1,9 +1,9 @@
 .login-box{
 	/*overflow-x: hidden;*/
 	position: relative;
+	margin: auto;
 	top: 100px;
 	width: 600px;
-	left: 15%;
 }
 
 
@@ -44,31 +44,11 @@
 		width: 600px;
 	}
 }
-@media screen and (min-width: 992px){
-	.login-box{
-		left: 23%;
-	}
-}
-@media screen and (min-width: 1040px){
-	.login-box{
-			left: 21%;
-	}
-}
-@media screen and (min-width: 1090px){
-	.login-box{
-			left: 20%;
-	}
-}
-@media screen and (min-width: 1200px){
-	.login-box{
-		left: 24%;
-	}	
-}
 
 @media screen and (max-width: 770px){
 	.login-box{
-		top: 75px;
-		left: 33%;
+		width: 160px;
+		top: 120px;
 	}
 
 	.signup-button{
@@ -78,6 +58,12 @@
 	.signin-button{
 		padding: 5px 35px 5px;
 		display: block;
-		margin-bottom: 325px;
+		margin-bottom: 250px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.login-box{
+		top: 50px;
 	}
 }

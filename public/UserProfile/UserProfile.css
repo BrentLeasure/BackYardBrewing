@@ -46,9 +46,6 @@
 	 border-bottom: 1px solid #23527c;
 
 }
-.global-page-layout{
-	padding: 0px 0px 0px;
-}
 
 @media screen and (min-width: 1200px){
 	.recipes-font{
