@@ -6,7 +6,6 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 var multer = require("multer");
 var crypto = require("crypto");
-var path = require("path");
 var storage = multer.diskStorage({
   destination: './uploads/',
   filename: function (req, file, cb) {
@@ -24,9 +23,10 @@ var upload = multer({ storage: storage })
 var server = express();
 
 
-var recipeController = require("./controllers/recipeController")
-var favRecipeController = require("./controllers/favRecipeController")
+var recipeController = require("./controllers/recipeController");
+var favRecipeController = require("./controllers/favRecipeController");
 var authenticationController = require('./controllers/authentication');
+var imageController = require("./controllers/imageController");
 
 var passportConfig = require('./config/passport');
 var passport = require('passport');
@@ -69,13 +69,7 @@ server.get("/beer/:beerAlias", recipeController.getRecipes);
 
 server.get("/getallbeertypes", recipeController.getAllBeerTypes);
 
-server.get("/getImage/:id", function (req, res) {
-  // Validate that req.params.id is 16 bytes hex string
-  // Get the stored image type for this image
-  console.log(req.params)
-  // res.setHeader('Content-Type', req.params.mimetype)
-  fs.createReadStream(path.join('/uploads/', req.params.filename)).pipe(res)
-})
+server.get("/getImage/", imageController.getImage);
 
 //MULTIPLE RECIPES
 server.get("/getuserrecipes/:_id", recipeController.getUserRecipes);
@@ -131,7 +125,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })

@@ -8,15 +8,16 @@ var recipeSchema = mongoose.Schema({
 	instructions     : {type 			: String},
 	userID			 : {type 			: String},
 	username		 : {type 			: String},
-	image			 : [{fieldname		: String,
-    					 originalname	: String,
-    					 encoding		: String,
-    					 mimetype		: String,
-    					 destination	: String,
-    					 filename		: String,
-    					 path			: String,
-    					 size			: String,
-     					}]
+	image			 : {type            : Object},
+	// image			 : [{fieldname		: String,
+ //    					 originalname	: String,
+ //    					 encoding		: String,
+ //    					 mimetype		: String,
+ //    					 destination	: String,
+ //    					 filename		: String,
+ //    					 path			: String,
+ //    					 size			: String,
+ //     					}]
 });
 
 var beerTypesSchema = mongoose.Schema({

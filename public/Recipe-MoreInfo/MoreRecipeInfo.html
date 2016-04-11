@@ -6,6 +6,7 @@
 
 			<div ng-hide="noRecipe">
 				<button title="add to favorites" ng-click="addToFavorites(recipe)" class="btn btn-group btn-default add-recipe-button">+</button>
+				<img ng-src="data:image/JPEG;base64, {{image}}">
 				<h1><u>{{recipe.alias}}</u></h1>
 				<div class="selected-beer-info">
 					<p class="inline-block">Beer by</p> <a href="">{{recipe.username}}</a>
