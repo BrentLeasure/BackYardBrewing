@@ -63,6 +63,9 @@
 }
 
 @media screen and (max-width: 450px){
+	.input-box{
+		width: 200px;
+	}
 	.login-box{
 		top: 50px;
 	}

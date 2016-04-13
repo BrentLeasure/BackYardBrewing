@@ -162,9 +162,6 @@ STATIC BEER INFORMATION
 	.beer-links{
 		font-size: 11px;
 	}
-	.modal-md{
-		width: 500px;
-	}
 }
 
 @media screen and (max-width: 525px){
