@@ -14,10 +14,10 @@ angular.module("indexModule")
 						$scope.noRecipe = false;
 						$scope.err = "";
 						$scope.recipe = returnData.data;
-						$http.get("/getImage/", {params: {"filename" : $scope.recipe.image.filename, "mimetype" : $scope.recipe.image.mimetype}})
-						.then(function(returnData){
-							$scope.image = returnData.data;
-						})
+						// $http.get("/getImage/", {params: {"filename" : $scope.recipe.image.filename, "mimetype" : $scope.recipe.image.mimetype}})
+						// .then(function(returnData){
+						// 	$scope.image = returnData.data;
+						// })
 					}
 				})
 		}

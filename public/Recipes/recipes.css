@@ -53,8 +53,10 @@
 
 .recipe-box{
 	position: relative;
+}	
+.modal-md{
+	width: 94%;
 }
-
 
 
 
@@ -120,23 +122,9 @@ STATIC BEER INFORMATION
 	MEDIA QUERIES
 =================*/
 
-@media screen and (min-width: 800px){
-	.modal-md{
-		width: 800px;
-	}
-}
-@media screen and (min-width: 1000px){
-	.modal-md{
-		width: 1000px;
-	}
-}
-
 @media screen and (min-width: 1200px){
 	.recipe-layout{
 		font-size: 15px;
-	}
-	.modal-md{
-		width: 1200px;
 	}
 }
 
