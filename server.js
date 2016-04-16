@@ -23,10 +23,14 @@ var upload = multer({ storage: storage })
 var server = express();
 
 
+//===================
+//CONTROLLERS
+//===================
 var recipeController = require("./controllers/recipeController");
 var favRecipeController = require("./controllers/favRecipeController");
 var authenticationController = require('./controllers/authentication');
 var imageController = require("./controllers/imageController");
+var dataScrape = require("./controllers/dataScrape");
 
 var passportConfig = require('./config/passport');
 var passport = require('passport');
@@ -78,6 +82,8 @@ server.get("/getuserrecipe/:_id", recipeController.getUserRecipe);
 
 server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
 
+server.get("/festivals", dataScrape.scraping);
+
 
 //=============
 //POST ROUTES
@@ -125,7 +131,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })

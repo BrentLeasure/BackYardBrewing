@@ -12,6 +12,7 @@
     "angular-bootstrap-lightbox": "^0.11.0",
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.14.1",
+    "cheerio": "^0.20.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.0",
     "crypto": "0.0.3",
@@ -21,6 +22,7 @@
     "multer": "^1.1.0",
     "passport": "^0.3.0",
     "passport-local": "^1.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "request": "^2.71.0"
   }
 }

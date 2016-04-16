@@ -3,15 +3,15 @@ angular.module("indexModule")
 		$scope.weekState = true;
 		$scope.monthState = false;
 
-		$scope.activateTab = function(buttonClicked){
-			if(buttonClicked == 1){
-				$scope.weekState = true;
-				$scope.monthState = false;
-			}else if(buttonClicked == 2){
-				$scope.weekState = false;
-				$scope.monthState = true;
-			}
-		}
+		// $scope.activateTab = function(buttonClicked){
+		// 	if(buttonClicked == 1){
+		// 		$scope.weekState = true;
+		// 		$scope.monthState = false;
+		// 	}else if(buttonClicked == 2){
+		// 		$scope.weekState = false;
+		// 		$scope.monthState = true;
+		// 	}
+		// }
 
 		$scope.eventMap;
 		$scope.initMap = function(){
@@ -23,10 +23,17 @@ angular.module("indexModule")
 				scrollwheel: false
 		  	});
 
-		 	$scope.marker = new google.maps.Marker({
-				position: $scope.centerOfMap,
-				map: $scope.eventMap,
-				title: 'Hello World!'
-			});
+		 // 	$scope.marker = new google.maps.Marker({
+			// 	position: $scope.centerOfMap,
+			// 	map: $scope.eventMap,
+			// 	title: 'Hello World!'
+			// });
 		}
-	}]);
+		$scope.getData = function(){
+			$http.get("/festivals")
+			.then(function(returnData){
+				console.log(returnData);
+
+			})
+		}
+}]);
