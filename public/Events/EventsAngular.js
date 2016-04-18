@@ -1,18 +1,5 @@
 angular.module("indexModule")
-	.controller("EventsController", ["$scope", function($scope){
-		$scope.weekState = true;
-		$scope.monthState = false;
-
-		// $scope.activateTab = function(buttonClicked){
-		// 	if(buttonClicked == 1){
-		// 		$scope.weekState = true;
-		// 		$scope.monthState = false;
-		// 	}else if(buttonClicked == 2){
-		// 		$scope.weekState = false;
-		// 		$scope.monthState = true;
-		// 	}
-		// }
-
+	.controller("EventsController", ["$scope", "$http", function($scope, $http){
 		$scope.eventMap;
 		$scope.initMap = function(){
 			$scope.centerOfMap ={lat: 39.244785, lng: -105.511852};
@@ -29,11 +16,17 @@ angular.module("indexModule")
 			// 	title: 'Hello World!'
 			// });
 		}
-		$scope.getData = function(){
-			$http.get("/festivals")
+		$scope.scrape = function(){
+			console.log("made it");
+			$http.get("/scrape")
 			.then(function(returnData){
-				console.log(returnData);
 
+			})
+		}
+		$scope.getFestivals = function(){
+			$http.get("/getFestivals")
+			.then(function(returnData){
+				// console.log(returnData);
 			})
 		}
 }]);

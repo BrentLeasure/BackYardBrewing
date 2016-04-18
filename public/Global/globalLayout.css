@@ -160,13 +160,13 @@ html, body{height: 100%;}
 /*====================
 	GLOBAL SEARCH BOX
 ====================*/
-.global-search-box{
+.search-box{
 	width: 300px;
 	position: relative;
 	height: 100px;
 	left: 1%;
 }
-.global-search-bar{
+.search-bar{
 	position: absolute;
 	top: 8px;
 	width: 300px;
@@ -179,42 +179,6 @@ html, body{height: 100%;}
 	border-radius: 25px;
 	padding: 0px 5px 0px 20px;
 	height: 30px;
-}
-
-/*==================
-MAPS STUFF
-===================*/
-.global-maps-list{
-	position: relative;
-	list-style: none;
-	padding: 0px;
-	top: 15px;
-	z-index: 2;
-	width: 100%;
-	margin-left: 0px;
-}
-
-.global-maps-buttons{
-	border: none;
-	background-color: transparent;
-	padding: 7px;
-	margin-right: 10px;
-}
-
-.global-maps-list-items{
-	position: relative;
-	display: inline-block;
-	z-index: 3;
-}
-
-.active-global-maps-list-items{
-	position: relative;
-	top: 5px;
-	border-bottom: 1px solid gray;
-}
-.active-global-maps-list-items li{
-	position: relative;
-	bottom: 5px;
 }
 
 /*======================

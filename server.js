@@ -65,9 +65,6 @@ server.get("/", function(req, res){
 	res.sendFile("/GlobalLayout.html", {root: "./public/Global"})
 });
 
-server.get("/updaterecipe", function(req, res){
-	res.sendFile("/RecipeUpdate.html", {root: "./public/Recipe-Update"})
-});
 
 server.get("/beer/:beerAlias", recipeController.getRecipes);
 
@@ -82,7 +79,9 @@ server.get("/getuserrecipe/:_id", recipeController.getUserRecipe);
 
 server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
 
-server.get("/festivals", dataScrape.scraping);
+server.get("/getFestivals", dataScrape.getFestivals);
+
+server.get("/scrape", dataScrape.scraping);
 
 
 //=============
@@ -131,7 +130,7 @@ server.get('/api/me', function(req, res){
 //============
 //PORT
 //============
-var port = 80;
+var port = 3000;
 server.listen(port, function(){
   console.log('Server running on port ' + port);
 })

@@ -1,5 +1,6 @@
 var cheerio = require("cheerio");
 var request = require("request");
+var dataScrapeModel = require("../models/dataScrape")
 
 var scraping = function(req, res){
 
@@ -18,7 +19,10 @@ var scraping = function(req, res){
 			var tempString;
 			var hasTitle = false;
 			$('.entry-content p strong').each(function(){
+				
 				var title = $(this).find("a").text();
+				// var location = $(this).find("nth-child(2)").text();
+				// console.log(location)
 				var date = $(this).text();
 				var link = $(this).find("a").attr("href");
 				if(title != null && title != undefined){
@@ -47,7 +51,12 @@ var scraping = function(req, res){
 	})
 }
 
+var getFestivals = function(){
+
+}
+
 
 module.exports = {
-	scraping : scraping,
+	scraping   		: scraping,
+	getFestivals	: getFestivals,
 }
