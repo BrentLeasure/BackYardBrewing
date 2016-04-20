@@ -1,10 +1,7 @@
 var mongoose = require("mongoose");
 
 var festivalSchema = mongoose.Schema({
-	title		: {type	:   String},
-	link		: {type	:   String},
-	date		: {type	:   String},
-	location	: {type	:   String},
+	events : {type : Object},
 })
 
 module.exports = {

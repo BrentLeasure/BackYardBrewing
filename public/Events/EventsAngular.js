@@ -16,13 +16,13 @@ angular.module("indexModule")
 			// 	title: 'Hello World!'
 			// });
 		}
-		$scope.scrape = function(){
-			console.log("made it");
-			$http.get("/scrape")
-			.then(function(returnData){
+		// $scope.scrape = function(){
+		// 	console.log("made it");
+		// 	$http.get("/scrape")
+		// 	.then(function(returnData){
 
-			})
-		}
+		// 	})
+		// }
 		$scope.getFestivals = function(){
 			$http.get("/getFestivals")
 			.then(function(returnData){

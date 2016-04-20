@@ -1,8 +1,9 @@
 var cheerio = require("cheerio");
 var request = require("request");
+var CronJob = require('cron').CronJob;
 var dataScrapeModel = require("../models/dataScrape")
 
-var scraping = function(req, res){
+var job = new CronJob('00 6 * * 6', function(req, res){
 
 	//url being used for the request
 	url = "http://www.coloradocraftbrews.com/beer-festivals/";
@@ -36,35 +37,37 @@ var scraping = function(req, res){
 					}
 					
 					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " " && hasTitle){
-						console.log(dates.length);
-						console.log("DATE: " + date);
+						// console.log(dates.length);
+						// console.log("DATE: " + date);
 						dates.push(date); 
 						hasTitle = false;
 					}else if(date.match(", CO")){
 						temp.push(date);
-						console.log("LOCATION: " + date);
-						console.log("-----------------");
+						// console.log("LOCATION: " + date);
+						// console.log("-----------------");
 					}
 				}	
 			})
+			console.log("testing");
 			for(var i = 0; i < titles.length; i++){
 				data.push({"festival" : titles[i], "date" : dates[i], "url" : links[i]});
 			}
+			
 			
 			// console.log(temp.length);
 			// console.log(dates.length);
 			// console.log(links.length);
 		}
-		res.send(data);
+		// res.send(data);
 	})
-}
-
+});
+job.start();
 var getFestivals = function(){
 
 }
 
 
 module.exports = {
-	scraping   		: scraping,
+	// scraping   		: scraping,
 	getFestivals	: getFestivals,
 }
