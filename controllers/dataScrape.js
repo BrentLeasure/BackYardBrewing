@@ -4,7 +4,10 @@ var CronJob = require('cron').CronJob;
 var events = require("../models/dataScrape");
 
 var job = new CronJob('00 6 * * 6', function(req, res){
+	requestData();
+});
 
+var requestData = function(){
 	//url being used for the request
 	url = "http://www.coloradocraftbrews.com/beer-festivals/";
 
@@ -78,16 +81,21 @@ var job = new CronJob('00 6 * * 6', function(req, res){
 			// console.log(dates.length);
 			// console.log(links.length);
 		}
-		// res.send(data);
 	})
-});
+}
 job.start();
 var getFestivals = function(){
-
+	events.eventList.find({name: "Colorado"}, function (err, data){
+		if(err){
+			res.send(err);
+		}else{
+			res.send(data);
+		}
+	});
 }
 
 
 module.exports = {
-	// scraping   		: scraping,
+	requestData   	: requestData,
 	getFestivals	: getFestivals,
 }

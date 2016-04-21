@@ -13,7 +13,7 @@ angular.module("indexModule")
 		$scope.getFestivals = function(){
 			$http.get("/getFestivals")
 			.then(function(returnData){
-				// console.log(returnData);
+				console.log(returnData);
 			})
 		}
 }]);
