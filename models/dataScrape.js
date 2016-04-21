@@ -1,9 +1,15 @@
 var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/BackYardBrewing");
 
-var festivalSchema = mongoose.Schema({
-	events : {type : Object},
+var eventsSchema = mongoose.Schema({
+	name   		: {type : String},
+	events 		: [{
+					    festival : String,
+					    date 	 : String,
+					    url		 : String,
+     				}],
 })
 
 module.exports = {
-	festivals	   : mongoose.model("festivals", festivalSchema),
+	eventList	   : mongoose.model("event", eventsSchema),
 }

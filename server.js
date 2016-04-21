@@ -6,6 +6,8 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 var multer = require("multer");
 var crypto = require("crypto");
+var path = require('path')
+
 var storage = multer.diskStorage({
   destination: './uploads/',
   filename: function (req, file, cb) {
@@ -13,7 +15,6 @@ var storage = multer.diskStorage({
       if (err){
       	return cb(err);
       } 
-      console.log(path.extname(file.originalname));
       cb(null, raw.toString('hex') + path.extname(file.originalname))
     })
   }

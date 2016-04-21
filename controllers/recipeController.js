@@ -74,7 +74,6 @@ createRecipe = function(req, res){
 	}else{
 		req.body.image = req.file;
 	}
-	console.log(req.body.image);
 	if(req.user){
 		//checks if any variables are null
 		for(variable in body){

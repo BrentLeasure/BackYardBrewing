@@ -10,19 +10,6 @@ angular.module("indexModule")
 				scrollwheel: false
 		  	});
 
-		 // 	$scope.marker = new google.maps.Marker({
-			// 	position: $scope.centerOfMap,
-			// 	map: $scope.eventMap,
-			// 	title: 'Hello World!'
-			// });
-		}
-		// $scope.scrape = function(){
-		// 	console.log("made it");
-		// 	$http.get("/scrape")
-		// 	.then(function(returnData){
-
-		// 	})
-		// }
 		$scope.getFestivals = function(){
 			$http.get("/getFestivals")
 			.then(function(returnData){

@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/BackYardBrewing");
+// mongoose.connect("mongodb://localhost/BackYardBrewing");
 
 var recipeSchema = mongoose.Schema({
 	alias            : {type 	: String},

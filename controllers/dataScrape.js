@@ -1,7 +1,7 @@
 var cheerio = require("cheerio");
 var request = require("request");
 var CronJob = require('cron').CronJob;
-var dataScrapeModel = require("../models/dataScrape")
+var events = require("../models/dataScrape");
 
 var job = new CronJob('00 6 * * 6', function(req, res){
 
@@ -48,11 +48,31 @@ var job = new CronJob('00 6 * * 6', function(req, res){
 					}
 				}	
 			})
-			console.log("testing");
 			for(var i = 0; i < titles.length; i++){
 				data.push({"festival" : titles[i], "date" : dates[i], "url" : links[i]});
 			}
-			
+			var name = "Colorado";
+			var body = {"name" : name, "events" : data};
+			events.eventList.find({}, function (err, count) {
+			    if (!err && count.length == 0) {
+			        var newEvents = new events.eventList(body);
+					newEvents.save(function(err){
+						if(err){
+							console.log("Error: " + err);
+						}else{
+							console.log("success!");
+						}
+					});
+			    }else{
+				    events.eventList.update({name: body.name}, body, function(err){
+						if(err){
+							console.log(err);
+						}else{
+							console.log("successful update.");
+						}
+					});
+			    }
+			});
 			
 			// console.log(temp.length);
 			// console.log(dates.length);
