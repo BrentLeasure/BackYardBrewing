@@ -27,8 +27,6 @@ var requestData = function(){
 				var title = $(this).find("a").text();
 				var date = $(this).text();
 				var link = $(this).find("a").attr("href");
-				// console.log(date);
-				// console.log("-----------------");
 				if(title != null && title != undefined){
 					if(title != ""){
 						hasTitle = true;
@@ -52,7 +50,7 @@ var requestData = function(){
 				}	
 			})
 			for(var i = 0; i < titles.length; i++){
-				data.push({"festival" : titles[i], "date" : dates[i], "url" : links[i]});
+				data.push({"title" : titles[i], "date" : dates[i], "url" : links[i]});
 			}
 			var name = "Colorado";
 			var body = {"name" : name, "events" : data};
@@ -77,6 +75,7 @@ var requestData = function(){
 			    }
 			});
 			
+			// console.log(body.events);
 			// console.log(temp.length);
 			// console.log(dates.length);
 			// console.log(links.length);
@@ -84,12 +83,12 @@ var requestData = function(){
 	})
 }
 job.start();
-var getFestivals = function(){
+var getFestivals = function(req, res){
 	events.eventList.find({name: "Colorado"}, function (err, data){
 		if(err){
 			res.send(err);
 		}else{
-			res.send(data);
+			res.send(data[0]);
 		}
 	});
 }
