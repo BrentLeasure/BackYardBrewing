@@ -1,35 +1,35 @@
+#temp{
+	position: absolute;
+}
 #eventMap { 
-	margin-bottom: 90px;
-	padding-bottom: 0px;
-	top: 62px;
 	position: relative;
 	border: 1px solid white;
 	border-radius: 5px;
-	padding-left: 10px;
 	width: 100%;
 	height: 500px; 
 	opacity: 0.9;
 }
 
 .events{
+	position: relative;
 	overflow: auto;
-	height: 700px;
+	width: 33%;
+	height: 500px;
 	border: 1px solid white;
+	border-radius: 5px;
 }
-
 
 /*=====================
 	MEDIA QUERIES
 =====================*/
-@media screen and (max-width: 415px){
+
+@media screen and (max-width: 990px){
+	.events{
+		background-color: #F3EFE0;
+		margin: 10px;
+		width: 96%;
+	}
 	#eventMap{
-		height: 350px;
+		margin-bottom: 90px;
 	}
 }
-
-@media screen and (max-width: 350px){
-	#eventMap{
-		height: 300px;
-	}	
-}
-
