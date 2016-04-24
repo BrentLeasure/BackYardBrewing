@@ -15,6 +15,7 @@ var requestData = function(){
 
 		if(!error){
 			$ = cheerio.load(html);
+			var count = 0;
 			var href;
 			var links = [];
 			var titles = [];
@@ -38,17 +39,16 @@ var requestData = function(){
 					}
 					
 					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " " && hasTitle){
-						// console.log(dates.length);
-						// console.log("DATE: " + date);
 						dates.push(date); 
 						hasTitle = false;
 					}else if(date.match(", CO")){
-						temp.push(date);
+						console.log(date);
 						// console.log("LOCATION: " + date);
 						// console.log("-----------------");
 					}
 				}	
 			})
+			console.log(count);
 			for(var i = 0; i < titles.length; i++){
 				data.push({"title" : titles[i], "date" : dates[i], "url" : links[i]});
 			}

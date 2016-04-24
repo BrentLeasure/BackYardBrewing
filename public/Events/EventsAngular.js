@@ -17,7 +17,6 @@ angular.module("indexModule")
 			// });
 		}
 		$scope.scrape = function(){
-			console.log("made it");
 			$http.get("/requestData")
 			.then(function(returnData){
 

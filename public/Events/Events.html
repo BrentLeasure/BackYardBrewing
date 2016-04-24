@@ -1,13 +1,16 @@
 <div class="container">
 	<div class="row">
 		<p id="temp">*This page is still being worked on.</p>
+		<button ng-click="scrape()">click me!</button>
 		<h2><u>Festivals</u></h2>
 		<div class="col-sm-12 col-md-3 events">
 			<div ng-repeat="event in events">
 				<ul>
 					<li>
-						<a target="_blank" ng-href="{{event.url}}"><h3>{{event.title}}</h3></a>
-						<p> <u>Date:</u> {{event.date}}</p>
+						<h2>{{event.title}}</h2>
+						<h4 class="eventTitles"><strong><a target="_blank" ng-href="{{event.url}}">More Info</a> </strong></h4>
+						<p> <h4 class="eventTitles"><strong>Date: </strong></h4>{{event.date}}</p>
+						<p>----------------------------------</p>
 					</li>
 				</ul>
 			</div>

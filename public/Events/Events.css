@@ -19,6 +19,10 @@
 	border-radius: 5px;
 }
 
+.eventTitles{
+	display: inline;
+}
+
 /*=====================
 	MEDIA QUERIES
 =====================*/
