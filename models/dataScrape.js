@@ -4,9 +4,10 @@ mongoose.connect("mongodb://localhost/BackYardBrewing");
 var eventsSchema = mongoose.Schema({
 	name   		: {type : String},
 	events 		: [{
-					    title : String,
+					    title 	 : String,
 					    date 	 : String,
 					    url		 : String,
+					    location : String,
      				}],
 })
 

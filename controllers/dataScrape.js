@@ -16,14 +16,13 @@ var requestData = function(){
 		if(!error){
 			$ = cheerio.load(html);
 			var count = 0;
-			var href;
+			var hasTitle = false;
 			var links = [];
 			var titles = [];
 			var dates = [];
+			var locations = [];
 			var data = [];
-			var temp = [];
-			var tempString;
-			var hasTitle = false;
+			
 			$('.entry-content p strong').each(function(){
 				var title = $(this).find("a").text();
 				var date = $(this).text();
@@ -42,15 +41,25 @@ var requestData = function(){
 						dates.push(date); 
 						hasTitle = false;
 					}else if(date.match(", CO")){
-						console.log(date);
-						// console.log("LOCATION: " + date);
-						// console.log("-----------------");
+						locations.push(date.split("–").pop());
 					}
 				}	
+				// console.log(titles.length);
+				// if(links.length < titles.length){
+				// 	// links.push("N/A")
+				// 	console.log("Links : " + links.length);
+				// }
+				// if(dates.length < titles.length){
+				// 	// dates.push("N/A")
+				// 	console.log("Dates: " + dates.length);
+				// }
+				// if(locations.length < titles.length){
+				// 	// locations.push("N/A");
+				// 	console.log("Locations: " + locations.length);
+				// }
 			})
-			console.log(count);
 			for(var i = 0; i < titles.length; i++){
-				data.push({"title" : titles[i], "date" : dates[i], "url" : links[i]});
+				data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
 			}
 			var name = "Colorado";
 			var body = {"name" : name, "events" : data};
