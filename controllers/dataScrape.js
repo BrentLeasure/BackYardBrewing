@@ -22,28 +22,33 @@ var requestData = function(){
 			var dates = [];
 			var locations = [];
 			var data = [];
-			
-			$('.entry-content p strong').each(function(){
+
+			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
-				var date = $(this).text();
-				var link = $(this).find("a").attr("href");
 				if(title != null && title != undefined){
 					if(title != ""){
-						hasTitle = true;
-						titles.push(title);
+						titles.push(title);		
 					}
+				}
+			});
+			// console.log(titles);
+			$('.entry-content p strong').each(function(){
+				var date = $(this).text();
+				var link = $(this).find("a").attr("href");
+				
 
 					if(link != undefined){
 						links.push(link);
 					}
 					
-					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " " && hasTitle){
+					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " "){
+						console.log(date);
 						dates.push(date); 
-						hasTitle = false;
-					}else if(date.match(", CO")){
+					}
+					if(date.match(", CO")){
 						locations.push(date.split("–").pop());
 					}
-				}	
+				// }	
 				// console.log(titles.length);
 				// if(links.length < titles.length){
 				// 	// links.push("N/A")
