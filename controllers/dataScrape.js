@@ -25,6 +25,7 @@ var requestData = function(){
 
 			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
+				var date = $(this).text();
 				if(title != null && title != undefined){
 					if(title != ""){
 						titles.push(title);		
@@ -34,34 +35,20 @@ var requestData = function(){
 			// console.log(titles);
 			$('.entry-content p strong').each(function(){
 				var date = $(this).text();
+				var title = $(this).find("a").text();
 				var link = $(this).find("a").attr("href");
 				
-
+				console.log(title);
 					if(link != undefined){
 						links.push(link);
 					}
 					
 					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " "){
-						console.log(date);
 						dates.push(date); 
 					}
 					if(date.match(", CO")){
 						locations.push(date.split("–").pop());
 					}
-				// }	
-				// console.log(titles.length);
-				// if(links.length < titles.length){
-				// 	// links.push("N/A")
-				// 	console.log("Links : " + links.length);
-				// }
-				// if(dates.length < titles.length){
-				// 	// dates.push("N/A")
-				// 	console.log("Dates: " + dates.length);
-				// }
-				// if(locations.length < titles.length){
-				// 	// locations.push("N/A");
-				// 	console.log("Locations: " + locations.length);
-				// }
 			})
 			for(var i = 0; i < titles.length; i++){
 				data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
