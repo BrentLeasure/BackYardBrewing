@@ -95,6 +95,24 @@ li{
 	background-color: transparent;
 }
 
+/*======================
+	BUTTONS
+========================*/
+.button{
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	background-color: white;
+	color: black;
+	margin: 0px 5px 0px 5px;
+	padding: 6px 12px;
+}
+.button:hover{
+	background-color: rgba(135, 45, 46, .9);
+}
+
+.button-padding{
+
+}
 
 /*======================
 	FOOTER

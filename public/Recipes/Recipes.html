@@ -23,12 +23,12 @@
 			<input ng-change="Paginate.checkUserQuery(this)"class="search-bar" ng-model="userQuery" placeholder="Search Beers"></br>
 		</div>
 			<div class="pagination-bar">
-					<button ng-show="screenSize" class="btn btn-sm btn-default button-color" ng-click="Paginate.moveListBackward(this)">Prev</button>
+					<button ng-show="screenSize" class="button" ng-click="Paginate.moveListBackward(this)">Prev</button>
 
-					<button ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="btn btn-group btn-default button-padding button-color" role="group" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
+					<button ng-repeat="page in pagination | limitTo: shownPages : startingElement - 1" class="button" role="group" ng-class="{'recipe-active-page' : page.state}" ng-click="changePage(page)">{{page.number}}</button>
 
-					<button ng-show="screenSize" class="btn btn-sm btn-default button-color" ng-click="Paginate.moveListForward(this)">Next</button>
-				<button ng-click="isLoggedIn()" class="btn btn-default submit-recipe button-color" target="_blank">Submit a Recipe!</button>
+					<button ng-show="screenSize" class="button" ng-click="Paginate.moveListForward(this)">Next</button>
+				<button ng-click="isLoggedIn()" class="button submit-recipe button-color" target="_blank">Submit a Recipe!</button>
 			</div>
 		</div>	
 
@@ -36,7 +36,7 @@
 		<div class="col-lg-12">
 			<div  ng-repeat="beer in beerTypes | filter: userQuery | orderBy:'-alias':true | limitTo: beersPerPage : (pageNumber-1) * beersPerPage">
 				<ul ng-submit="getRecipes(beer)" class="beers ">
-					<button ng-click="pass('md', beer)" class="btn btn-default recipe-layout beer-links button-color"><li>{{beer.alias}}</li></button>
+					<button ng-click="pass('md', beer)" class="button recipe-layout beer-links button-color"><li>{{beer.alias}}</li></button>
 				</ul>
 			</div>
 		</div>
