@@ -25,9 +25,11 @@ var requestData = function(){
 
 			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
-				var date = $(this).text();
+				var date = $(this)z	.text();
 				if(title != null && title != undefined){
+					console.log(date);
 					if(title != ""){
+						console.log(title)
 						titles.push(title);		
 					}
 				}
@@ -35,10 +37,8 @@ var requestData = function(){
 			// console.log(titles);
 			$('.entry-content p strong').each(function(){
 				var date = $(this).text();
-				var title = $(this).find("a").text();
 				var link = $(this).find("a").attr("href");
 				
-				console.log(title);
 					if(link != undefined){
 						links.push(link);
 					}
