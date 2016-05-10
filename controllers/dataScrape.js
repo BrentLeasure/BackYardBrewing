@@ -25,12 +25,16 @@ var requestData = function(){
 
 			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
-				var date = $(this).text();
+				var text = $(this).text();
 				if(title != null && title != undefined){
-					console.log(date);
 					if(title != ""){
-						// console.log(title)
+						console.log("TITLE: " + title)
 						titles.push(title);		
+					}
+					if(text.match(", CO")){
+						
+					}else{
+						console.log(date);
 					}
 				}
 			});
