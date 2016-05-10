@@ -25,11 +25,11 @@ var requestData = function(){
 
 			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
-				var date = $(this)z	.text();
+				var date = $(this).text();
 				if(title != null && title != undefined){
 					console.log(date);
 					if(title != ""){
-						console.log(title)
+						// console.log(title)
 						titles.push(title);		
 					}
 				}
