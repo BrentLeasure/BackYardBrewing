@@ -20,6 +20,7 @@ var requestData = function(){
 			var links = [];
 			var titles = [];
 			var dates = [];
+			var hasLocation = [];
 			var locations = [];
 			var data = [];
 
@@ -31,9 +32,9 @@ var requestData = function(){
 						titles.push(title);		
 					}
 					if(text.match(", CO")){
-						locations.push(1);
+						hasLocation.push(1);
 					}else{
-						locations.push(0);
+						hasLocation.push(0);
 					}
 				}
 			});
@@ -46,13 +47,14 @@ var requestData = function(){
 					}
 					
 					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " "){
-							dates.push(date); 
+						dates.push(date); 
 					}
 					if(date.match(", CO")){
-						if(locations[count] == 1){
-							locations[count] = date.split("–").pop();
+						if(hasLocation[count] == 1){
+							locations.push(date.split("–").pop());
 						}else{
-							locations[count] = "N/A";
+							locations.push("N/A");
+							locations.push(date.split("-").pop());
 						}
 						count++;
 					}
