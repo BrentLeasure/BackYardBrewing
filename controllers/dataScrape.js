@@ -26,19 +26,17 @@ var requestData = function(){
 			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
 				var text = $(this).text();
-				if(title != null && title != undefined){
+				if(title != null && title != undefined && text != "Colorado beer festivals, brewery events, and other Colorado craft beer activities."){
 					if(title != ""){
-						console.log("TITLE: " + title)
 						titles.push(title);		
 					}
 					if(text.match(", CO")){
-						
+						locations.push(1);
 					}else{
-						console.log(date);
+						locations.push(0);
 					}
 				}
 			});
-			// console.log(titles);
 			$('.entry-content p strong').each(function(){
 				var date = $(this).text();
 				var link = $(this).find("a").attr("href");
@@ -48,10 +46,15 @@ var requestData = function(){
 					}
 					
 					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " "){
-						dates.push(date); 
+							dates.push(date); 
 					}
 					if(date.match(", CO")){
-						locations.push(date.split("–").pop());
+						if(locations[count] == 1){
+							locations[count] = date.split("–").pop();
+						}else{
+							locations[count] = "N/A";
+						}
+						count++;
 					}
 			})
 			for(var i = 0; i < titles.length; i++){
@@ -79,11 +82,6 @@ var requestData = function(){
 					});
 			    }
 			});
-			
-			// console.log(body.events);
-			// console.log(temp.length);
-			// console.log(dates.length);
-			// console.log(links.length);
 		}
 	})
 }
