@@ -3,7 +3,7 @@ angular.module("indexModule")
 		$scope.eventMap;
 		$scope.initMap = function(){
 			$scope.centerOfMap ={lat: 39.244785, lng: -105.511852};
-
+			$scope.getFestivals();
 			$scope.eventMap = new google.maps.Map(document.getElementById('eventMap'), {
 				center: $scope.centerOfMap,
 				zoom: 7,
@@ -28,5 +28,5 @@ angular.module("indexModule")
 				$scope.events = (returnData.data.events);
 			})
 		}
-		$scope.getFestivals();
+		
 }]);
