@@ -16,12 +16,6 @@ angular.module("indexModule")
 			// 	title: 'Hello World!'
 			// });
 		}
-		$scope.scrape = function(){
-			$http.get("/requestData")
-			.then(function(returnData){
-
-			})
-		}
 		$scope.getFestivals = function(){
 			$http.get("/getFestivals")
 			.then(function(returnData){
