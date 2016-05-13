@@ -15,6 +15,11 @@ angular.module("indexModule")
 				$scope.events = returnData.data.events;
 				console.log($scope.events);
 				for(var i = 0; i < $scope.events.length; i++){
+					  	// var request = {
+					  	// 	location: centerOfMap,
+					  	// 	radius = 612000,
+					  	// 	keyword = $scope.events.location,
+					  	// }
 					
 				  	$scope.marker = new google.maps.Marker({
 						position: "Vail",
