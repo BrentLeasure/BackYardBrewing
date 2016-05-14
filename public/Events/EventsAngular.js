@@ -15,20 +15,6 @@ angular.module("indexModule")
 				var geocoder = new google.maps.Geocoder();
 				$scope.events = returnData.data.events;
 				$scope.geocodeAddress(geocoder, $scope.events);
-				// console.log($scope.events);
-				// for(var i = 0; i < $scope.events.length; i++){
-				// 	  	// var request = {
-				// 	  	// 	location: centerOfMap,
-				// 	  	// 	radius = 612000,
-				// 	  	// 	keyword = $scope.events.location,
-				// 	  	// }
-					
-				//   	$scope.marker = new google.maps.Marker({
-				// 		position: "Vail",
-				// 		map: $scope.eventMap,
-				// 		title: $scope.events.title,
-				// 	});
-		  // 		}
 			})
 		}
 		$scope.geocodeAddress = function(geocoder, events){
