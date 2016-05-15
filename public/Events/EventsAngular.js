@@ -19,7 +19,6 @@ angular.module("indexModule")
 		}
 		$scope.geocodeAddress = function(geocoder, events){
 			var count = 0;
-			console.log(events.length);
 			for(var i = 0; i < events.length; i++){
 				if(events[i].location != "N/A"){
 					geocoder.geocode({"address" : events[i].location}, function(results, status) {
@@ -27,11 +26,14 @@ angular.module("indexModule")
 					      var marker = new google.maps.Marker({
 					        map: $scope.eventMap,
 					        position: results[0].geometry.location
-					      });
-					      count++;
-					      console.log(count);
-					    } else {
-					      console.log('Geocode was not successful for the following reason: ' + status);
+					      });					    
+					    } else if( status = google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+					      setTimeout(function(){
+					      	var marker = new google.maps.Marker({
+						        map: $scope.eventMap,
+						        position: results[0].geometry.location
+					      	});
+					      }, 2000)
 					    }
 
 					});
