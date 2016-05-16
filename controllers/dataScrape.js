@@ -2,12 +2,23 @@ var cheerio = require("cheerio");
 var request = require("request");
 var CronJob = require('cron').CronJob;
 var events = require("../models/dataScrape");
+var geocoderProvider = 'google'
+var httpAdapter = "https";
+
+var extra = {
+    formatter: null         // 'gpx', 'string', ...
+};
+
+var geocoder = require('node-geocoder')(geocoderProvider, httpAdapter, extra);
+
+// Using callback
 
 var job = new CronJob('00 6 * * 6', function(req, res){
 	requestData();
 });
 
 var requestData = function(){
+	
 	//url being used for the request
 	url = "http://www.coloradocraftbrews.com/beer-festivals/";
 
@@ -60,6 +71,7 @@ var requestData = function(){
 					}
 			})
 			for(var i = 0; i < titles.length; i++){
+				runTimeout(locations[i]);
 				data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
 			}
 			var name = "Colorado";
@@ -86,6 +98,13 @@ var requestData = function(){
 			});
 		}
 	})
+}
+
+var runTimeout = function(location){
+	setTimeout(function(){geocoder.geocode(location, function(err, res) {
+		console.log(err);
+		console.log(res);
+	});}, 1000);
 }
 job.start();
 var getFestivals = function(req, res){

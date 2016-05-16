@@ -17,6 +17,13 @@ angular.module("indexModule")
 				$scope.geocodeAddress(geocoder, $scope.events);
 			})
 		}
+
+		$scope.scrape = function(){
+			$http.get('requestData')
+			.then(function(){
+				console.log("sucess!");
+			})
+		}
 		$scope.geocodeAddress = function(geocoder, events){
 			var count = 0;
 			for(var i = 0; i < events.length; i++){
