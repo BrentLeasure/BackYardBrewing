@@ -71,8 +71,10 @@ var requestData = function(){
 					}
 			})
 			for(var i = 0; i < titles.length; i++){
-				runTimeout(locations[i]);
-				data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
+				runTimeout(locations[i], function(latLong){
+					data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
+					console.log(latLong);
+				});
 			}
 			var name = "Colorado";
 			var body = {"name" : name, "events" : data};
@@ -100,10 +102,10 @@ var requestData = function(){
 	})
 }
 
-var runTimeout = function(location){
+var runTimeout = function(location, _callback){
 	setTimeout(function(){geocoder.geocode(location, function(err, res) {
-		console.log(err);
 		console.log(res);
+		_callback("Hello world: " + res);
 	});}, 1000);
 }
 job.start();
