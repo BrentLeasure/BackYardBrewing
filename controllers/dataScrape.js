@@ -65,24 +65,24 @@ var requestData = function(){
 
 					if(date.match(", CO")){
 						if(hasLocation[count] == 1){
-							locations.push(date.split("–").pop());
+							locations[count] = date.split("–").pop();
 						}else{
-							locations.push("N/A");
-							locations.push(date.split("-").pop());
+							locations[count] = "N/A";
 						}
 						count++;
 					}
 			})
-
 			//uses geocoder to get lat/long coordinates.
 			for(var i = 0; i < titles.length; i++){
-				Q.delay(1000, runTimeout(locations[i]))
-				.then(function(returnData){
-					console.log(returnData);
-					// data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
+				Q(locations[i])
+				.delay(1000)
+				.then(function(location){
+					//goes into geocode function
+					geocode(location);
 				});
+			
 			}
-			console.log("what is going on??");
+			// 
 			// pushData(data);
 		}
 	})
@@ -91,11 +91,12 @@ var requestData = function(){
 //q library -- LOOK INTO IT
 //promises for node
 //console.log "Promise" to see if node has it
-var runTimeout = function(location){
-	geocoder.geocode(location, function(err, res){
-		console.log(res);
-		return res; 
-	});
+var geocode = function(location){
+	if(location != "N/A"){
+		geocoder.geocode(location, function(err, res){
+			// data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
+		});
+	}
 }
 
 var pushData = function(data){
