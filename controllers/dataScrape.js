@@ -57,6 +57,8 @@ var requestData = function(){
 				
 					if(link != undefined){
 						links.push(link);
+					}else{
+						links.push("N/A");
 					}
 					
 					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " "){
@@ -73,17 +75,39 @@ var requestData = function(){
 					}
 			})
 			//uses geocoder to get lat/long coordinates.
-			for(var i = 0; i < titles.length; i++){
-				Q(locations[i])
-				.delay(1000)
-				.then(function(location){
-					//goes into geocode function
-					geocode(location);
-				});
+			// for(var i = 0; i < titles.length; i++){
+			// 	Q(locations[i])
+			// 	.delay(1000)
+			// 	.then(function(location){
+			// 		//goes into geocode function?
+			// 		console.log("in the .then")
+			// 		geocode(location);
+			// 		
+			// 	});
 			
-			}
-			// 
-			// pushData(data);
+			
+			
+			// }
+	
+			geocodeLocations(locations.slice(0), [], function(returnData){
+				console.log(returnData.length);
+				console.log(titles.length);
+				for(var i = 0; i < titles.length; i++){
+					console.log(i);
+					console.log("returndata: " + returnData[i]);
+					var latitude, longitude;
+					if (returnData[i]) {
+						latitude = returnData[i].latitude;
+						longitude = returnData[i].longitude;
+					} else {
+						latitude = "N/A";
+						longitude = "N/A";
+					}
+					data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i], "lat": latitude, "long": longitude});
+				}
+				pushData(data);
+			});
+			
 		}
 	})
 }
@@ -91,13 +115,29 @@ var requestData = function(){
 //q library -- LOOK INTO IT
 //promises for node
 //console.log "Promise" to see if node has it
-var geocode = function(location){
-	if(location != "N/A"){
-		geocoder.geocode(location, function(err, res){
-			// data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i]});
-		});
+var geocodeLocations  = function(locations, latLong, callback){
+	if(locations.length != 0){
+		var localLocation = locations.pop();
+		setTimeout(function(){
+			// if(localLocation != "N/A");
+			geocoder.geocode(localLocation, function(err, res){
+				if(res == undefined){
+					latLong.push({"latitude": "N/A", "longitude": "N/A"})
+				}else{
+					latLong.push(res);
+				}
+				geocodeLocations(locations, latLong, callback);
+			});
+		}, 1000);
+	}else{
+		callback(latLong);	
 	}
 }
+// var geocode = function(location){
+// 	if(location != "N/A"){
+
+// 	}
+// }
 
 var pushData = function(data){
 	var name = "Colorado";
