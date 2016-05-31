@@ -4,7 +4,6 @@ var CronJob = require('cron').CronJob;
 var events = require("../models/dataScrape");
 var geocoderProvider = 'google'
 var httpAdapter = "https";
-var Q = require('q');
 
 var extra = {
     formatter: null 
@@ -35,6 +34,7 @@ var requestData = function(){
 			//gets the title and finds out if there is a location
 			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
+				var link = $(this).find("a").attr("href");
 				var text = $(this).text();
 				
 				if(title != null && title != undefined && text != "Colorado beer festivals, brewery events, and other Colorado craft beer activities."){
@@ -47,55 +47,38 @@ var requestData = function(){
 					}else{
 						hasLocation.push(0);
 					}
+				
+					if(link != undefined){
+						links.push(link);
+					}
 				}
 			});
 
 			//gets the urls, dates and locations
 			$('.entry-content p strong').each(function(){
 				var date = $(this).text();
-				var link = $(this).find("a").attr("href");
-				
-					if(link != undefined){
-						links.push(link);
-					}else{
-						links.push("N/A");
-					}
 					
 					if(date.match("January|February|March|April|May|June|July|August|September|October|November|December|Check back for| Check back for|Stay tuned for") && date != " "){
 						dates.push(date); 
 					}
 
 					if(date.match(", CO")){
-						if(hasLocation[count] == 1){
-							locations[count] = date.split("–").pop();
-						}else{
-							locations[count] = "N/A";
-						}
+						var tempString = date.split("–").pop();
+						locations[count] = tempString.substring(0, tempString.indexOf("CO") + 2);
+						count++;
+					}else if(hasLocation[count] == 0){
+						locations[count] = "N/A";
 						count++;
 					}
-			})
-			//uses geocoder to get lat/long coordinates.
-			// for(var i = 0; i < titles.length; i++){
-			// 	Q(locations[i])
-			// 	.delay(1000)
-			// 	.then(function(location){
-			// 		//goes into geocode function?
-			// 		console.log("in the .then")
-			// 		geocode(location);
-			// 		
-			// 	});
-			
-			
-			
-			// }
-	
+			});
+
 			geocodeLocations(locations.slice(0), [], function(returnData){
-				console.log(returnData.length);
-				console.log(titles.length);
+				returnData.reverse();
+				console.log(returnData[0]);
+				console.log(returnData[0].longitude);
 				for(var i = 0; i < titles.length; i++){
-					console.log(i);
-					console.log("returndata: " + returnData[i]);
-					var latitude, longitude;
+					var latitude;
+					var longitude;
 					if (returnData[i]) {
 						latitude = returnData[i].latitude;
 						longitude = returnData[i].longitude;
@@ -103,7 +86,7 @@ var requestData = function(){
 						latitude = "N/A";
 						longitude = "N/A";
 					}
-					data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i], "lat": latitude, "long": longitude});
+					data.push({"title" : titles[i], "date" : dates[i], "url" : links[i], "location" : locations[i], "latitude": latitude, "longitude": longitude});
 				}
 				pushData(data);
 			});
@@ -111,20 +94,17 @@ var requestData = function(){
 		}
 	})
 }
-//quene
-//q library -- LOOK INTO IT
-//promises for node
-//console.log "Promise" to see if node has it
+
 var geocodeLocations  = function(locations, latLong, callback){
 	if(locations.length != 0){
 		var localLocation = locations.pop();
 		setTimeout(function(){
-			// if(localLocation != "N/A");
 			geocoder.geocode(localLocation, function(err, res){
 				if(res == undefined){
 					latLong.push({"latitude": "N/A", "longitude": "N/A"})
 				}else{
-					latLong.push(res);
+					console.log(res[0]);
+					latLong.push(res[0]);
 				}
 				geocodeLocations(locations, latLong, callback);
 			});
@@ -133,11 +113,6 @@ var geocodeLocations  = function(locations, latLong, callback){
 		callback(latLong);	
 	}
 }
-// var geocode = function(location){
-// 	if(location != "N/A"){
-
-// 	}
-// }
 
 var pushData = function(data){
 	var name = "Colorado";

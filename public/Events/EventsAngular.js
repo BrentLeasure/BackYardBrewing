@@ -12,9 +12,9 @@ angular.module("indexModule")
 		$scope.getFestivals = function(){
 			$http.get("/getFestivals")
 			.then(function(returnData){
-				var geocoder = new google.maps.Geocoder();
 				$scope.events = returnData.data.events;
-				$scope.geocodeAddress(geocoder, $scope.events);
+				console.log($scope.events);
+				$scope.setLocations($scope.events);
 			})
 		}
 
@@ -24,26 +24,14 @@ angular.module("indexModule")
 				console.log("sucess!");
 			})
 		}
-		$scope.geocodeAddress = function(geocoder, events){
+		$scope.setLocations = function(events){
 			var count = 0;
 			for(var i = 0; i < events.length; i++){
 				if(events[i].location != "N/A"){
-					geocoder.geocode({"address" : events[i].location}, function(results, status) {
-					    if (status === google.maps.GeocoderStatus.OK) {
-					      var marker = new google.maps.Marker({
-					        map: $scope.eventMap,
-					        position: results[0].geometry.location
-					      });					    
-					    } else if( status = google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
-					      setTimeout(function(){
-					      	var marker = new google.maps.Marker({
-						        map: $scope.eventMap,
-						        position: results[0].geometry.location
-					      	});
-					      }, 2000)
-					    }
-
-					});
+				  	var marker = new google.maps.Marker({
+				        map: $scope.eventMap,
+				        position: new google.maps.LatLng(events[i].latitude, events[i].longitude),
+				    });
 				}
 			}
 		}
