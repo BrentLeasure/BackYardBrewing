@@ -13,7 +13,6 @@ angular.module("indexModule")
 			$http.get("/getFestivals")
 			.then(function(returnData){
 				$scope.events = returnData.data.events;
-				console.log($scope.events);
 				$scope.setLocations($scope.events);
 			})
 		}
@@ -25,9 +24,9 @@ angular.module("indexModule")
 			})
 		}
 		$scope.setLocations = function(events){
-			var count = 0;
 			for(var i = 0; i < events.length; i++){
 				if(events[i].location != "N/A"){
+					console.log("Lat: " + events[i].latitude + "Long: " + events[i].longitude)
 				  	var marker = new google.maps.Marker({
 				        map: $scope.eventMap,
 				        position: new google.maps.LatLng(events[i].latitude, events[i].longitude),
