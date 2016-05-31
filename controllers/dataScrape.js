@@ -74,8 +74,6 @@ var requestData = function(){
 
 			geocodeLocations(locations.slice(0), [], function(returnData){
 				returnData.reverse();
-				console.log(returnData[0]);
-				console.log(returnData[0].longitude);
 				for(var i = 0; i < titles.length; i++){
 					var latitude;
 					var longitude;
@@ -103,7 +101,6 @@ var geocodeLocations  = function(locations, latLong, callback){
 				if(res == undefined){
 					latLong.push({"latitude": "N/A", "longitude": "N/A"})
 				}else{
-					console.log(res[0]);
 					latLong.push(res[0]);
 				}
 				geocodeLocations(locations, latLong, callback);
