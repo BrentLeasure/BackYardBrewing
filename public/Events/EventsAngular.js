@@ -17,16 +17,10 @@ angular.module("indexModule")
 			})
 		}
 
-		$scope.scrape = function(){
-			$http.get('requestData')
-			.then(function(){
-				console.log("sucess!");
-			})
-		}
+
 		$scope.setLocations = function(events){
 			for(var i = 0; i < events.length; i++){
 				if(events[i].location != "N/A"){
-					console.log("Lat: " + events[i].latitude + "Long: " + events[i].longitude)
 				  	var marker = new google.maps.Marker({
 				        map: $scope.eventMap,
 				        position: new google.maps.LatLng(events[i].latitude, events[i].longitude),

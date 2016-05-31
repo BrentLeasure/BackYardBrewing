@@ -82,7 +82,6 @@ server.get("/getFavoriteRecipes", favRecipeController.getFavoriteRecipes);
 
 server.get("/getFestivals", dataScrape.getFestivals);
 
-server.get("/requestData", dataScrape.requestData);
 
 
 //=============
