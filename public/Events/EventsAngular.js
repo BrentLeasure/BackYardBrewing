@@ -17,15 +17,25 @@ angular.module("indexModule")
 			})
 		}
 
-
+		$scope.createMarker = function(map, currentEvent){
+			if(currentEvent.location != "N/A"){
+			  	var marker = new google.maps.Marker({
+			        map: $scope.eventMap,
+			        position: new google.maps.LatLng(currentEvent.latitude, currentEvent.longitude),
+			    });
+				
+				var info = new google.maps.InfoWindow({
+	            	content: currentEvent.title,
+		        });
+		        google.maps.event.addListener(marker, 'click', function() {
+		            info.open(map, marker);
+		        });
+		        return marker;
+	        }
+		}
 		$scope.setLocations = function(events){
 			for(var i = 0; i < events.length; i++){
-				if(events[i].location != "N/A"){
-				  	var marker = new google.maps.Marker({
-				        map: $scope.eventMap,
-				        position: new google.maps.LatLng(events[i].latitude, events[i].longitude),
-				    });
-				}
+					var marker = $scope.createMarker($scope.eventMap, events[i]);
 			}
 		}
 }]);
