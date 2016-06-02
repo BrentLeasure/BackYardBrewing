@@ -27,8 +27,12 @@ angular.module("indexModule")
 				var info = new google.maps.InfoWindow({
 	            	content: currentEvent.title,
 		        });
-		        google.maps.event.addListener(marker, 'click', function() {
+		        google.maps.event.addListener(marker, 'click', function(marker){
 		            info.open(map, marker);
+		            for(var i=0; i<this.markers.length; i++){
+        this.markers[i].setMap(null);
+    }
+    			this.markers = new Array();
 		        });
 		        return marker;
 	        }
