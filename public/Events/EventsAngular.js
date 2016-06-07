@@ -1,45 +1,46 @@
 angular.module("indexModule")
 	.controller("EventsController", ["$scope", "$http", function($scope, $http){
+		var lastMarker;
 		$scope.initMap = function(){
-			$scope.getFestivals();
-			$scope.centerOfMap ={lat: 39.244785, lng: -105.511852};
-			$scope.eventMap = new google.maps.Map(document.getElementById('eventMap'), {
-				center: $scope.centerOfMap,
+			var centerOfMap ={lat: 39.244785, lng: -105.511852};
+			var eventMap = new google.maps.Map(document.getElementById('eventMap'), {
+				center: centerOfMap,
 				zoom: 7,
 				scrollwheel: false
 		  	});
+		  	getFestivals(eventMap);
 		}
-		$scope.getFestivals = function(){
+		var getFestivals = function(eventMap){
 			$http.get("/getFestivals")
 			.then(function(returnData){
 				$scope.events = returnData.data.events;
-				$scope.setLocations($scope.events);
+				setLocations($scope.events, eventMap);
 			})
 		}
 
-		$scope.createMarker = function(map, currentEvent){
+		var createMarker = function(map, currentEvent){
 			if(currentEvent.location != "N/A"){
 			  	var marker = new google.maps.Marker({
-			        map: $scope.eventMap,
+			        map: map,
 			        position: new google.maps.LatLng(currentEvent.latitude, currentEvent.longitude),
 			    });
 				
-				var info = new google.maps.InfoWindow({
+				marker.infoWindow = new google.maps.InfoWindow({
 	            	content: currentEvent.title,
 		        });
-		        google.maps.event.addListener(marker, 'click', function(marker){
-		            info.open(map, marker);
-		            for(var i=0; i<this.markers.length; i++){
-        this.markers[i].setMap(null);
-    }
-    			this.markers = new Array();
+		        google.maps.event.addListener(marker, 'click', function(){		    
+		            marker.infoWindow.open(map, marker);	
+		            // if(lastMarker != undefined){     
+		            // 	marker.infoWindow.close(map, lastMarker);		      
+		            // }
+		            // lastMarker = marker;     
 		        });
 		        return marker;
 	        }
 		}
-		$scope.setLocations = function(events){
+		var setLocations = function(events, eventMap){
 			for(var i = 0; i < events.length; i++){
-					var marker = $scope.createMarker($scope.eventMap, events[i]);
+					var marker = createMarker(eventMap, events[i]);
 			}
 		}
 }]);

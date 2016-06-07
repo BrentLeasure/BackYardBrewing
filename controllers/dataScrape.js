@@ -31,7 +31,7 @@ var requestData = function(){
 			var locations = [];
 			var data = [];
 
-			//gets the title and finds out if there is a location
+			//gets the title and urls as well as finds out if there is a location
 			$('.entry-content p').each(function(){ 
 				var title = $(this).find("a").text();
 				var link = $(this).find("a").attr("href");
@@ -54,7 +54,7 @@ var requestData = function(){
 				}
 			});
 
-			//gets the urls, dates and locations
+			//gets the dates and locations
 			$('.entry-content p strong').each(function(){
 				var date = $(this).text();
 					
