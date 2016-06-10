@@ -25,20 +25,21 @@ angular.module("indexModule")
 			        map: map,
 			        position: new google.maps.LatLng(currentEvent.latitude, currentEvent.longitude),
 			    });
-				
-				infoWindow = new google.maps.InfoWindow({
-	            	content: currentEvent.title,
+				marker.infoWindow = new google.maps.InfoWindow({
+		        	content: currentEvent.title,
 		        });
+				
 		        google.maps.event.addListener(marker, 'click', function(){		    
-		            lastMarker = marker;    
+		               
 		            if(lastMarker){
-		            	infoWindow.close();		     
+		            	lastMarker.infoWindow.close();		     
 		            }
-		            infoWindow.open(map, marker);	
+		            lastMarker = marker; 
+		            marker.infoWindow.open(map, marker);	
 		          
 		        });
 		        return marker;
-	        }
+		    }
 		}
 		var setLocations = function(events, eventMap){
 			for(var i = 0; i < events.length; i++){
