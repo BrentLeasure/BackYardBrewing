@@ -3,10 +3,10 @@
 		<h2><u>Festivals</u></h2>
 		<div class="col-sm-12 col-md-3 events">
 			
-			<div ng-repeat="event in events" ng-mouseover="openInfoWindow(event.title)">
+			<div ng-repeat="event in events">
 				<ul>
 					<li>
-						<h2>{{event.title}}</h2>
+						<h2 ng-mouseover="openInfoWindow(event.title)">{{event.title}}</h2>
 						<p> <h4 class="eventTitles"><strong>Location: </strong></h4>{{event.location}}</p>
 						<p>----------------------------------</p>
 					</li>

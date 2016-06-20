@@ -20,9 +20,9 @@ angular.module("indexModule")
 			})
 		}
 
-		var openInfoWindow = function(markerLabel){
-			console.log("hello");
-			// marker.infoWindow.open(map, marker);	
+		$scope.openInfoWindow = function(markerLabel){
+			console.log(markerLabel);
+			google.maps.event.trigger(, 'click');	
 		}
 		var createMarker = function(map, currentEvent){
 			if(currentEvent.location != "N/A"){
