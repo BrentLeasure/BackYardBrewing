@@ -1,5 +1,6 @@
 angular.module("indexModule")
 	.controller("EventsController", ["$scope", "$http", function($scope, $http){
+		var marker = [];
 		var lastMarker;
 		var infoWindow;
 		$scope.initMap = function(){
@@ -19,9 +20,14 @@ angular.module("indexModule")
 			})
 		}
 
+		var openInfoWindow = function(markerLabel){
+			console.log("hello");
+			// marker.infoWindow.open(map, marker);	
+		}
 		var createMarker = function(map, currentEvent){
 			if(currentEvent.location != "N/A"){
 			  	var marker = new google.maps.Marker({
+			  		label: currentEvent.title,
 			        map: map,
 			        position: new google.maps.LatLng(currentEvent.latitude, currentEvent.longitude),
 			    });
@@ -42,8 +48,10 @@ angular.module("indexModule")
 		    }
 		}
 		var setLocations = function(events, eventMap){
-			for(var i = 0; i < events.length; i++){
-					var marker = createMarker(eventMap, events[i]);
+			for(var markerNumber = 0; markerNumber < events.length; markerNumber++){
+      				marker.push(createMarker(eventMap, events[markerNumber]));
+    			
 			}
 		}
+
 }]);
