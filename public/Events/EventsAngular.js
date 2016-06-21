@@ -20,19 +20,25 @@ angular.module("indexModule")
 			})
 		}
 
-		$scope.openInfoWindow = function(markerLabel){
-			console.log(markerLabel);
-			google.maps.event.trigger(, 'click');	
+		$scope.openInfoWindow = function(passedMarker){
+			for(var position = 0; position < marker.length; position++){
+				if(passedMarker._id == marker[position]._id){
+					console.log(marker.title);
+					google.maps.event.trigger(marker[position], 'click');
+					break;		
+				}
+			}
+			
 		}
 		var createMarker = function(map, currentEvent){
-			if(currentEvent.location != "N/A"){
 			  	var marker = new google.maps.Marker({
-			  		label: currentEvent.title,
 			        map: map,
 			        position: new google.maps.LatLng(currentEvent.latitude, currentEvent.longitude),
 			    });
-				marker.infoWindow = new google.maps.InfoWindow({
-		        	content: currentEvent.title,
+			    marker._id = currentEvent._id;
+			    var content = "<h3>" + currentEvent.title + "</h3>" + "<p> Date: " + currentEvent.date + "</p> <a target='_blank' href = '" + currentEvent.url + "'> More Info </a>";
+			    marker.infoWindow = new google.maps.InfoWindow({
+		        	content: content,
 		        });
 				
 		        google.maps.event.addListener(marker, 'click', function(){		    
@@ -45,12 +51,13 @@ angular.module("indexModule")
 		          
 		        });
 		        return marker;
-		    }
 		}
 		var setLocations = function(events, eventMap){
-			for(var markerNumber = 0; markerNumber < events.length; markerNumber++){
-      				marker.push(createMarker(eventMap, events[markerNumber]));
-    			
+			console.log(events);
+			for(var position = 0; position < events.length; position++){
+      				if(events[position].location != "N/A"){
+      					marker.push(createMarker(eventMap, events[position]));
+    				}
 			}
 		}
 
