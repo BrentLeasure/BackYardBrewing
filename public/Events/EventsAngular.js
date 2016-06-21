@@ -23,7 +23,6 @@ angular.module("indexModule")
 		$scope.openInfoWindow = function(passedMarker){
 			for(var position = 0; position < marker.length; position++){
 				if(passedMarker._id == marker[position]._id){
-					console.log(marker.title);
 					google.maps.event.trigger(marker[position], 'click');
 					break;		
 				}
@@ -36,7 +35,7 @@ angular.module("indexModule")
 			        position: new google.maps.LatLng(currentEvent.latitude, currentEvent.longitude),
 			    });
 			    marker._id = currentEvent._id;
-			    var content = "<h3>" + currentEvent.title + "</h3>" + "<p> Date: " + currentEvent.date + "</p> <a target='_blank' href = '" + currentEvent.url + "'> More Info </a>";
+			    var content = "<h3>" + currentEvent.title + "</h3>" + "<p> <strong>Date:</strong> " + currentEvent.date + "</p> <p><strong>Location:</strong> " + currentEvent.location + "</p>" + "<a target='_blank' href = '" + currentEvent.url + "'> More Info </a>";
 			    marker.infoWindow = new google.maps.InfoWindow({
 		        	content: content,
 		        });
@@ -53,7 +52,6 @@ angular.module("indexModule")
 		        return marker;
 		}
 		var setLocations = function(events, eventMap){
-			console.log(events);
 			for(var position = 0; position < events.length; position++){
       				if(events[position].location != "N/A"){
       					marker.push(createMarker(eventMap, events[position]));
