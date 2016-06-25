@@ -18,16 +18,16 @@ angular.module("indexModule")
 	}
 	$scope.getUserRecipes = function(){
 		$http.get("/getuserrecipes/" + $scope.user._id)
-		.then(function(returnData){
-			if(returnData.data.err){
-				$scope.err = returnData.data.err;	
-			}else if(returnData.data.length == 0){
+		.then(function(returnData){				
+			if(returnData.data.length == 0){
 				$scope.hasRecipes = false;
 			}else{
 				$scope.hasRecipes = true;
 				$scope.userRecipes = returnData.data;
 				
 			}
+		},function(returnData){
+			$scope.err = returnData.data.err;	
 		})
 	}
 	$scope.deleteRecipe = function(recipe){
