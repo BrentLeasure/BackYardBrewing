@@ -19,14 +19,16 @@ var addFavoriteRecipe = function(req, res){
 						}
 					});
 				}else{
-					var err = {err:"You already added this recipe!"};
-					res.send(err);
+					return res.status(409).send({
+						message: "You already added this recipe!"
+					});
 				}
 			});
 		}
 	}else{
-		var err = {err: "You are not logged in."};
-		res.send(err);
+		return res.status(403).send({
+			message: "you are not logged in"
+		});
 	}
 }
 
@@ -40,8 +42,9 @@ var removeFavoriteRecipe = function(req, res){
 			}
 		});	
 	}else{
-		var err = {err: "You are not logged in."};
-		res.send(err);
+		return res.status(403).send({
+			message: "you are not logged in"
+		});
 	}
 }
 //hello!
@@ -49,8 +52,9 @@ var getFavoriteRecipes = function(req, res){
 	if(req.user){
 		res.send(req.user.favoriteRecipes);
 	}else{
-		var err = {err: "You are not logged in."};
-		res.send(err);
+		return res.status(403).send({
+			message: "you are not logged in"
+		});
 	}
 }
 

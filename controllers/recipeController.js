@@ -38,7 +38,9 @@ getUserRecipe = function(req, res){
 		if(err){
 			res.send(err);
 		}else if(!userRecipe){
-			res.send(null);
+			return res.status(404).send({
+				message: "The recipe you are looking for is not here."
+			});
 		}else{
 			res.send(userRecipe);
 		}
@@ -108,7 +110,7 @@ createRecipe = function(req, res){
 			})
 		}
 	}else{
-		return res.status(400).send({
+		return res.status(403).send({
 			message: "you are not logged in"
 		});
 	}

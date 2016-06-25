@@ -25,11 +25,9 @@ angular.module("indexModule")
 		$scope.addToFavorites = function(recipe){
 			$http.post("/addFavoriteRecipe", recipe)
 			.then(function(returnData){
-				if(returnData.data.err){
-					$scope.err = returnData.data.err;
-				}else{
 					$scope.success = returnData.data;
-				}
+			}, function(returnData){				
+				$scope.err = returnData.data.message;
 			})
 		}
 }])

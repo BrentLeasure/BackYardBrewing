@@ -47,14 +47,15 @@ angular.module("indexModule")
 	$scope.getFavoriteRecipes = function(){
 		$http.get("/getFavoriteRecipes")
 		.then(function(returnData){
-			if(returnData.data.err){
-				$scope.err = returnData.data.err;
-			}else if(returnData.data.length == 0){
+			if(returnData.data.length == 0){
 				$scope.hasFavorites = false;
 			}else{
 				$scope.hasFavorites = true;
 				$scope.userFavorites = returnData.data;
 			}
+		},function(returnData){
+			$scope.err = returnData.data.message;
+			
 		})
 	}
 
@@ -62,13 +63,11 @@ angular.module("indexModule")
 		var deleteIt = confirm("Are you sure you want to remove this recipe from your favorites?");
 		if(deleteIt){
 			$http.put("/removeFavoriteRecipe", favorite)
-			.then(function(returnData){
-				if(returnData.data.err){
-					$scope.err = returnData.data.err;
-				}else{
+			.then(function(returnData){				
 					$scope.err = "";
 					$window.location.reload();
-				}
+			}, function(returnData){				
+					$scope.err = returnData.data.message;
 			})
 		}
 	}
