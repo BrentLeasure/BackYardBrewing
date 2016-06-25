@@ -41,13 +41,14 @@ angular.module("indexModule")
 				$scope.recipe.username = user.username;
 				$scope.recipe.userID = user._id;
 				$scope.mpForm.post("/createrecipe", $scope.recipe).then(function(returnData){
-					if(returnData.data.err){
-						$scope.hasError = returnData.data.err;
-						$scope.successful = "";
-					}else{
+					console.log(returnData);						
 						$scope.hasError = "";
 						$scope.successful = "success!";
-					}
+					
+				},
+				function(returnData){
+					$scope.hasError = returnData.data.message;
+					$scope.successful = "";
 				})
 			});
 

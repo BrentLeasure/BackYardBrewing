@@ -70,7 +70,9 @@ createRecipe = function(req, res){
 		var nullVar = false;
 		var counter = 0;
 	if(req.file === undefined){
-		var err = {err:"You need to include a picture!"};
+		return res.status(400).send({
+   			message: "You need to include a picture!"
+		});
 	}else{
 		req.body.image = req.file;
 	}
@@ -84,17 +86,17 @@ createRecipe = function(req, res){
 			}
 			if(variable == "instructions"){
 				if(body[variable].length < 500){
-					var err = {err:"Your instructions are too short. (you need at least 500 characters)"};
+					return res.status(400).send({
+   						message: "Your instructions are too short. (you need at least 500 characters)"
+					});
 				}
 			}
 			counter++;
 		}
-		if(err){
-			res.send(err);
-		}
-		else if(nullVar || counter < 4){
-			var err = {err: "You cannot leave any of these fields blank"};
-			res.send(err);
+		if(nullVar || counter < 4){
+			return res.status(400).send({
+				message: "You cannot leave any of these fields blank"
+			});
 		}else{
 			var newRecipe = new recipeModel.userRecipe(req.body);
 			newRecipe.save(function(err, data){
@@ -106,8 +108,9 @@ createRecipe = function(req, res){
 			})
 		}
 	}else{
-		var err = {err: "You are not logged in."};
-		res.send(err);
+		return res.status(400).send({
+			message: "you are not logged in"
+		});
 	}
 }
 
@@ -126,8 +129,9 @@ updateRecipe = function(req, res){
 		});
 
 	}else{
-		var err = {err: "You are not logged in."};
-		res.send(err);
+		return res.status(400).send({
+			message: "you are not logged in"
+		});
 	} 
 }
 
@@ -145,8 +149,9 @@ deleteRecipe = function(req, res){
 			}
 		})
 	}else{
-		var err = {err: "You are not logged in."};
-		res.send(err);
+		return res.status(400).send({
+			message: "you are not logged in"
+		});
 	}
 }
 
